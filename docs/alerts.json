@@ -1,18 +1,12 @@
 {
-  "generated_at": "2026-05-15T15:15:13.832879+00:00",
-  "count": 4,
+  "generated_at": "2026-05-15T15:34:29.470597+00:00",
+  "count": 3,
   "alerts": [
     {
-      "cve_id": "CVE-2026-41524",
-      "matched": "Laravel",
-      "severity": "HIGH",
-      "score": 8.7,
-      "published": "2026-05-08T15:16:40.253",
-      "last_modified": "2026-05-08T22:16:30.473",
-      "description": "Brave CMS is an open-source CMS. Prior to commit 6c56603, page and article body content entered through the CKEditor rich-text editor is stored verbatim in the database and subsequently rendered with Laravel Blade's unescaped output directive {!! !!}. Any JavaScript or HTML injected by an editor-role user is permanently stored and executed in every visitor's browser upon page load. This issue has been patched via commit 6c56603.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41524"
-    },
-    {
+      "alert_id": "nvd:cve-2026-43900:vue",
+      "source": "NVD",
+      "category": "JS",
+      "priority": "URGENT",
       "cve_id": "CVE-2026-43900",
       "matched": "Vue",
       "severity": "CRITICAL",
@@ -23,6 +17,10 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43900"
     },
     {
+      "alert_id": "nvd:cve-2026-45321:npm",
+      "source": "NVD",
+      "category": "JS",
+      "priority": "URGENT",
       "cve_id": "CVE-2026-45321",
       "matched": "npm",
       "severity": "CRITICAL",
@@ -33,6 +31,10 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45321"
     },
     {
+      "alert_id": "nvd:cve-2026-44262:laravel",
+      "source": "NVD",
+      "category": "PHP",
+      "priority": "URGENT",
       "cve_id": "CVE-2026-44262",
       "matched": "Laravel",
       "severity": "CRITICAL",
