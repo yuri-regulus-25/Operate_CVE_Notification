@@ -4,7 +4,7 @@ import urllib.request
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
-PUBLIC_DIR = Path("public")
+PUBLIC_DIR = Path("docs")
 ALERTS_PATH = PUBLIC_DIR / "alerts.json"
 
 KEYWORDS = [
