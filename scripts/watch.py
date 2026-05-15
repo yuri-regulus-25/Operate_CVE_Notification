@@ -19,6 +19,18 @@ KEYWORDS = [
     "Laravel",
 ]
 
+CATEGORY_MAP = {
+    "AlmaLinux": "OS",
+    "Red Hat Enterprise Linux": "OS",
+    "RHEL": "OS",
+    "npm": "JS",
+    "Vue.js": "JS",
+    "Vue": "JS",
+    "Vuetify": "JS",
+    "composer": "PHP",
+    "Laravel": "PHP",
+}
+
 SEVERITIES = {"CRITICAL", "HIGH"}
 
 def fetch_nvd():
@@ -71,6 +83,18 @@ def match_keyword(text):
 
     return None
 
+def make_alert_id(source, cve_id, matched):
+    return f"{source}:{cve_id}:{matched}".lower()
+
+def decide_priority(severity, matched):
+    if severity == "CRITICAL":
+        return "URGENT"
+
+    if severity == "HIGH":
+        return "WATCH"
+
+    return "INFO"
+
 def main():
     PUBLIC_DIR.mkdir(exist_ok=True)
 
@@ -92,7 +116,14 @@ def main():
         if severity not in SEVERITIES:
             continue
 
+        category = CATEGORY_MAP.get(matched, "UNKNOWN")
+        source = "NVD"
+
         alerts.append({
+            "alert_id": make_alert_id(source, cve_id, matched),
+            "source": source,
+            "category": category,
+            "priority": decide_priority(severity, matched),
             "cve_id": cve_id,
             "matched": matched,
             "severity": severity,
