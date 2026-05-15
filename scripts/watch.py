@@ -32,7 +32,14 @@ CATEGORY_MAP = {
     "Laravel": "PHP",
 }
 
-SEVERITIES = {"CRITICAL", "HIGH"}
+SEVERITIES = {
+    "CRITICAL",
+    "HIGH",
+    "MEDIUM",
+    "LOW",
+    "NONE",
+    "UNKNOWN"
+}
 
 
 def fetch_nvd():
@@ -123,6 +130,12 @@ def decide_priority(severity, matched):
 
     if severity == "HIGH":
         return "WATCH"
+
+    if severity == "MEDIUM":
+        return "NOTICE"
+
+    if severity == "LOW":
+        return "LOW"
 
     return "INFO"
 
