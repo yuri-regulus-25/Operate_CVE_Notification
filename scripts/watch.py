@@ -105,6 +105,7 @@ def fetch_jvn(severity=None):
     }
 
     url = "https://jvndb.jvn.jp/myjvn?" + urllib.parse.urlencode(params)
+    print(f"JVN URL: {url}")
 
     with urllib.request.urlopen(url, timeout=30) as response:
         return response.read().decode("utf-8")
