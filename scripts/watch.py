@@ -270,6 +270,7 @@ def normalize_nvd(data):
             "score": score,
             "published": cve.get("published"),
             "last_modified": cve.get("lastModified"),
+            "title": cve_id,
             "description": truncate_text(description),
             "url": f"https://nvd.nist.gov/vuln/detail/{cve_id}",
         })
@@ -393,8 +394,11 @@ def normalize_jvn(xml_text, requested_keyword):
                 default="",
                 namespaces=namespaces,
             ),
+            "title": truncate_text(
+                title
+            ),
             "description": truncate_text(
-                title or description
+                description or title
             ),
             "url": link,
         })
