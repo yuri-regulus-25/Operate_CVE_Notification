@@ -93,7 +93,7 @@ def fetch_nvd():
 def fetch_jvn(severity):
     params = {
         "method": "getVulnOverviewList",
-        "feed": "hnd",
+        "feed": "oka",
         "cvssV3Severity": severity,
     }
 
