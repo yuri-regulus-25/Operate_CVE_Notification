@@ -306,6 +306,8 @@ def normalize_jvn(xml_text, requested_keyword):
             default="",
             namespaces=namespaces,
         )
+        if "MyJVN　該当する脆弱性対策情報はありません。" in title:
+            continue
 
         link = item.findtext(
             "rss:link",
