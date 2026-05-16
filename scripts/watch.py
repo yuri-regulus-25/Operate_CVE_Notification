@@ -66,21 +66,23 @@ NVD_SEVERITIES = {
     "UNKNOWN",
 }
 
-JVN_SEVERITIES = [
-    "CRITICAL",
-    "HIGH",
-    "MEDIUM",
-    "LOW",
-    "NONE",
+JVN_KEYWORDS = [
+    "Apache",
+    "Apache HTTP Server",
+    "Apache Tomcat",
+    "PostgreSQL",
+    "Node.js",
+    "Laravel",
+    "Symfony",
+    "Vue",
+    "Vue.js",
+    "Vuetify",
+    "composer",
+    "npm",
+    "AlmaLinux",
+    "Red Hat Enterprise Linux",
+    "RHEL",
 ]
-
-JVN_SEVERITY_MAP = {
-    "CRITICAL": "c",
-    "HIGH": "h",
-    "MEDIUM": "m",
-    "LOW": "l",
-    "NONE": "n",
-}
 
 def fetch_nvd():
     end = datetime.now(timezone.utc)
@@ -97,15 +99,17 @@ def fetch_nvd():
         return json.loads(response.read().decode("utf-8"))
 
 
-def fetch_jvn(severity=None):
+def fetch_jvn_by_keyword(keyword):
     params = {
         "method": "getVulnOverviewList",
         "feed": "hnd",
-        "severity": JVN_SEVERITY_MAP[severity],
+        "keyword": keyword,
+        "useSynonym": "1",
     }
 
     url = "https://jvndb.jvn.jp/myjvn?" + urllib.parse.urlencode(params)
-    print(f"JVN URL: {url}")
+
+    print(f"JVN keyword URL: {url}")
 
     with urllib.request.urlopen(url, timeout=30) as response:
         return response.read().decode("utf-8")
@@ -219,11 +223,11 @@ def normalize_nvd(data):
     return alerts
 
 
-def normalize_jvn(xml_text, severity):
+def normalize_jvn(xml_text):
     alerts = []
 
     if not xml_text:
-        print(f"JVN {severity}: empty xml")
+        print("JVN: empty xml")
         return alerts
 
     root = ET.fromstring(xml_text)
@@ -237,7 +241,7 @@ def normalize_jvn(xml_text, severity):
     }
 
     items = root.findall(".//rss:item", namespaces)
-    print(f"JVN {severity}: raw items = {len(items)}")
+    print(f"JVN: raw items = {len(items)}")
 
     matched_count = 0
 
@@ -247,15 +251,15 @@ def normalize_jvn(xml_text, severity):
         identifier = item.findtext("sec:identifier", default="", namespaces=namespaces)
         description = item.findtext("rss:description", default="", namespaces=namespaces)
 
+        cvss = item.find("sec:cvss", namespaces)
+        score = cvss.attrib.get("score", "") if cvss is not None else ""
+        severity = cvss.attrib.get("severity", "UNKNOWN").upper() if cvss is not None else "UNKNOWN"
+
         cve_ids = [
             ref.attrib.get("id", "")
             for ref in item.findall("sec:references", namespaces)
             if ref.attrib.get("source") == "CVE"
         ]
-
-        cvss = item.find("sec:cvss", namespaces)
-        score = cvss.attrib.get("score", "") if cvss is not None else ""
-        xml_severity = cvss.attrib.get("severity", "") if cvss is not None else severity
 
         text = f"{title} {description}"
         matched = match_keyword(text)
@@ -283,7 +287,7 @@ def normalize_jvn(xml_text, severity):
             "url": link,
         })
 
-    print(f"JVN {severity}: matched items = {matched_count}")
+    print(f"JVN: matched items = {matched_count}")
 
     return alerts
 
@@ -324,12 +328,12 @@ def main():
     except Exception as e:
         print(f"NVD fetch failed: {e}")
 
-    for severity in JVN_SEVERITIES:
+    for keyword in JVN_KEYWORDS:
         try:
-            jvn_xml = fetch_jvn(severity)
-            alerts.extend(normalize_jvn(jvn_xml, severity))
+            jvn_xml = fetch_jvn_by_keyword(keyword)
+            alerts.extend(normalize_jvn(jvn_xml))
         except Exception as e:
-            print(f"JVN fetch failed: {severity}: {e}")
+            print(f"JVN fetch failed: {keyword}: {e}")
 
     alerts = dedupe_alerts(alerts)
 
