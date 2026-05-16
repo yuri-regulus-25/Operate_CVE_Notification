@@ -12,34 +12,67 @@ KEYWORDS = [
     "AlmaLinux",
     "Red Hat Enterprise Linux",
     "RHEL",
+
     "npm",
+    "Node.js",
+
     "composer",
+    "Laravel",
+    "Symfony",
+    "symfony",
+    "AuraSQL",
+    "Aura SQL",
+
     "Vue.js",
     "Vue",
     "Vuetify",
-    "Laravel",
+
+    "PostgreSQL",
+
+    "Apache HTTP Server",
+    "Apache Tomcat",
 ]
 
 CATEGORY_MAP = {
     "AlmaLinux": "OS",
     "Red Hat Enterprise Linux": "OS",
     "RHEL": "OS",
+
     "npm": "JS",
+    "Node.js": "JS",
     "Vue.js": "JS",
     "Vue": "JS",
     "Vuetify": "JS",
+
     "composer": "PHP",
     "Laravel": "PHP",
+    "Symfony": "PHP",
+    "symfony": "PHP",
+    "AuraSQL": "PHP",
+    "Aura SQL": "PHP",
+
+    "PostgreSQL": "DB",
+
+    "Apache HTTP Server": "WEB",
+    "Apache Tomcat": "WEB",
 }
 
-SEVERITIES = {
+NVD_SEVERITIES = {
     "CRITICAL",
     "HIGH",
     "MEDIUM",
     "LOW",
     "NONE",
-    "UNKNOWN"
+    "UNKNOWN",
 }
+
+JVN_SEVERITIES = [
+    "CRITICAL",
+    "HIGH",
+    "MEDIUM",
+    "LOW",
+    "NONE",
+]
 
 
 def fetch_nvd():
@@ -155,7 +188,7 @@ def normalize_nvd(data):
         if not matched:
             continue
 
-        if severity not in SEVERITIES:
+        if severity not in NVD_SEVERITIES:
             continue
 
         source = "NVD"
@@ -178,7 +211,7 @@ def normalize_nvd(data):
     return alerts
 
 
-def normalize_jvn(xml_text):
+def normalize_jvn(xml_text, severity):
     alerts = []
 
     if not xml_text:
@@ -211,10 +244,10 @@ def normalize_jvn(xml_text):
             "alert_id": make_alert_id(source, cve_id, matched),
             "source": source,
             "category": CATEGORY_MAP.get(matched, "UNKNOWN"),
-            "priority": "WATCH",
+            "priority": decide_priority(severity, matched),
             "cve_id": cve_id,
             "matched": matched,
-            "severity": "UNKNOWN",
+            "severity": severity,
             "score": "",
             "published": "",
             "last_modified": "",
@@ -262,10 +295,10 @@ def main():
     except Exception as e:
         print(f"NVD fetch failed: {e}")
 
-    for severity in ["CRITICAL", "HIGH"]:
+    for severity in JVN_SEVERITIES:
         try:
             jvn_xml = fetch_jvn(severity)
-            alerts.extend(normalize_jvn(jvn_xml))
+            alerts.extend(normalize_jvn(jvn_xml, severity))
         except Exception as e:
             print(f"JVN fetch failed: {severity}: {e}")
 
