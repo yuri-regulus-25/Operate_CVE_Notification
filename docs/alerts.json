@@ -1,10 +1,24 @@
 {
   "generated_at": "2026-05-16T08:01:48.491137+00:00",
-  "count": 8,
+  "count": 9,
   "sources": {
-    "NVD": 8
+    "NVD": 9
   },
   "alerts": [
+    {
+      "alert_id": "nvd:cve-2026-43900:vue",
+      "source": "NVD",
+      "category": "JS",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-43900",
+      "matched": "Vue",
+      "severity": "CRITICAL",
+      "score": 9.3,
+      "published": "2026-05-11T23:20:21.557",
+      "last_modified": "2026-05-12T14:50:18.527",
+      "description": "DeepChat is an open-source artificial intelligence agent platform that unifies models, tools, and agents. Prior to v1.0.4-beta.1, a Cross-Site Scripting (XSS) vulnerability exists due to a discrepancy between the backend validation layer and the frontend browser rendering engine. The SVGSanitizer (src/main/lib/svgSanitizer.ts) restricts script execution by scrubbing javascript: protocols using plain-text regular expressions. However, it fails to account for HTML entity decoding prior to Vue's v-...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43900"
+    },
     {
       "alert_id": "nvd:cve-2026-45321:npm",
       "source": "NVD",
