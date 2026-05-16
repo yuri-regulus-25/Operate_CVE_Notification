@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-16T13:18:28.762113+00:00",
-  "count": 83,
+  "generated_at": "2026-05-16T19:02:14.005697+00:00",
+  "count": 81,
   "sources": {
     "NVD": 67,
-    "JVN": 16
+    "JVN": 14
   },
   "alerts": [
     {
@@ -1040,36 +1040,6 @@
       "title": "Apache Software FoundationのApache-airflow-providers-opensearchにおけるログファイルからの情報漏えいに関する脆弱性",
       "description": "OpenSearchロギングプロバイダーは、認証情報を埋め込んだ`host` URL（例：`https://user:password@server.example.com:9200`）で構成されている場合、埋め込まれた認証情報を含む完全なホストURLをタスクログに記録していました。そのため、タスクログの読み取り権限を持つユーザーは、バックエンドの認証情報を収集できる可能性があります。ユーザーは`apache-airflow-providers-opensearch`をバージョン1.9.1以降にアップグレードし、防御の多層化措置として、バックエンドの認証情報を`[opensearch] host` URLに埋め込むのではなく、シークレットバックエンド経由で設定することを推奨します。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015522.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-6722:apache",
-      "source": "JVN",
-      "category": "WEB",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-6722",
-      "matched": "Apache",
-      "severity": "CRITICAL",
-      "score": "9.8",
-      "published": "2026-05-14T10:15:25+09:00",
-      "last_modified": "2026-05-14T10:15:25+09:00",
-      "title": "The PHP GroupのPHPにおける解放済みメモリの使用に関する脆弱性",
-      "description": "PHPのバージョン8.2.*の8.2.31未満、8.3.*の8.3.31未満、8.4.*の8.4.21未満、および8.5.*の8.5.6未満において、SOAP拡張のオブジェクト重複排除機構はPHPオブジェクトへのポインタの参照カウントを増やさずにグローバルマップに保存します。apache:Mapノードに重複したキーがある場合、2つ目のエントリの処理が一時結果マップの最初のエントリを上書きし、元のPHPオブジェクトを解放しますが、古いポインタはマップに残ります。その後のhref参照により、解放されたノードのダングリングポインタが結果にコピーされる可能性があります。PHPの文字列割り当ては解放されたメモリ領域を再利用するため、SOAPリクエストボディを制御できる攻撃者はこのUse-After-Free脆弱性を悪用してリモートコードを実行する可能性があります。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015323.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-7262:apache",
-      "source": "JVN",
-      "category": "WEB",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-7262",
-      "matched": "Apache",
-      "severity": "HIGH",
-      "score": "7.5",
-      "published": "2026-05-14T10:15:06+09:00",
-      "last_modified": "2026-05-14T10:15:06+09:00",
-      "title": "The PHP GroupのPHPにおけるNULL ポインタデリファレンスに関する脆弱性",
-      "description": "PHPのバージョン8.2.*の8.2.31未満、8.3.*の8.3.31未満、8.4.*の8.4.21未満、および8.5.*の8.5.6未満において、SOAPサーバーにtypemapが設定されている場合、デコード処理に誤りがあり、値要素が存在しない場合に誤った変数をチェックしてしまいます。これによりNULLポインタの参照が発生し、セグメンテーションフォルトが引き起こされます。その結果、リモートの認証されていない攻撃者がPHPのSOAPサーバープロセスをクラッシュさせ、サービス拒否を引き起こす可能性があります。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015317.html"
     },
     {
       "alert_id": "jvn:cve-2026-42858:red hat enterprise linux",
