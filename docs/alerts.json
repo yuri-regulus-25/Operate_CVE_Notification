@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-16T09:15:35.595994+00:00",
+  "generated_at": "2026-05-16T09:27:13.632781+00:00",
   "count": 83,
   "sources": {
     "NVD": 67,
@@ -17,6 +17,7 @@
       "score": 4.8,
       "published": "2026-05-11T16:17:37.620",
       "last_modified": "2026-05-13T15:34:13.237",
+      "title": "CVE-2026-7814",
       "description": "Stored cross-site scripting (XSS) vulnerability in pgAdmin 4 Browser Tree and Explain Visualizer modules.\n\nUser-controlled PostgreSQL object names (database, schema, table, column, etc.) were assigned to DOM elements via innerHTML, allowing crafted object names containing HTML markup to execute attacker-supplied JavaScript in the browser of any pgAdmin user who navigated to or executed EXPLAIN over the malicious object.\n\nFix replaces innerHTML with textContent.\n\nThis issue affects pgAdmin 4: bef...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7814"
     },
@@ -31,6 +32,7 @@
       "score": 8.8,
       "published": "2026-05-11T16:17:37.873",
       "last_modified": "2026-05-13T15:34:13.237",
+      "title": "CVE-2026-7815",
       "description": "SQL injection vulnerability in pgAdmin 4 Maintenance Tool.\n\nFour user-supplied JSON fields (buffer_usage_limit, vacuum_parallel, vacuum_index_cleanup, reindex_tablespace) were concatenated directly into the rendered VACUUM/ANALYZE/REINDEX command and passed to psql --command. An authenticated user with the tools_maintenance permission could break out of the option syntax and execute arbitrary SQL on the connected PostgreSQL server. The injected SQL could in turn invoke COPY ... TO PROGRAM to esc...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7815"
     },
@@ -45,6 +47,7 @@
       "score": null,
       "published": "2026-05-11T18:16:35.990",
       "last_modified": "2026-05-13T17:31:40.840",
+      "title": "CVE-2026-42856",
       "description": "Network-AI is a TypeScript/Node.js multi-agent orchestrator. Prior to 5.1.3, the MCP HTTP transport accepts JSON-RPC tools/call requests with no authentication, session, origin, or token check, and dispatches them directly to the orchestrator's tool registry. The default bind address is 0.0.0.0. As a result, any party with network reachability to the service can enumerate and invoke privileged management tools. This vulnerability is fixed in 5.1.3.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42856"
     },
@@ -59,6 +62,7 @@
       "score": 8.2,
       "published": "2026-05-11T22:22:14.033",
       "last_modified": "2026-05-13T18:27:58.823",
+      "title": "CVE-2026-43893",
       "description": "exiftool-vendored provides cross-platform Node.js access to ExifTool. Prior to 35.19.0, exiftool-vendored starts ExifTool in -stay_open True -@ - mode, where arguments are read from stdin one per line. In affected versions, several caller-supplied strings were interpolated into ExifTool arguments without rejecting line delimiters. A newline or carriage return inside one of those strings could split a single intended argument into multiple ExifTool arguments, allowing argument injection. The fix ...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43893"
     },
@@ -73,6 +77,7 @@
       "score": 9.3,
       "published": "2026-05-11T23:20:21.557",
       "last_modified": "2026-05-12T14:50:18.527",
+      "title": "CVE-2026-43900",
       "description": "DeepChat is an open-source artificial intelligence agent platform that unifies models, tools, and agents. Prior to v1.0.4-beta.1, a Cross-Site Scripting (XSS) vulnerability exists due to a discrepancy between the backend validation layer and the frontend browser rendering engine. The SVGSanitizer (src/main/lib/svgSanitizer.ts) restricts script execution by scrubbing javascript: protocols using plain-text regular expressions. However, it fails to account for HTML entity decoding prior to Vue's v-...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43900"
     },
@@ -87,6 +92,7 @@
       "score": 9.6,
       "published": "2026-05-12T01:16:46.820",
       "last_modified": "2026-05-14T17:05:28.793",
+      "title": "CVE-2026-45321",
       "description": "On 2026-05-11, between approximately 19:20 and 19:26 UTC, 84 malicious versions across 42 @tanstack/* packages were published to the npm registry. The publishes were authenticated via the legitimate GitHub Actions OIDC trusted-publisher binding for TanStack/router, but the publish workflow itself was not modified. The attacker chained three known vulnerability classes — a pull_request_target \"Pwn Request\" misconfiguration, GitHub Actions cache poisoning across the fork↔base trust boundary, and r...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45321"
     },
@@ -101,6 +107,7 @@
       "score": null,
       "published": "2026-05-12T10:16:48.490",
       "last_modified": "2026-05-12T15:09:58.693",
+      "title": "CVE-2026-7428",
       "description": "Prior to 2025-11-03, well-intended users of Terraform or REST API for Google Cloud AlloyDB for PostgreSQL could have created clusters with an insecure default password which could have been exploited by a remote attacker to gain full administrative access to the database.\n\n\n\n\nExploitation required network access to the AlloyDB cluster and was limited to Terraform or the REST API, as other clients blocked it.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7428"
     },
@@ -115,6 +122,7 @@
       "score": null,
       "published": "2026-05-12T14:17:08.217",
       "last_modified": "2026-05-13T18:26:47.613",
+      "title": "CVE-2026-43930",
       "description": "Parse Server is an open source backend that can be deployed to any infrastructure that can run Node.js. Prior to 8.6.76 and 9.9.0-alpha.2, a race condition in the MFA SMS one-time password (OTP) login path allows two concurrent /login requests carrying the same OTP to both succeed and both receive valid session tokens, breaking the single-use property of the OTP. The vulnerability requires the attacker to already possess the victim's password and intercept the active SMS OTP (e.g. via SIM swap, ...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43930"
     },
@@ -129,6 +137,7 @@
       "score": 9.1,
       "published": "2026-05-12T14:17:08.820",
       "last_modified": "2026-05-13T18:27:58.823",
+      "title": "CVE-2026-45091",
       "description": "sealed-env is a cross-stack, zero-trust secret management library for Node.js and Java/Spring Boot. In sealed-env enterprise mode, versions 0.1.0-alpha.1 through 0.1.0-alpha.3 embedded the operator's literal TOTP secret in the JWS payload of every minted unseal token. JWS payload is base64-encoded JSON, NOT encrypted. Any party who could observe a minted token (CI build logs, container env dumps, kubectl describe pod, Sentry/Rollbar stack traces, log aggregators) could decode the payload and ext...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45091"
     },
@@ -143,6 +152,7 @@
       "score": null,
       "published": "2026-05-12T15:16:12.810",
       "last_modified": "2026-05-13T15:57:03.607",
+      "title": "CVE-2026-32687",
       "description": "Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in elixir-ecto postgrex ('Elixir.Postgrex.Notifications' module) allows SQL Injection.\n\nThe channel argument passed to 'Elixir.Postgrex.Notifications':listen/3 and 'Elixir.Postgrex.Notifications':unlisten/3 is interpolated directly into LISTEN \"...\" / UNLISTEN \"...\" SQL statements without escaping the \" character. An attacker who can influence the channel name can inject a \" to break out of the quo...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-32687"
     },
@@ -157,6 +167,7 @@
       "score": 7.5,
       "published": "2026-05-12T16:16:15.933",
       "last_modified": "2026-05-14T18:59:48.383",
+      "title": "CVE-2026-41284",
       "description": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.21, from 10.1.0-M1 through 10.1.54, from 9.0.0.M1 through 9.0.117.\nOlder, unsupported versions may also be affected.\n\nUsers are recommended to upgrade to version [FIXED_VERSION], which fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41284"
     },
@@ -171,6 +182,7 @@
       "score": 9.8,
       "published": "2026-05-12T16:16:17.553",
       "last_modified": "2026-05-15T15:57:18.900",
+      "title": "CVE-2026-41293",
       "description": "Improper Input Validation vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.21, from 10.1.0-M1 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 10.0.0-M1 through 10.0.27.\nOlder, end of support versions may also be affected.\n\nUsers are recommended to upgrade to version [FIXED_VERSION], which fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41293"
     },
@@ -185,6 +197,7 @@
       "score": 7.3,
       "published": "2026-05-12T16:16:17.800",
       "last_modified": "2026-05-14T18:51:59.217",
+      "title": "CVE-2026-42498",
       "description": "Exposure of HTTP Authentication Header to unexpected hosts during WebSocket authentication vulnerability in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.21, from 10.1.0-M1 through 10.1.54, from 9.0.2 through 9.0.117, from 8.5.24 through 8.5.100, from 7.0.83 through 7.0.109.\n\nUsers are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118, which fix the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42498"
     },
@@ -199,6 +212,7 @@
       "score": 9.8,
       "published": "2026-05-12T16:16:17.990",
       "last_modified": "2026-05-15T15:54:37.383",
+      "title": "CVE-2026-43512",
       "description": "DEPRECATED: Authentication Bypass Issues vulnerability in digest authentication in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.21, from 10.1.0-M1 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 8.5.0 through 8.5.100, from before 7.0.0.\nOlder unsupported versions any also be affect\n\nUsers are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118 which fix the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43512"
     },
@@ -213,6 +227,7 @@
       "score": 7.5,
       "published": "2026-05-12T16:16:18.177",
       "last_modified": "2026-05-15T15:53:14.517",
+      "title": "CVE-2026-43513",
       "description": "Improper Handling of Case Sensitivity vulnerability in LockOutRealm in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.21, from 10.1.0-M1 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 8.5.0 through 8.5.100, from 7.0.0 through 7.0.109.\nOlder unsupported versions may also be affected.\n\nUsers are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118 which fix the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43513"
     },
@@ -227,6 +242,7 @@
       "score": 3.7,
       "published": "2026-05-12T16:16:18.370",
       "last_modified": "2026-05-14T18:46:41.457",
+      "title": "CVE-2026-43514",
       "description": "Observable Timing Discrepancy vulnerability when comparing AJP secret in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.21, from 10.1.0-M1 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 8.5.0 through 8.5.100, from 7.0.0 through 7.0.109.\nOlder unsupported versions may also be affected.\n\nUsers are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118 which fix the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43514"
     },
@@ -241,6 +257,7 @@
       "score": 9.1,
       "published": "2026-05-12T16:16:18.553",
       "last_modified": "2026-05-15T15:52:05.177",
+      "title": "CVE-2026-43515",
       "description": "Improper Authorization vulnerability when multiple method constraints define an HTTP method for the same extension in Apache Tomcat.\n\nThis issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.21, from 10.1.0-M1 through 10.1.54, from 9.0.0.M1 through 9.0.117, from 8.5.0 through 8.5.100, from 7.0.0 through 7.0.109.\n\nUsers are recommended to upgrade to version 11.0.22, 10.1.55 or 9.0.118 which fix the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43515"
     },
@@ -255,6 +272,7 @@
       "score": 8.2,
       "published": "2026-05-12T18:17:28.970",
       "last_modified": "2026-05-13T18:24:31.310",
+      "title": "CVE-2026-43929",
       "description": "ssrfcheck is a library that checks if a string contains a potential SSRF attack. In 1.3.0 and earlier, ssrfcheck fails to block Server-Side Request Forgery attacks when the target private IP address is encoded as an IPv4-mapped IPv6 address (e.g. http://[::ffff:127.0.0.1]/). The WHATWG URL parser built into Node.js silently normalizes the IPv4 notation inside the brackets to compressed hex form ([::ffff:7f00:1]) before the library's private-IP regex ever runs. The regex was written to match dot-...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43929"
     },
@@ -269,6 +287,7 @@
       "score": null,
       "published": "2026-05-12T20:16:42.513",
       "last_modified": "2026-05-13T18:21:10.270",
+      "title": "CVE-2026-44217",
       "description": "sse-channel is an SSE-implementation which can be used to any node.js http request/response stream. Prior to 4.0.1, implementations that allow user-provided values to be passed to event, retry or id fields are susceptible to event spoofing, where an attacker could inject arbitrary messages into the stream. This vulnerability is fixed in 4.0.1.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44217"
     },
@@ -283,6 +302,7 @@
       "score": 8.8,
       "published": "2026-05-12T21:16:16.137",
       "last_modified": "2026-05-14T14:56:13.470",
+      "title": "CVE-2026-44224",
       "description": "Wiki.js is an open source wiki app built on Node.js. Prior to 2.5.313, the users.update GraphQL mutation accepts an arbitrary groups array and applies it directly to the database with no validation of the group IDs supplied. The resolver passes the caller's arguments straight to the model without any ownership check or restriction on which groups can be assigned. A user with manage:users — a permission typically delegated to wiki moderators for account management — can set groups:[1] on their ow...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44224"
     },
@@ -297,6 +317,7 @@
       "score": null,
       "published": "2026-05-12T21:16:16.270",
       "last_modified": "2026-05-13T18:21:10.270",
+      "title": "CVE-2026-44232",
       "description": "DSSRF is a Node.js library that provides a wide range of utilities and advanced SSRF defense checks. Prior to 1.3.0, every IPv6 category bypasses is_url_safe. This vulnerability is fixed in 1.3.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44232"
     },
@@ -311,6 +332,7 @@
       "score": 7.5,
       "published": "2026-05-12T21:16:16.410",
       "last_modified": "2026-05-14T13:16:19.250",
+      "title": "CVE-2026-44240",
       "description": "basic-ftp is an FTP client for Node.js. Prior to 5.3.1, basic-ftp is vulnerable to client-side denial of service when parsing FTP control-channel multiline responses. A malicious or compromised FTP server can send an unterminated multiline response during the initial FTP banner phase, before authentication. The client keeps appending attacker-controlled data into FtpContext._partialResponse and repeatedly reparses the accumulated buffer without enforcing a maximum control response size. As a res...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44240"
     },
@@ -325,6 +347,7 @@
       "score": 9.4,
       "published": "2026-05-12T22:16:36.563",
       "last_modified": "2026-05-13T16:10:57.817",
+      "title": "CVE-2026-44262",
       "description": "Scramble generates API documentation for Laravel project. From 0.13.2 to before 0.13.22, when documentation endpoints are publicly accessible and validation rules reference user-controlled input, request supplied data may be evaluated during documentation generation, leading to execution of arbitrary PHP code in the application context. This vulnerability is fixed in 0.13.22.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44262"
     },
@@ -339,6 +362,7 @@
       "score": 5.3,
       "published": "2026-05-12T22:16:37.413",
       "last_modified": "2026-05-13T15:43:05.440",
+      "title": "CVE-2026-44306",
       "description": "Statamic is a Laravel and Git powered content management system (CMS). Prior to 5.73.21 and 6.15.0, responses from the forgot password forms hinted at whether an account existed for a given email address. An unauthenticated attacker could use this to enumerate valid users, which can aid in follow-up credential-based attacks. This vulnerability is fixed in 5.73.21 and 6.15.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44306"
     },
@@ -353,6 +377,7 @@
       "score": 6.1,
       "published": "2026-05-12T23:16:18.060",
       "last_modified": "2026-05-13T18:14:48.583",
+      "title": "CVE-2026-44245",
       "description": "Kyverno is a policy engine designed for cloud native platform engineering teams. Prior to 2.5.2, Vue 3's v-html directive is the framework-documented mechanism for injecting raw HTML, and it intentionally disables the auto-escaping that {{ }} interpolation provides. The PropertyCard.vue component uses v-html for the else branch of the URL check, meaning any non-URL string value flows directly into the DOM as HTML. The isURL() guard only filters values that parse as http: or https: URLs, so any H...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44245"
     },
@@ -367,6 +392,7 @@
       "score": 10.0,
       "published": "2026-05-13T18:16:16.177",
       "last_modified": "2026-05-14T15:37:30.850",
+      "title": "CVE-2026-43997",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, it is possible to obtain the host Object. There are various ways to use the host Object, to escape the sandbox, one example would be using HostObject.getOwnPropertySymbols to obtain Symbol(nodejs.util.inspect.custom). This vulnerability is fixed in 3.11.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43997"
     },
@@ -381,6 +407,7 @@
       "score": 8.5,
       "published": "2026-05-13T18:16:16.317",
       "last_modified": "2026-05-14T15:36:55.493",
+      "title": "CVE-2026-43998",
       "description": "vm2 is an open source vm/sandbox for Node.js. In 3.10.5, NodeVM's require.root path restriction can be bypassed using filesystem symlinks, allowing sandboxed code to load modules from outside the allowed root directory in host context. Because path validation uses path.resolve() (which does not dereference symlinks) but module loading uses Node's native require() (which does), an attacker can load arbitrary host-realm modules and achieve remote code execution. This vulnerability is fixed in 3.11...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43998"
     },
@@ -395,6 +422,7 @@
       "score": 9.9,
       "published": "2026-05-13T18:16:16.450",
       "last_modified": "2026-05-14T16:16:23.190",
+      "title": "CVE-2026-43999",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, NodeVM's builtin allowlist can be bypassed when the module builtin is allowed (including via the '*' wildcard). The module builtin exposes Node's Module._load(), which loads any module by name directly in the host context, completely bypassing vm2's builtin restriction. This allows sandboxed code to load excluded builtins like child_process and achieve remote code execution. This vulnerability is fixed in 3.11.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43999"
     },
@@ -409,6 +437,7 @@
       "score": 6.5,
       "published": "2026-05-13T18:16:16.590",
       "last_modified": "2026-05-14T15:35:36.290",
+      "title": "CVE-2026-44000",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, a sandbox boundary violation in vm2 allows host object identity to cross into the sandbox through host Promise resolution. When a host-side Promise that resolves to a host object is exposed to the sandbox, the value delivered to the sandbox .then() callback preserves host identity. This allows the sandbox to interact with the host object directly, including performing identity checks using host-side WeakMap and mutating host object s...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44000"
     },
@@ -423,6 +452,7 @@
       "score": 8.6,
       "published": "2026-05-13T18:16:16.720",
       "last_modified": "2026-05-14T15:23:48.470",
+      "title": "CVE-2026-44001",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, a sandbox escape vulnerability in vm2 v3.10.5 allows any sandboxed code to crash the host Node.js process via a single Promise constructor that triggers an unhandled rejection propagating to the host. The fix for CVE-2026-22709 (v3.10.2) only sanitized the onRejected callback in .then() and .catch() overrides and did not address the executor-to-unhandledRejection path. This vulnerability is fixed in 3.11.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44001"
     },
@@ -437,6 +467,7 @@
       "score": 5.8,
       "published": "2026-05-13T18:16:16.857",
       "last_modified": "2026-05-14T15:23:29.507",
+      "title": "CVE-2026-44002",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, vm2's CallSite wrapper class (intended as a safe wrapper for V8's native CallSite) blocks getThis() and getFunction() to prevent host object leakage, but allows getFileName() to return unsanitized host absolute paths. Any sandboxed code can extract the full directory structure, library paths, and framework versions of the host server. This vulnerability is fixed in 3.11.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44002"
     },
@@ -451,6 +482,7 @@
       "score": 5.3,
       "published": "2026-05-13T18:16:16.997",
       "last_modified": "2026-05-14T15:22:34.950",
+      "title": "CVE-2026-44003",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, vm2's code transformer has a performance optimization that skips AST analysis when the code does not contain catch, import, or async keywords. This fast-path bypass allows sandboxed code to directly access the internal VM2_INTERNAL_STATE_DO_NOT_USE_OR_PROGRAM_WILL_FAIL variable, which exposes internal security functions (handleException, wrapWith, import). This vulnerability is fixed in 3.11.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44003"
     },
@@ -465,6 +497,7 @@
       "score": 7.5,
       "published": "2026-05-13T18:16:17.123",
       "last_modified": "2026-05-14T15:22:06.020",
+      "title": "CVE-2026-44004",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, sandboxed code can call Buffer.alloc() with an arbitrary size to allocate memory directly on the host heap. Because Buffer.alloc is a synchronous C++ native call, vm2's timeout option cannot interrupt it. A single request can exhaust host memory and crash the process with a FATAL ERROR: Reached heap limit. This vulnerability is fixed in 3.11.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44004"
     },
@@ -479,6 +512,7 @@
       "score": 10.0,
       "published": "2026-05-13T18:16:17.257",
       "last_modified": "2026-05-14T16:16:23.313",
+      "title": "CVE-2026-44005",
       "description": "vm2 is an open source vm/sandbox for Node.js. From 3.9.6 to 3.10.5, vm2's bridge exposes mutable proxies for real host-realm intrinsic prototypes and then forwards sandbox writes into the underlying host objects with otherReflectSet() and otherReflectDefineProperty(), which lets attacker-controlled JavaScript running in a default VM or inherited NodeVM mutate shared host Object.prototype, Array.prototype, and Function.prototype from inside the sandbox This vulnerability is fixed in 3.11.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44005"
     },
@@ -493,6 +527,7 @@
       "score": 10.0,
       "published": "2026-05-13T18:16:17.387",
       "last_modified": "2026-05-14T15:19:08.680",
+      "title": "CVE-2026-44006",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, It is possible to reach BaseHandler.getPrototypeOf, which can be used to get arbitrary prototypes. This vulnerability is fixed in 3.11.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44006"
     },
@@ -507,6 +542,7 @@
       "score": 9.1,
       "published": "2026-05-13T18:16:17.527",
       "last_modified": "2026-05-14T15:18:26.150",
+      "title": "CVE-2026-44007",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.1, when a NodeVM is created with nesting: true, sandbox code can unconditionally require('vm2') regardless of the outer VM's require configuration — including require: false. With access to vm2, the sandbox constructs a new inner NodeVM with its own unrestricted require settings and executes arbitrary OS commands on the host. Any application that runs untrusted code inside a NodeVM with nesting: true is fully compromised. This vulnerabi...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44007"
     },
@@ -521,6 +557,7 @@
       "score": 9.8,
       "published": "2026-05-13T18:16:17.667",
       "last_modified": "2026-05-14T15:17:59.563",
+      "title": "CVE-2026-44008",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.2, the new method neutralizeArraySpeciesBatch works with objects from the other side but can call into this side via getter on the array prototype exposing objects of the wrong side into the sandbox. This can be used to get host objects and get the host Function object. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This vulnerability is fixed in 3.11.2.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44008"
     },
@@ -535,6 +572,7 @@
       "score": 9.8,
       "published": "2026-05-13T18:16:17.803",
       "last_modified": "2026-05-14T15:17:22.300",
+      "title": "CVE-2026-44009",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.2,  This vulnerability is fixed in 3.11.2.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44009"
     },
@@ -549,6 +587,7 @@
       "score": 8.6,
       "published": "2026-05-13T18:16:17.990",
       "last_modified": "2026-05-14T18:34:38.530",
+      "title": "CVE-2026-44578",
       "description": "Next.js is a React framework for building full-stack web applications. From 13.4.13 to before 15.5.16 and 16.2.5, self-hosted applications using the built-in Node.js server can be vulnerable to server-side request forgery through crafted WebSocket upgrade requests. An attacker can cause the server to proxy requests to arbitrary internal or external destinations, which may expose internal services or cloud metadata endpoints. Vercel-hosted deployments are not affected. This vulnerability is fixed...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44578"
     },
@@ -563,6 +602,7 @@
       "score": 9.8,
       "published": "2026-05-13T18:16:19.427",
       "last_modified": "2026-05-14T18:19:40.790",
+      "title": "CVE-2026-45411",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.3, it is possible to catch a host exception using the yield* expression inside an async generator. When the generator is closed using the return function, the value is awaited on and exceptions thrown in the then call will be caught by the runtime and passed to the yield* iterator as the next value. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This vulnerabi...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45411"
     },
@@ -577,6 +617,7 @@
       "score": 9.8,
       "published": "2026-05-13T19:17:22.637",
       "last_modified": "2026-05-15T14:59:11.840",
+      "title": "CVE-2026-42031",
       "description": "CKAN is an open-source DMS (data management system) for powering data hubs and data portals. Prior to 2.10.10 and 2.11.5, a vulnerability in datastore_search_sql allowed attackers to inject SQL in order to gain access to private resources and PostgreSQL system information This vulnerability is fixed in 2.10.10 and 2.11.5.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42031"
     },
@@ -591,6 +632,7 @@
       "score": 9.1,
       "published": "2026-05-13T19:17:22.853",
       "last_modified": "2026-05-15T15:02:11.310",
+      "title": "CVE-2026-42032",
       "description": "CKAN is an open-source DMS (data management system) for powering data hubs and data portals. Prior to 2.10.10 and 2.11.5, a vulnerability in datastore_search_sql allowed attackers to bypass authorization in order to gain access to private resources and PostgreSQL system information This vulnerability is fixed in 2.10.10 and 2.11.5.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42032"
     },
@@ -605,6 +647,7 @@
       "score": 5.4,
       "published": "2026-05-13T21:16:49.583",
       "last_modified": "2026-05-14T16:24:56.240",
+      "title": "CVE-2026-45228",
       "description": "Quark Drive before 0.8.5 contains a stored cross-site scripting vulnerability in the System Configuration page where the template renders push_config key names using Vue.js's v-html directive without escaping. Authenticated attackers can inject HTML or JavaScript payloads as key names through the POST /update endpoint, which are persisted to disk and executed in the browsers of all authenticated users accessing the System Configuration tab, allowing session cookie exfiltration and arbitrary auth...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45228"
     },
@@ -619,6 +662,7 @@
       "score": 7.1,
       "published": "2026-05-14T04:17:03.193",
       "last_modified": "2026-05-14T16:49:18.583",
+      "title": "CVE-2026-46445",
       "description": "SOGo before 5.12.7, when PostgreSQL is used, allows SQL injection.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46445"
     },
@@ -633,6 +677,7 @@
       "score": 7.1,
       "published": "2026-05-14T04:17:03.547",
       "last_modified": "2026-05-14T16:49:18.583",
+      "title": "CVE-2026-46446",
       "description": "SOGo before 5.12.7, when PostgreSQL or MariaDB is used, and cleartext passwords are stored, allows SQL injection. This is related to c_password = '%@' in changePasswordForLogin.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46446"
     },
@@ -647,6 +692,7 @@
       "score": 5.4,
       "published": "2026-05-14T14:16:24.757",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6472",
       "description": "Missing authorization in PostgreSQL CREATE TYPE allows an object creator to hijack other queries that use search_path to find user-defined types, including extension-defined types.  That is to say, the victim will execute arbitrary SQL functions of the attacker's choice.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6472"
     },
@@ -661,6 +707,7 @@
       "score": 8.8,
       "published": "2026-05-14T14:16:24.883",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6473",
       "description": "Integer wraparound in multiple PostgreSQL server features allows an unprivileged database user to cause the server to undersize an allocation and write out-of-bounds.  This may execute arbitrary code as the operating system user running the database.  In applications that pass gigabyte-scale user inputs to the relevant database functions, the application input provider may achieve a segmentation fault.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6473"
     },
@@ -675,6 +722,7 @@
       "score": 4.3,
       "published": "2026-05-14T14:16:24.997",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6474",
       "description": "Externally-controlled format string in PostgreSQL timeofday() function allows an attacker to retrieve portions of server memory, via crafted timezone zones.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6474"
     },
@@ -689,6 +737,7 @@
       "score": 8.8,
       "published": "2026-05-14T14:16:25.113",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6475",
       "description": "Symlink following in PostgreSQL pg_basebackup plain format and in pg_rewind allows an origin superuser to overwrite local files, e.g. /var/lib/postgres/.bashrc, that hijack the operating system account.  It will remain the case that starting the server after these commands implicitly trusts the origin superuser, due to features like shared_preload_libraries.  Hence, the attack has practical implications only if one takes relevant action between these commands and server start, like moving the fi...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6475"
     },
@@ -703,6 +752,7 @@
       "score": 7.2,
       "published": "2026-05-14T14:16:25.230",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6476",
       "description": "SQL injection in PostgreSQL pg_createsubscriber allows an attacker with pg_create_subscription rights to execute arbitrary SQL as a superuser.  The attack takes effect when pg_createsubscriber next runs.  Within major versions 17 and 18, minor versions before PostgreSQL 18.4 and 17.10 are affected.  Versions before PostgreSQL 17 are unaffected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6476"
     },
@@ -717,6 +767,7 @@
       "score": 8.8,
       "published": "2026-05-14T14:16:25.347",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6477",
       "description": "Use of inherently dangerous function PQfn(..., result_is_int=0, ...) in PostgreSQL libpq lo_export(), lo_read(), lo_lseek64(), and lo_tell64() functions allows the server superuser to overwrite a client stack buffer with an arbitrarily-large response.  Like gets(), PQfn(..., result_is_int=0, ...) stores arbitrary-length, server-determined data into a buffer of unspecified size.  Because both the \\lo_export command in psql and pg_dump call lo_read(), the server superuser can overwrite pg_dump or ...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6477"
     },
@@ -731,6 +782,7 @@
       "score": 6.5,
       "published": "2026-05-14T14:16:25.463",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6478",
       "description": "Covert timing channel in comparison of MD5-hashed password in PostgreSQL authentication allows an attacker to recover user credentials sufficient to authenticate.  This does not affect scram-sha-256 passwords, the default in all supported releases.  However, current databases may have MD5-hashed passwords originating in upgrades from PostgreSQL 13 or earlier.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6478"
     },
@@ -745,6 +797,7 @@
       "score": 7.5,
       "published": "2026-05-14T14:16:25.583",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6479",
       "description": "Uncontrolled recursion in PostgreSQL SSL and GSS negotiation allows an attacker able to connect to a PostgreSQL AF_UNIX socket to achieve sustained denial of service.  If SSL and GSS are both disabled, an attacker can do the same via access to a PostgreSQL TCP socket.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6479"
     },
@@ -759,6 +812,7 @@
       "score": 4.3,
       "published": "2026-05-14T14:16:25.693",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6575",
       "description": "Buffer over-read in PostgreSQL function pg_restore_attribute_stats() accepts array values of unmatched length, which causes query planning to read past end of one array.  This allows a table maintainer to infer memory values past that array end.  Within major version 18, minor versions before PostgreSQL 18.4 are affected.  Versions before PostgreSQL 18 are unaffected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6575"
     },
@@ -773,6 +827,7 @@
       "score": 8.8,
       "published": "2026-05-14T14:16:25.820",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6637",
       "description": "Stack buffer overflow in PostgreSQL module \"refint\" allows an unprivileged database user to execute arbitrary code as the operating system user running the database.  A distinct attack is possible if the application declares a user-controlled column as a \"refint\" cascade primary key and facilitates user-controlled updates to that column.  In that case, a SQL injection allows a primary key update value provider to execute arbitrary SQL as the database user performing the primary key update.  Vers...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6637"
     },
@@ -787,6 +842,7 @@
       "score": 3.7,
       "published": "2026-05-14T14:16:25.937",
       "last_modified": "2026-05-14T16:21:23.190",
+      "title": "CVE-2026-6638",
       "description": "SQL injection in PostgreSQL logical replication ALTER SUBSCRIPTION ... REFRESH PUBLICATION allows a subscriber table creator to execute arbitrary SQL with the subscription's publication-side credentials.  The attack takes effect at the next REFRESH PUBLICATION.  Within major versions 16, 17, and 18, minor versions before PostgreSQL 18.4, 17.10, and 16.14 are affected.  Versions before PostgreSQL 16 are unaffected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6638"
     },
@@ -801,6 +857,7 @@
       "score": 9.6,
       "published": "2026-05-14T15:16:48.793",
       "last_modified": "2026-05-14T18:19:25.260",
+      "title": "CVE-2026-44482",
       "description": "soundcloud-rpc is a SoundCloud Client with Discord Rich Presence, Dark Mode, Last.fm and AdBlock support. Prior to 0.1.8, a track title containing an HTML payload executed locally in the Electron app. This means attacker-controlled SoundCloud track metadata can lead to local command execution on the user's machine. The application exposes a preload API (window.soundcloudAPI.sendTrackUpdate) to the remote SoundCloud page. Track metadata from SoundCloud is trusted and forwarded through IPC into th...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44482"
     },
@@ -815,6 +872,7 @@
       "score": 8.3,
       "published": "2026-05-14T19:16:37.727",
       "last_modified": "2026-05-14T21:22:56.313",
+      "title": "CVE-2026-44586",
       "description": "SiYuan is an open-source personal knowledge management system. From 2.1.12 to before 3.7.0. SiYuan's Bazaar marketplace renders package author metadata from the public bazaar stage feed into HTML without escaping. In the desktop app this becomes stored XSS, and because SiYuan's Electron windows are created with nodeIntegration: true and contextIsolation: false, a successful payload can call Node.js APIs and execute code on the host. This vulnerability is fixed in 3.7.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44586"
     },
@@ -829,6 +887,7 @@
       "score": 3.7,
       "published": "2026-05-14T19:16:38.007",
       "last_modified": "2026-05-15T14:44:49.877",
+      "title": "CVE-2026-44589",
       "description": "Nuxt OG Image generates OG Images with Vue templates in Nuxt. The isBlockedUrl() denylist introduced in nuxt-og-image@6.2.5 to remediate GHSA-pqhr-mp3f-hrpp (Dmitry Prokhorov / Positive Technologies, March 2026) is incomplete. It has an incomplete IPv6 prefix list and is missing redirect re-validation. This vulnerability is fixed in 6.4.9.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44589"
     },
@@ -843,6 +902,7 @@
       "score": null,
       "published": "2026-05-14T19:16:38.437",
       "last_modified": "2026-05-15T15:16:53.737",
+      "title": "CVE-2026-44670",
       "description": "SiYuan is an open-source personal knowledge management system. Prior to 3.7.0, the kernel stores Attribute View (AV / database) names without any HTML escape, then a render template uses raw strings.ReplaceAll(tpl, \"${avName}\", nodeAvName) to embed the name in HTML before pushing to all clients via WebSocket. Three independent client paths (render.ts:120 → outerHTML, Title.ts:401 → innerHTML, transaction.ts:559 → innerHTML) consume the value without escaping. Because the main BrowserWindow runs ...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44670"
     },
@@ -857,6 +917,7 @@
       "score": 3.5,
       "published": "2026-05-14T21:16:48.480",
       "last_modified": "2026-05-16T02:16:15.380",
+      "title": "CVE-2026-45781",
       "description": "The MCP Registry provides MCP clients with a list of MCP servers, like an app store for MCP servers. Prior to 1.7.9, OCI ownership validation skips label-match check when upstream OCI registry returns HTTP 429, letting any authenticated publisher bind their io.github.<user>/* namespace to OCI images they do not control. internal/validators/registries/oci.go:104-119 fails open on http.StatusTooManyRequests: when the registry's anonymous fetch to the upstream OCI registry is rate-limited, Validate...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45781"
     },
@@ -871,6 +932,7 @@
       "score": null,
       "published": "2026-05-15T03:16:23.270",
       "last_modified": "2026-05-15T14:11:57.190",
+      "title": "CVE-2026-7373",
       "description": "Rapid7 Metasploit Pro is vulnerable to a local privilege escalation attack that allows users to gain SYSTEM level control of a Windows host. Upon startup the metasploitPostgreSQL service the subsequent  postgres.exe service attempts to load an OpenSSL configuration file from a non-existent directory that is writable by standard users. By planting a crafted openssl.cnf file an attacker can trick the high-privilege service into executing arbitrary commands. This effectively permits an unprivileged...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7373"
     },
@@ -885,6 +947,7 @@
       "score": null,
       "published": "2026-05-15T13:16:19.130",
       "last_modified": "2026-05-15T14:12:43.710",
+      "title": "CVE-2026-41553",
       "description": "PDF Export Module used in DHTMLX's products Gantt and Scheduler is vulnerable to Remote Code Execution due to lack of \"data\" parameter sanitization. An unauthenticated attacker can inject the malicious JavaScript code to the parameter whose value is processed by Node.js and subsequently executed. This can lead to server compromise.\n\nThis issue was fixed in PDF Export Module version 0.7.6.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41553"
     },
@@ -899,6 +962,7 @@
       "score": 4.4,
       "published": "2026-05-15T15:16:54.103",
       "last_modified": "2026-05-16T02:16:15.273",
+      "title": "CVE-2026-45736",
       "description": "ws is an open source WebSocket client and server for Node.js. Prior to 8.20.1, the websocket.close() implementation is vulnerable to uninitialized memory disclosure when a TypedArray is passed as the reason argument. This vulnerability is fixed in 8.20.1.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45736"
     },
@@ -913,6 +977,7 @@
       "score": 5.4,
       "published": "2026-05-15T17:16:45.673",
       "last_modified": "2026-05-15T17:16:45.673",
+      "title": "CVE-2026-23695",
       "description": "Cockpit CMS through version 2.14.0, patched in commit 72a83fc, contains a stored cross-site scripting vulnerability in the Set field type's Display template option, where the template string is processed by the $interpolate function using new Function() and rendered via Vue's v-html directive without sanitization. An attacker with content/:models/manage permission can inject arbitrary JavaScript into the Display template, which executes in the browser of any user viewing the collection items lis...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23695"
     },
@@ -927,6 +992,7 @@
       "score": null,
       "published": "2026-05-15T19:17:00.590",
       "last_modified": "2026-05-15T19:17:00.590",
+      "title": "CVE-2026-44718",
       "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. From 0.2.0 to before 0.10.0, explorations.get, explorations.replace, and explorations.delete operate on an exploration_id without verifying that the requesting user was a collaborator on the exploration’s database. An authenticated user on the same Mathesar installation who knew or guessed an exploration ID could read, replace, or delete a saved exploration belonging to a database where they were...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44718"
     },
@@ -941,6 +1007,7 @@
       "score": null,
       "published": "2026-05-15T19:17:00.757",
       "last_modified": "2026-05-15T19:17:00.757",
+      "title": "CVE-2026-44719",
       "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. From 0.2.0 to before 0.10.0, collaborators.list, tables.metadata.list, explorations.list, and forms.list accept a database_id without verifying that the requesting user was a collaborator on that database. An authenticated user on the same Mathesar installation could use these methods to view Mathesar-managed metadata for databases where they were not a collaborator. Depending on the database and...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44719"
     },
@@ -955,7 +1022,8 @@
       "score": "6.5",
       "published": "2026-05-15T10:54:26+09:00",
       "last_modified": "2026-05-15T10:54:26+09:00",
-      "description": "Apache Software FoundationのApache-airflow-providers-elasticsearchにおけるログファイルからの情報漏えいに関する脆弱性",
+      "title": "Apache Software FoundationのApache-airflow-providers-elasticsearchにおけるログファイルからの情報漏えいに関する脆弱性",
+      "description": "Elasticsearch ロギングプロバイダーは、資格情報を埋め込んだ `host` URL（例：`https://user:password@server.example.com:9200`）で構成されている場合、埋め込まれた資格情報を含む完全なホスト URL をタスクログに書き込んでいました。タスクログの読み取り権限を持つユーザーは、バックエンドの資格情報を収集できる可能性があります。そのため、ユーザーは `apache-airflow-providers-elasticsearch` をバージョン 6.5.3 以降にアップグレードし、防御の多層化対策としてバックエンド資格情報を `[elasticsearch] host` URL に埋め込むのではなく、シークレットバックエンドを通じて設定することを推奨します。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015526.html"
     },
     {
@@ -969,7 +1037,8 @@
       "score": "6.5",
       "published": "2026-05-15T10:54:15+09:00",
       "last_modified": "2026-05-15T10:54:15+09:00",
-      "description": "Apache Software FoundationのApache-airflow-providers-opensearchにおけるログファイルからの情報漏えいに関する脆弱性",
+      "title": "Apache Software FoundationのApache-airflow-providers-opensearchにおけるログファイルからの情報漏えいに関する脆弱性",
+      "description": "OpenSearchロギングプロバイダーは、認証情報を埋め込んだ`host` URL（例：`https://user:password@server.example.com:9200`）で構成されている場合、埋め込まれた認証情報を含む完全なホストURLをタスクログに記録していました。そのため、タスクログの読み取り権限を持つユーザーは、バックエンドの認証情報を収集できる可能性があります。ユーザーは`apache-airflow-providers-opensearch`をバージョン1.9.1以降にアップグレードし、防御の多層化措置として、バックエンドの認証情報を`[opensearch] host` URLに埋め込むのではなく、シークレットバックエンド経由で設定することを推奨します。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015522.html"
     },
     {
@@ -983,7 +1052,8 @@
       "score": "9.8",
       "published": "2026-05-14T10:15:25+09:00",
       "last_modified": "2026-05-14T10:15:25+09:00",
-      "description": "The PHP GroupのPHPにおける解放済みメモリの使用に関する脆弱性",
+      "title": "The PHP GroupのPHPにおける解放済みメモリの使用に関する脆弱性",
+      "description": "PHPのバージョン8.2.*の8.2.31未満、8.3.*の8.3.31未満、8.4.*の8.4.21未満、および8.5.*の8.5.6未満において、SOAP拡張のオブジェクト重複排除機構はPHPオブジェクトへのポインタの参照カウントを増やさずにグローバルマップに保存します。apache:Mapノードに重複したキーがある場合、2つ目のエントリの処理が一時結果マップの最初のエントリを上書きし、元のPHPオブジェクトを解放しますが、古いポインタはマップに残ります。その後のhref参照により、解放されたノードのダングリングポインタが結果にコピーされる可能性があります。PHPの文字列割り当ては解放されたメモリ領域を再利用するため、SOAPリクエストボディを制御できる攻撃者はこのUse-After-Free脆弱性を悪用してリモートコードを実行する可能性があります。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015323.html"
     },
     {
@@ -997,7 +1067,8 @@
       "score": "7.5",
       "published": "2026-05-14T10:15:06+09:00",
       "last_modified": "2026-05-14T10:15:06+09:00",
-      "description": "The PHP GroupのPHPにおけるNULL ポインタデリファレンスに関する脆弱性",
+      "title": "The PHP GroupのPHPにおけるNULL ポインタデリファレンスに関する脆弱性",
+      "description": "PHPのバージョン8.2.*の8.2.31未満、8.3.*の8.3.31未満、8.4.*の8.4.21未満、および8.5.*の8.5.6未満において、SOAPサーバーにtypemapが設定されている場合、デコード処理に誤りがあり、値要素が存在しない場合に誤った変数をチェックしてしまいます。これによりNULLポインタの参照が発生し、セグメンテーションフォルトが引き起こされます。その結果、リモートの認証されていない攻撃者がPHPのSOAPサーバープロセスをクラッシュさせ、サービス拒否を引き起こす可能性があります。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015317.html"
     },
     {
@@ -1011,7 +1082,8 @@
       "score": "9.9",
       "published": "2026-05-15T11:00:21+09:00",
       "last_modified": "2026-05-15T11:00:21+09:00",
-      "description": "Open edXのopenedxにおけるサーバサイドのリクエストフォージェリの脆弱性",
+      "title": "Open edXのopenedxにおけるサーバサイドのリクエストフォージェリの脆弱性",
+      "description": "Open edXプラットフォームは、あらゆる規模のオンライン学習を作成および提供することを可能にします。SAMLProviderDataViewSetのsync_provider_dataエンドポイントは、認証されたEnterprise Adminユーザーがmetadata_urlというPOSTパラメータを通じて任意のURLを提供できるようにしています。このURLはfetch_metadata_xml()内でrequests.get()に直接渡されており、URLの検証、IPフィルタリング、スキームの強制が行われていません。Enterprise Admin権限を持つ攻撃者は、サーバーに対して内部ネットワークサービスやクラウドメタデータエンドポイント（例：AWSの169.254.169.254）、または他の攻撃者が制御する宛先へのHTTPリクエストを強制することが可能です。この脆弱性は、コミット6fda1f120ff5a590d120ae1180185525f399c6d0および70a56246dd9c9df57c596e64bdd8a11b1d9da054によって修正されました。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015644.html"
     },
     {
@@ -1025,7 +1097,8 @@
       "score": "8.5",
       "published": "2026-05-15T10:54:17+09:00",
       "last_modified": "2026-05-15T10:54:17+09:00",
-      "description": "Open edXのOpen edx Enterprise Serviceにおけるサーバサイドのリクエストフォージェリの脆弱性",
+      "title": "Open edXのOpen edx Enterprise Serviceにおけるサーバサイドのリクエストフォージェリの脆弱性",
+      "description": "Open edX Enterprise ServiceアプリはOpen edXプラットフォームに企業向け機能を提供します。バージョン7.0.2から7.0.4の間、SAMLProviderDataViewSet内のsync_provider_dataエンドポイントは、SAMLProviderConfig.metadata_sourceに保存されたURLからSAMLメタデータを取得していました。Enterprise Adminロールを持つ認証ユーザーは、SAMLProviderConfigViewSetのPATCHエンドポイントを介してこのフィールドに任意のURLを設定でき、その後sync_provider_dataを呼び出すことでサーバー側のHTTPリクエストをトリガーできます。fetch_metadata_xml()内のfetchは、スキームの強制、IPフィルタリング、タイムアウトを行わずにURLを直接requests.get()に渡します。この脆弱性はバージョン7.0.5で修正されました。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015523.html"
     },
     {
@@ -1039,7 +1112,8 @@
       "score": "",
       "published": "2026-05-14T17:11:31+09:00",
       "last_modified": "2026-05-14T17:11:31+09:00",
-      "description": "Intel製品に対するアップデート（2026年5月）",
+      "title": "Intel製品に対するアップデート（2026年5月）",
+      "description": "<ul><li><a href='https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01387.html' target='_blank'>INTEL-SA-01387: Intel&#174; QAT Software Drivers for Windows Advisory</a></li><li><a href='https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01402.html' target='_blank'>INTEL-SA-01402: Intel&#174; Graphics Advisory</a></li><li><a href='https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-01410.html' target='_blank'>INTEL-SA-01410: Int...",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015489.html"
     },
     {
@@ -1053,7 +1127,8 @@
       "score": "",
       "published": "2026-05-14T17:11:25+09:00",
       "last_modified": "2026-05-14T17:11:25+09:00",
-      "description": "Siemens製品に対するアップデート（2026年5月）",
+      "title": "Siemens製品に対するアップデート（2026年5月）",
+      "description": "新規：18件<ul><li><a href='https://cert-portal.siemens.com/productcert/html/ssa-032379.html' target='_blank'>SSA-032379: Multiple Vulnerabilities in SIMATIC CN 4100 Before V5.0</a></li><li><a href='https://cert-portal.siemens.com/productcert/html/ssa-078743.html' target='_blank'>SSA-078743: Remote Code Execution Vulnerability in Ruggedcom Rox Before V2.17.1</a></li><li><a href='https://cert-portal.siemens.com/productcert/html/ssa-081142.html' target='_blank'>SSA-081142: Arbitrary Code Execution Vuln...",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015487.html"
     },
     {
@@ -1067,7 +1142,8 @@
       "score": "8.8",
       "published": "2026-05-14T10:14:10+09:00",
       "last_modified": "2026-05-14T10:14:10+09:00",
-      "description": "D-Link CorporationのDCS-935L ファームウェアにおける複数の脆弱性",
+      "title": "D-Link CorporationのDCS-935L ファームウェアにおける複数の脆弱性",
+      "description": "D-Link DCS-935L バージョン 1.10.01 までに脆弱性が発見されました。影響を受けるのは、コンポーネント HNAP Service の /web/cgi-bin/hnap/hnap_service ファイル内の SetDeviceSettings 関数です。引数 AdminPassword の操作によりバッファオーバーフローが発生します。この攻撃はリモートで実行可能です。エクスプロイトが公開されており、悪用される可能性があります。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015298.html"
     },
     {
@@ -1081,7 +1157,8 @@
       "score": "8.8",
       "published": "2026-05-14T10:13:47+09:00",
       "last_modified": "2026-05-14T10:13:47+09:00",
-      "description": "D-Link CorporationのDIR-816 ファームウェアにおける複数の脆弱性",
+      "title": "D-Link CorporationのDIR-816 ファームウェアにおける複数の脆弱性",
+      "description": "D-Link DIR-816 1.10CNB05_R1B011D88210に脆弱性が特定されました。この脆弱性は/goform/formDMZ.cgiファイル内の関数sub_445E7Cに影響を及ぼします。この操作によりコマンドインジェクションが発生します。攻撃はリモートで開始可能です。エクスプロイトは公開されており、攻撃に悪用される可能性があります。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015290.html"
     },
     {
@@ -1095,7 +1172,8 @@
       "score": "8.8",
       "published": "2026-05-14T10:13:44+09:00",
       "last_modified": "2026-05-14T10:13:44+09:00",
-      "description": "D-Link CorporationのDIR-816 ファームウェアにおける複数の脆弱性",
+      "title": "D-Link CorporationのDIR-816 ファームウェアにおける複数の脆弱性",
+      "description": "D-Link DIR-816 1.10CNB05_R1B011D88210にセキュリティ脆弱性が検出されました。この問題が影響を及ぼすのは、ファイル/goform/singlePortForward内の関数sub_445E7Cです。引数ip_addressの操作によりコマンドインジェクションが発生します。この攻撃はリモートから実行可能です。エクスプロイトは公開されており、悪用される可能性があります。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015289.html"
     },
     {
@@ -1109,7 +1187,8 @@
       "score": "8.8",
       "published": "2026-05-14T10:13:41+09:00",
       "last_modified": "2026-05-14T10:13:41+09:00",
-      "description": "D-Link CorporationのDIR-816 ファームウェアにおける複数の脆弱性",
+      "title": "D-Link CorporationのDIR-816 ファームウェアにおける複数の脆弱性",
+      "description": "D-Link DIR-816 1.10CNB05_R1B011D88210に脆弱性が検出されました。この脆弱性はportForward関数に影響を与えます。ip_address引数の操作によりコマンドインジェクションが発生します。この攻撃はリモートで実行可能です。エクスプロイトは既に公開されており、悪用される可能性があります。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015288.html"
     },
     {
@@ -1123,7 +1202,8 @@
       "score": "7.2",
       "published": "2026-05-13T10:21:00+09:00",
       "last_modified": "2026-05-13T10:21:00+09:00",
-      "description": "D-Link CorporationのD-Link DNS-320 ファームウェアにおける複数の脆弱性",
+      "title": "D-Link CorporationのD-Link DNS-320 ファームウェアにおける複数の脆弱性",
+      "description": "D-Link DNS-320 2.06B01に脆弱性が特定されました。影響を受けるのは、ファイル /cgi-bin/network_mgr.cgi 内の関数 cgi_speed/cgi_dhcpd_lease/cgi_ddns/cgi_set_ip/cgi_upnp_del/cgi_dhcpd/cgi_upnp_add/cgi_upnp_edit です。この操作によってOSコマンドインジェクションが発生します。攻撃はリモートで実行可能です。エクスプロイトは公開されており、悪用される恐れがあります。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015136.html"
     },
     {
@@ -1137,7 +1217,8 @@
       "score": "7.2",
       "published": "2026-05-13T10:20:57+09:00",
       "last_modified": "2026-05-13T10:20:57+09:00",
-      "description": "D-Link CorporationのD-Link DNS-320 ファームウェアにおける複数の脆弱性",
+      "title": "D-Link CorporationのD-Link DNS-320 ファームウェアにおける複数の脆弱性",
+      "description": "D-Link DNS-320 2.06B01にはセキュリティの脆弱性が発見されました。この脆弱性は、/cgi-bin/webfile_mgr.cgiファイルのdelete、rename、copy、move、chmod、chown機能に影響を与えます。この操作によりOSコマンドインジェクションが発生します。この攻撃はリモートから実行される可能性があります。エクスプロイトが公開されており、攻撃に利用される恐れがあります。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015135.html"
     },
     {
@@ -1151,7 +1232,8 @@
       "score": "7.2",
       "published": "2026-05-13T10:20:53+09:00",
       "last_modified": "2026-05-13T10:20:53+09:00",
-      "description": "D-Link CorporationのD-Link DNS-320 ファームウェアにおける複数の脆弱性",
+      "title": "D-Link CorporationのD-Link DNS-320 ファームウェアにおける複数の脆弱性",
+      "description": "D-Link DNS-320 2.06B01に脆弱性が確認されました。この脆弱性は、ファイル/cgi-bin/system_mgr.cgiの関数cgi_set_host、cgi_set_ntp、cgi_fan_control、cgi_merge_userに影響を及ぼします。この操作によりOSコマンドインジェクションが発生します。リモートから攻撃を開始することが可能です。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015134.html"
     },
     {
@@ -1165,7 +1247,8 @@
       "score": "7.8",
       "published": "2026-05-12T10:20:01+09:00",
       "last_modified": "2026-05-12T10:20:01+09:00",
-      "description": "LinuxのLinux Kernelにおける境界外書き込みに関する脆弱性",
+      "title": "LinuxのLinux Kernelにおける境界外書き込みに関する脆弱性",
+      "description": "Linuxカーネルにおいて、以下の脆弱性が修正されました。rxrpcでは、ページ化された断片が存在する場合にDATA/RESPONSEパケットも共有解除するように対応しました。rxrpc_input_call_event()内のDATAパケットハンドラおよびrxrpc_verify_response()内のRESPONSEハンドラは、skb_cloned()が真の場合にのみ、セキュリティ操作呼び出し前にskbをリニアにコピーします。クローンされていないが外部所有のページ断片（例：splice()によってUDPソケットに__ip_append_data経由で渡されるSKBFL_SHARED_FRAGが設定されたもの、またはチェインされたskb_has_frag_list()を持つskb）はインプレース復号化経路へ進み、fragページをskb_to_sgvec()を介して直接AEAD/skcipherのSGLに束縛します。skb_has_frag_list()またはskb_has_shared_frag()が真の場合にも共有解除を拡張し、splice-ループバックベクトルやその他の外部共有...",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015103.html"
     }
   ]
