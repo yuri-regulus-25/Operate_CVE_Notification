@@ -1,8 +1,9 @@
 {
-  "generated_at": "2026-05-16T06:28:23.776481+00:00",
-  "count": 9,
+  "generated_at": "2026-05-16T06:59:23.776481+00:00",
+  "count": 10,
   "sources": {
-    "NVD": 9
+    "NVD": 9,
+    "JVN": 1
   },
   "alerts": [
     {
@@ -129,6 +130,20 @@
       "published": "2026-05-15T17:16:45.673",
       "last_modified": "2026-05-15T17:16:45.673",
       "description": "Cockpit CMS through version 2.14.0, patched in commit 72a83fc, contains a stored cross-site scripting vulnerability in the Set field type's Display template option, where the template string is processed by the $interpolate function using new Function() and rendered via Vue's v-html directive without sanitization. An attacker with content/:models/manage permission can inject arbitrary JavaScript into the Display template, which executes in the browser of any user viewing the collection items lis...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23695"
+    },
+    {
+      "alert_id": "nvd:cve-2026-xxxxx:vue",
+      "source": "JVN",
+      "category": "JS",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-xxxxx",
+      "matched": "Vue",
+      "severity": "MEDIUM",
+      "score": 5.4,
+      "published": "2026-05-16T15:16:45.673",
+      "last_modified": "2026-05-16T15:16:45.673",
+      "description": "サンプルですよ～～",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23695"
     }
   ]
