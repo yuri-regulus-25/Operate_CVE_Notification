@@ -229,21 +229,33 @@ def normalize_jvn(xml_text, severity):
     root = ET.fromstring(xml_text)
 
     namespaces = {
+        "rss": "http://purl.org/rss/1.0/",
+        "dc": "http://purl.org/dc/elements/1.1/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "sec": "http://jvn.jp/rss/mod_sec/3.0/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "item": "http://jvndb.jvn.jp/myjvn/Item#",
-        "sec": "http://jvn.jp/rss/mod_sec/",
     }
 
-    items = root.findall(".//item:item", namespaces)
+    items = root.findall(".//rss:item", namespaces)
     print(f"JVN {severity}: raw items = {len(items)}")
 
     matched_count = 0
 
     for item in items:
-        title = item.findtext("item:title", default="", namespaces=namespaces)
-        link = item.findtext("item:link", default="", namespaces=namespaces)
+        title = item.findtext("rss:title", default="", namespaces=namespaces)
+        link = item.findtext("rss:link", default="", namespaces=namespaces)
         identifier = item.findtext("sec:identifier", default="", namespaces=namespaces)
-        description = item.findtext("item:description", default="", namespaces=namespaces)
+        description = item.findtext("rss:description", default="", namespaces=namespaces)
+
+        cve_ids = [
+            ref.attrib.get("id", "")
+            for ref in item.findall("sec:references", namespaces)
+            if ref.attrib.get("source") == "CVE"
+        ]
+
+        cvss = item.find("sec:cvss", namespaces)
+        score = cvss.attrib.get("score", "") if cvss is not None else ""
+        xml_severity = cvss.attrib.get("severity", "") if cvss is not None else severity
 
         text = f"{title} {description}"
         matched = match_keyword(text)
@@ -254,7 +266,7 @@ def normalize_jvn(xml_text, severity):
         matched_count += 1
 
         source = "JVN"
-        cve_id = identifier if identifier else title
+        cve_id = cve_ids[0] if cve_ids else identifier if identifier else title
 
         alerts.append({
             "alert_id": make_alert_id(source, cve_id, matched),
@@ -264,9 +276,9 @@ def normalize_jvn(xml_text, severity):
             "cve_id": cve_id,
             "matched": matched,
             "severity": severity,
-            "score": "",
-            "published": "",
-            "last_modified": "",
+            "score": score,
+            "published": item.findtext("dcterms:issued", default="", namespaces=namespaces),
+            "last_modified": item.findtext("dcterms:modified", default="", namespaces=namespaces),
             "description": truncate_text(title or description),
             "url": link,
         })
