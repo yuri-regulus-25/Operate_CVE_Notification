@@ -215,6 +215,7 @@ def normalize_jvn(xml_text, severity):
     alerts = []
 
     if not xml_text:
+        print(f"JVN {severity}: empty xml")
         return alerts
 
     root = ET.fromstring(xml_text)
@@ -225,7 +226,12 @@ def normalize_jvn(xml_text, severity):
         "sec": "http://jvn.jp/rss/mod_sec/",
     }
 
-    for item in root.findall(".//item:item", namespaces):
+    items = root.findall(".//item:item", namespaces)
+    print(f"JVN {severity}: raw items = {len(items)}")
+
+    matched_count = 0
+
+    for item in items:
         title = item.findtext("item:title", default="", namespaces=namespaces)
         link = item.findtext("item:link", default="", namespaces=namespaces)
         identifier = item.findtext("sec:identifier", default="", namespaces=namespaces)
@@ -236,6 +242,8 @@ def normalize_jvn(xml_text, severity):
 
         if not matched:
             continue
+
+        matched_count += 1
 
         source = "JVN"
         cve_id = identifier if identifier else title
@@ -255,8 +263,9 @@ def normalize_jvn(xml_text, severity):
             "url": link,
         })
 
-    return alerts
+    print(f"JVN {severity}: matched items = {matched_count}")
 
+    return alerts
 
 def dedupe_alerts(alerts):
     seen = set()
