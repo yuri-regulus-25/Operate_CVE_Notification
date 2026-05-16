@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-16T09:11:30.983913+00:00",
-  "count": 94,
+  "generated_at": "2026-05-16T09:15:35.595994+00:00",
+  "count": 83,
   "sources": {
     "NVD": 67,
-    "JVN": 27
+    "JVN": 16
   },
   "alerts": [
     {
@@ -1001,146 +1001,6 @@
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015317.html"
     },
     {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:postgresql",
-      "source": "JVN",
-      "category": "DB",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "PostgreSQL",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:24+09:00",
-      "last_modified": "2026-05-16T18:11:24+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
-    },
-    {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:node.js",
-      "source": "JVN",
-      "category": "JS",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "Node.js",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:25+09:00",
-      "last_modified": "2026-05-16T18:11:25+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
-    },
-    {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:laravel",
-      "source": "JVN",
-      "category": "PHP",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "Laravel",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:25+09:00",
-      "last_modified": "2026-05-16T18:11:25+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
-    },
-    {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:symfony",
-      "source": "JVN",
-      "category": "PHP",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "Symfony",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:26+09:00",
-      "last_modified": "2026-05-16T18:11:26+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
-    },
-    {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:vue",
-      "source": "JVN",
-      "category": "JS",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "Vue",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:26+09:00",
-      "last_modified": "2026-05-16T18:11:26+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
-    },
-    {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:vue.js",
-      "source": "JVN",
-      "category": "JS",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "Vue.js",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:27+09:00",
-      "last_modified": "2026-05-16T18:11:27+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
-    },
-    {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:vuetify",
-      "source": "JVN",
-      "category": "JS",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "Vuetify",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:27+09:00",
-      "last_modified": "2026-05-16T18:11:27+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
-    },
-    {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:composer",
-      "source": "JVN",
-      "category": "PHP",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "composer",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:28+09:00",
-      "last_modified": "2026-05-16T18:11:28+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
-    },
-    {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:npm",
-      "source": "JVN",
-      "category": "JS",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "npm",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:28+09:00",
-      "last_modified": "2026-05-16T18:11:28+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
-    },
-    {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:almalinux",
-      "source": "JVN",
-      "category": "OS",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "AlmaLinux",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:29+09:00",
-      "last_modified": "2026-05-16T18:11:29+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
-    },
-    {
       "alert_id": "jvn:cve-2026-42858:red hat enterprise linux",
       "source": "JVN",
       "category": "OS",
@@ -1307,20 +1167,6 @@
       "last_modified": "2026-05-12T10:20:01+09:00",
       "description": "LinuxのLinux Kernelにおける境界外書き込みに関する脆弱性",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015103.html"
-    },
-    {
-      "alert_id": "jvn:myjvn　該当する脆弱性対策情報はありません。:rhel",
-      "source": "JVN",
-      "category": "OS",
-      "priority": "INFO",
-      "cve_id": "MyJVN　該当する脆弱性対策情報はありません。",
-      "matched": "RHEL",
-      "severity": "UNKNOWN",
-      "score": "",
-      "published": "2026-05-16T18:11:30+09:00",
-      "last_modified": "2026-05-16T18:11:30+09:00",
-      "description": "MyJVN　該当する脆弱性対策情報はありません。",
-      "url": "https://jvndb.jvn.jp/apis/myjvn"
     }
   ]
 }
