@@ -90,14 +90,18 @@ def fetch_nvd():
         return json.loads(response.read().decode("utf-8"))
 
 
-def fetch_jvn(severity):
+def fetch_jvn(severity=None):
     params = {
         "method": "getVulnOverviewList",
         "feed": "oka",
-        "cvssV3Severity": severity,
     }
 
+    if severity:
+        params["cvssV3Severity"] = severity
+
     url = "https://jvndb.jvn.jp/myjvn?" + urllib.parse.urlencode(params)
+
+    print(f"JVN URL: {url}")
 
     with urllib.request.urlopen(url, timeout=30) as response:
         return response.read().decode("utf-8")
