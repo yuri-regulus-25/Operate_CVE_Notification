@@ -74,6 +74,13 @@ JVN_SEVERITIES = [
     "NONE",
 ]
 
+JVN_SEVERITY_MAP = {
+    "CRITICAL": "c",
+    "HIGH": "h",
+    "MEDIUM": "m",
+    "LOW": "l",
+    "NONE": "n",
+}
 
 def fetch_nvd():
     end = datetime.now(timezone.utc)
@@ -93,15 +100,11 @@ def fetch_nvd():
 def fetch_jvn(severity=None):
     params = {
         "method": "getVulnOverviewList",
-        "feed": "oka",
+        "feed": "hnd",
+        "severity": JVN_SEVERITY_MAP[severity],
     }
 
-    if severity:
-        params["cvssV3Severity"] = severity
-
     url = "https://jvndb.jvn.jp/myjvn?" + urllib.parse.urlencode(params)
-
-    print(f"JVN URL: {url}")
 
     with urllib.request.urlopen(url, timeout=30) as response:
         return response.read().decode("utf-8")
