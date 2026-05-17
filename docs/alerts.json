@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-16T19:02:14.005697+00:00",
-  "count": 81,
+  "generated_at": "2026-05-17T02:53:47.835273+00:00",
+  "count": 82,
   "sources": {
-    "NVD": 67,
+    "NVD": 68,
     "JVN": 14
   },
   "alerts": [
@@ -1010,6 +1010,21 @@
       "title": "CVE-2026-44719",
       "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. From 0.2.0 to before 0.10.0, collaborators.list, tables.metadata.list, explorations.list, and forms.list accept a database_id without verifying that the requesting user was a collaborator on that database. An authenticated user on the same Mathesar installation could use these methods to view Mathesar-managed metadata for databases where they were not a collaborator. Depending on the database and...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44719"
+    },
+    {
+      "alert_id": "nvd:cve-2026-8723:node.js",
+      "source": "NVD",
+      "category": "JS",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-8723",
+      "matched": "Node.js",
+      "severity": "MEDIUM",
+      "score": 5.3,
+      "published": "2026-05-17T00:16:21.233",
+      "last_modified": "2026-05-17T00:16:21.233",
+      "title": "CVE-2026-8723",
+      "description": "### Summary\n\n\n\n`qs.stringify` throws `TypeError` when called with `arrayFormat: 'comma'` and `encodeValuesOnly: true` on an array containing `null` or `undefined`. The throw is synchronous and not handled by any of qs's null-related options (`skipNulls`, `strictNullHandling`).\n\n\n\n### Details\n\n\n\nIn the comma + `encodeValuesOnly` branch, `lib/stringify.js:145` mapped the array through the raw encoder before joining:\n\n\n\n```js\n\n\n\nobj = utils.maybeMap(obj, encoder);\n\n\n\n```\n\n\n\n`utils.encode` (`lib/uti...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8723"
     },
     {
       "alert_id": "jvn:cve-2026-41018:apache",
