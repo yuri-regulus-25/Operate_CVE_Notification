@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-18T10:00:37.337672+00:00",
-  "count": 100,
+  "generated_at": "2026-05-18T15:29:09.471400+00:00",
+  "count": 89,
   "sources": {
-    "NVD": 68,
-    "JVN": 32
+    "NVD": 69,
+    "JVN": 20
   },
   "alerts": [
     {
@@ -691,7 +691,7 @@
       "severity": "MEDIUM",
       "score": 5.4,
       "published": "2026-05-14T14:16:24.757",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T14:59:26.607",
       "title": "CVE-2026-6472",
       "description": "Missing authorization in PostgreSQL CREATE TYPE allows an object creator to hijack other queries that use search_path to find user-defined types, including extension-defined types.  That is to say, the victim will execute arbitrary SQL functions of the attacker's choice.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6472"
@@ -706,7 +706,7 @@
       "severity": "HIGH",
       "score": 8.8,
       "published": "2026-05-14T14:16:24.883",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T14:59:59.747",
       "title": "CVE-2026-6473",
       "description": "Integer wraparound in multiple PostgreSQL server features allows an unprivileged database user to cause the server to undersize an allocation and write out-of-bounds.  This may execute arbitrary code as the operating system user running the database.  In applications that pass gigabyte-scale user inputs to the relevant database functions, the application input provider may achieve a segmentation fault.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6473"
@@ -721,7 +721,7 @@
       "severity": "MEDIUM",
       "score": 4.3,
       "published": "2026-05-14T14:16:24.997",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T15:00:45.520",
       "title": "CVE-2026-6474",
       "description": "Externally-controlled format string in PostgreSQL timeofday() function allows an attacker to retrieve portions of server memory, via crafted timezone zones.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6474"
@@ -736,7 +736,7 @@
       "severity": "HIGH",
       "score": 8.8,
       "published": "2026-05-14T14:16:25.113",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T15:02:12.483",
       "title": "CVE-2026-6475",
       "description": "Symlink following in PostgreSQL pg_basebackup plain format and in pg_rewind allows an origin superuser to overwrite local files, e.g. /var/lib/postgres/.bashrc, that hijack the operating system account.  It will remain the case that starting the server after these commands implicitly trusts the origin superuser, due to features like shared_preload_libraries.  Hence, the attack has practical implications only if one takes relevant action between these commands and server start, like moving the fi...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6475"
@@ -751,7 +751,7 @@
       "severity": "HIGH",
       "score": 7.2,
       "published": "2026-05-14T14:16:25.230",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T15:02:55.537",
       "title": "CVE-2026-6476",
       "description": "SQL injection in PostgreSQL pg_createsubscriber allows an attacker with pg_create_subscription rights to execute arbitrary SQL as a superuser.  The attack takes effect when pg_createsubscriber next runs.  Within major versions 17 and 18, minor versions before PostgreSQL 18.4 and 17.10 are affected.  Versions before PostgreSQL 17 are unaffected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6476"
@@ -766,7 +766,7 @@
       "severity": "HIGH",
       "score": 8.8,
       "published": "2026-05-14T14:16:25.347",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T15:03:26.733",
       "title": "CVE-2026-6477",
       "description": "Use of inherently dangerous function PQfn(..., result_is_int=0, ...) in PostgreSQL libpq lo_export(), lo_read(), lo_lseek64(), and lo_tell64() functions allows the server superuser to overwrite a client stack buffer with an arbitrarily-large response.  Like gets(), PQfn(..., result_is_int=0, ...) stores arbitrary-length, server-determined data into a buffer of unspecified size.  Because both the \\lo_export command in psql and pg_dump call lo_read(), the server superuser can overwrite pg_dump or ...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6477"
@@ -781,7 +781,7 @@
       "severity": "MEDIUM",
       "score": 6.5,
       "published": "2026-05-14T14:16:25.463",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T15:03:55.670",
       "title": "CVE-2026-6478",
       "description": "Covert timing channel in comparison of MD5-hashed password in PostgreSQL authentication allows an attacker to recover user credentials sufficient to authenticate.  This does not affect scram-sha-256 passwords, the default in all supported releases.  However, current databases may have MD5-hashed passwords originating in upgrades from PostgreSQL 13 or earlier.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6478"
@@ -796,7 +796,7 @@
       "severity": "HIGH",
       "score": 7.5,
       "published": "2026-05-14T14:16:25.583",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T15:04:25.403",
       "title": "CVE-2026-6479",
       "description": "Uncontrolled recursion in PostgreSQL SSL and GSS negotiation allows an attacker able to connect to a PostgreSQL AF_UNIX socket to achieve sustained denial of service.  If SSL and GSS are both disabled, an attacker can do the same via access to a PostgreSQL TCP socket.  Versions before PostgreSQL 18.4, 17.10, 16.14, 15.18, and 14.23 are affected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6479"
@@ -811,7 +811,7 @@
       "severity": "MEDIUM",
       "score": 4.3,
       "published": "2026-05-14T14:16:25.693",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T15:04:50.840",
       "title": "CVE-2026-6575",
       "description": "Buffer over-read in PostgreSQL function pg_restore_attribute_stats() accepts array values of unmatched length, which causes query planning to read past end of one array.  This allows a table maintainer to infer memory values past that array end.  Within major version 18, minor versions before PostgreSQL 18.4 are affected.  Versions before PostgreSQL 18 are unaffected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6575"
@@ -826,7 +826,7 @@
       "severity": "HIGH",
       "score": 8.8,
       "published": "2026-05-14T14:16:25.820",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T15:05:21.300",
       "title": "CVE-2026-6637",
       "description": "Stack buffer overflow in PostgreSQL module \"refint\" allows an unprivileged database user to execute arbitrary code as the operating system user running the database.  A distinct attack is possible if the application declares a user-controlled column as a \"refint\" cascade primary key and facilitates user-controlled updates to that column.  In that case, a SQL injection allows a primary key update value provider to execute arbitrary SQL as the database user performing the primary key update.  Vers...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6637"
@@ -841,7 +841,7 @@
       "severity": "LOW",
       "score": 3.7,
       "published": "2026-05-14T14:16:25.937",
-      "last_modified": "2026-05-14T16:21:23.190",
+      "last_modified": "2026-05-18T14:14:33.400",
       "title": "CVE-2026-6638",
       "description": "SQL injection in PostgreSQL logical replication ALTER SUBSCRIPTION ... REFRESH PUBLICATION allows a subscriber table creator to execute arbitrary SQL with the subscription's publication-side credentials.  The attack takes effect at the next REFRESH PUBLICATION.  Within major versions 16, 17, and 18, minor versions before PostgreSQL 18.4, 17.10, and 16.14 are affected.  Versions before PostgreSQL 16 are unaffected.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6638"
@@ -1021,130 +1021,25 @@
       "severity": "MEDIUM",
       "score": 5.3,
       "published": "2026-05-17T00:16:21.233",
-      "last_modified": "2026-05-17T00:16:21.233",
+      "last_modified": "2026-05-18T15:16:28.083",
       "title": "CVE-2026-8723",
       "description": "### Summary\n\n\n\n`qs.stringify` throws `TypeError` when called with `arrayFormat: 'comma'` and `encodeValuesOnly: true` on an array containing `null` or `undefined`. The throw is synchronous and not handled by any of qs's null-related options (`skipNulls`, `strictNullHandling`).\n\n\n\n### Details\n\n\n\nIn the comma + `encodeValuesOnly` branch, `lib/stringify.js:145` mapped the array through the raw encoder before joining:\n\n\n\n```js\n\n\n\nobj = utils.maybeMap(obj, encoder);\n\n\n\n```\n\n\n\n`utils.encode` (`lib/uti...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8723"
     },
     {
-      "alert_id": "jvn:cve-2026-41284:apache",
-      "source": "JVN",
-      "category": "WEB",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-41284",
-      "matched": "Apache",
-      "severity": "HIGH",
-      "score": "7.5",
-      "published": "2026-05-18T12:15:13+09:00",
-      "last_modified": "2026-05-18T12:15:13+09:00",
-      "title": "Apache Software FoundationのApache Tomcatにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性",
-      "description": "Apache Tomcatにおいて、リソースの割り当てに制限やスロットリングがない脆弱性が存在します。この問題はApache Tomcatのバージョン11.0.0-M1から11.0.21まで、10.1.0-M1から10.1.54まで、9.0.0-M1から9.0.117までに影響します。サポートされていない古いバージョンも影響を受ける可能性があります。ユーザーは、この問題を修正したバージョン[FIXED_VERSION]へアップグレードすることを推奨します。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016137.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-42268:apache",
-      "source": "JVN",
-      "category": "WEB",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-42268",
-      "matched": "Apache",
-      "severity": "HIGH",
-      "score": "7.5",
-      "published": "2026-05-18T12:14:51+09:00",
-      "last_modified": "2026-05-18T12:14:51+09:00",
-      "title": "OWASPのModSecurityにおける複数の脆弱性",
-      "description": "ModSecurityは、Apache、IIS、Nginx向けのオープンソースでクロスプラットフォームのウェブアプリケーションファイアウォール（WAF）エンジンです。バージョン3.0.0から3.0.15未満の間、管理者が@verifySSN、@verifyCPF、または@verifySVNRのいずれかのルールを使用すると、libmodsecurity3内で符号なし整数のアンダーフローにより未処理の例外（std::out_of_range）が発生する脆弱性が存在していました。この脆弱性はバージョン3.0.15で修正されました。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016130.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-42498:apache",
-      "source": "JVN",
-      "category": "WEB",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-42498",
-      "matched": "Apache",
-      "severity": "HIGH",
-      "score": "7.3",
-      "published": "2026-05-18T12:14:27+09:00",
-      "last_modified": "2026-05-18T12:14:27+09:00",
-      "title": "Apache Software FoundationのApache Tomcatにおける情報漏えいに関する脆弱性",
-      "description": "Apache TomcatのWebSocket認証時に、HTTP認証ヘッダーが予期しないホストに露出する脆弱性があります。この問題は、Apache Tomcatの以下のバージョンに影響を与えます：11.0.0-M1から11.0.21、10.1.0-M1から10.1.54、9.0.2から9.0.117、8.5.24から8.5.100、7.0.83から7.0.109までです。ユーザーは、この問題を修正したバージョン11.0.22、10.1.55または9.0.118にアップグレードすることを推奨します。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016122.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-43514:apache",
-      "source": "JVN",
-      "category": "WEB",
-      "priority": "LOW",
-      "cve_id": "CVE-2026-43514",
-      "matched": "Apache",
-      "severity": "LOW",
-      "score": "3.7",
-      "published": "2026-05-18T12:13:23+09:00",
-      "last_modified": "2026-05-18T12:13:23+09:00",
-      "title": "Apache Software FoundationのApache Tomcatにおけるタイミングの違いに起因する情報漏えいに関する脆弱性",
-      "description": "Apache TomcatのAJPシークレット比較時に観測可能なタイミングの不一致が発生する脆弱性です。本問題は、Apache Tomcatの以下のバージョンに影響します: 11.0.0-M1から11.0.21まで、10.1.0-M1から10.1.54まで、9.0.0-M1から9.0.117まで、8.5.0から8.5.100まで、7.0.0から7.0.109まで。サポートされていない古いバージョンも影響を受ける可能性があります。ユーザーは、この問題を修正したバージョン11.0.22、10.1.55または9.0.118へアップグレードすることを推奨します。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016101.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-41293:apache",
-      "source": "JVN",
-      "category": "WEB",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-41293",
-      "matched": "Apache",
-      "severity": "CRITICAL",
-      "score": "9.8",
-      "published": "2026-05-18T11:31:05+09:00",
-      "last_modified": "2026-05-18T11:31:05+09:00",
-      "title": "Apache Software FoundationのApache Tomcatにおける入力確認に関する脆弱性",
-      "description": "Apache Tomcatにおける不適切な入力検証の脆弱性です。この問題はApache Tomcatの以下のバージョンに影響します：11.0.0-M1から11.0.21まで、10.1.0-M1から10.1.54まで、9.0.0-M1から9.0.117まで、および10.0.0-M1から10.0.27まで。サポート終了の古いバージョンも影響を受ける可能性があります。ユーザーはこの問題を修正した[FIXED_VERSION]にアップグレードすることを推奨します。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015922.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-43512:apache",
-      "source": "JVN",
-      "category": "WEB",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-43512",
-      "matched": "Apache",
-      "severity": "CRITICAL",
-      "score": "9.8",
-      "published": "2026-05-18T11:26:00+09:00",
-      "last_modified": "2026-05-18T11:26:00+09:00",
-      "title": "Apache Software FoundationのApache Tomcatにおける認証回避に関する脆弱性",
-      "description": "廃止予定の脆弱性は、Apache Tomcatのダイジェスト認証における認証バイパスです。この問題は、Apache Tomcatのバージョン11.0.0-M1から11.0.21、10.1.0-M1から10.1.54、9.0.0-M1から9.0.117、8.5.0から8.5.100、および7.0.0より前のバージョンに影響します。サポートされていない古いバージョンも影響を受ける可能性があります。ユーザーは、この問題を修正した11.0.22、10.1.55、または9.0.118にアップグレードすることを推奨します。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015821.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-43513:apache",
-      "source": "JVN",
-      "category": "WEB",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-43513",
-      "matched": "Apache",
-      "severity": "HIGH",
-      "score": "7.5",
-      "published": "2026-05-18T11:25:58+09:00",
-      "last_modified": "2026-05-18T11:25:58+09:00",
-      "title": "Apache Software FoundationのApache Tomcatにおける大文字と小文字の区別の不適切な処理に関する脆弱性",
-      "description": "Apache TomcatのLockOutRealmにおける大文字小文字の区別の不適切な処理に脆弱性があります。この問題は、Apache Tomcatのバージョン11.0.0-M1から11.0.21まで、10.1.0-M1から10.1.54まで、9.0.0-M1から9.0.117まで、8.5.0から8.5.100まで、7.0.0から7.0.109までに影響します。サポートされていない古いバージョンも影響を受ける可能性があります。ユーザーは、この問題を修正したバージョン11.0.22、10.1.55、または9.0.118にアップグレードすることを推奨します。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015820.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-43515:apache",
-      "source": "JVN",
-      "category": "WEB",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-43515",
-      "matched": "Apache",
-      "severity": "CRITICAL",
-      "score": "9.1",
-      "published": "2026-05-18T11:25:55+09:00",
-      "last_modified": "2026-05-18T11:25:55+09:00",
-      "title": "Apache Software FoundationのApache Tomcatにおける認可に関する脆弱性",
-      "description": "Apache Tomcatにおいて、複数のメソッド制約が同じ拡張子に対してHTTPメソッドを定義した場合に発生する、不適切な認可の脆弱性です。この問題はApache Tomcatの以下のバージョンに影響を与えます: 11.0.0-M1から11.0.21まで、10.1.0-M1から10.1.54まで、9.0.0-M1から9.0.117まで、8.5.0から8.5.100まで、7.0.0から7.0.109までです。ユーザーには、この問題を修正したバージョンである11.0.22、10.1.55、または9.0.118にアップグレードすることを推奨します。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015819.html"
+      "alert_id": "nvd:cve-2026-26462:node.js",
+      "source": "NVD",
+      "category": "JS",
+      "priority": "INFO",
+      "cve_id": "CVE-2026-26462",
+      "matched": "Node.js",
+      "severity": "UNKNOWN",
+      "score": null,
+      "published": "2026-05-18T15:16:25.230",
+      "last_modified": "2026-05-18T15:16:25.230",
+      "title": "CVE-2026-26462",
+      "description": "Offline Hospital Management System 5.3.0 allows remote code execution due to an improper Electron renderer configuration. The application enables Node.js integration while disabling context isolation, allowing JavaScript executed in the renderer process to access Node.js APIs and execute arbitrary operating system commands.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26462"
     },
     {
       "alert_id": "jvn:cve-2026-45205:apache",
@@ -1387,21 +1282,6 @@
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016086.html"
     },
     {
-      "alert_id": "jvn:cve-2026-44224:node.js",
-      "source": "JVN",
-      "category": "JS",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-44224",
-      "matched": "Node.js",
-      "severity": "HIGH",
-      "score": "8.8",
-      "published": "2026-05-18T12:12:23+09:00",
-      "last_modified": "2026-05-18T12:12:23+09:00",
-      "title": "requarksのWiki.jsにおける権限管理に関する脆弱性",
-      "description": "Wiki.jsはNode.js上に構築されたオープンソースのウィキアプリケーションです。バージョン2.5.313より前のバージョンでは、users.update GraphQLミューテーションが任意のgroups配列を受け入れ、提供されたグループIDの検証を行わずにそのままデータベースに適用していました。リゾルバは呼び出し元の引数をそのままモデルに渡し、所有権の確認や割り当て可能なグループに制限を設けていませんでした。manage:users権限を持つユーザー（通常ウィキのモデレーターにアカウント管理のために委譲される権限）は、自分のアカウントにgroups:[1]を設定することで、管理者グループへの自己割り当てが可能でした。再認証後に新しいJWTにはmanage:system権限が付与され、一つのミューテーション呼び出しでサイト管理者の完全なアクセス権を得ることができました。この脆弱性はバージョン2.5.313で修正されています。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016081.html"
-    },
-    {
       "alert_id": "jvn:cve-2026-44578:node.js",
       "source": "JVN",
       "category": "JS",
@@ -1432,36 +1312,6 @@
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016040.html"
     },
     {
-      "alert_id": "jvn:cve-2026-45321:npm",
-      "source": "JVN",
-      "category": "JS",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-45321",
-      "matched": "npm",
-      "severity": "CRITICAL",
-      "score": "9.6",
-      "published": "2026-05-18T12:06:15+09:00",
-      "last_modified": "2026-05-18T12:06:15+09:00",
-      "title": "TanStackの@tanstack/arktype-adapter等の複数製品における埋め込まれた悪意のあるコードに関する脆弱性",
-      "description": "2026年5月11日、約19時20分から19時26分（UTC）の間に、42の@tanstack/*パッケージにわたって合計84の悪意あるバージョンがnpmレジストリに公開されました。公開は正当なGitHub ActionsのOIDC信頼済みパブリッシャーバインディングを通じてTanStack/router向けに認証されましたが、公開ワークフロー自体は変更されていませんでした。攻撃者は3つの既知の脆弱性クラス（pull_request_targetの「Pwn Request」誤設定、フォークとベースの信頼境界を跨ぐGitHub Actionsキャッシュ汚染、およびActionsランナープロセスからのOIDCトークンの実行時メモリ抽出）を連鎖的に悪用して、信頼されたIDの下で認証情報を盗むマルウェアを公開しました。影響を受けた各パッケージにはちょうど2つの悪意あるバージョンが数分おきに公開されました。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015966.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-44347:red hat enterprise linux",
-      "source": "JVN",
-      "category": "OS",
-      "priority": "NOTICE",
-      "cve_id": "CVE-2026-44347",
-      "matched": "Red Hat Enterprise Linux",
-      "severity": "MEDIUM",
-      "score": "6.5",
-      "published": "2026-05-18T12:12:19+09:00",
-      "last_modified": "2026-05-18T12:12:19+09:00",
-      "title": "Warpgate projectのWarpgateにおけるクロスサイトリクエストフォージェリの脆弱性",
-      "description": "WarpgateはLinux向けのオープンソースのSSH、HTTPS、およびMySQLのバスティオンホストです。バージョン0.23.3以前では、SSOフローにおいてstateパラメータの検証が行われていませんでした。そのため、攻撃者がユーザーをだまして攻撃者のアカウントにログインさせることが可能でした。これにより、ユーザーは攻撃者のアカウント上で機密性の高い操作（例えば、攻撃者のSSHターゲットへの機密データ書き込みや、攻撃者が設置したHTTPターゲットへのログイン）を行う可能性がありました。この脆弱性はバージョン0.23.3で修正されています。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016080.html"
-    },
-    {
       "alert_id": "jvn:jvndb-2026-015489:red hat enterprise linux",
       "source": "JVN",
       "category": "OS",
@@ -1490,21 +1340,6 @@
       "title": "Siemens製品に対するアップデート（2026年5月）",
       "description": "新規：18件<ul><li><a href='https://cert-portal.siemens.com/productcert/html/ssa-032379.html' target='_blank'>SSA-032379: Multiple Vulnerabilities in SIMATIC CN 4100 Before V5.0</a></li><li><a href='https://cert-portal.siemens.com/productcert/html/ssa-078743.html' target='_blank'>SSA-078743: Remote Code Execution Vulnerability in Ruggedcom Rox Before V2.17.1</a></li><li><a href='https://cert-portal.siemens.com/productcert/html/ssa-081142.html' target='_blank'>SSA-081142: Arbitrary Code Execution Vuln...",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015487.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-8346:red hat enterprise linux",
-      "source": "JVN",
-      "category": "OS",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-8346",
-      "matched": "Red Hat Enterprise Linux",
-      "severity": "HIGH",
-      "score": "8.8",
-      "published": "2026-05-14T10:13:41+09:00",
-      "last_modified": "2026-05-14T10:13:41+09:00",
-      "title": "D-Link CorporationのDIR-816 ファームウェアにおける複数の脆弱性",
-      "description": "D-Link DIR-816 1.10CNB05_R1B011D88210に脆弱性が検出されました。この脆弱性はportForward関数に影響を与えます。ip_address引数の操作によりコマンドインジェクションが発生します。この攻撃はリモートで実行可能です。エクスプロイトは既に公開されており、悪用される可能性があります。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015288.html"
     }
   ]
 }
