@@ -1,56 +1,11 @@
 {
-  "generated_at": "2026-05-18T15:29:09.471400+00:00",
-  "count": 89,
+  "generated_at": "2026-05-18T19:42:52.202825+00:00",
+  "count": 86,
   "sources": {
-    "NVD": 69,
+    "NVD": 66,
     "JVN": 20
   },
   "alerts": [
-    {
-      "alert_id": "nvd:cve-2026-7814:postgresql",
-      "source": "NVD",
-      "category": "DB",
-      "priority": "NOTICE",
-      "cve_id": "CVE-2026-7814",
-      "matched": "PostgreSQL",
-      "severity": "MEDIUM",
-      "score": 4.8,
-      "published": "2026-05-11T16:17:37.620",
-      "last_modified": "2026-05-13T15:34:13.237",
-      "title": "CVE-2026-7814",
-      "description": "Stored cross-site scripting (XSS) vulnerability in pgAdmin 4 Browser Tree and Explain Visualizer modules.\n\nUser-controlled PostgreSQL object names (database, schema, table, column, etc.) were assigned to DOM elements via innerHTML, allowing crafted object names containing HTML markup to execute attacker-supplied JavaScript in the browser of any pgAdmin user who navigated to or executed EXPLAIN over the malicious object.\n\nFix replaces innerHTML with textContent.\n\nThis issue affects pgAdmin 4: bef...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7814"
-    },
-    {
-      "alert_id": "nvd:cve-2026-7815:postgresql",
-      "source": "NVD",
-      "category": "DB",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-7815",
-      "matched": "PostgreSQL",
-      "severity": "HIGH",
-      "score": 8.8,
-      "published": "2026-05-11T16:17:37.873",
-      "last_modified": "2026-05-13T15:34:13.237",
-      "title": "CVE-2026-7815",
-      "description": "SQL injection vulnerability in pgAdmin 4 Maintenance Tool.\n\nFour user-supplied JSON fields (buffer_usage_limit, vacuum_parallel, vacuum_index_cleanup, reindex_tablespace) were concatenated directly into the rendered VACUUM/ANALYZE/REINDEX command and passed to psql --command. An authenticated user with the tools_maintenance permission could break out of the option syntax and execute arbitrary SQL on the connected PostgreSQL server. The injected SQL could in turn invoke COPY ... TO PROGRAM to esc...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7815"
-    },
-    {
-      "alert_id": "nvd:cve-2026-42856:node.js",
-      "source": "NVD",
-      "category": "JS",
-      "priority": "INFO",
-      "cve_id": "CVE-2026-42856",
-      "matched": "Node.js",
-      "severity": "UNKNOWN",
-      "score": null,
-      "published": "2026-05-11T18:16:35.990",
-      "last_modified": "2026-05-13T17:31:40.840",
-      "title": "CVE-2026-42856",
-      "description": "Network-AI is a TypeScript/Node.js multi-agent orchestrator. Prior to 5.1.3, the MCP HTTP transport accepts JSON-RPC tools/call requests with no authentication, session, origin, or token check, and dispatches them directly to the orchestrator's tool registry. The default bind address is 0.0.0.0. As a result, any party with network reachability to the service can enumerate and invoke privileged management tools. This vulnerability is fixed in 5.1.3.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42856"
-    },
     {
       "alert_id": "nvd:cve-2026-43893:node.js",
       "source": "NVD",
@@ -316,7 +271,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-05-12T21:16:16.270",
-      "last_modified": "2026-05-13T18:21:10.270",
+      "last_modified": "2026-05-18T16:16:31.173",
       "title": "CVE-2026-44232",
       "description": "DSSRF is a Node.js library that provides a wide range of utilities and advanced SSRF defense checks. Prior to 1.3.0, every IPv6 category bypasses is_url_safe. This vulnerability is fixed in 1.3.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44232"
@@ -451,7 +406,7 @@
       "severity": "HIGH",
       "score": 8.6,
       "published": "2026-05-13T18:16:16.720",
-      "last_modified": "2026-05-14T15:23:48.470",
+      "last_modified": "2026-05-18T16:16:31.053",
       "title": "CVE-2026-44001",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to 3.11.0, a sandbox escape vulnerability in vm2 v3.10.5 allows any sandboxed code to crash the host Node.js process via a single Promise constructor that triggers an unhandled rejection propagating to the host. The fix for CVE-2026-22709 (v3.10.2) only sanitized the onRejected callback in .then() and .catch() overrides and did not address the executor-to-unhandledRejection path. This vulnerability is fixed in 3.11.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44001"
@@ -940,13 +895,13 @@
       "alert_id": "nvd:cve-2026-41553:node.js",
       "source": "NVD",
       "category": "JS",
-      "priority": "INFO",
+      "priority": "URGENT",
       "cve_id": "CVE-2026-41553",
       "matched": "Node.js",
-      "severity": "UNKNOWN",
-      "score": null,
+      "severity": "CRITICAL",
+      "score": 10.0,
       "published": "2026-05-15T13:16:19.130",
-      "last_modified": "2026-05-15T14:12:43.710",
+      "last_modified": "2026-05-18T18:40:07.417",
       "title": "CVE-2026-41553",
       "description": "PDF Export Module used in DHTMLX's products Gantt and Scheduler is vulnerable to Remote Code Execution due to lack of \"data\" parameter sanitization. An unauthenticated attacker can inject the malicious JavaScript code to the parameter whose value is processed by Node.js and subsequently executed. This can lead to server compromise.\n\nThis issue was fixed in PDF Export Module version 0.7.6.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-41553"
@@ -976,7 +931,7 @@
       "severity": "MEDIUM",
       "score": 5.4,
       "published": "2026-05-15T17:16:45.673",
-      "last_modified": "2026-05-15T17:16:45.673",
+      "last_modified": "2026-05-18T17:26:40.167",
       "title": "CVE-2026-23695",
       "description": "Cockpit CMS through version 2.14.0, patched in commit 72a83fc, contains a stored cross-site scripting vulnerability in the Set field type's Display template option, where the template string is processed by the $interpolate function using new Function() and rendered via Vue's v-html directive without sanitization. An attacker with content/:models/manage permission can inject arbitrary JavaScript into the Display template, which executes in the browser of any user viewing the collection items lis...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-23695"
@@ -991,7 +946,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-05-15T19:17:00.590",
-      "last_modified": "2026-05-15T19:17:00.590",
+      "last_modified": "2026-05-18T17:50:08.190",
       "title": "CVE-2026-44718",
       "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. From 0.2.0 to before 0.10.0, explorations.get, explorations.replace, and explorations.delete operate on an exploration_id without verifying that the requesting user was a collaborator on the exploration’s database. An authenticated user on the same Mathesar installation who knew or guessed an exploration ID could read, replace, or delete a saved exploration belonging to a database where they were...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44718"
@@ -1006,7 +961,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-05-15T19:17:00.757",
-      "last_modified": "2026-05-15T19:17:00.757",
+      "last_modified": "2026-05-18T17:50:08.190",
       "title": "CVE-2026-44719",
       "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. From 0.2.0 to before 0.10.0, collaborators.list, tables.metadata.list, explorations.list, and forms.list accept a database_id without verifying that the requesting user was a collaborator on that database. An authenticated user on the same Mathesar installation could use these methods to view Mathesar-managed metadata for databases where they were not a collaborator. Depending on the database and...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44719"
@@ -1036,7 +991,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-05-18T15:16:25.230",
-      "last_modified": "2026-05-18T15:16:25.230",
+      "last_modified": "2026-05-18T17:44:03.697",
       "title": "CVE-2026-26462",
       "description": "Offline Hospital Management System 5.3.0 allows remote code execution due to an improper Electron renderer configuration. The application enables Node.js integration while disabling context isolation, allowing JavaScript executed in the renderer process to access Node.js APIs and execute arbitrary operating system commands.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26462"
