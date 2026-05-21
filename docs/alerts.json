@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-21T09:59:59.179842+00:00",
-  "count": 1183,
+  "generated_at": "2026-05-21T15:38:08.847832+00:00",
+  "count": 1182,
   "sources": {
-    "NVD": 420,
+    "NVD": 419,
     "JVN": 763
   },
   "alerts": [
@@ -6170,21 +6170,6 @@
       "title": "CVE-2026-24781",
       "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, VM2 suffers from a sandbox breakout vulnerability through the inspect function. This allows attackers to write code which can escape from the VM2 sandbox and execute arbitrary commands on the host system. This issue has been patched in version 3.11.0.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-24781"
-    },
-    {
-      "alert_id": "nvd:cve-2026-26332:node.js",
-      "source": "NVD",
-      "category": "JS",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-26332",
-      "matched": "Node.js",
-      "severity": "CRITICAL",
-      "score": 9.8,
-      "published": "2026-05-04T17:16:22.403",
-      "last_modified": "2026-05-06T12:24:36.910",
-      "title": "CVE-2026-26332",
-      "description": "vm2 is an open source vm/sandbox for Node.js. Prior to version 3.11.0, SuppressedError allows attackers to escape the sandbox and run arbitrary code. This issue has been patched in version 3.11.0.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26332"
     },
     {
       "alert_id": "nvd:cve-2026-26956:node.js",
