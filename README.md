@@ -20,11 +20,13 @@ The watcher currently checks two sources:
 
 For both sources, the script collects:
 
-- vulnerabilities published in the last 30 days
-- vulnerabilities modified or updated in the last 30 days
+- vulnerabilities published in the last 15 days
+- vulnerabilities modified or updated in the last 15 days
 
 This is intended to catch both newly announced vulnerabilities and older
-vulnerability records that were updated after initial publication.
+vulnerability records that were updated after initial publication. The script
+does not filter by CVSS score or severity; matching is based on the configured
+keywords.
 
 ### Monitored Keywords
 
@@ -48,10 +50,10 @@ structure is:
 ```json
 {
   "generated_at": "2026-05-21T03:31:14.275138+00:00",
-  "count": 51,
+  "count": 948,
   "sources": {
-    "NVD": 30,
-    "JVN": 21
+    "NVD": 240,
+    "JVN": 708
   },
   "alerts": []
 }
@@ -117,6 +119,10 @@ To change the lookback window, edit:
 - `NVD_LOOKBACK_DAYS`
 - `JVN_LOOKBACK_DAYS`
 
+If a GitHub Actions secret named `NVD_API_KEY` is configured, the workflow uses
+it for the NVD API. Without it, the script slows NVD requests to respect the
+public rate limit.
+
 ## 日本語
 
 このリポジトリは、運用環境で利用している可能性のある技術に関連する脆弱性情報を監視し、該当した結果を JSON として出力するためのものです。
@@ -132,10 +138,10 @@ To change the lookback window, edit:
 
 どちらの情報源についても、次の両方を取得します。
 
-- 直近30日に公開された脆弱性
-- 直近30日に更新された脆弱性
+- 直近15日に公開された脆弱性
+- 直近15日に更新された脆弱性
 
-新規公開された脆弱性だけでなく、公開後に内容が更新された既存の脆弱性も拾うことを意図しています。
+新規公開された脆弱性だけでなく、公開後に内容が更新された既存の脆弱性も拾うことを意図しています。CVSSスコアや深刻度による除外は行わず、設定されたキーワードへの一致を基準に出力します。
 
 ### 監視キーワード
 
@@ -156,10 +162,10 @@ NVD と JVN では検索方法や説明文の形式が異なるため、[`script
 ```json
 {
   "generated_at": "2026-05-21T03:31:14.275138+00:00",
-  "count": 51,
+  "count": 948,
   "sources": {
-    "NVD": 30,
-    "JVN": 21
+    "NVD": 240,
+    "JVN": 708
   },
   "alerts": []
 }
@@ -221,3 +227,5 @@ python scripts/watch.py
 
 - `NVD_LOOKBACK_DAYS`
 - `JVN_LOOKBACK_DAYS`
+
+GitHub Actions の secret に `NVD_API_KEY` を設定している場合、NVD API の呼び出しに利用されます。未設定の場合は、公開レート制限に合わせて NVD へのリクエスト間隔を長めに取ります。
