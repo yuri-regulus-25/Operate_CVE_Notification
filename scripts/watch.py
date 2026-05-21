@@ -1,4 +1,5 @@
 import json
+import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -8,27 +9,33 @@ from pathlib import Path
 PUBLIC_DIR = Path("docs")
 ALERTS_PATH = PUBLIC_DIR / "alerts.json"
 
+NVD_API_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
+NVD_RESULTS_PER_PAGE = 2000
+NVD_LOOKBACK_DAYS = 30
+JVN_API_URL = "https://jvndb.jvn.jp/myjvn"
+JVN_RESULTS_PER_PAGE = 50
+JVN_LOOKBACK_DAYS = 30
+JVN_TIMEZONE = timezone(timedelta(hours=9))
+
 NVD_KEYWORDS = [
     "AlmaLinux",
     "Red Hat Enterprise Linux",
     "RHEL",
-
     "npm",
     "Node.js",
-
     "composer",
     "Laravel",
     "Symfony",
     "symfony",
     "AuraSQL",
     "Aura SQL",
-
     "Vue.js",
     "Vue",
     "Vuetify",
-
     "PostgreSQL",
-
+    "pgAdmin",
+    "pgAdmin 4",
+    "pgadmin4",
     "Apache HTTP Server",
     "Apache Tomcat",
 ]
@@ -37,22 +44,21 @@ NVD_CATEGORY_MAP = {
     "AlmaLinux": "OS",
     "Red Hat Enterprise Linux": "OS",
     "RHEL": "OS",
-
     "npm": "JS",
     "Node.js": "JS",
     "Vue.js": "JS",
     "Vue": "JS",
     "Vuetify": "JS",
-
     "composer": "PHP",
     "Laravel": "PHP",
     "Symfony": "PHP",
     "symfony": "PHP",
     "AuraSQL": "PHP",
     "Aura SQL": "PHP",
-
     "PostgreSQL": "DB",
-
+    "pgAdmin": "DB",
+    "pgAdmin 4": "DB",
+    "pgadmin4": "DB",
     "Apache HTTP Server": "WEB",
     "Apache Tomcat": "WEB",
 }
@@ -75,66 +81,221 @@ JVN_KEYWORDS = [
 
 JVN_CATEGORY_MAP = {
     "Apache": "WEB",
-
     "PostgreSQL": "DB",
-
     "Node.js": "JS",
     "Vue": "JS",
     "Vue.js": "JS",
     "Vuetify": "JS",
     "npm": "JS",
-
     "composer": "PHP",
     "Laravel": "PHP",
     "Symfony": "PHP",
-
     "AlmaLinux": "OS",
     "Red Hat Enterprise Linux": "OS",
     "RHEL": "OS",
 }
 
-NVD_SEVERITIES = {
-    "CRITICAL",
-    "HIGH",
-    "MEDIUM",
-    "LOW",
-    "NONE",
-    "UNKNOWN",
-}
+
+def format_nvd_datetime(value):
+    return value.strftime("%Y-%m-%dT%H:%M:%S.000Z")
 
 
-def fetch_nvd():
-    end = datetime.now(timezone.utc)
-    start = end - timedelta(days=7)
+def update_jvn_date_params(params, prefix, start, end):
+    params.update({
+        f"{prefix}StartY": f"{start.year:04d}",
+        f"{prefix}StartM": f"{start.month:02d}",
+        f"{prefix}StartD": f"{start.day:02d}",
+        f"{prefix}EndY": f"{end.year:04d}",
+        f"{prefix}EndM": f"{end.month:02d}",
+        f"{prefix}EndD": f"{end.day:02d}",
+    })
 
-    params = {
-        "pubStartDate": start.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
-        "pubEndDate": end.strftime("%Y-%m-%dT%H:%M:%S.000Z"),
-    }
 
-    url = (
-        "https://services.nvd.nist.gov/rest/json/cves/2.0?"
-        + urllib.parse.urlencode(params)
-    )
+def get_jvn_status(xml_text):
+    root = ET.fromstring(xml_text)
+
+    for element in root.iter():
+        if element.tag.endswith("Status"):
+            return element.attrib
+
+    return {}
+
+
+def parse_int(value, default=0):
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return default
+
+
+def fetch_nvd_page(params):
+    url = NVD_API_URL + "?" + urllib.parse.urlencode(params)
+    print(f"NVD URL: {url}")
 
     with urllib.request.urlopen(url, timeout=30) as response:
         return json.loads(response.read().decode("utf-8"))
 
 
-def fetch_jvn_by_keyword(keyword):
-    params = {
+def fetch_nvd_by_date(date_type):
+    end = datetime.now(timezone.utc)
+    start = end - timedelta(days=NVD_LOOKBACK_DAYS)
+
+    base_params = {
+        "resultsPerPage": NVD_RESULTS_PER_PAGE,
+        "startIndex": 0,
+    }
+
+    if date_type == "modified":
+        base_params.update({
+            "lastModStartDate": format_nvd_datetime(start),
+            "lastModEndDate": format_nvd_datetime(end),
+        })
+    elif date_type == "published":
+        base_params.update({
+            "pubStartDate": format_nvd_datetime(start),
+            "pubEndDate": format_nvd_datetime(end),
+        })
+    else:
+        raise ValueError(f"Unknown NVD date_type: {date_type}")
+
+    all_vulnerabilities = []
+    start_index = 0
+    total_results = None
+
+    while True:
+        params = dict(base_params)
+        params["startIndex"] = start_index
+
+        data = fetch_nvd_page(params)
+
+        vulnerabilities = data.get("vulnerabilities", [])
+        results_per_page = data.get("resultsPerPage", len(vulnerabilities))
+        total_results = data.get("totalResults", 0)
+
+        print(
+            f"NVD [{date_type}]: "
+            f"startIndex={start_index}, "
+            f"resultsPerPage={results_per_page}, "
+            f"pageItems={len(vulnerabilities)}, "
+            f"totalResults={total_results}"
+        )
+
+        all_vulnerabilities.extend(vulnerabilities)
+
+        if not vulnerabilities:
+            break
+
+        start_index += results_per_page
+
+        if start_index >= total_results:
+            break
+
+        time.sleep(0.6)
+
+    return {
+        "source_date_type": date_type,
+        "totalResults": total_results,
+        "vulnerabilities": all_vulnerabilities,
+    }
+
+
+def fetch_nvd():
+    published = fetch_nvd_by_date("published")
+    modified = fetch_nvd_by_date("modified")
+
+    return {
+        "vulnerabilities": (
+            published.get("vulnerabilities", [])
+            + modified.get("vulnerabilities", [])
+        )
+    }
+
+
+def fetch_jvn_page(params):
+    url = JVN_API_URL + "?" + urllib.parse.urlencode(params)
+
+    print(f"JVN URL: {url}")
+
+    with urllib.request.urlopen(url, timeout=30) as response:
+        return response.read().decode("utf-8")
+
+
+def fetch_jvn_by_keyword_date(keyword, date_type):
+    end = datetime.now(JVN_TIMEZONE).date()
+    start = end - timedelta(days=JVN_LOOKBACK_DAYS)
+
+    base_params = {
         "method": "getVulnOverviewList",
         "feed": "hnd",
         "keyword": keyword,
         "useSynonym": "1",
+        "rangeDatePublic": "n",
+        "rangeDatePublished": "n",
+        "rangeDateFirstPublished": "n",
+        "startItem": 1,
+        "maxCountItem": JVN_RESULTS_PER_PAGE,
     }
 
-    url = "https://jvndb.jvn.jp/myjvn?" + urllib.parse.urlencode(params)
+    if date_type == "modified":
+        update_jvn_date_params(
+            base_params,
+            "datePublished",
+            start,
+            end,
+        )
+    elif date_type == "published":
+        update_jvn_date_params(
+            base_params,
+            "dateFirstPublished",
+            start,
+            end,
+        )
+    else:
+        raise ValueError(f"Unknown JVN date_type: {date_type}")
 
-    print(f"JVN keyword URL: {url}")
+    xml_pages = []
+    start_item = 1
 
-    with urllib.request.urlopen(url, timeout=30) as response:
-        return response.read().decode("utf-8")
+    while True:
+        params = dict(base_params)
+        params["startItem"] = start_item
+
+        xml_text = fetch_jvn_page(params)
+        xml_pages.append(xml_text)
+
+        status = get_jvn_status(xml_text)
+        total_results = parse_int(status.get("totalRes"))
+        page_items = parse_int(status.get("totalResRet"))
+        first_result = parse_int(
+            status.get("firstRes"),
+            start_item,
+        )
+
+        print(
+            f"JVN [{keyword}/{date_type}]: "
+            f"startItem={first_result}, "
+            f"pageItems={page_items}, "
+            f"totalResults={total_results}"
+        )
+
+        if page_items <= 0:
+            break
+
+        start_item = first_result + page_items
+
+        if start_item > total_results:
+            break
+
+        time.sleep(0.6)
+
+    return xml_pages
+
+
+def fetch_jvn_by_keyword(keyword):
+    return (
+        fetch_jvn_by_keyword_date(keyword, "published")
+        + fetch_jvn_by_keyword_date(keyword, "modified")
+    )
 
 
 def get_severity(cve):
@@ -235,19 +396,14 @@ def normalize_nvd(data):
 
     for item in data.get("vulnerabilities", []):
         cve = item.get("cve", {})
-
         cve_id = cve.get("id", "")
         description = get_description(cve)
-
         severity = get_severity(cve)
         score = get_score(cve)
 
         matched = match_nvd_keyword(description)
 
         if not matched:
-            continue
-
-        if severity not in NVD_SEVERITIES:
             continue
 
         source = "NVD"
@@ -307,6 +463,7 @@ def normalize_jvn(xml_text, requested_keyword):
             default="",
             namespaces=namespaces,
         )
+
         if "MyJVN　該当する脆弱性対策情報はありません。" in title:
             continue
 
@@ -355,7 +512,6 @@ def normalize_jvn(xml_text, requested_keyword):
         ]
 
         source = "JVN"
-
         matched = requested_keyword
 
         cve_id = (
@@ -427,7 +583,6 @@ def count_by_source(alerts):
 
     for alert in alerts:
         source = alert.get("source", "UNKNOWN")
-
         result[source] = (
             result.get(source, 0) + 1
         )
@@ -448,15 +603,15 @@ def main():
 
     for keyword in JVN_KEYWORDS:
         try:
-            jvn_xml = fetch_jvn_by_keyword(keyword)
+            jvn_xml_pages = fetch_jvn_by_keyword(keyword)
 
-            alerts.extend(
-                normalize_jvn(
-                    jvn_xml,
-                    keyword,
+            for jvn_xml in jvn_xml_pages:
+                alerts.extend(
+                    normalize_jvn(
+                        jvn_xml,
+                        keyword,
+                    )
                 )
-            )
-
         except Exception as e:
             print(
                 f"JVN fetch failed: {keyword}: {e}"
