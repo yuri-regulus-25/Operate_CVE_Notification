@@ -1,7 +1,9 @@
 import json
+import os
 import time
 import urllib.parse
 import urllib.request
+import urllib.error
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -10,8 +12,11 @@ PUBLIC_DIR = Path("docs")
 ALERTS_PATH = PUBLIC_DIR / "alerts.json"
 
 NVD_API_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
+NVD_API_KEY = os.getenv("NVD_API_KEY")
 NVD_RESULTS_PER_PAGE = 2000
 NVD_LOOKBACK_DAYS = 30
+NVD_REQUEST_DELAY = 0.7 if NVD_API_KEY else 6.1
+NVD_MAX_RETRIES = 3
 JVN_API_URL = "https://jvndb.jvn.jp/myjvn"
 JVN_RESULTS_PER_PAGE = 50
 JVN_LOOKBACK_DAYS = 30
@@ -132,8 +137,45 @@ def fetch_nvd_page(params):
     url = NVD_API_URL + "?" + urllib.parse.urlencode(params)
     print(f"NVD URL: {url}")
 
-    with urllib.request.urlopen(url, timeout=30) as response:
-        return json.loads(response.read().decode("utf-8"))
+    headers = {}
+
+    if NVD_API_KEY:
+        headers["apiKey"] = NVD_API_KEY
+
+    request = urllib.request.Request(
+        url,
+        headers=headers,
+    )
+
+    for attempt in range(1, NVD_MAX_RETRIES + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            message = e.headers.get("message", "")
+
+            print(
+                f"NVD request failed: "
+                f"status={e.code}, "
+                f"attempt={attempt}/{NVD_MAX_RETRIES}, "
+                f"message={message or e.reason}"
+            )
+
+            if attempt >= NVD_MAX_RETRIES:
+                raise
+
+            time.sleep(NVD_REQUEST_DELAY * attempt)
+        except urllib.error.URLError as e:
+            print(
+                f"NVD request failed: "
+                f"attempt={attempt}/{NVD_MAX_RETRIES}, "
+                f"reason={e.reason}"
+            )
+
+            if attempt >= NVD_MAX_RETRIES:
+                raise
+
+            time.sleep(NVD_REQUEST_DELAY * attempt)
 
 
 def fetch_nvd_by_date(date_type):
@@ -190,7 +232,7 @@ def fetch_nvd_by_date(date_type):
         if start_index >= total_results:
             break
 
-        time.sleep(0.6)
+        time.sleep(NVD_REQUEST_DELAY)
 
     return {
         "source_date_type": date_type,
@@ -200,14 +242,27 @@ def fetch_nvd_by_date(date_type):
 
 
 def fetch_nvd():
-    published = fetch_nvd_by_date("published")
-    modified = fetch_nvd_by_date("modified")
+    vulnerabilities = []
+
+    date_types = [
+        "published",
+        "modified",
+    ]
+
+    for index, date_type in enumerate(date_types):
+        try:
+            data = fetch_nvd_by_date(date_type)
+            vulnerabilities.extend(
+                data.get("vulnerabilities", [])
+            )
+        except Exception as e:
+            print(f"NVD {date_type} fetch failed: {e}")
+
+        if index < len(date_types) - 1:
+            time.sleep(NVD_REQUEST_DELAY)
 
     return {
-        "vulnerabilities": (
-            published.get("vulnerabilities", [])
-            + modified.get("vulnerabilities", [])
-        )
+        "vulnerabilities": vulnerabilities
     }
 
 
