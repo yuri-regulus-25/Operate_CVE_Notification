@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import time
 import urllib.parse
 import urllib.request
@@ -132,6 +133,333 @@ JVN_KEYWORDS = NVD_KEYWORDS.copy()
 
 NVD_CATEGORY_MAP = build_category_map(KEYWORD_GROUPS)
 JVN_CATEGORY_MAP = NVD_CATEGORY_MAP.copy()
+
+STRONG_REJECT_PATTERNS = [
+    "Windows版",
+    "for Windows",
+    "Windows version",
+    "on Windows",
+    "Windows環境",
+    "Linux, UNIX and Windows",
+    "Windows/macOS/Linux",
+    "Vue, React, Angular",
+    "Vue/React/Angular",
+    "supports Vue",
+    "RDP/VNC/SSH",
+    "SMB service on device",
+]
+
+MICROSOFT_CONTEXT = [
+    "Microsoft",
+    "Windows",
+    "Active Directory",
+    "Microsoft Entra",
+    "Azure AD",
+]
+
+WINDOWS_CONTEXT = [
+    "Microsoft",
+    "Windows",
+    "Win32k",
+    "CLFS",
+    "BitLocker",
+    "Hyper-V",
+    "Defender",
+    "Active Directory",
+]
+
+PHP_COMPOSER_CONTEXT = [
+    "PHP",
+    "package manager",
+    "dependency manager",
+]
+
+NPM_CONTEXT = [
+    "npm package",
+    "npm CLI",
+    "npm registry",
+    "package.json",
+    "Node.js",
+    "Node package",
+]
+
+PRODUCT_RULES = [
+    {
+        "key": "almalinux",
+        "display": "AlmaLinux",
+        "category": "OS",
+        "formal": ["AlmaLinux"],
+        "cpe": ["almalinux"],
+    },
+    {
+        "key": "rhel",
+        "display": "Red Hat Enterprise Linux",
+        "category": "OS",
+        "formal": ["Red Hat Enterprise Linux"],
+        "aliases": ["RHEL"],
+        "cpe": ["redhat:enterprise_linux", "red_hat:enterprise_linux", "rhel"],
+    },
+    {
+        "key": "microsoft_windows",
+        "display": "Microsoft Windows",
+        "category": "OS",
+        "formal": [
+            "Microsoft Windows",
+            "Windows Server",
+            "Windows 10",
+            "Windows 11",
+            "Windows Server 2012",
+            "Windows Server 2016",
+            "Windows Server 2019",
+            "Windows Server 2022",
+            "Windows Server 2025",
+        ],
+        "cpe": ["microsoft:windows", "microsoft:windows_server"],
+    },
+    {
+        "key": "windows_kernel",
+        "display": "Windows Kernel",
+        "category": "OS",
+        "formal": ["Windows Kernel"],
+        "cpe": [],
+    },
+    {
+        "key": "win32k",
+        "display": "Win32k",
+        "category": "OS",
+        "aliases": ["Win32k"],
+        "contexts": WINDOWS_CONTEXT,
+        "cpe": [],
+    },
+    {
+        "key": "windows_installer",
+        "display": "Windows Installer",
+        "category": "OS",
+        "formal": ["Windows Installer"],
+        "cpe": ["microsoft:windows_installer"],
+    },
+    {
+        "key": "windows_tcp_ip",
+        "display": "Windows TCP/IP",
+        "category": "OS",
+        "formal": ["Windows TCP/IP"],
+        "cpe": [],
+    },
+    {
+        "key": "windows_clfs",
+        "display": "Windows Common Log File System",
+        "category": "OS",
+        "formal": ["Windows Common Log File System"],
+        "aliases": ["CLFS"],
+        "contexts": ["Windows Common Log File System"],
+        "cpe": [],
+    },
+    {
+        "key": "bitlocker",
+        "display": "BitLocker",
+        "category": "OS",
+        "formal": ["BitLocker"],
+        "cpe": ["microsoft:bitlocker"],
+    },
+    {
+        "key": "hyper_v",
+        "display": "Hyper-V",
+        "category": "OS",
+        "formal": ["Hyper-V"],
+        "exclude": ["Linux kernel on Hyper-V"],
+        "cpe": ["microsoft:hyper-v"],
+    },
+    {
+        "key": "apache_http_server",
+        "display": "Apache HTTP Server",
+        "category": "WEB",
+        "formal": ["Apache HTTP Server", "Apache httpd"],
+        "cpe": ["apache:http_server"],
+    },
+    {
+        "key": "apache_tomcat",
+        "display": "Apache Tomcat",
+        "category": "WEB",
+        "formal": ["Apache Tomcat", "Tomcat"],
+        "cpe": ["apache:tomcat"],
+    },
+    {
+        "key": "iis",
+        "display": "IIS",
+        "category": "WEB",
+        "formal": ["Internet Information Services", "Microsoft IIS"],
+        "aliases": ["IIS"],
+        "contexts": ["Microsoft", "Windows", "Internet Information Services"],
+        "cpe": ["microsoft:internet_information_services", "microsoft:iis"],
+    },
+    {
+        "key": "remote_desktop_services",
+        "display": "Remote Desktop Services",
+        "category": "WEB",
+        "formal": ["Remote Desktop Services"],
+        "aliases": ["RDP"],
+        "contexts": ["Remote Desktop Services"],
+        "cpe": ["microsoft:remote_desktop_services"],
+    },
+    {
+        "key": "smb",
+        "display": "SMB",
+        "category": "WEB",
+        "formal": ["Windows SMB", "SMB Server", "Samba"],
+        "aliases": ["SMB"],
+        "contexts": ["Windows SMB", "SMB Server", "Samba", "Microsoft"],
+        "cpe": ["microsoft:smb", "samba:samba"],
+    },
+    {
+        "key": "ntlm",
+        "display": "NTLM",
+        "category": "WEB",
+        "aliases": ["NTLM"],
+        "contexts": ["Microsoft", "Windows", "Active Directory", "authentication"],
+        "cpe": [],
+    },
+    {
+        "key": "kerberos",
+        "display": "Kerberos",
+        "category": "WEB",
+        "formal": ["Kerberos"],
+        "contexts": MICROSOFT_CONTEXT + ["MIT Kerberos", "Heimdal"],
+        "cpe": ["mit:kerberos", "heimdal:heimdal"],
+    },
+    {
+        "key": "active_directory",
+        "display": "Active Directory",
+        "category": "WEB",
+        "formal": ["Active Directory"],
+        "cpe": ["microsoft:active_directory"],
+    },
+    {
+        "key": "ldap",
+        "display": "LDAP",
+        "category": "WEB",
+        "aliases": ["LDAP"],
+        "contexts": ["Active Directory", "OpenLDAP", "Microsoft", "Windows"],
+        "cpe": ["openldap:openldap", "microsoft:active_directory"],
+    },
+    {
+        "key": "windows_dns_server",
+        "display": "Windows DNS Server",
+        "category": "WEB",
+        "formal": ["Windows DNS Server", "Microsoft DNS"],
+        "aliases": ["DNS Server"],
+        "contexts": ["Windows DNS Server", "Microsoft DNS"],
+        "cpe": ["microsoft:dns_server"],
+    },
+    {
+        "key": "windows_dhcp_server",
+        "display": "Windows DHCP Server",
+        "category": "WEB",
+        "formal": ["Windows DHCP Server", "Microsoft DHCP"],
+        "aliases": ["DHCP Server"],
+        "contexts": ["Windows DHCP Server", "Microsoft DHCP"],
+        "cpe": ["microsoft:dhcp_server"],
+    },
+    {
+        "key": "windows_print_spooler",
+        "display": "Windows Print Spooler",
+        "category": "WEB",
+        "formal": ["Windows Print Spooler", "Print Spooler"],
+        "contexts": ["Windows", "Microsoft"],
+        "cpe": [],
+    },
+    {
+        "key": "rras",
+        "display": "Windows Routing and Remote Access Service",
+        "category": "WEB",
+        "formal": ["Windows Routing and Remote Access Service", "Routing and Remote Access Service"],
+        "aliases": ["RRAS"],
+        "contexts": ["Routing and Remote Access Service"],
+        "cpe": [],
+    },
+    {
+        "key": "microsoft_defender",
+        "display": "Microsoft Defender",
+        "category": "WEB",
+        "formal": ["Microsoft Defender", "Windows Defender"],
+        "cpe": ["microsoft:defender", "microsoft:windows_defender"],
+    },
+    {
+        "key": "postgresql",
+        "display": "PostgreSQL",
+        "category": "DB",
+        "formal": ["PostgreSQL"],
+        "cpe": ["postgresql:postgresql"],
+    },
+    {
+        "key": "pgadmin",
+        "display": "pgAdmin",
+        "category": "DB",
+        "formal": ["pgAdmin", "pgAdmin 4", "pgadmin4"],
+        "cpe": ["pgadmin:pgadmin", "pgadmin:pgadmin4"],
+    },
+    {
+        "key": "composer",
+        "display": "Composer",
+        "category": "PHP",
+        "formal": ["PHP Composer", "Composer package manager"],
+        "aliases": ["Composer", "composer"],
+        "contexts": PHP_COMPOSER_CONTEXT,
+        "cpe": ["getcomposer:composer", "composer:composer"],
+    },
+    {
+        "key": "laravel",
+        "display": "Laravel",
+        "category": "PHP",
+        "formal": ["Laravel"],
+        "cpe": ["laravel:laravel"],
+    },
+    {
+        "key": "symfony",
+        "display": "Symfony",
+        "category": "PHP",
+        "formal": ["Symfony", "symfony"],
+        "cpe": ["symfony:symfony"],
+    },
+    {
+        "key": "aurasql",
+        "display": "AuraSQL",
+        "category": "PHP",
+        "formal": ["AuraSQL", "Aura SQL"],
+        "cpe": ["auraphp:aurasql", "aura:sql"],
+    },
+    {
+        "key": "npm",
+        "display": "npm",
+        "category": "JS",
+        "formal": ["npm CLI", "npm package", "npm registry"],
+        "aliases": ["npm"],
+        "contexts": NPM_CONTEXT,
+        "cpe": ["npmjs:npm", "npm:npm"],
+    },
+    {
+        "key": "nodejs",
+        "display": "Node.js",
+        "category": "JS",
+        "formal": ["Node.js", "Nodejs"],
+        "cpe": ["nodejs:node.js", "nodejs:node"],
+    },
+    {
+        "key": "vuejs",
+        "display": "Vue.js",
+        "category": "JS",
+        "formal": ["Vue.js", "vuejs"],
+        "aliases": ["Vue"],
+        "contexts": ["Vue.js", "vuejs", "npm package vue"],
+        "cpe": ["vuejs:vue", "vue:vue"],
+    },
+    {
+        "key": "vuetify",
+        "display": "Vuetify",
+        "category": "JS",
+        "formal": ["Vuetify"],
+        "cpe": ["vuetifyjs:vuetify", "vuetify:vuetify"],
+    },
+]
 
 
 def format_nvd_datetime(value):
@@ -449,6 +777,166 @@ def truncate_text(text, limit=500):
     return text[:limit] + "..."
 
 
+def normalize_text(value):
+    return re.sub(r"\s+", " ", value or "").strip()
+
+
+def contains_phrase(text, phrase):
+    return phrase.lower() in text.lower()
+
+
+def contains_word(text, word):
+    pattern = r"(?<![A-Za-z0-9])" + re.escape(word) + r"(?![A-Za-z0-9])"
+    return re.search(pattern, text, flags=re.IGNORECASE) is not None
+
+
+def contains_any(text, patterns):
+    return any(contains_phrase(text, pattern) for pattern in patterns)
+
+
+def matching_reject_patterns(text):
+    return [
+        pattern
+        for pattern in STRONG_REJECT_PATTERNS
+        if contains_phrase(text, pattern)
+    ]
+
+
+def iter_cpe_match_nodes(node):
+    for cpe_match in node.get("cpeMatch", []):
+        yield cpe_match
+
+    for child in node.get("nodes", []):
+        yield from iter_cpe_match_nodes(child)
+
+
+def collect_nvd_cpe_names(cve):
+    names = []
+
+    for configuration in cve.get("configurations", []):
+        for node in configuration.get("nodes", []):
+            for cpe_match in iter_cpe_match_nodes(node):
+                criteria = cpe_match.get("criteria", "")
+
+                if criteria:
+                    names.append(criteria)
+
+    return names
+
+
+def cpe_matches(rule, cpe_text):
+    return any(
+        pattern.lower() in cpe_text
+        for pattern in rule.get("cpe", [])
+    )
+
+
+def find_formal_match(rule, title, description):
+    for term in rule.get("formal", []):
+        if contains_phrase(title, term):
+            return term, "title", 90
+
+    for term in rule.get("formal", []):
+        if contains_phrase(description, term):
+            return term, "description_formal", 70
+
+    return None, None, 0
+
+
+def find_alias_match(rule, title, description):
+    for term in rule.get("aliases", []):
+        if contains_word(title, term):
+            return term, "title_alias", 75
+
+    for term in rule.get("aliases", []):
+        if contains_word(description, term):
+            return term, "description_alias", 45
+
+    return None, None, 0
+
+
+def classify_rule(rule, title, description, cpe_names):
+    title = normalize_text(title)
+    description = normalize_text(description)
+    full_text = normalize_text(f"{title} {description}")
+    cpe_text = " ".join(cpe_names or []).lower()
+
+    for pattern in rule.get("exclude", []):
+        if contains_phrase(full_text, pattern):
+            return None
+
+    if cpe_matches(rule, cpe_text):
+        return {
+            "product_key": rule["key"],
+            "matched": rule["display"],
+            "category": rule["category"],
+            "confidence": "cpe",
+            "score": 100,
+        }
+
+    matched_term, match_type, score = find_formal_match(
+        rule,
+        title,
+        description,
+    )
+
+    if not matched_term:
+        matched_term, match_type, score = find_alias_match(
+            rule,
+            title,
+            description,
+        )
+
+    if not matched_term:
+        return None
+
+    contexts = rule.get("contexts", [])
+
+    if contexts and not contains_any(full_text, contexts):
+        return None
+
+    reject_patterns = matching_reject_patterns(full_text)
+
+    if reject_patterns:
+        return None
+
+    return {
+        "product_key": rule["key"],
+        "matched": rule["display"],
+        "category": rule["category"],
+        "confidence": match_type,
+        "score": score,
+    }
+
+
+def classify_product(title="", description="", cpe_names=None):
+    candidates = []
+
+    for rule in PRODUCT_RULES:
+        classification = classify_rule(
+            rule,
+            title,
+            description,
+            cpe_names or [],
+        )
+
+        if classification:
+            candidates.append(classification)
+
+    if not candidates:
+        return None
+
+    candidates.sort(
+        key=lambda item: (
+            item["score"],
+            len(item["matched"]),
+        ),
+        reverse=True,
+    )
+
+    return candidates[0]
+
+
 def match_nvd_keyword(text):
     lower_text = text.lower()
 
@@ -488,13 +976,19 @@ def normalize_nvd(data):
         description = get_description(cve)
         severity = get_severity(cve)
         score = get_score(cve)
+        cpe_names = collect_nvd_cpe_names(cve)
 
-        matched = match_nvd_keyword(description)
+        product = classify_product(
+            title=cve_id,
+            description=description,
+            cpe_names=cpe_names,
+        )
 
-        if not matched:
+        if not product:
             continue
 
         source = "NVD"
+        matched = product["matched"]
 
         alerts.append({
             "alert_id": make_alert_id(
@@ -503,10 +997,9 @@ def normalize_nvd(data):
                 matched,
             ),
             "source": source,
-            "category": NVD_CATEGORY_MAP.get(
-                matched,
-                "UNKNOWN",
-            ),
+            "category": product["category"],
+            "product_key": product["product_key"],
+            "confidence": product["confidence"],
             "priority": decide_priority(severity),
             "cve_id": cve_id,
             "matched": matched,
@@ -600,7 +1093,15 @@ def normalize_jvn(xml_text, requested_keyword):
         ]
 
         source = "JVN"
-        matched = requested_keyword
+        product = classify_product(
+            title=title,
+            description=description,
+        )
+
+        if not product:
+            continue
+
+        matched = product["matched"]
 
         cve_id = (
             cve_ids[0]
@@ -619,10 +1120,9 @@ def normalize_jvn(xml_text, requested_keyword):
                 matched,
             ),
             "source": source,
-            "category": JVN_CATEGORY_MAP.get(
-                matched,
-                "UNKNOWN",
-            ),
+            "category": product["category"],
+            "product_key": product["product_key"],
+            "confidence": product["confidence"],
             "priority": decide_priority(severity),
             "cve_id": cve_id,
             "matched": matched,
