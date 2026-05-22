@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-05-22T15:53:16.590466+00:00",
+  "start": "2025-02-01T00:00:00+00:00",
+  "end": "2025-03-01T00:00:00+00:00",
+  "source": "all",
+  "records_before": 0,
+  "records_after": 156,
+  "nvd": {
+    "windows": 2,
+    "raw_items": 3831,
+    "accepted": 123
+  },
+  "jvn": {
+    "windows": 162,
+    "raw_items": 4019,
+    "accepted": 366
+  },
+  "database_counts": {
+    "records": 156,
+    "products": 156,
+    "references": 382
+  },
+  "sources": {
+    "JVN": 33,
+    "NVD": 123
+  }
+}
