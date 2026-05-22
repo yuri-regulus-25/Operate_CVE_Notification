@@ -17,88 +17,119 @@ NVD_RESULTS_PER_PAGE = 2000
 NVD_LOOKBACK_DAYS = 15
 NVD_REQUEST_DELAY = 0.7 if NVD_API_KEY else 6.1
 NVD_MAX_RETRIES = 3
+
 JVN_API_URL = "https://jvndb.jvn.jp/myjvn"
 JVN_RESULTS_PER_PAGE = 50
 JVN_LOOKBACK_DAYS = 15
 JVN_TIMEZONE = timezone(timedelta(hours=9))
 
-NVD_KEYWORDS = [
-    "AlmaLinux",
-    "Red Hat Enterprise Linux",
-    "RHEL",
-    "npm",
-    "Node.js",
-    "composer",
-    "Laravel",
-    "Symfony",
-    "symfony",
-    "AuraSQL",
-    "Aura SQL",
-    "Vue.js",
-    "Vue",
-    "Vuetify",
-    "PostgreSQL",
-    "pgAdmin",
-    "pgAdmin 4",
-    "pgadmin4",
-    "Apache HTTP Server",
-    "Apache Tomcat",
-]
+# ============================================================
+# Keyword Settings
+# ============================================================
+# - NVD / JVN で同じキーワード群を使用する
+# - category は既存 alerts.json 互換を優先して OS / WEB / DB / PHP / JS / UNKNOWN を維持
+# - Windows / Windows Server 関連は OS として扱う
+# - IIS / RDP / SMB など Windows 周辺コンポーネントも検索対象に含める
 
-NVD_CATEGORY_MAP = {
-    "AlmaLinux": "OS",
-    "Red Hat Enterprise Linux": "OS",
-    "RHEL": "OS",
-    "npm": "JS",
-    "Node.js": "JS",
-    "Vue.js": "JS",
-    "Vue": "JS",
-    "Vuetify": "JS",
-    "composer": "PHP",
-    "Laravel": "PHP",
-    "Symfony": "PHP",
-    "symfony": "PHP",
-    "AuraSQL": "PHP",
-    "Aura SQL": "PHP",
-    "PostgreSQL": "DB",
-    "pgAdmin": "DB",
-    "pgAdmin 4": "DB",
-    "pgadmin4": "DB",
-    "Apache HTTP Server": "WEB",
-    "Apache Tomcat": "WEB",
+KEYWORD_GROUPS = {
+    "OS": [
+        "AlmaLinux",
+        "Red Hat Enterprise Linux",
+        "RHEL",
+
+        "Microsoft Windows",
+        "Windows Server",
+        "Windows 10",
+        "Windows 11",
+        "Windows Server 2016",
+        "Windows Server 2019",
+        "Windows Server 2022",
+        "Windows Server 2025",
+
+        "Windows Kernel",
+        "Win32k",
+        "Windows Installer",
+        "Windows TCP/IP",
+        "Windows Common Log File System",
+        "CLFS",
+        "BitLocker",
+        "Hyper-V",
+    ],
+
+    "WEB": [
+        "Apache",
+        "Apache HTTP Server",
+        "Apache Tomcat",
+        "IIS",
+        "Remote Desktop Services",
+        "RDP",
+        "SMB",
+        "NTLM",
+        "Kerberos",
+        "Active Directory",
+        "LDAP",
+        "DNS Server",
+        "DHCP Server",
+        "Windows Print Spooler",
+        "Windows Routing and Remote Access Service",
+        "RRAS",
+        "Microsoft Defender",
+        "Windows Defender",
+    ],
+
+    "DB": [
+        "PostgreSQL",
+        "pgAdmin",
+        "pgAdmin 4",
+        "pgadmin4",
+    ],
+
+    "PHP": [
+        "composer",
+        "Composer",
+        "Laravel",
+        "Symfony",
+        "symfony",
+        "AuraSQL",
+        "Aura SQL",
+    ],
+
+    "JS": [
+        "npm",
+        "Node.js",
+        "Vue.js",
+        "Vue",
+        "Vuetify",
+    ],
 }
 
-JVN_KEYWORDS = [
-    "Apache",
-    "PostgreSQL",
-    "Node.js",
-    "Laravel",
-    "Symfony",
-    "Vue",
-    "Vue.js",
-    "Vuetify",
-    "composer",
-    "npm",
-    "AlmaLinux",
-    "Red Hat Enterprise Linux",
-    "RHEL",
-]
 
-JVN_CATEGORY_MAP = {
-    "Apache": "WEB",
-    "PostgreSQL": "DB",
-    "Node.js": "JS",
-    "Vue": "JS",
-    "Vue.js": "JS",
-    "Vuetify": "JS",
-    "npm": "JS",
-    "composer": "PHP",
-    "Laravel": "PHP",
-    "Symfony": "PHP",
-    "AlmaLinux": "OS",
-    "Red Hat Enterprise Linux": "OS",
-    "RHEL": "OS",
-}
+def flatten_keywords(keyword_groups):
+    keywords = []
+
+    for group_keywords in keyword_groups.values():
+        for keyword in group_keywords:
+            if keyword not in keywords:
+                keywords.append(keyword)
+
+    return keywords
+
+
+def build_category_map(keyword_groups):
+    category_map = {}
+
+    for category, group_keywords in keyword_groups.items():
+        for keyword in group_keywords:
+            category_map[keyword] = category
+
+    return category_map
+
+
+NVD_KEYWORDS = flatten_keywords(KEYWORD_GROUPS)
+JVN_KEYWORDS = NVD_KEYWORDS.copy()
+
+NVD_CATEGORY_MAP = build_category_map(KEYWORD_GROUPS)
+JVN_CATEGORY_MAP = NVD_CATEGORY_MAP.copy()
 
 
 def format_nvd_datetime(value):
