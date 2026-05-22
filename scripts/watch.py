@@ -32,15 +32,18 @@ JVN_TIMEZONE = timezone(timedelta(hours=9))
 # - IIS / RDP / SMB など Windows 周辺コンポーネントも検索対象に含める
 
 KEYWORD_GROUPS = {
-    "OS": [
+    "Linux": [
         "AlmaLinux",
         "Red Hat Enterprise Linux",
         "RHEL",
+    ],
 
+    "Windows": [
         "Microsoft Windows",
         "Windows Server",
         "Windows 10",
         "Windows 11",
+        "Windows Server 2012",
         "Windows Server 2016",
         "Windows Server 2019",
         "Windows Server 2022",
@@ -55,7 +58,6 @@ KEYWORD_GROUPS = {
         "BitLocker",
         "Hyper-V",
     ],
-
     "WEB": [
         "Apache",
         "Apache HTTP Server",
