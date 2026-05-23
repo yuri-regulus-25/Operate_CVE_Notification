@@ -502,7 +502,7 @@ def fetch_jvn_window(keyword, start_date, end_date):
         if start_item > total_results:
             break
 
-        time.sleep(0.6)
+        time.sleep(watch.JVN_REQUEST_DELAY)
 
     return xml_pages
 
@@ -617,7 +617,7 @@ def export_jvn(conn, start, end, fetched_at):
                     stats["accepted"] += 1
 
             conn.commit()
-            time.sleep(0.6)
+            time.sleep(watch.JVN_REQUEST_DELAY)
 
     return stats
 
