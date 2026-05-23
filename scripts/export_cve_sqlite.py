@@ -176,6 +176,8 @@ def ensure_schema(conn):
 def upsert_alert(conn, alert, source_id, raw_json, references, fetched_at):
     fetched_at_text = format_sqlite_datetime(fetched_at)
 
+    alert = sanitize_alert(alert)
+
     conn.execute(
         """
         INSERT INTO cve_records (
@@ -293,7 +295,7 @@ def upsert_alert(conn, alert, source_id, raw_json, references, fetched_at):
             (
                 alert.get("source", ""),
                 source_id,
-                url,
+                sanitize_text(url),
                 reference.get("source", ""),
                 json.dumps(reference.get("tags", []), ensure_ascii=False),
                 fetched_at_text,
@@ -628,6 +630,43 @@ def parse_args():
     )
     return parser.parse_args()
 
+def sanitize_text(value):
+    if value is None:
+        return ""
+
+    text = str(value)
+
+    # NULL文字除去
+    text = text.replace("\x00", "")
+
+    # 制御文字除去（改行/タブ以外）
+    text = "".join(
+        ch for ch in text
+        if ch in ("\n", "\r", "\t") or ord(ch) >= 32
+    )
+
+    # サロゲート除去
+    text = "".join(
+        ch for ch in text
+        if not (0xD800 <= ord(ch) <= 0xDFFF)
+    )
+
+    # UTF-8安全化
+    text = text.encode("utf-8", errors="ignore").decode("utf-8", errors="ignore")
+
+    return text
+
+
+def sanitize_alert(alert):
+    sanitized = {}
+
+    for key, value in alert.items():
+        if isinstance(value, str):
+            sanitized[key] = sanitize_text(value)
+        else:
+            sanitized[key] = value
+
+    return sanitized
 
 def main():
     args = parse_args()
