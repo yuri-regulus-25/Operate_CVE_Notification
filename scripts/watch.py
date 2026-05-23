@@ -23,6 +23,10 @@ JVN_API_URL = "https://jvndb.jvn.jp/myjvn"
 JVN_RESULTS_PER_PAGE = 50
 JVN_LOOKBACK_DAYS = 15
 JVN_TIMEZONE = timezone(timedelta(hours=9))
+JVN_REQUEST_DELAY = float(os.getenv("JVN_REQUEST_DELAY", "2.0"))
+JVN_RETRY_BASE_DELAY = float(os.getenv("JVN_RETRY_BASE_DELAY", "10.0"))
+JVN_MAX_RETRIES = int(os.getenv("JVN_MAX_RETRIES", "4"))
+JVN_TIMEOUT = int(os.getenv("JVN_TIMEOUT", "60"))
 
 # ============================================================
 # Keyword Settings
@@ -632,8 +636,40 @@ def fetch_jvn_page(params):
 
     print(f"JVN URL: {url}")
 
-    with urllib.request.urlopen(url, timeout=30) as response:
-        return response.read().decode("utf-8")
+    for attempt in range(1, JVN_MAX_RETRIES + 1):
+        try:
+            with urllib.request.urlopen(url, timeout=JVN_TIMEOUT) as response:
+                xml_text = response.read().decode("utf-8")
+
+            time.sleep(JVN_REQUEST_DELAY)
+            return xml_text
+        except urllib.error.HTTPError as e:
+            print(
+                f"JVN request failed: "
+                f"status={e.code}, "
+                f"attempt={attempt}/{JVN_MAX_RETRIES}, "
+                f"reason={e.reason}"
+            )
+
+            if attempt >= JVN_MAX_RETRIES:
+                raise
+
+            time.sleep(JVN_RETRY_BASE_DELAY * attempt)
+        except (
+            urllib.error.URLError,
+            TimeoutError,
+            OSError,
+        ) as e:
+            print(
+                f"JVN request failed: "
+                f"attempt={attempt}/{JVN_MAX_RETRIES}, "
+                f"reason={getattr(e, 'reason', e)}"
+            )
+
+            if attempt >= JVN_MAX_RETRIES:
+                raise
+
+            time.sleep(JVN_RETRY_BASE_DELAY * attempt)
 
 
 def fetch_jvn_by_keyword_date(keyword, date_type):
@@ -701,8 +737,6 @@ def fetch_jvn_by_keyword_date(keyword, date_type):
 
         if start_item > total_results:
             break
-
-        time.sleep(0.6)
 
     return xml_pages
 
