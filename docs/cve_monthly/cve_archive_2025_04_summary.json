@@ -1,0 +1,32 @@
+{
+  "archive_type": "monthly",
+  "generated_at": "2026-05-24T04:53:32.544786+00:00",
+  "month": "2025_04",
+  "start": "2025-04-01T00:00:00+00:00",
+  "end_exclusive": "2025-05-01T00:00:00+00:00",
+  "source": "all",
+  "database": "docs/cve_monthly/cve_archive_2025_04.sqlite",
+  "records_before": 0,
+  "records_after": 180,
+  "nvd": {
+    "windows": 1,
+    "raw_items": 4142,
+    "accepted": 172,
+    "out_of_range": 0
+  },
+  "jvn": {
+    "windows": 162,
+    "raw_items": 6464,
+    "accepted": 53,
+    "out_of_range": 0
+  },
+  "database_counts": {
+    "records": 180,
+    "products": 180,
+    "references": 325
+  },
+  "sources": {
+    "JVN": 8,
+    "NVD": 172
+  }
+}
