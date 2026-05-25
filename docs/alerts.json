@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-25T10:27:30.036723+00:00",
-  "count": 1901,
+  "generated_at": "2026-05-25T15:18:49.347489+00:00",
+  "count": 1895,
   "sources": {
-    "NVD": 1759,
+    "NVD": 1753,
     "JVN": 142
   },
   "alerts": [
@@ -29026,57 +29026,6 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5121"
     },
     {
-      "alert_id": "nvd:cve-2026-21712:node.js",
-      "source": "NVD",
-      "category": "JS",
-      "product_key": "nodejs",
-      "confidence": "description_formal",
-      "priority": "NOTICE",
-      "cve_id": "CVE-2026-21712",
-      "matched": "Node.js",
-      "severity": "MEDIUM",
-      "score": 5.7,
-      "published": "2026-03-30T16:16:03.510",
-      "last_modified": "2026-05-10T14:16:47.377",
-      "title": "CVE-2026-21712",
-      "description": "A flaw in Node.js URL processing causes an assertion failure in native code when `url.format()` is called with a malformed internationalized domain name (IDN) containing invalid characters, crashing the Node.js process.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21712"
-    },
-    {
-      "alert_id": "nvd:cve-2026-21713:node.js",
-      "source": "NVD",
-      "category": "JS",
-      "product_key": "nodejs",
-      "confidence": "description_formal",
-      "priority": "NOTICE",
-      "cve_id": "CVE-2026-21713",
-      "matched": "Node.js",
-      "severity": "MEDIUM",
-      "score": 5.9,
-      "published": "2026-03-30T20:16:19.397",
-      "last_modified": "2026-05-10T14:16:47.507",
-      "title": "CVE-2026-21713",
-      "description": "A flaw in Node.js HMAC verification uses a non-constant-time comparison when validating user-provided signatures, potentially leaking timing information proportional to the number of matching bytes. Under certain threat models where high-resolution timing measurements are possible, this behavior could be exploited as a timing oracle to infer HMAC values.\r\n\r\nNode.js already provides timing-safe comparison primitives used elsewhere in the codebase, indicating this is an oversight rather than an in...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21713"
-    },
-    {
-      "alert_id": "nvd:cve-2026-21717:node.js",
-      "source": "NVD",
-      "category": "JS",
-      "product_key": "nodejs",
-      "confidence": "description_formal",
-      "priority": "NOTICE",
-      "cve_id": "CVE-2026-21717",
-      "matched": "Node.js",
-      "severity": "MEDIUM",
-      "score": 5.9,
-      "published": "2026-03-30T20:16:20.010",
-      "last_modified": "2026-05-10T14:16:47.620",
-      "title": "CVE-2026-21717",
-      "description": "A flaw in V8's string hashing mechanism causes integer-like strings to be hashed to their numeric value, making hash collisions trivially predictable. By crafting a request that causes many such collisions in V8's internal string table, an attacker can significantly degrade performance of the Node.js process.\r\n\r\nThe most common trigger is any endpoint that calls `JSON.parse()` on attacker-controlled input, as JSON parsing automatically internalizes short strings into the affected hash table.\r\n\r\n...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-21717"
-    },
-    {
       "alert_id": "nvd:cve-2026-5201:red hat enterprise linux",
       "source": "NVD",
       "category": "OS",
@@ -29092,23 +29041,6 @@
       "title": "CVE-2026-5201",
       "description": "A flaw was found in the gdk-pixbuf library. This heap-based buffer overflow vulnerability occurs in the JPEG image loader due to improper validation of color component counts when processing a specially crafted JPEG image. A remote attacker can exploit this flaw without user interaction, for example, via thumbnail generation. Successful exploitation leads to application crashes and denial of service (DoS) conditions.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5201"
-    },
-    {
-      "alert_id": "nvd:cve-2026-22561:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-22561",
-      "matched": "Microsoft Windows",
-      "severity": "HIGH",
-      "score": 7.8,
-      "published": "2026-03-31T16:16:28.850",
-      "last_modified": "2026-05-10T14:16:47.860",
-      "title": "CVE-2026-22561",
-      "description": "Uncontrolled search path elements in Anthropic Claude for Windows installer (Claude Setup.exe) versions prior to 1.1.3363 allow local privilege escalation via DLL search-order hijacking. The installer loads DLLs (e.g., profapi.dll) from its own directory after UAC elevation, enabling arbitrary code execution if a malicious DLL is planted alongside the installer.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-22561"
     },
     {
       "alert_id": "nvd:cve-2026-35091:red hat enterprise linux",
@@ -29228,23 +29160,6 @@
       "title": "CVE-2026-40175",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. Versions prior to 1.15.0 and 0.3.1 are vulnerable to a specific gadget-style attack chain in which prototype pollution in a third-party dependency may be leveraged to inject unsanitized header values into outbound requests. This vulnerability is fixed in 1.15.0 and 0.3.1.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40175"
-    },
-    {
-      "alert_id": "nvd:cve-2026-6312:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "LOW",
-      "cve_id": "CVE-2026-6312",
-      "matched": "Microsoft Windows",
-      "severity": "LOW",
-      "score": 3.1,
-      "published": "2026-04-15T20:16:40.940",
-      "last_modified": "2026-05-10T14:16:51.183",
-      "title": "CVE-2026-6312",
-      "description": "Insufficient policy enforcement in Passwords in Google Chrome prior to 147.0.7727.101 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: High)",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6312"
     },
     {
       "alert_id": "nvd:cve-2026-31843:laravel",
@@ -29653,23 +29568,6 @@
       "title": "CVE-2026-29090",
       "description": "### Summary\n\nA SQL injection vulnerability exists in Rucio versions 1.30.0 and later before 35.8.5, 38.5.5, 39.4.2, and 40.1.1, in `FilterEngine.create_postgres_query()`. This allows any authenticated Rucio user to execute arbitrary SQL against the PostgreSQL metadata database through the DID search endpoint (`GET /dids/<scope>/dids/search`). When the `postgres_meta` metadata plugin is configured, attacker-controlled filter keys and values are interpolated directly into raw SQL strings via Pytho...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29090"
-    },
-    {
-      "alert_id": "nvd:cve-2026-7902:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-7902",
-      "matched": "Microsoft Windows",
-      "severity": "HIGH",
-      "score": 8.8,
-      "published": "2026-05-06T19:16:38.503",
-      "last_modified": "2026-05-10T14:16:51.360",
-      "title": "CVE-2026-7902",
-      "description": "Out of bounds memory access in V8 in Google Chrome prior to 148.0.7778.96 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7902"
     },
     {
       "alert_id": "nvd:cve-2026-7910:microsoft windows",
