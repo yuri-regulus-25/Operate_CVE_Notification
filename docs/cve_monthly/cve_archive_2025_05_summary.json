@@ -1,12 +1,12 @@
 {
   "archive_type": "monthly",
-  "generated_at": "2026-05-24T05:16:34.475342+00:00",
+  "generated_at": "2026-05-25T01:49:52.020127+00:00",
   "month": "2025_05",
   "start": "2025-05-01T00:00:00+00:00",
   "end_exclusive": "2025-06-01T00:00:00+00:00",
   "source": "all",
   "database": "docs/cve_monthly/cve_archive_2025_05.sqlite",
-  "records_before": 0,
+  "records_before": 186,
   "records_after": 186,
   "nvd": {
     "windows": 1,
