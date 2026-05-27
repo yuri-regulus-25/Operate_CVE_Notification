@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-27T03:56:33.729912+00:00",
-  "count": 1924,
+  "generated_at": "2026-05-27T10:01:13.009230+00:00",
+  "count": 1926,
   "sources": {
-    "NVD": 1792,
+    "NVD": 1794,
     "JVN": 132
   },
   "alerts": [
@@ -28782,7 +28782,7 @@
       "severity": "MEDIUM",
       "score": 5.6,
       "published": "2025-12-10T09:15:47.053",
-      "last_modified": "2026-05-20T11:16:25.250",
+      "last_modified": "2026-05-27T08:16:38.747",
       "title": "CVE-2025-14087",
       "description": "A flaw was found in GLib (Gnome Lib). This vulnerability allows a remote attacker to cause heap corruption, leading to a denial of service or potential code execution via a buffer-underflow in the GVariant parser when processing maliciously crafted input strings.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14087"
@@ -28799,7 +28799,7 @@
       "severity": "MEDIUM",
       "score": 6.5,
       "published": "2025-12-11T07:16:00.463",
-      "last_modified": "2026-05-20T11:16:25.533",
+      "last_modified": "2026-05-27T08:16:39.350",
       "title": "CVE-2025-14512",
       "description": "A flaw was found in glib. This vulnerability allows a heap buffer overflow and denial-of-service (DoS) via an integer overflow in GLib's GIO (GLib Input/Output) escape_byte_string() function when processing malicious file or remote filesystem attribute values.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-14512"
@@ -29173,7 +29173,7 @@
       "severity": "MEDIUM",
       "score": 5.3,
       "published": "2026-03-26T21:17:04.247",
-      "last_modified": "2026-05-19T14:16:40.380",
+      "last_modified": "2026-05-27T08:16:40.253",
       "title": "CVE-2026-2100",
       "description": "A flaw was found in p11-kit. A remote attacker could exploit this vulnerability by calling the C_DeriveKey function on a remote token with specific IBM kyber or IBM btc derive mechanism parameters set to NULL. This could lead to the RPC-client attempting to return an uninitialized value, potentially resulting in a NULL dereference or undefined behavior. This issue may cause an application level denial of service or other unpredictable system states.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2100"
@@ -29360,7 +29360,7 @@
       "severity": "MEDIUM",
       "score": 6.7,
       "published": "2026-04-09T16:16:31.987",
-      "last_modified": "2026-05-26T09:16:21.010",
+      "last_modified": "2026-05-27T09:16:32.377",
       "title": "CVE-2026-4878",
       "description": "A flaw was found in libcap. A local unprivileged user can exploit a Time-of-check-to-time-of-use (TOCTOU) race condition in the `cap_set_file()` function. This allows an attacker with write access to a parent directory to redirect file capability updates to an attacker-controlled file. By doing so, capabilities can be injected into or stripped from unintended executables, leading to privilege escalation.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4878"
@@ -29978,6 +29978,40 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42249"
     },
     {
+      "alert_id": "nvd:cve-2026-33845:red hat enterprise linux",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "rhel",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-33845",
+      "matched": "Red Hat Enterprise Linux",
+      "severity": "HIGH",
+      "score": 7.5,
+      "published": "2026-04-30T18:16:28.003",
+      "last_modified": "2026-05-27T04:16:26.953",
+      "title": "CVE-2026-33845",
+      "description": "A flaw in GnuTLS DTLS handshake parsing allows malformed fragments with zero length and non-zero offset, leading to an integer underflow during reassembly and resulting in an out-of-bounds read. This issue is remotely exploitable and may cause information disclosure or denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33845"
+    },
+    {
+      "alert_id": "nvd:cve-2026-3833:red hat enterprise linux",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "rhel",
+      "confidence": "cpe",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-3833",
+      "matched": "Red Hat Enterprise Linux",
+      "severity": "MEDIUM",
+      "score": 6.5,
+      "published": "2026-04-30T18:16:30.577",
+      "last_modified": "2026-05-27T04:16:30.053",
+      "title": "CVE-2026-3833",
+      "description": "A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unaut...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3833"
+    },
+    {
       "alert_id": "nvd:cve-2026-41686:node.js",
       "source": "NVD",
       "category": "JS",
@@ -30091,7 +30125,7 @@
       "severity": "HIGH",
       "score": 7.1,
       "published": "2026-05-07T12:16:17.977",
-      "last_modified": "2026-05-14T23:16:36.520",
+      "last_modified": "2026-05-27T04:16:30.430",
       "title": "CVE-2026-42010",
       "description": "A flaw was found in gnutls. Servers configured with RSA-PSK (Rivest–Shamir–Adleman – Pre-Shared Key) wrongfully matched usernames containing a NUL character with truncated usernames. A remote attacker could exploit this by sending a specially crafted username, leading to an authentication bypass. This vulnerability allows an attacker to gain unauthorized access by circumventing the authentication process.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42010"
