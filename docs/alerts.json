@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-28T10:19:56.695055+00:00",
-  "count": 501,
+  "generated_at": "2026-05-28T16:07:50.112963+00:00",
+  "count": 499,
   "sources": {
-    "NVD": 360,
-    "JVN": 141
+    "NVD": 359,
+    "JVN": 140
   },
   "alerts": [
     {
@@ -1197,6 +1197,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7373"
     },
     {
+      "alert_id": "nvd:cve-2026-8398:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-8398",
+      "matched": "Microsoft Windows",
+      "severity": "CRITICAL",
+      "score": 9.8,
+      "published": "2026-05-15T09:16:17.653",
+      "last_modified": "2026-05-28T12:57:00.563",
+      "title": "CVE-2026-8398",
+      "description": "A supply chain attack compromised the official installation packages of DAEMON Tools Lite (Windows versions 12.5.0.2421 through 12.5.0.2434), distributed from the legitimate website daemon-tools.cc between approximately April 8, 2026, and May 5, 2026. Attackers gained unauthorized access to the vendor's (AVB Disc Soft) build or distribution infrastructure and trojanized three binaries: DTHelper.exe, DiscSoftBusServiceLite.exe, and DTShellHlp.exe. These files were digitally signed with the legiti...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8398"
+    },
+    {
       "alert_id": "nvd:cve-2026-41553:node.js",
       "source": "NVD",
       "category": "JS",
@@ -1429,7 +1446,7 @@
       "severity": "MEDIUM",
       "score": 4.0,
       "published": "2026-05-20T13:16:36.780",
-      "last_modified": "2026-05-27T20:16:38.953",
+      "last_modified": "2026-05-28T10:49:44.453",
       "title": "CVE-2026-45498",
       "description": "Microsoft Defender Denial of Service Vulnerability",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45498"
@@ -2030,18 +2047,18 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1933"
     },
     {
-      "alert_id": "nvd:cve-2026-2340:smb",
+      "alert_id": "nvd:cve-2026-2340:red hat enterprise linux",
       "source": "NVD",
-      "category": "WEB",
-      "product_key": "smb",
-      "confidence": "description_formal",
+      "category": "OS",
+      "product_key": "rhel",
+      "confidence": "cpe",
       "priority": "NOTICE",
       "cve_id": "CVE-2026-2340",
-      "matched": "SMB",
+      "matched": "Red Hat Enterprise Linux",
       "severity": "MEDIUM",
       "score": 6.5,
       "published": "2026-05-27T14:16:44.387",
-      "last_modified": "2026-05-27T14:54:20.160",
+      "last_modified": "2026-05-28T15:33:05.360",
       "title": "CVE-2026-2340",
       "description": "A flaw was found in Samba’s vfs_worm module. The module is intended to provide write-once, read-many (WORM) protections by preventing modification of files after a configurable grace period. Due to insufficient validation during rename operations, an authenticated user with write access to a share could overwrite a protected file by renaming a newly created file over the existing WORM-protected file.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2340"
@@ -2079,6 +2096,23 @@
       "title": "CVE-2026-46076",
       "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nKVM: nSVM: Raise #UD if unhandled VMMCALL isn't intercepted by L1\n\nExplicitly synthesize a #UD for VMMCALL if L2 is active, L1 does NOT want\nto intercept VMMCALL, nested_svm_l2_tlb_flush_enabled() is true, and the\nhypercall is something other than one of the supported Hyper-V hypercalls.\nWhen all of the above conditions are met, KVM will intercept VMMCALL but\nnever forward it to L1, i.e. will let L2 make hypercalls as if it wer...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46076"
+    },
+    {
+      "alert_id": "nvd:cve-2026-6053:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-6053",
+      "matched": "Microsoft Windows",
+      "severity": "MEDIUM",
+      "score": 5.5,
+      "published": "2026-05-27T14:17:34.633",
+      "last_modified": "2026-05-28T15:46:36.133",
+      "title": "CVE-2026-6053",
+      "description": "IBM Db2 11.5.0 through 11.5.9, and 12.1.0 through 12.1.4 is vulnerable to a denial of service when a specially crafted query is run with range partitioned tables.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6053"
     },
     {
       "alert_id": "nvd:cve-2026-9617:postgresql",
@@ -2177,7 +2211,7 @@
       "severity": "HIGH",
       "score": 7.5,
       "published": "2026-05-27T19:16:20.947",
-      "last_modified": "2026-05-27T19:16:20.947",
+      "last_modified": "2026-05-28T14:16:20.450",
       "title": "CVE-2026-44635",
       "description": "Kysely is a type-safe TypeScript SQL query builder. From 0.26.0 to 0.28.16, DefaultQueryCompiler.visitJSONPathLeg does not escape JSON-path metacharacters (., [, ], *, **, ?). When attacker-controlled input flows into eb.ref(col, '->$').key(input) or .at(input) — including type-safe code where the JSON column is shaped like Record<string, T> so K extends string is the inferred type — every dot becomes a path-leg separator, letting an attacker traverse from the intended key into sibling and child...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44635"
@@ -2245,10 +2279,27 @@
       "severity": "CRITICAL",
       "score": 9.0,
       "published": "2026-05-28T09:16:47.643",
-      "last_modified": "2026-05-28T09:16:47.643",
+      "last_modified": "2026-05-28T13:44:54.327",
       "title": "CVE-2026-4408",
       "description": "A flaw was found in Samba. A remote attacker can exploit a misconfiguration in Samba file servers and classic domain controllers that use the \"check password script\" feature. If this script is configured with the %u substitution character, the client-controlled username is passed without proper escaping of shell meta-characters. This vulnerability allows an attacker to achieve remote command execution on the affected system. This issue primarily affects non-standard configurations where the \"che...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4408"
+    },
+    {
+      "alert_id": "nvd:cve-2026-46139:smb",
+      "source": "NVD",
+      "category": "WEB",
+      "product_key": "smb",
+      "confidence": "description_formal",
+      "priority": "INFO",
+      "cve_id": "CVE-2026-46139",
+      "matched": "SMB",
+      "severity": "UNKNOWN",
+      "score": null,
+      "published": "2026-05-28T10:16:29.470",
+      "last_modified": "2026-05-28T13:44:01.663",
+      "title": "CVE-2026-46139",
+      "description": "In the Linux kernel, the following vulnerability has been resolved:\n\nsmb: client: use kzalloc to zero-initialize security descriptor buffer\n\nCommit 62e7dd0a39c2d (\"smb: common: change the data type of num_aces\nto le16\") split struct smb_acl's __le32 num_aces field into __le16\nnum_aces and __le16 reserved. The reserved field corresponds to Sbz2\nin the MS-DTYP ACL wire format, which must be zero [1].\n\nWhen building an ACL descriptor in build_sec_desc(), we are using a\nkmalloc()'ed descriptor buffe...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46139"
     },
     {
       "alert_id": "nvd:cve-2005-1794:microsoft windows",
@@ -2381,7 +2432,7 @@
       "severity": "LOW",
       "score": 3.7,
       "published": "2015-04-01T02:00:35.097",
-      "last_modified": "2026-05-28T00:16:41.810",
+      "last_modified": "2026-05-28T14:16:16.170",
       "title": "CVE-2015-2808",
       "description": "The RC4 algorithm, as used in the TLS protocol and SSL protocol, does not properly combine state data with key data during the initialization phase, which makes it easier for remote attackers to conduct plaintext-recovery attacks against the initial bytes of a stream by sniffing network traffic that occasionally relies on keys affected by the Invariance Weakness, and then using a brute-force approach involving LSB values, aka the \"Bar Mitzvah\" issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-2808"
@@ -3299,7 +3350,7 @@
       "severity": "MEDIUM",
       "score": 5.9,
       "published": "2026-03-30T07:15:58.350",
-      "last_modified": "2026-05-19T22:16:39.120",
+      "last_modified": "2026-05-28T12:16:17.833",
       "title": "CVE-2026-5119",
       "description": "A flaw was found in libsoup. When establishing HTTPS tunnels through a configured HTTP proxy, sensitive session cookies are transmitted in cleartext within the initial HTTP CONNECT request. A network-positioned attacker or a malicious HTTP proxy can intercept these cookies, leading to potential session hijacking or user impersonation.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5119"
@@ -3337,6 +3388,23 @@
       "title": "CVE-2026-5201",
       "description": "A flaw was found in the gdk-pixbuf library. This heap-based buffer overflow vulnerability occurs in the JPEG image loader due to improper validation of color component counts when processing a specially crafted JPEG image. A remote attacker can exploit this flaw without user interaction, for example, via thumbnail generation. Successful exploitation leads to application crashes and denial of service (DoS) conditions.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5201"
+    },
+    {
+      "alert_id": "nvd:cve-2026-5272:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-5272",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": 8.8,
+      "published": "2026-04-01T05:16:00.287",
+      "last_modified": "2026-05-28T14:33:59.507",
+      "title": "CVE-2026-5272",
+      "description": "Heap buffer overflow in GPU in Google Chrome prior to 146.0.7680.178 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5272"
     },
     {
       "alert_id": "nvd:cve-2026-35091:red hat enterprise linux",
@@ -3968,23 +4036,6 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33519"
     },
     {
-      "alert_id": "nvd:cve-2026-40906:postgresql",
-      "source": "NVD",
-      "category": "DB",
-      "product_key": "postgresql",
-      "confidence": "description_formal",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-40906",
-      "matched": "PostgreSQL",
-      "severity": "CRITICAL",
-      "score": 9.9,
-      "published": "2026-04-21T21:16:44.697",
-      "last_modified": "2026-05-13T15:47:04.403",
-      "title": "CVE-2026-40906",
-      "description": "Electric is a Postgres sync engine. From 1.1.12 to before 1.5.0, the order_by parameter in the ElectricSQL /v1/shape API is vulnerable to error-based SQL injection, allowing any authenticated user to read, write, and destroy the full contents of the underlying PostgreSQL database through crafted ORDER BY expressions. This vulnerability is fixed in 1.5.0.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40906"
-    },
-    {
       "alert_id": "nvd:cve-2026-31431:red hat enterprise linux",
       "source": "NVD",
       "category": "OS",
@@ -4285,7 +4336,7 @@
       "severity": "MEDIUM",
       "score": 6.1,
       "published": "2026-05-05T16:16:11.647",
-      "last_modified": "2026-05-28T09:16:43.253",
+      "last_modified": "2026-05-28T12:16:17.147",
       "title": "CVE-2026-34000",
       "description": "A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34000"
@@ -4302,7 +4353,7 @@
       "severity": "MEDIUM",
       "score": 6.1,
       "published": "2026-05-05T16:16:11.787",
-      "last_modified": "2026-05-28T09:16:44.313",
+      "last_modified": "2026-05-28T12:16:17.407",
       "title": "CVE-2026-34002",
       "description": "A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34002"
@@ -5294,57 +5345,6 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34351"
     },
     {
-      "alert_id": "nvd:cve-2026-34636:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-34636",
-      "matched": "Microsoft Windows",
-      "severity": "HIGH",
-      "score": 7.8,
-      "published": "2026-05-12T18:17:09.917",
-      "last_modified": "2026-05-13T14:31:42.957",
-      "title": "CVE-2026-34636",
-      "description": "Premiere Pro versions 26.0.2, 25.6.4 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34636"
-    },
-    {
-      "alert_id": "nvd:cve-2026-34637:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-34637",
-      "matched": "Microsoft Windows",
-      "severity": "HIGH",
-      "score": 7.8,
-      "published": "2026-05-12T18:17:10.070",
-      "last_modified": "2026-05-13T14:30:22.117",
-      "title": "CVE-2026-34637",
-      "description": "Premiere Pro versions 26.0.2, 25.6.4 and earlier are affected by an out-of-bounds write vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34637"
-    },
-    {
-      "alert_id": "nvd:cve-2026-34638:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-34638",
-      "matched": "Microsoft Windows",
-      "severity": "HIGH",
-      "score": 7.8,
-      "published": "2026-05-12T18:17:10.190",
-      "last_modified": "2026-05-13T14:28:31.203",
-      "title": "CVE-2026-34638",
-      "description": "Premiere Pro versions 26.0.2, 25.6.4 and earlier are affected by a Use After Free vulnerability that could result in arbitrary code execution in the context of the current user. Exploitation of this issue requires user interaction in that a victim must open a malicious file.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34638"
-    },
-    {
       "alert_id": "nvd:cve-2026-35415:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -6108,23 +6108,6 @@
       "title": "CVE-2026-44262",
       "description": "Scramble generates API documentation for Laravel project. From 0.13.2 to before 0.13.22, when documentation endpoints are publicly accessible and validation rules reference user-controlled input, request supplied data may be evaluated during documentation generation, leading to execution of arbitrary PHP code in the application context. This vulnerability is fixed in 0.13.22.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44262"
-    },
-    {
-      "alert_id": "nvd:cve-2026-44306:laravel",
-      "source": "NVD",
-      "category": "PHP",
-      "product_key": "laravel",
-      "confidence": "description_formal",
-      "priority": "NOTICE",
-      "cve_id": "CVE-2026-44306",
-      "matched": "Laravel",
-      "severity": "MEDIUM",
-      "score": 5.3,
-      "published": "2026-05-12T22:16:37.413",
-      "last_modified": "2026-05-13T15:43:05.440",
-      "title": "CVE-2026-44306",
-      "description": "Statamic is a Laravel and Git powered content management system (CMS). Prior to 5.73.21 and 6.15.0, responses from the forgot password forms hinted at whether an account existed for a given email address. An unauthenticated attacker could use this to enumerate valid users, which can aid in follow-up credential-based attacks. This vulnerability is fixed in 5.73.21 and 6.15.0.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44306"
     },
     {
       "alert_id": "jvn:cve-2026-41035:smb",
@@ -8386,23 +8369,6 @@
       "title": "ElectricのSync-serviceにおけるSQL インジェクションの脆弱性",
       "description": "ElectricはPostgres同期エンジンです。バージョン1.1.12から1.5.0未満のElectricSQLの/v1/shape APIにおけるorder_byパラメータには、エラーに基づくSQLインジェクションの脆弱性があります。認証された任意のユーザーは細工されたORDER BY式を通じて、基盤となるPostgreSQLデータベースの全内容を読み取り、書き込み、破壊することが可能です。この脆弱性はバージョン1.5.0で修正されました。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015527.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-32885:node.js",
-      "source": "JVN",
-      "category": "JS",
-      "product_key": "nodejs",
-      "confidence": "description_formal",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-32885",
-      "matched": "Node.js",
-      "severity": "CRITICAL",
-      "score": "9.1",
-      "published": "2026-05-13T10:27:10+09:00",
-      "last_modified": "2026-05-13T10:27:10+09:00",
-      "title": "DDEVにおけるパストラバーサルの脆弱性",
-      "description": "DDEVはPHPおよびNode.js向けのローカルウェブ開発環境を実行するためのオープンソースツールです。バージョン1.25.2より前のバージョンでは、`pkg/archive/archive.go`の`Untar()`および`Unzip()`関数の両方において、サニタイズされていない展開の脆弱性が存在していました。これにより、リモートソースからのアーカイブをパスの検証を行わずにダウンロードおよび展開してしまう可能性がありました。バージョン1.25.2でこの問題は修正されています。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015261.html"
     },
     {
       "alert_id": "jvn:cve-2026-7814:pgadmin",
