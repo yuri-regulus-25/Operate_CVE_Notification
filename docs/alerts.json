@@ -1,28 +1,11 @@
 {
-  "generated_at": "2026-05-28T20:38:40.438575+00:00",
-  "count": 503,
+  "generated_at": "2026-05-29T03:45:31.542149+00:00",
+  "count": 510,
   "sources": {
-    "NVD": 363,
-    "JVN": 140
+    "NVD": 367,
+    "JVN": 143
   },
   "alerts": [
-    {
-      "alert_id": "nvd:cve-2026-45228:vue.js",
-      "source": "NVD",
-      "category": "JS",
-      "product_key": "vuejs",
-      "confidence": "description_formal",
-      "priority": "NOTICE",
-      "cve_id": "CVE-2026-45228",
-      "matched": "Vue.js",
-      "severity": "MEDIUM",
-      "score": 5.4,
-      "published": "2026-05-13T21:16:49.583",
-      "last_modified": "2026-05-14T16:24:56.240",
-      "title": "CVE-2026-45228",
-      "description": "Quark Drive before 0.8.5 contains a stored cross-site scripting vulnerability in the System Configuration page where the template renders push_config key names using Vue.js's v-html directive without escaping. Authenticated attackers can inject HTML or JavaScript payloads as key names through the POST /update endpoint, which are persisted to disk and executed in the browsers of all authenticated users accessing the System Configuration tab, allowing session cookie exfiltration and arbitrary auth...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45228"
-    },
     {
       "alert_id": "nvd:cve-2026-46445:postgresql",
       "source": "NVD",
@@ -2115,6 +2098,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44477"
     },
     {
+      "alert_id": "nvd:cve-2026-45288:postgresql",
+      "source": "NVD",
+      "category": "DB",
+      "product_key": "postgresql",
+      "confidence": "description_formal",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-45288",
+      "matched": "PostgreSQL",
+      "severity": "CRITICAL",
+      "score": 9.8,
+      "published": "2026-05-28T21:16:31.220",
+      "last_modified": "2026-05-28T21:16:31.220",
+      "title": "CVE-2026-45288",
+      "description": "Marten is a .NET Transactional Document DB and Event Store on PostgreSQL. Prior to 8.36.1, Marten's full-text search APIs interpolated the user-supplied regConfig parameter directly into the generated SQL without parameterization or validation, making every code path that exposes regConfig to untrusted input a SQL injection sink. This vulnerability is fixed in 8.36.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45288"
+    },
+    {
       "alert_id": "nvd:cve-1999-0511:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -2421,6 +2421,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-11135"
     },
     {
+      "alert_id": "nvd:cve-2020-28209:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2020-28209",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": 7.0,
+      "published": "2020-11-19T22:15:13.287",
+      "last_modified": "2026-05-28T21:16:25.990",
+      "title": "CVE-2020-28209",
+      "description": "A CWE-428 Windows Unquoted Search Path vulnerability exists in EcoStruxure Building Operation Enterprise Server installer V1.9 - V3.1 and Enterprise Central installer V2.0 - V3.1 that could cause any local Windows user who has write permission on at least one of the subfolders of the Connect Agent service binary path, being able to gain the privilege of the user who started the service. By default, the Enterprise Server and Enterprise Central is always installed at a location requiring Administr...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28209"
+    },
+    {
       "alert_id": "nvd:cve-2020-17103:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -2436,6 +2453,23 @@
       "title": "CVE-2020-17103",
       "description": "Windows Cloud Files Mini Filter Driver Elevation of Privilege Vulnerability",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-17103"
+    },
+    {
+      "alert_id": "nvd:cve-2021-4104:red hat enterprise linux",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "rhel",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2021-4104",
+      "matched": "Red Hat Enterprise Linux",
+      "severity": "HIGH",
+      "score": 7.5,
+      "published": "2021-12-14T12:15:12.200",
+      "last_modified": "2026-05-28T21:16:28.573",
+      "title": "CVE-2021-4104",
+      "description": "JMSAppender in Log4j 1.2 is vulnerable to deserialization of untrusted data when the attacker has write access to the Log4j configuration. The attacker can provide TopicBindingName and TopicConnectionFactoryBindingName configurations causing JMSAppender to perform JNDI requests that result in remote code execution in a similar fashion to CVE-2021-44228. Note this issue only affects Log4j 1.2 when specifically configured to use JMSAppender, which is not the default. Apache Log4j 1.2 reached end o...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-4104"
     },
     {
       "alert_id": "nvd:cve-2022-0778:node.js",
@@ -5379,6 +5413,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35424"
     },
     {
+      "alert_id": "nvd:cve-2026-35438:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-35438",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": 8.3,
+      "published": "2026-05-12T18:17:14.030",
+      "last_modified": "2026-05-28T20:39:39.480",
+      "title": "CVE-2026-35438",
+      "description": "Missing authorization in Windows Admin Center allows an authorized attacker to elevate privileges over a network.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-35438"
+    },
+    {
       "alert_id": "nvd:cve-2026-40369:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -6178,6 +6229,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42032"
     },
     {
+      "alert_id": "nvd:cve-2026-45228:vue.js",
+      "source": "NVD",
+      "category": "JS",
+      "product_key": "vuejs",
+      "confidence": "description_formal",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-45228",
+      "matched": "Vue.js",
+      "severity": "MEDIUM",
+      "score": 5.4,
+      "published": "2026-05-13T21:16:49.583",
+      "last_modified": "2026-05-14T16:24:56.240",
+      "title": "CVE-2026-45228",
+      "description": "Quark Drive before 0.8.5 contains a stored cross-site scripting vulnerability in the System Configuration page where the template renders push_config key names using Vue.js's v-html directive without escaping. Authenticated attackers can inject HTML or JavaScript payloads as key names through the POST /update endpoint, which are persisted to disk and executed in the browsers of all authenticated users accessing the System Configuration tab, allowing session cookie exfiltration and arbitrary auth...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45228"
+    },
+    {
       "alert_id": "jvn:cve-2026-41035:smb",
       "source": "JVN",
       "category": "WEB",
@@ -6261,6 +6329,40 @@
       "title": "Siemens製品に対するアップデート（2026年5月）",
       "description": "新規：18件<ul><li><a href='https://cert-portal.siemens.com/productcert/html/ssa-032379.html' target='_blank'>SSA-032379: Multiple Vulnerabilities in SIMATIC CN 4100 Before V5.0</a></li><li><a href='https://cert-portal.siemens.com/productcert/html/ssa-078743.html' target='_blank'>SSA-078743: Remote Code Execution Vulnerability in Ruggedcom Rox Before V2.17.1</a></li><li><a href='https://cert-portal.siemens.com/productcert/html/ssa-081142.html' target='_blank'>SSA-081142: Arbitrary Code Execution Vuln...",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015487.html"
+    },
+    {
+      "alert_id": "jvn:cve-2025-7024:microsoft windows",
+      "source": "JVN",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2025-7024",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": "7.3",
+      "published": "2026-05-29T11:20:23+09:00",
+      "last_modified": "2026-05-29T11:20:23+09:00",
+      "title": "AirbusのTETRA Connectivity Serverにおける不適切なデフォルトパーミッションに関する脆弱性",
+      "description": "Windows Server OS上のAIRBUS PSS TETRA Connectivity Serverにおける不適切なデフォルト権限の脆弱性により、権限が悪用される可能性があります。ユーザーが騙されたり誘導されたりして細工されたファイルを脆弱なディレクトリに配置すると、攻撃者はSYSTEM権限で任意のコードを実行できる可能性があります。この問題はTETRA Connectivity Serverバージョン7.0に影響します。脆弱性修正は提供されており、影響を受ける顧客に配布されています。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017315.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-33843:active directory",
+      "source": "JVN",
+      "category": "WEB",
+      "product_key": "active_directory",
+      "confidence": "description_formal",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-33843",
+      "matched": "Active Directory",
+      "severity": "CRITICAL",
+      "score": "9.8",
+      "published": "2026-05-29T11:17:41+09:00",
+      "last_modified": "2026-05-29T11:17:41+09:00",
+      "title": "マイクロソフトのMicrosoft Entra IDにおける代替パスまたはチャネルを使用した認証回避に関する脆弱性",
+      "description": "Microsoft Azure Active Directory B2Cにおいて、代替パスまたはチャネルを利用した認証バイパスの脆弱性が存在し、不正な攻撃者がネットワーク上で権限を昇格させることが可能となる。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017258.html"
     },
     {
       "alert_id": "jvn:cve-2026-23667:active directory",
@@ -8437,6 +8539,23 @@
       "title": "ElectricのSync-serviceにおけるSQL インジェクションの脆弱性",
       "description": "ElectricはPostgres同期エンジンです。バージョン1.1.12から1.5.0未満のElectricSQLの/v1/shape APIにおけるorder_byパラメータには、エラーに基づくSQLインジェクションの脆弱性があります。認証された任意のユーザーは細工されたORDER BY式を通じて、基盤となるPostgreSQLデータベースの全内容を読み取り、書き込み、破壊することが可能です。この脆弱性はバージョン1.5.0で修正されました。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015527.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-46624:postgresql",
+      "source": "JVN",
+      "category": "DB",
+      "product_key": "postgresql",
+      "confidence": "description_formal",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-46624",
+      "matched": "PostgreSQL",
+      "severity": "CRITICAL",
+      "score": "9.9",
+      "published": "2026-05-29T11:16:47+09:00",
+      "last_modified": "2026-05-29T11:16:47+09:00",
+      "title": "Twenty.com PBCのTwentyにおける複数の脆弱性",
+      "description": "TwentyはオープンソースのCRMです。バージョン1.7.7から1.16.7までの間に、Twenty CRMには連鎖的なSQLインジェクションとPostgreSQLのCOPY TO PROGRAM攻撃による重大なリモートコード実行（RCE）脆弱性が存在します。Postgresユーザーがスーパーユーザーである場合、認証された任意のユーザーがREST APIのgroupByエンドポイントでサニタイズされていないtimeZoneパラメータを通じてSQLを注入することにより、データベースサーバー上で任意のOSコマンドを実行できます。group_byクエリパラメータ内のtimeZoneフィールドはJavaScriptのテンプレートリテラルを用いて直接生のSQL式に組み込まれており、パラメータ化、検証、またはエスケープが一切行われていません。本脆弱性はengine/api/graphql/graphql-query-runner/group-by/resolvers/utils/get-group-by-expression.util.tsに影響を与えます。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017239.html"
     },
     {
       "alert_id": "jvn:cve-2026-7814:pgadmin",
