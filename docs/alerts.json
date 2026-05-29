@@ -1,45 +1,11 @@
 {
-  "generated_at": "2026-05-29T03:45:31.542149+00:00",
+  "generated_at": "2026-05-29T10:11:36.414329+00:00",
   "count": 510,
   "sources": {
     "NVD": 367,
     "JVN": 143
   },
   "alerts": [
-    {
-      "alert_id": "nvd:cve-2026-46445:postgresql",
-      "source": "NVD",
-      "category": "DB",
-      "product_key": "postgresql",
-      "confidence": "description_formal",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-46445",
-      "matched": "PostgreSQL",
-      "severity": "HIGH",
-      "score": 7.1,
-      "published": "2026-05-14T04:17:03.193",
-      "last_modified": "2026-05-14T16:49:18.583",
-      "title": "CVE-2026-46445",
-      "description": "SOGo before 5.12.7, when PostgreSQL is used, allows SQL injection.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46445"
-    },
-    {
-      "alert_id": "nvd:cve-2026-46446:postgresql",
-      "source": "NVD",
-      "category": "DB",
-      "product_key": "postgresql",
-      "confidence": "description_formal",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-46446",
-      "matched": "PostgreSQL",
-      "severity": "HIGH",
-      "score": 7.1,
-      "published": "2026-05-14T04:17:03.547",
-      "last_modified": "2026-05-14T16:49:18.583",
-      "title": "CVE-2026-46446",
-      "description": "SOGo before 5.12.7, when PostgreSQL or MariaDB is used, and cleartext passwords are stored, allows SQL injection. This is related to c_password = '%@' in changePasswordForLogin.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46446"
-    },
     {
       "alert_id": "nvd:cve-2026-6472:postgresql",
       "source": "NVD",
@@ -6244,6 +6210,40 @@
       "title": "CVE-2026-45228",
       "description": "Quark Drive before 0.8.5 contains a stored cross-site scripting vulnerability in the System Configuration page where the template renders push_config key names using Vue.js's v-html directive without escaping. Authenticated attackers can inject HTML or JavaScript payloads as key names through the POST /update endpoint, which are persisted to disk and executed in the browsers of all authenticated users accessing the System Configuration tab, allowing session cookie exfiltration and arbitrary auth...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45228"
+    },
+    {
+      "alert_id": "nvd:cve-2026-46445:postgresql",
+      "source": "NVD",
+      "category": "DB",
+      "product_key": "postgresql",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-46445",
+      "matched": "PostgreSQL",
+      "severity": "HIGH",
+      "score": 7.1,
+      "published": "2026-05-14T04:17:03.193",
+      "last_modified": "2026-05-14T16:49:18.583",
+      "title": "CVE-2026-46445",
+      "description": "SOGo before 5.12.7, when PostgreSQL is used, allows SQL injection.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46445"
+    },
+    {
+      "alert_id": "nvd:cve-2026-46446:postgresql",
+      "source": "NVD",
+      "category": "DB",
+      "product_key": "postgresql",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-46446",
+      "matched": "PostgreSQL",
+      "severity": "HIGH",
+      "score": 7.1,
+      "published": "2026-05-14T04:17:03.547",
+      "last_modified": "2026-05-14T16:49:18.583",
+      "title": "CVE-2026-46446",
+      "description": "SOGo before 5.12.7, when PostgreSQL or MariaDB is used, and cleartext passwords are stored, allows SQL injection. This is related to c_password = '%@' in changePasswordForLogin.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46446"
     },
     {
       "alert_id": "jvn:cve-2026-41035:smb",
