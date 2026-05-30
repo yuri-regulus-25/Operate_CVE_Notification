@@ -1,28 +1,11 @@
 {
-  "generated_at": "2026-05-30T03:11:02.180856+00:00",
+  "generated_at": "2026-05-30T08:45:33.178541+00:00",
   "count": 518,
   "sources": {
     "NVD": 379,
     "JVN": 139
   },
   "alerts": [
-    {
-      "alert_id": "nvd:cve-2026-7373:postgresql",
-      "source": "NVD",
-      "category": "DB",
-      "product_key": "postgresql",
-      "confidence": "description_formal",
-      "priority": "INFO",
-      "cve_id": "CVE-2026-7373",
-      "matched": "PostgreSQL",
-      "severity": "UNKNOWN",
-      "score": null,
-      "published": "2026-05-15T03:16:23.270",
-      "last_modified": "2026-05-19T23:16:58.587",
-      "title": "CVE-2026-7373",
-      "description": "Rapid7 Metasploit Pro is vulnerable to a local privilege escalation attack that allows a user to gain SYSTEM level control of a Windows host. When started the metasploitPostgreSQL service would start the postgres.exe child process which would in turn load an OpenSSL configuration file from a static location. This static location would be writable by a pre-existing \"vagrant\" user, if they already existed on the system. Metasploit does not create local accounts, an Administrator would need to crea...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7373"
-    },
     {
       "alert_id": "nvd:cve-2026-8398:microsoft windows",
       "source": "NVD",
@@ -6448,6 +6431,23 @@
       "title": "CVE-2026-8574",
       "description": "Use after free in Core in Google Chrome on Windows prior to 148.0.7778.168 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Medium)",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8574"
+    },
+    {
+      "alert_id": "nvd:cve-2026-7373:postgresql",
+      "source": "NVD",
+      "category": "DB",
+      "product_key": "postgresql",
+      "confidence": "description_formal",
+      "priority": "INFO",
+      "cve_id": "CVE-2026-7373",
+      "matched": "PostgreSQL",
+      "severity": "UNKNOWN",
+      "score": null,
+      "published": "2026-05-15T03:16:23.270",
+      "last_modified": "2026-05-19T23:16:58.587",
+      "title": "CVE-2026-7373",
+      "description": "Rapid7 Metasploit Pro is vulnerable to a local privilege escalation attack that allows a user to gain SYSTEM level control of a Windows host. When started the metasploitPostgreSQL service would start the postgres.exe child process which would in turn load an OpenSSL configuration file from a static location. This static location would be writable by a pre-existing \"vagrant\" user, if they already existed on the system. Metasploit does not create local accounts, an Administrator would need to crea...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-7373"
     },
     {
       "alert_id": "jvn:cve-2026-41035:smb",
