@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-29T20:41:25.979977+00:00",
-  "count": 508,
+  "generated_at": "2026-05-30T03:11:02.180856+00:00",
+  "count": 518,
   "sources": {
-    "NVD": 369,
+    "NVD": 379,
     "JVN": 139
   },
   "alerts": [
@@ -1123,7 +1123,7 @@
       "severity": "HIGH",
       "score": 7.8,
       "published": "2026-05-27T20:16:37.617",
-      "last_modified": "2026-05-27T20:16:37.617",
+      "last_modified": "2026-05-30T02:16:19.137",
       "title": "CVE-2026-44724",
       "description": "systeminformation is a System and OS information library for node.js. From 4.17.0 to 5.31.5, on Linux, systeminformation is vulnerable to command injection in networkInterfaces() when an active NetworkManager connection profile name contains shell metacharacters. The vulnerable value is obtained internally from real nmcli device status output. The library sanitizes the network interface name before using it in shell commands, but it does not apply equivalent sanitization to the parsed NetworkMan...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44724"
@@ -1140,7 +1140,7 @@
       "severity": "CRITICAL",
       "score": 9.9,
       "published": "2026-05-27T20:16:38.250",
-      "last_modified": "2026-05-27T20:16:38.250",
+      "last_modified": "2026-05-30T02:16:19.367",
       "title": "CVE-2026-45102",
       "description": "OneUptime is an open-source monitoring and observability platform. Prior to 10.0.98, OneUptime uses the Node.js' vm module as an isolation primitive. This API was not designed for that and can be escaped via error objects and infinite recursion. This vulnerability is fixed in 10.0.98.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45102"
@@ -1979,6 +1979,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9957"
     },
     {
+      "alert_id": "nvd:cve-2026-9959:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "LOW",
+      "cve_id": "CVE-2026-9959",
+      "matched": "Microsoft Windows",
+      "severity": "LOW",
+      "score": 3.1,
+      "published": "2026-05-28T23:16:54.100",
+      "last_modified": "2026-05-29T20:38:45.123",
+      "title": "CVE-2026-9959",
+      "description": "Race in WebRTC in Google Chrome on Windows prior to 148.0.7778.216 allowed a remote attacker to leak cross-origin data via a crafted HTML page. (Chromium security severity: High)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9959"
+    },
+    {
       "alert_id": "nvd:cve-2026-9960:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -1996,6 +2013,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9960"
     },
     {
+      "alert_id": "nvd:cve-2026-9961:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-9961",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": 8.8,
+      "published": "2026-05-28T23:16:54.320",
+      "last_modified": "2026-05-29T20:35:20.490",
+      "title": "CVE-2026-9961",
+      "description": "Use after free in SurfaceCapture in Google Chrome prior to 148.0.7778.216 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9961"
+    },
+    {
       "alert_id": "nvd:cve-2026-9962:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -2011,6 +2045,40 @@
       "title": "CVE-2026-9962",
       "description": "Use after free in WebRTC in Google Chrome prior to 148.0.7778.216 allowed a remote attacker to execute arbitrary code inside a sandbox via a crafted HTML page. (Chromium security severity: High)",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9962"
+    },
+    {
+      "alert_id": "nvd:cve-2026-9965:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-9965",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": 8.8,
+      "published": "2026-05-28T23:16:54.720",
+      "last_modified": "2026-05-29T20:33:01.573",
+      "title": "CVE-2026-9965",
+      "description": "Out of bounds write in ANGLE in Google Chrome prior to 148.0.7778.216 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9965"
+    },
+    {
+      "alert_id": "nvd:cve-2026-9966:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-9966",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": 8.3,
+      "published": "2026-05-28T23:16:54.817",
+      "last_modified": "2026-05-29T20:28:06.317",
+      "title": "CVE-2026-9966",
+      "description": "Integer overflow in XML in Google Chrome on Windows prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9966"
     },
     {
       "alert_id": "nvd:cve-2026-9968:microsoft windows",
@@ -2113,6 +2181,23 @@
       "title": "CVE-2026-9984",
       "description": "Use after free in UI in Google Chrome on Windows prior to 148.0.7778.216 allowed a remote attacker to execute arbitrary code via a crafted HTML page. (Chromium security severity: High)",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9984"
+    },
+    {
+      "alert_id": "nvd:cve-2026-9986:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-9986",
+      "matched": "Microsoft Windows",
+      "severity": "MEDIUM",
+      "score": 4.2,
+      "published": "2026-05-28T23:16:56.840",
+      "last_modified": "2026-05-29T20:27:43.160",
+      "title": "CVE-2026-9986",
+      "description": "Insufficient validation of untrusted input in OptimizationGuide in Google Chrome prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to perform UI spoofing via a crafted HTML page. (Chromium security severity: High)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9986"
     },
     {
       "alert_id": "nvd:cve-2026-9992:microsoft windows",
@@ -2625,6 +2710,40 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-8553"
     },
     {
+      "alert_id": "nvd:cve-2016-2183:red hat enterprise linux",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "rhel",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2016-2183",
+      "matched": "Red Hat Enterprise Linux",
+      "severity": "HIGH",
+      "score": 7.5,
+      "published": "2016-09-01T00:59:00.137",
+      "last_modified": "2026-05-29T21:16:27.537",
+      "title": "CVE-2016-2183",
+      "description": "The DES and Triple DES ciphers, as used in the TLS, SSH, and IPSec protocols and other protocols and products, have a birthday bound of approximately four billion blocks, which makes it easier for remote attackers to obtain cleartext data via a birthday attack against a long-duration encrypted session, as demonstrated by an HTTPS session using Triple DES in CBC mode, aka a \"Sweet32\" attack.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-2183"
+    },
+    {
+      "alert_id": "nvd:cve-2016-1908:red hat enterprise linux",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "rhel",
+      "confidence": "cpe",
+      "priority": "URGENT",
+      "cve_id": "CVE-2016-1908",
+      "matched": "Red Hat Enterprise Linux",
+      "severity": "CRITICAL",
+      "score": 9.8,
+      "published": "2017-04-11T18:59:00.167",
+      "last_modified": "2026-05-29T21:16:27.137",
+      "title": "CVE-2016-1908",
+      "description": "The client in OpenSSH before 7.2 mishandles failed cookie generation for untrusted X11 forwarding and relies on the local X11 server for access-control decisions, which allows remote X11 clients to trigger a fallback and obtain trusted X11 forwarding privileges by leveraging configuration issues on this X11 server, as demonstrated by lack of the SECURITY extension on this X11 server.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2016-1908"
+    },
+    {
       "alert_id": "nvd:cve-2017-15906:red hat enterprise linux",
       "source": "NVD",
       "category": "OS",
@@ -2640,6 +2759,40 @@
       "title": "CVE-2017-15906",
       "description": "The process_open function in sftp-server.c in OpenSSH before 7.6 does not properly prevent write operations in readonly mode, which allows attackers to create zero-length files.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2017-15906"
+    },
+    {
+      "alert_id": "nvd:cve-2018-3639:red hat enterprise linux",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "rhel",
+      "confidence": "cpe",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2018-3639",
+      "matched": "Red Hat Enterprise Linux",
+      "severity": "MEDIUM",
+      "score": 5.5,
+      "published": "2018-05-22T12:29:00.250",
+      "last_modified": "2026-05-29T21:16:34.153",
+      "title": "CVE-2018-3639",
+      "description": "Systems with microprocessors utilizing speculative execution and speculative execution of memory reads before the addresses of all prior memory writes are known may allow unauthorized disclosure of information to an attacker with local user access via a side-channel analysis, aka Speculative Store Bypass (SSB), Variant 4.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-3639"
+    },
+    {
+      "alert_id": "nvd:cve-2018-13785:red hat enterprise linux",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "rhel",
+      "confidence": "cpe",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2018-13785",
+      "matched": "Red Hat Enterprise Linux",
+      "severity": "MEDIUM",
+      "score": 6.5,
+      "published": "2018-07-09T13:29:00.443",
+      "last_modified": "2026-05-29T21:16:32.123",
+      "title": "CVE-2018-13785",
+      "description": "In libpng 1.6.34, a wrong calculation of row_factor in the png_check_chunk_length function (pngrutil.c) may trigger an integer overflow and resultant divide-by-zero while processing a crafted PNG file, leading to a denial of service.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2018-13785"
     },
     {
       "alert_id": "nvd:cve-2019-6109:red hat enterprise linux",
@@ -2691,6 +2844,23 @@
       "title": "CVE-2019-11135",
       "description": "TSX Asynchronous Abort condition on some CPUs utilizing speculative execution may allow an authenticated user to potentially enable information disclosure via a side channel with local access.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-11135"
+    },
+    {
+      "alert_id": "nvd:cve-2020-1574:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2020-1574",
+      "matched": "Microsoft Windows",
+      "severity": "MEDIUM",
+      "score": 5.5,
+      "published": "2020-08-17T19:15:21.100",
+      "last_modified": "2026-05-29T21:16:39.147",
+      "title": "CVE-2020-1574",
+      "description": "A remote code execution vulnerability exists in the way that Microsoft Windows Codecs Library handles objects in memory. An attacker who successfully exploited the vulnerability could execute arbitrary code.\nExploitation of the vulnerability requires that a program process a specially crafted image file.\nThe update addresses the vulnerability by correcting how Microsoft Windows Codecs Library handles objects in memory.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-1574"
     },
     {
       "alert_id": "nvd:cve-2020-28209:microsoft windows",
