@@ -1,45 +1,11 @@
 {
-  "generated_at": "2026-05-30T19:29:17.990928+00:00",
-  "count": 484,
+  "generated_at": "2026-05-31T03:54:22.809183+00:00",
+  "count": 483,
   "sources": {
-    "NVD": 347,
+    "NVD": 346,
     "JVN": 137
   },
   "alerts": [
-    {
-      "alert_id": "nvd:cve-2026-44718:postgresql",
-      "source": "NVD",
-      "category": "DB",
-      "product_key": "postgresql",
-      "confidence": "description_formal",
-      "priority": "INFO",
-      "cve_id": "CVE-2026-44718",
-      "matched": "PostgreSQL",
-      "severity": "UNKNOWN",
-      "score": null,
-      "published": "2026-05-15T19:17:00.590",
-      "last_modified": "2026-05-18T17:50:08.190",
-      "title": "CVE-2026-44718",
-      "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. From 0.2.0 to before 0.10.0, explorations.get, explorations.replace, and explorations.delete operate on an exploration_id without verifying that the requesting user was a collaborator on the exploration’s database. An authenticated user on the same Mathesar installation who knew or guessed an exploration ID could read, replace, or delete a saved exploration belonging to a database where they were...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44718"
-    },
-    {
-      "alert_id": "nvd:cve-2026-44719:postgresql",
-      "source": "NVD",
-      "category": "DB",
-      "product_key": "postgresql",
-      "confidence": "description_formal",
-      "priority": "INFO",
-      "cve_id": "CVE-2026-44719",
-      "matched": "PostgreSQL",
-      "severity": "UNKNOWN",
-      "score": null,
-      "published": "2026-05-15T19:17:00.757",
-      "last_modified": "2026-05-18T17:50:08.190",
-      "title": "CVE-2026-44719",
-      "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. From 0.2.0 to before 0.10.0, collaborators.list, tables.metadata.list, explorations.list, and forms.list accept a database_id without verifying that the requesting user was a collaborator on that database. An authenticated user on the same Mathesar installation could use these methods to view Mathesar-managed metadata for databases where they were not a collaborator. Depending on the database and...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44719"
-    },
     {
       "alert_id": "nvd:cve-2026-8723:node.js",
       "source": "NVD",
@@ -3662,23 +3628,6 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-2100"
     },
     {
-      "alert_id": "nvd:cve-2026-4948:red hat enterprise linux",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "rhel",
-      "confidence": "cpe",
-      "priority": "NOTICE",
-      "cve_id": "CVE-2026-4948",
-      "matched": "Red Hat Enterprise Linux",
-      "severity": "MEDIUM",
-      "score": 5.5,
-      "published": "2026-03-27T06:16:39.543",
-      "last_modified": "2026-05-15T19:17:04.917",
-      "title": "CVE-2026-4948",
-      "description": "A flaw was found in firewalld. A local unprivileged user can exploit this vulnerability by mis-authorizing two runtime D-Bus (Desktop Bus) setters, setZoneSettings2 and setPolicySettings. This mis-authorization allows the user to modify the runtime firewall state without proper authentication, leading to unauthorized changes in network security configurations.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4948"
-    },
-    {
       "alert_id": "nvd:cve-2026-5119:red hat enterprise linux",
       "source": "NVD",
       "category": "OS",
@@ -5904,6 +5853,40 @@
       "title": "CVE-2026-45736",
       "description": "ws is an open source WebSocket client and server for Node.js. Prior to 8.20.1, the websocket.close() implementation is vulnerable to uninitialized memory disclosure when a TypedArray is passed as the reason argument. This vulnerability is fixed in 8.20.1.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45736"
+    },
+    {
+      "alert_id": "nvd:cve-2026-44718:postgresql",
+      "source": "NVD",
+      "category": "DB",
+      "product_key": "postgresql",
+      "confidence": "description_formal",
+      "priority": "INFO",
+      "cve_id": "CVE-2026-44718",
+      "matched": "PostgreSQL",
+      "severity": "UNKNOWN",
+      "score": null,
+      "published": "2026-05-15T19:17:00.590",
+      "last_modified": "2026-05-18T17:50:08.190",
+      "title": "CVE-2026-44718",
+      "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. From 0.2.0 to before 0.10.0, explorations.get, explorations.replace, and explorations.delete operate on an exploration_id without verifying that the requesting user was a collaborator on the exploration’s database. An authenticated user on the same Mathesar installation who knew or guessed an exploration ID could read, replace, or delete a saved exploration belonging to a database where they were...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44718"
+    },
+    {
+      "alert_id": "nvd:cve-2026-44719:postgresql",
+      "source": "NVD",
+      "category": "DB",
+      "product_key": "postgresql",
+      "confidence": "description_formal",
+      "priority": "INFO",
+      "cve_id": "CVE-2026-44719",
+      "matched": "PostgreSQL",
+      "severity": "UNKNOWN",
+      "score": null,
+      "published": "2026-05-15T19:17:00.757",
+      "last_modified": "2026-05-18T17:50:08.190",
+      "title": "CVE-2026-44719",
+      "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. From 0.2.0 to before 0.10.0, collaborators.list, tables.metadata.list, explorations.list, and forms.list accept a database_id without verifying that the requesting user was a collaborator on that database. An authenticated user on the same Mathesar installation could use these methods to view Mathesar-managed metadata for databases where they were not a collaborator. Depending on the database and...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44719"
     },
     {
       "alert_id": "jvn:cve-2026-41035:smb",
