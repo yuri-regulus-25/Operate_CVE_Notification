@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-02T04:02:31.165076+00:00",
-  "count": 534,
+  "generated_at": "2026-06-02T10:37:42.517572+00:00",
+  "count": 535,
   "sources": {
-    "NVD": 397,
+    "NVD": 398,
     "JVN": 137
   },
   "alerts": [
@@ -3560,6 +3560,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-21338"
     },
     {
+      "alert_id": "nvd:cve-2025-26597:red hat enterprise linux",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "rhel",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2025-26597",
+      "matched": "Red Hat Enterprise Linux",
+      "severity": "HIGH",
+      "score": 7.8,
+      "published": "2025-02-25T16:15:38.797",
+      "last_modified": "2026-06-02T04:17:01.140",
+      "title": "CVE-2025-26597",
+      "description": "A buffer overflow flaw was found in X.Org and Xwayland. If XkbChangeTypesOfKey() is called with a 0 group, it will resize the key symbols table to 0 but leave the key actions unchanged. If the same function is later called with a non-zero value of groups, this will cause a buffer overflow because the key actions are of the wrong size.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-26597"
+    },
+    {
       "alert_id": "nvd:cve-2025-26687:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -5237,7 +5254,7 @@
       "severity": "MEDIUM",
       "score": 6.1,
       "published": "2026-05-05T16:16:11.647",
-      "last_modified": "2026-05-28T18:16:30.750",
+      "last_modified": "2026-06-02T10:16:21.107",
       "title": "CVE-2026-34000",
       "description": "A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34000"
@@ -5254,7 +5271,7 @@
       "severity": "MEDIUM",
       "score": 6.1,
       "published": "2026-05-05T16:16:11.787",
-      "last_modified": "2026-05-28T18:16:31.017",
+      "last_modified": "2026-06-02T10:16:21.703",
       "title": "CVE-2026-34002",
       "description": "A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34002"
