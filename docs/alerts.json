@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-03T04:06:44.086892+00:00",
-  "count": 430,
+  "generated_at": "2026-06-03T11:10:17.756692+00:00",
+  "count": 435,
   "sources": {
     "NVD": 384,
-    "JVN": 46
+    "JVN": 51
   },
   "alerts": [
     {
@@ -675,13 +675,13 @@
       "category": "OS",
       "product_key": "rhel",
       "confidence": "cpe",
-      "priority": "WATCH",
+      "priority": "URGENT",
       "cve_id": "CVE-2026-4480",
       "matched": "Red Hat Enterprise Linux",
-      "severity": "HIGH",
-      "score": 8.5,
+      "severity": "CRITICAL",
+      "score": 9.0,
       "published": "2026-05-26T15:16:40.937",
-      "last_modified": "2026-06-01T17:53:36.910",
+      "last_modified": "2026-06-03T09:16:13.330",
       "title": "CVE-2026-4480",
       "description": "A flaw was found in the Samba printing subsystem. Samba passes the client-controlled job description string to the command configured with the \"print command\" setting via the \"%J\"\nsubstitution character without escaping shell meta characters. A remote attacker could exploit this vulnerability by sending a specially crafted print job description that contains unescaped shell characters. This could lead to remote code execution on the affected system.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4480"
@@ -868,7 +868,7 @@
       "severity": "HIGH",
       "score": 8.0,
       "published": "2026-05-27T11:16:18.357",
-      "last_modified": "2026-05-27T14:54:20.160",
+      "last_modified": "2026-06-03T06:16:32.410",
       "title": "CVE-2026-3012",
       "description": "A flaw was found in Samba’s certificate auto-enrollment Group Policy handling. When certificate auto-enrollment is enabled, Samba may retrieve a CA certificate over an unencrypted HTTP connection and install it into the local trust store without proper verification. An attacker with the ability to intercept or redirect network traffic could exploit this behavior to supply a malicious certificate authority certificate, potentially allowing interception or spoofing of trusted communications.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3012"
@@ -919,7 +919,7 @@
       "severity": "HIGH",
       "score": 8.8,
       "published": "2026-05-27T14:16:45.143",
-      "last_modified": "2026-05-29T16:16:26.500",
+      "last_modified": "2026-06-03T04:17:06.500",
       "title": "CVE-2026-36044",
       "description": "@pensar/apex <= 0.0.58 is vulnerable to OS command injection via the smart_enumerate tool. The createSmartEnumerateTool() function in src/core/agent/tools.ts constructs a shell command by concatenating unsanitized values from the extensions array and url parameter into a string passed to Node.js child_process.exec(). Because exec() spawns a shell, shell metacharacters in those values are interpreted by the host shell, resulting in arbitrary OS command execution with the privileges of the running...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-36044"
@@ -1157,7 +1157,7 @@
       "severity": "CRITICAL",
       "score": 9.0,
       "published": "2026-05-28T09:16:47.643",
-      "last_modified": "2026-05-28T13:44:54.327",
+      "last_modified": "2026-06-03T06:16:33.917",
       "title": "CVE-2026-4408",
       "description": "A flaw was found in Samba. A remote attacker can exploit a misconfiguration in Samba file servers and classic domain controllers that use the \"check password script\" feature. If this script is configured with the %u substitution character, the client-controlled username is passed without proper escaping of shell meta-characters. This vulnerability allows an attacker to achieve remote command execution on the affected system. This issue primarily affects non-standard configurations where the \"che...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4408"
@@ -4506,7 +4506,7 @@
       "severity": "MEDIUM",
       "score": 5.9,
       "published": "2026-03-30T07:15:58.350",
-      "last_modified": "2026-06-01T19:16:54.580",
+      "last_modified": "2026-06-03T09:16:13.503",
       "title": "CVE-2026-5119",
       "description": "A flaw was found in libsoup. When establishing HTTPS tunnels through a configured HTTP proxy, sensitive session cookies are transmitted in cleartext within the initial HTTP CONNECT request. A network-positioned attacker or a malicious HTTP proxy can intercept these cookies, leading to potential session hijacking or user impersonation.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5119"
@@ -6535,6 +6535,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26462"
     },
     {
+      "alert_id": "jvn:cve-2026-2340:smb",
+      "source": "JVN",
+      "category": "WEB",
+      "product_key": "smb",
+      "confidence": "description_formal",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-2340",
+      "matched": "SMB",
+      "severity": "MEDIUM",
+      "score": "6.5",
+      "published": "2026-06-03T15:39:22+09:00",
+      "last_modified": "2026-06-03T15:39:22+09:00",
+      "title": "レッドハット等の複数ベンダの製品における不十分なパーミッションまたは特権の不適切な処理に関する脆弱性",
+      "description": "Sambaのvfs_wormモジュールに脆弱性が発見されました。このモジュールは、設定可能な猶予期間後のファイルの変更を防止し、一度書き込んだら読み取りのみ可能（WORM：Write-Once, Read-Many）の保護を提供することを目的としています。リネーム操作時の検証が不十分であったため、共有への書き込み権限を持つ認証済みユーザーが、新規作成したファイルを既存のWORM保護ファイルにリネームすることで、その保護されたファイルを上書きできてしまう可能性があります。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017435.html"
+    },
+    {
       "alert_id": "jvn:cve-2026-41035:smb",
       "source": "JVN",
       "category": "WEB",
@@ -6601,6 +6618,23 @@
       "title": "LinuxのLinux KernelにおけるNULL ポインタデリファレンスに関する脆弱性",
       "description": "Linuxカーネルにおいて、以下の脆弱性が修正されました。ixgbevfでは、Hyper-V opsテーブルに不足していたnegotiate_featuresオペレーションを追加しました。コミットa7075f501bd3（\"ixgbevf: fix mailbox API compatibility by negotiating supported features\"）は、.negotiate_featuresコールバックをixgbe_mac_operationsに追加し、ixgbevf_mac_opsに設定しましたが、ixgbevf_hv_mac_opsへの追加を忘れていました。このため、Hyper-V仮想マシンでは関数ポインタがNULLのままとなっていました。プローブ時にixgbevf_negotiate_api()はixgbevf_set_features()を呼び出し、無条件にhw-mac.ops.negotiate_features()をデリファレンスします。Hyper-V上ではこれによりNULLポインタ参照が発生し、カーネルのNULLポインタデリファレンス障害を引き起こして...",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016538.html"
+    },
+    {
+      "alert_id": "jvn:jvndb-2026-017438:windows kernel",
+      "source": "JVN",
+      "category": "OS",
+      "product_key": "windows_kernel",
+      "confidence": "description_formal",
+      "priority": "INFO",
+      "cve_id": "JVNDB-2026-017438",
+      "matched": "Windows Kernel",
+      "severity": "UNKNOWN",
+      "score": "",
+      "published": "2026-06-03T16:22:48+09:00",
+      "last_modified": "2026-06-03T16:22:48+09:00",
+      "title": "Windowsカーネルドライバ「PCTCore64.sys」における不適切なアクセス制御",
+      "description": "CERT/CCから本件に関するアドバイザリが公表されました。 <ul><li><a href='https://kb.cert.org/vuls/id/158530' target='_blank'>Vulnerability Note VU#158530 PCTCore64.sys Windows kernel driver contains missing access control vulnerability</a></li></ul>",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017438.html"
     },
     {
       "alert_id": "jvn:cve-2025-7024:microsoft windows",
@@ -7147,6 +7181,40 @@
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017075.html"
     },
     {
+      "alert_id": "jvn:cve-2026-48918:active directory",
+      "source": "JVN",
+      "category": "WEB",
+      "product_key": "active_directory",
+      "confidence": "title",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-48918",
+      "matched": "Active Directory",
+      "severity": "MEDIUM",
+      "score": "6.6",
+      "published": "2026-06-03T15:34:37+09:00",
+      "last_modified": "2026-06-03T15:34:37+09:00",
+      "title": "JenkinsのActive Directoryにおけるサーバサイドのリクエストフォージェリの脆弱性",
+      "description": "Jenkins Active Directory プラグインのバージョン 2.41 およびそれ以前のバージョンは、デフォルトで LDAP リファラルを追跡します。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017340.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-48919:active directory",
+      "source": "JVN",
+      "category": "WEB",
+      "product_key": "active_directory",
+      "confidence": "title",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-48919",
+      "matched": "Active Directory",
+      "severity": "MEDIUM",
+      "score": "6.6",
+      "published": "2026-06-03T15:34:34+09:00",
+      "last_modified": "2026-06-03T15:34:34+09:00",
+      "title": "JenkinsのActive Directoryにおける信頼できないデータのデシリアライゼーションに関する脆弱性",
+      "description": "Jenkins Active Directoryプラグイン2.41以前のバージョンは、LDAPリファラルからのデータを検証せずに逆シリアル化を行います。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017339.html"
+    },
+    {
       "alert_id": "jvn:cve-2026-43617:smb",
       "source": "JVN",
       "category": "WEB",
@@ -7162,6 +7230,23 @@
       "title": "Samba Projectのrsyncにおける代替名による認証回避に関する脆弱性",
       "description": "Rsync バージョン 3.4.2 以前には、chroot を使用して設定された場合に、rsync デーモンのホスト名ベースのアクセス制御リストの適用に認証バイパスの脆弱性が存在します。攻撃者は送信元 IP アドレスの PTR レコードを操作することでホスト名ベースの拒否ルールを回避でき、逆引き DNS 解決に失敗して UNKNOWN にデフォルト設定された場合でも、管理者が拒否することを意図したホスト名からの接続を許可させることが可能です。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016850.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-7768:node.js",
+      "source": "JVN",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-7768",
+      "matched": "Node.js",
+      "severity": "HIGH",
+      "score": "7.5",
+      "published": "2026-06-03T17:04:31+09:00",
+      "last_modified": "2026-06-03T17:04:31+09:00",
+      "title": "fastifyのfastify/accepts-serializerにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性",
+      "description": "@fastify/accepts-serializerは、リクエストのAcceptヘッダーに基づくシリアライザー選択の結果を、サイズ制限や削除ポリシーなしにキャッシュしていました。リモートの認証されていないクライアントが、多数の異なるが一致するAcceptヘッダーのバリアントを送信することでキャッシュが無制限に増大し、最終的にNode.jsのヒープを枯渇させてプロセスをクラッシュさせる可能性があります。バージョン6.0.3以下が影響を受けます。6.0.4以降に更新することで、このキャッシュはデフォルトで100エントリのLRUによって制限されるようになり、新しいcacheSizeプラグインオプションを通じて設定可能です。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017590.html"
     },
     {
       "alert_id": "jvn:cve-2026-32687:postgresql",
