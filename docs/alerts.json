@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-02T20:58:03.094026+00:00",
-  "count": 427,
+  "generated_at": "2026-06-03T04:06:44.086892+00:00",
+  "count": 430,
   "sources": {
-    "NVD": 381,
+    "NVD": 384,
     "JVN": 46
   },
   "alerts": [
@@ -1248,6 +1248,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45288"
     },
     {
+      "alert_id": "nvd:cve-2026-10000:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-10000",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": 8.3,
+      "published": "2026-05-28T23:16:40.907",
+      "last_modified": "2026-06-03T02:32:00.570",
+      "title": "CVE-2026-10000",
+      "description": "Use after free in Passwords in Google Chrome on Windows prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10000"
+    },
+    {
       "alert_id": "nvd:cve-2026-10001:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -1654,6 +1671,23 @@
       "title": "CVE-2026-9887",
       "description": "Use after free in Proxy in Google Chrome prior to 148.0.7778.216 allowed a remote attacker to execute arbitrary code via a crafted PAC script. (Chromium security severity: Critical)",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9887"
+    },
+    {
+      "alert_id": "nvd:cve-2026-9890:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-9890",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": 8.3,
+      "published": "2026-05-28T23:16:46.983",
+      "last_modified": "2026-06-03T02:25:40.820",
+      "title": "CVE-2026-9890",
+      "description": "Use after free in XR in Google Chrome on Windows prior to 148.0.7778.216 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-9890"
     },
     {
       "alert_id": "nvd:cve-2026-9891:microsoft windows",
@@ -2948,6 +2982,23 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-25879"
     },
     {
+      "alert_id": "nvd:cve-2026-49143:node.js",
+      "source": "NVD",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-49143",
+      "matched": "Node.js",
+      "severity": "HIGH",
+      "score": 8.8,
+      "published": "2026-06-02T21:16:28.070",
+      "last_modified": "2026-06-02T21:16:28.070",
+      "title": "CVE-2026-49143",
+      "description": "BrowserStack Runner through 0.9.5 contains a remote code execution vulnerability in the /_log HTTP handler that allows unauthenticated network-adjacent attackers to execute arbitrary code by submitting crafted JSON request bodies to the handler, which passes user-supplied data to vm.runInNewContext() combined with eval(). Attackers can escape the Node.js vm sandbox by leveraging a host-context Function reference through util.format to access the host process via this.constructor.constructor, ach...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49143"
+    },
+    {
       "alert_id": "nvd:cve-1999-0511:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -3401,7 +3452,7 @@
       "severity": "HIGH",
       "score": 7.8,
       "published": "2022-03-03T19:15:08.633",
-      "last_modified": "2026-06-02T20:39:33.687",
+      "last_modified": "2026-06-02T21:16:24.997",
       "title": "CVE-2022-0492",
       "description": "A vulnerability was found in the Linux kernel’s cgroup_release_agent_write in the kernel/cgroup/cgroup-v1.c function. This flaw, under certain circumstances, allows the use of the cgroups v1 release_agent feature to escalate privileges and bypass the namespace isolation unexpectedly.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-0492"
@@ -5526,7 +5577,7 @@
       "severity": "MEDIUM",
       "score": 6.1,
       "published": "2026-05-05T16:16:11.647",
-      "last_modified": "2026-06-02T10:16:21.107",
+      "last_modified": "2026-06-02T23:16:36.373",
       "title": "CVE-2026-34000",
       "description": "A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34000"
@@ -5543,7 +5594,7 @@
       "severity": "MEDIUM",
       "score": 6.1,
       "published": "2026-05-05T16:16:11.787",
-      "last_modified": "2026-06-02T10:16:21.703",
+      "last_modified": "2026-06-02T23:16:36.933",
       "title": "CVE-2026-34002",
       "description": "A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34002"
