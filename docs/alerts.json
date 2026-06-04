@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-04T04:04:04.921743+00:00",
-  "count": 400,
+  "generated_at": "2026-06-04T10:12:30.113763+00:00",
+  "count": 409,
   "sources": {
     "NVD": 349,
-    "JVN": 51
+    "JVN": 60
   },
   "alerts": [
     {
@@ -5940,6 +5940,40 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45585"
     },
     {
+      "alert_id": "jvn:cve-2026-4480:smb",
+      "source": "JVN",
+      "category": "WEB",
+      "product_key": "smb",
+      "confidence": "description_formal",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-4480",
+      "matched": "SMB",
+      "severity": "CRITICAL",
+      "score": "9.8",
+      "published": "2026-06-04T16:23:53+09:00",
+      "last_modified": "2026-06-04T16:23:53+09:00",
+      "title": "レッドハット等の複数ベンダの製品におけるOS コマンドインジェクションの脆弱性",
+      "description": "Sambaの印刷サブシステムに欠陥が見つかりました。Sambaは「print command」設定で構成されたコマンドに対し、クライアントが制御するジョブ説明文字列を「%J」置換文字を通じてシェルのメタ文字をエスケープせずに渡します。遠隔の攻撃者は、エスケープされていないシェル文字を含む特別に細工された印刷ジョブ説明を送信することで、この脆弱性を悪用できます。これにより、影響を受けるシステムでリモートコードが実行される恐れがあります。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017807.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-1933:smb",
+      "source": "JVN",
+      "category": "WEB",
+      "product_key": "smb",
+      "confidence": "description_formal",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-1933",
+      "matched": "SMB",
+      "severity": "MEDIUM",
+      "score": "6.5",
+      "published": "2026-06-04T16:13:24+09:00",
+      "last_modified": "2026-06-04T16:13:24+09:00",
+      "title": "レッドハット等の複数ベンダの製品におけるアクセス制御に関する脆弱性",
+      "description": "SambaのNTFSスタイルのリパースポイントの処理に欠陥が見つかりました。この欠陥は、read only = yes に設定された共有で発生します。SMBレイヤーのアクセスチェックが欠如しているため、認証されたユーザーが基盤となるファイルシステムの書き込み権限を持っている場合でも、読み取り専用エクスポート上でSMB操作を通じてリパースポイントのメタデータを作成または削除できる可能性があります。これにより、SMBで表示されるファイルの動作を変更でき、ファイルをシンボリックリンクや他のリパースポイントタイプに変換することが可能です。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017636.html"
+    },
+    {
       "alert_id": "jvn:cve-2026-2340:smb",
       "source": "JVN",
       "category": "WEB",
@@ -6023,6 +6057,57 @@
       "title": "LinuxのLinux KernelにおけるNULL ポインタデリファレンスに関する脆弱性",
       "description": "Linuxカーネルにおいて、以下の脆弱性が修正されました。ixgbevfでは、Hyper-V opsテーブルに不足していたnegotiate_featuresオペレーションを追加しました。コミットa7075f501bd3（\"ixgbevf: fix mailbox API compatibility by negotiating supported features\"）は、.negotiate_featuresコールバックをixgbe_mac_operationsに追加し、ixgbevf_mac_opsに設定しましたが、ixgbevf_hv_mac_opsへの追加を忘れていました。このため、Hyper-V仮想マシンでは関数ポインタがNULLのままとなっていました。プローブ時にixgbevf_negotiate_api()はixgbevf_set_features()を呼び出し、無条件にhw-mac.ops.negotiate_features()をデリファレンスします。Hyper-V上ではこれによりNULLポインタ参照が発生し、カーネルのNULLポインタデリファレンス障害を引き起こして...",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016538.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-0390:microsoft windows",
+      "source": "JVN",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "description_formal",
+      "priority": "INFO",
+      "cve_id": "CVE-2026-0390",
+      "matched": "Microsoft Windows",
+      "severity": "UNKNOWN",
+      "score": "",
+      "published": "2026-06-04T16:59:24+09:00",
+      "last_modified": "2026-06-04T16:59:24+09:00",
+      "title": "日立ディスクアレイシステムにおけるSVP 脆弱性対策について　(2026年4月分)",
+      "description": "Microsoft製品に対して、以下に示す脆弱性が公開されました。 [脆弱性の内容] <ol><li>UEFI セキュア ブートのセキュリティ機能バイパスの脆弱性 (CVE-2026-0390)</li><li>Windows COM サーバーの情報漏えいの脆弱性 (CVE-2026-20806)</li><li>Windows 回復環境のセキュリティ機能バイパスの脆弱性 (CVE-2026-20928)</li><li>Windows Management サービスの特権昇格の脆弱性 (CVE-2026-20930)</li><li>.NET Framework のサービス拒否の脆弱性 (CVE-2026-23666)</li><li>Windows 仮想化ベース セキュリティ (VBS) のセキュリティ機能バイパスの脆弱性 (CVE-2026-23670)</li><li>MITRE: CVE-2026-25250 セキュア ブートを無効にする Eazy 修正プログラム (CVE-2026-25250)</li><li>リモート デスクトップのスプーフィングの脆弱性 (CVE-20...",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-018098.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-32154:microsoft windows",
+      "source": "JVN",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "title",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-32154",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": "7.8",
+      "published": "2026-06-04T16:35:07+09:00",
+      "last_modified": "2026-06-04T16:35:07+09:00",
+      "title": "マイクロソフトのMicrosoft Windows 11 23h2等の複数製品における解放済みメモリの使用に関する脆弱性",
+      "description": "Desktop Window ManagerにおけるUse after freeの脆弱性により、権限を持つ攻撃者はローカルで特権を昇格させることが可能です。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017901.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-32152:microsoft windows",
+      "source": "JVN",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "title",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-32152",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": "7.8",
+      "published": "2026-06-04T16:28:03+09:00",
+      "last_modified": "2026-06-04T16:28:03+09:00",
+      "title": "マイクロソフトのMicrosoft Windows 11 23h2等の複数製品における解放済みメモリの使用に関する脆弱性",
+      "description": "Desktop Window ManagerのUse after freeにより、認証済みの攻撃者がローカルで権限を昇格させることが可能です。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017891.html"
     },
     {
       "alert_id": "jvn:jvndb-2026-017438:windows kernel",
@@ -6159,6 +6244,40 @@
       "title": "マイクロソフトのMicrosoft Windows 11 24h2等の複数製品におけるコマンドインジェクションの脆弱性",
       "description": "Microsoftは、一般に「YellowKey」と呼ばれるWindowsのセキュリティ機能バイパスの脆弱性を認識しています。この脆弱性の概念実証（PoC）が公表されており、調整された脆弱性対応のベストプラクティスに違反しています。セキュリティ更新プログラムが提供されるまで、この脆弱性から保護するために実施可能な緩和策を提供する目的で、このCVEを発行しています。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016661.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-39976:laravel",
+      "source": "JVN",
+      "category": "PHP",
+      "product_key": "laravel",
+      "confidence": "title",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-39976",
+      "matched": "Laravel",
+      "severity": "HIGH",
+      "score": "7.1",
+      "published": "2026-06-04T16:37:46+09:00",
+      "last_modified": "2026-06-04T16:37:46+09:00",
+      "title": "Laravel Holdings Inc.のLaravel Passportにおける認証に関する脆弱性",
+      "description": "Laravel PassportはLaravelにOAuth2サーバーサポートを提供します。バージョン13.0.0から13.7.1未満の間に、client_credentialsトークンに対する認証バイパスの脆弱性が存在していました。league/oauth2-serverライブラリはJWTのsubクレームをクライアント識別子として設定します（ユーザーが存在しないためです）。その後、トークンガードはこの値をretrieveById()に渡しますが、それが実際にユーザー識別子であるかを検証しないため、無関係の実際のユーザーを誤って解決してしまう可能性があります。これにより、任意のマシン間トークンが誤って実際のユーザーとして認証される可能性があります。この脆弱性はバージョン13.7.1で修正されました。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017953.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-41213:node.js",
+      "source": "JVN",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-41213",
+      "matched": "Node.js",
+      "severity": "MEDIUM",
+      "score": "5.9",
+      "published": "2026-06-04T16:37:31+09:00",
+      "last_modified": "2026-06-04T16:37:31+09:00",
+      "title": "node-oauthのnode-oauth/oauth2-serverにおける複数の脆弱性",
+      "description": "@node-oauth/oauth2-serverは、Node.jsでOAuth2サーバーを実装するためのモジュールです。トークン交換パスは、S256 PKCEフローにおいてRFC7636に準拠していないcode_verifier値（一文字の文字列を含む）を受け入れます。短く弱い検証子が許可され、検証に失敗した試行が認可コードを消費しないため、認可コードを傍受した攻撃者はトークン発行に成功するまでcode_verifierをオンラインでブルートフォース攻撃により推測できます。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017948.html"
     },
     {
       "alert_id": "jvn:cve-2026-43930:node.js",
@@ -6688,6 +6807,23 @@
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016955.html"
     },
     {
+      "alert_id": "jvn:cve-2026-9617:postgresql",
+      "source": "JVN",
+      "category": "DB",
+      "product_key": "postgresql",
+      "confidence": "title",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-9617",
+      "matched": "PostgreSQL",
+      "severity": "HIGH",
+      "score": "8.8",
+      "published": "2026-06-04T16:45:00+09:00",
+      "last_modified": "2026-06-04T16:45:00+09:00",
+      "title": "Dalibo SARL SCOPのPostgreSQL AnonymizerにおけるSQL インジェクションの脆弱性",
+      "description": "PostgreSQL Anonymizerには脆弱性が存在し、ユーザーがテーブルを作成し、列識別子内に悪意のあるコードを配置することでスーパーユーザー権限を取得できる可能性があります。スーパーユーザーがk-匿名性関数を呼び出すと、その悪意のあるコードがスーパーユーザー権限で実行されます。このリスクはPostgreSQL 14およびPostgreSQL 14以前からアップグレードされたインスタンスで特に高くなります。PostgreSQL 15以降ではデフォルトでpublicスキーマの作成権限が取り消されており、この攻撃は明示的にCREATE TABLE権限が付与されたユーザーのみが実行可能です。この問題はPostgreSQL Anonymizer 3.1.0およびそれ以降のバージョンで修正されています。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-018093.html"
+    },
+    {
       "alert_id": "jvn:cve-2026-46624:postgresql",
       "source": "JVN",
       "category": "DB",
@@ -6771,6 +6907,23 @@
       "title": "Samba Projectのrsyncにおける複数の脆弱性",
       "description": "Rsyncバージョン3.4.2およびそれ以前には、chmod、lchown、utimes、rename、unlink、mkdir、symlink、mknod、link、rmdir、およびlstatを含むパスベースのシステムコールにシンボリックリンク競合状態の脆弱性が存在します。この脆弱性により、ローカルの攻撃者がエクスポートされたrsyncモジュール外のファイルへの操作をリダイレクトできる可能性があります。ローカルファイルシステムへのアクセス権を持つ攻撃者は、パス解決とシステムコール実行の間のタイミングウィンドウを利用してシンボリックリンクを入れ替えることができ、'use chroot = no'に設定されたrsyncデーモンにおいて、送信者から提供された権限、所有権、タイムスタンプ、またはファイル名を意図されたモジュール境界外の任意のファイルに適用することが可能です。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016848.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-24425:symfony",
+      "source": "JVN",
+      "category": "PHP",
+      "product_key": "symfony",
+      "confidence": "title",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-24425",
+      "matched": "Symfony",
+      "severity": "CRITICAL",
+      "score": "9.9",
+      "published": "2026-06-04T16:12:47+09:00",
+      "last_modified": "2026-06-04T16:12:47+09:00",
+      "title": "symfonyのtwigにおける保護メカニズムの不具合に関する脆弱性",
+      "description": "Twigのバージョン2.16.xおよび3.9.0から3.25.xには、SourcePolicyInterfaceを使用する際にサンドボックスをバイパスする脆弱性があります。この脆弱性により、テンプレートレンダリング機能を持つ攻撃者が任意のPHPコーラブルをsort、filter、map、およびreduceフィルターに渡すことが可能になります。攻撃者は現在のテンプレートソースを使用しないランタイムチェックを悪用し、サンドボックスがグローバルではなくソースポリシーを通じて有効になっている場合にサンドボックス制限を回避して任意のコードを実行できます。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017624.html"
     },
     {
       "alert_id": "jvn:cve-2026-45736:node.js",
