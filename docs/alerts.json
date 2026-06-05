@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-05T09:59:09.840972+00:00",
-  "count": 393,
+  "generated_at": "2026-06-05T15:03:58.383730+00:00",
+  "count": 389,
   "sources": {
-    "NVD": 343,
-    "JVN": 50
+    "NVD": 340,
+    "JVN": 49
   },
   "alerts": [
     {
@@ -2642,23 +2642,6 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2005-1794"
     },
     {
-      "alert_id": "nvd:cve-2008-4250:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "URGENT",
-      "cve_id": "CVE-2008-4250",
-      "matched": "Microsoft Windows",
-      "severity": "CRITICAL",
-      "score": 9.8,
-      "published": "2008-10-23T22:00:01.357",
-      "last_modified": "2026-05-21T12:57:17.353",
-      "title": "CVE-2008-4250",
-      "description": "The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, Vista Gold and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary code via a crafted RPC request that triggers the overflow during path canonicalization, as exploited in the wild by Gimmiv.A in October 2008, aka \"Server Service Vulnerability.\"",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2008-4250"
-    },
-    {
       "alert_id": "nvd:cve-2003-1567:iis",
       "source": "NVD",
       "category": "WEB",
@@ -2674,23 +2657,6 @@
       "title": "CVE-2003-1567",
       "description": "The undocumented TRACK method in Microsoft Internet Information Services (IIS) 5.0 returns the content of the original request in the body of the response, which makes it easier for remote attackers to steal cookies and authentication credentials, or bypass the HttpOnly protection mechanism, by using TRACK to read the contents of the HTTP headers that are returned in the response, a technique that is similar to cross-site tracing (XST) using HTTP TRACE.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2003-1567"
-    },
-    {
-      "alert_id": "nvd:cve-2009-1537:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "WATCH",
-      "cve_id": "CVE-2009-1537",
-      "matched": "Microsoft Windows",
-      "severity": "HIGH",
-      "score": 8.8,
-      "published": "2009-05-29T18:30:00.187",
-      "last_modified": "2026-05-21T12:57:12.850",
-      "title": "CVE-2009-1537",
-      "description": "Unspecified vulnerability in the QuickTime Movie Parser Filter in quartz.dll in DirectShow in Microsoft DirectX 7.0 through 9.0c on Windows 2000 SP4, Windows XP SP2 and SP3, and Windows Server 2003 SP2 allows remote attackers to execute arbitrary code via a crafted QuickTime media file, as exploited in the wild in May 2009, aka \"DirectX NULL Byte Overwrite Vulnerability.\"",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-1537"
     },
     {
       "alert_id": "nvd:cve-2009-2493:microsoft windows",
@@ -2725,40 +2691,6 @@
       "title": "CVE-2009-3555",
       "description": "The TLS protocol, and the SSL protocol 3.0 and possibly earlier, as used in Microsoft Internet Information Services (IIS) 7.0, mod_ssl in the Apache HTTP Server 2.2.14 and earlier, OpenSSL before 0.9.8l, GnuTLS 2.8.5 and earlier, Mozilla Network Security Services (NSS) 3.12.4 and earlier, multiple Cisco products, and other products, does not properly associate renegotiation handshakes with an existing connection, which allows man-in-the-middle attackers to insert data into HTTPS sessions, and po...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2009-3555"
-    },
-    {
-      "alert_id": "nvd:cve-2010-0249:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "WATCH",
-      "cve_id": "CVE-2010-0249",
-      "matched": "Microsoft Windows",
-      "severity": "HIGH",
-      "score": 8.8,
-      "published": "2010-01-15T17:30:00.533",
-      "last_modified": "2026-05-21T12:57:01.463",
-      "title": "CVE-2010-0249",
-      "description": "Use-after-free vulnerability in Microsoft Internet Explorer 6, 6 SP1, 7, and 8 on Windows 2000 SP4; Windows XP SP2 and SP3; Windows Server 2003 SP2; Windows Vista Gold, SP1, and SP2; Windows Server 2008 Gold, SP2, and R2; and Windows 7 allows remote attackers to execute arbitrary code by accessing a pointer associated with a deleted object, related to incorrectly initialized memory and improper handling of objects in memory, as exploited in the wild in December 2009 and January 2010 during Opera...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0249"
-    },
-    {
-      "alert_id": "nvd:cve-2010-0806:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "WATCH",
-      "cve_id": "CVE-2010-0806",
-      "matched": "Microsoft Windows",
-      "severity": "HIGH",
-      "score": 8.8,
-      "published": "2010-03-10T22:30:01.323",
-      "last_modified": "2026-05-21T12:57:10.303",
-      "title": "CVE-2010-0806",
-      "description": "Use-after-free vulnerability in the Peer Objects component (aka iepeers.dll) in Microsoft Internet Explorer 6, 6 SP1, and 7 allows remote attackers to execute arbitrary code via vectors involving access to an invalid pointer after the deletion of an object, as exploited in the wild in March 2010, aka \"Uninitialized Memory Corruption Vulnerability.\"",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2010-0806"
     },
     {
       "alert_id": "nvd:cve-2014-3566:red hat enterprise linux",
@@ -3847,6 +3779,23 @@
       "title": "CVE-2026-4775",
       "description": "A flaw was found in the libtiff library. A remote attacker could exploit a signed integer overflow vulnerability in the putcontig8bitYCbCr44tile function by providing a specially crafted TIFF file. This flaw can lead to an out-of-bounds heap write due to incorrect memory pointer calculations, potentially causing a denial of service (application crash) or arbitrary code execution.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4775"
+    },
+    {
+      "alert_id": "nvd:cve-2026-26832:node.js",
+      "source": "NVD",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-26832",
+      "matched": "Node.js",
+      "severity": "CRITICAL",
+      "score": 9.8,
+      "published": "2026-03-25T16:16:21.240",
+      "last_modified": "2026-06-05T14:33:23.523",
+      "title": "CVE-2026-26832",
+      "description": "node-tesseract-ocr is an npm package that provides a Node.js wrapper for Tesseract OCR. In all versions through 2.2.1, the recognize() function in src/index.js is vulnerable to OS Command Injection. The file path parameter is concatenated into a shell command string and passed to child_process.exec() without proper sanitization",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-26832"
     },
     {
       "alert_id": "nvd:cve-2026-4887:red hat enterprise linux",
@@ -6669,23 +6618,6 @@
       "title": "symfonyのtwigにおける保護メカニズムの不具合に関する脆弱性",
       "description": "Twigのバージョン2.16.xおよび3.9.0から3.25.xには、SourcePolicyInterfaceを使用する際にサンドボックスをバイパスする脆弱性があります。この脆弱性により、テンプレートレンダリング機能を持つ攻撃者が任意のPHPコーラブルをsort、filter、map、およびreduceフィルターに渡すことが可能になります。攻撃者は現在のテンプレートソースを使用しないランタイムチェックを悪用し、サンドボックスがグローバルではなくソースポリシーを通じて有効になっている場合にサンドボックス制限を回避して任意のコードを実行できます。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017624.html"
-    },
-    {
-      "alert_id": "jvn:cve-2026-45736:node.js",
-      "source": "JVN",
-      "category": "JS",
-      "product_key": "nodejs",
-      "confidence": "description_formal",
-      "priority": "WATCH",
-      "cve_id": "CVE-2026-45736",
-      "matched": "Node.js",
-      "severity": "HIGH",
-      "score": "7.5",
-      "published": "2026-05-21T10:50:26+09:00",
-      "last_modified": "2026-05-21T10:50:26+09:00",
-      "title": "ws projectのwsにおける初期化されていないリソースの使用に関する脆弱性",
-      "description": "wsはNode.js向けのオープンソースのWebSocketクライアントおよびサーバーです。8.20.1より前のバージョンでは、reason引数としてTypedArrayが渡された場合にwebsocket.close()の実装で初期化されていないメモリの情報漏洩が発生する脆弱性がありました。この脆弱性は8.20.1で修正されました。 ",
-      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016514.html"
     }
   ]
 }
