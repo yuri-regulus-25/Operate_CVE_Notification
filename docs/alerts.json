@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-06T03:11:35.357182+00:00",
-  "count": 510,
+  "generated_at": "2026-06-06T08:45:35.811795+00:00",
+  "count": 513,
   "sources": {
-    "NVD": 463,
+    "NVD": 466,
     "JVN": 47
   },
   "alerts": [
@@ -3384,7 +3384,7 @@
       "severity": "HIGH",
       "score": 7.4,
       "published": "2026-06-04T23:16:59.953",
-      "last_modified": "2026-06-05T20:25:01.033",
+      "last_modified": "2026-06-06T04:17:19.200",
       "title": "CVE-2026-10968",
       "description": "Insufficient validation of untrusted input in Dawn in Google Chrome on Windows prior to 149.0.7827.53 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: High)",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-10968"
@@ -5821,6 +5821,40 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-26687"
     },
     {
+      "alert_id": "nvd:cve-2025-2421:smb",
+      "source": "NVD",
+      "category": "WEB",
+      "product_key": "smb",
+      "confidence": "description_formal",
+      "priority": "URGENT",
+      "cve_id": "CVE-2025-2421",
+      "matched": "SMB",
+      "severity": "CRITICAL",
+      "score": 9.8,
+      "published": "2025-05-02T12:15:15.803",
+      "last_modified": "2026-06-06T06:16:38.447",
+      "title": "CVE-2025-2421",
+      "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Profelis Informatics SambaBox allows Code Injection.\n\nThis issue affects SambaBox: before 5.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2421"
+    },
+    {
+      "alert_id": "nvd:cve-2025-2488:smb",
+      "source": "NVD",
+      "category": "WEB",
+      "product_key": "smb",
+      "confidence": "description_formal",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2025-2488",
+      "matched": "SMB",
+      "severity": "MEDIUM",
+      "score": 6.1,
+      "published": "2025-05-02T12:15:16.340",
+      "last_modified": "2026-06-06T06:16:38.643",
+      "title": "CVE-2025-2488",
+      "description": "Improper Neutralization of Input During Web Page Generation (XSS or 'Cross-site Scripting') vulnerability in Profelis Informatics SambaBox allows Cross-Site Scripting (XSS).\n\nThis issue affects SambaBox: before 5.1.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-2488"
+    },
+    {
       "alert_id": "nvd:cve-2025-30388:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -7162,6 +7196,23 @@
       "title": "CVE-2026-3833",
       "description": "A flaw was found in gnutls. This vulnerability occurs because gnutls performs case-sensitive comparisons of `nameConstraints` labels, specifically for `dNSName` (DNS) or `rfc822Name` (email) constraints within `excludedSubtrees` or `permittedSubtrees`. A remote attacker can exploit this by crafting a leaf certificate with casing differences in the Subject Alternative Name (SAN), leading to a policy bypass where a certificate that should be rejected is instead accepted. This could result in unaut...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3833"
+    },
+    {
+      "alert_id": "nvd:cve-2026-3120:smb",
+      "source": "NVD",
+      "category": "WEB",
+      "product_key": "smb",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-3120",
+      "matched": "SMB",
+      "severity": "HIGH",
+      "score": 7.2,
+      "published": "2026-05-04T12:16:29.393",
+      "last_modified": "2026-06-06T08:16:53.577",
+      "title": "CVE-2026-3120",
+      "description": "Improper Control of Generation of Code ('Code Injection') vulnerability in Profelis Information and Consulting Trade and Industry Limited Company SambaBox allows OS Command Injection.\n\nThis issue affects SambaBox: from 5.1 before 5.3.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3120"
     },
     {
       "alert_id": "nvd:cve-2026-7768:node.js",
