@@ -1,28 +1,11 @@
 {
-  "generated_at": "2026-06-06T19:34:46.017699+00:00",
-  "count": 494,
+  "generated_at": "2026-06-07T03:55:44.102869+00:00",
+  "count": 493,
   "sources": {
-    "NVD": 452,
+    "NVD": 451,
     "JVN": 42
   },
   "alerts": [
-    {
-      "alert_id": "nvd:cve-2026-33843:active directory",
-      "source": "NVD",
-      "category": "WEB",
-      "product_key": "active_directory",
-      "confidence": "description_formal",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-33843",
-      "matched": "Active Directory",
-      "severity": "CRITICAL",
-      "score": 9.1,
-      "published": "2026-05-22T23:16:44.163",
-      "last_modified": "2026-05-27T16:50:43.063",
-      "title": "CVE-2026-33843",
-      "description": "Authentication bypass using an alternate path or channel in Microsoft Azure Active Directory B2C allows an unauthorized attacker to elevate privileges over a network.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33843"
-    },
     {
       "alert_id": "nvd:cve-2026-4480:red hat enterprise linux",
       "source": "NVD",
@@ -7453,23 +7436,6 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8398"
     },
     {
-      "alert_id": "nvd:cve-2026-45585:microsoft windows",
-      "source": "NVD",
-      "category": "OS",
-      "product_key": "microsoft_windows",
-      "confidence": "cpe",
-      "priority": "NOTICE",
-      "cve_id": "CVE-2026-45585",
-      "matched": "Microsoft Windows",
-      "severity": "MEDIUM",
-      "score": 6.8,
-      "published": "2026-05-20T00:16:44.380",
-      "last_modified": "2026-05-22T23:16:56.123",
-      "title": "CVE-2026-45585",
-      "description": "Microsoft is aware of a security feature bypass vulnerability in Windows publicly referred to as &quot;YellowKey&quot;. The proof of concept for this vulnerability has been made public violating coordinated vulnerability best practices.\nWe are issuing this CVE to provide mitigation guidance that can be implemented to protect against this vulnerability until the security update is made available.\nMitigation FAQs\nShould I leverage the temporary mitigation?\nMicrosoft recommends that you consider im...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-45585"
-    },
-    {
       "alert_id": "nvd:cve-2026-9064:red hat enterprise linux",
       "source": "NVD",
       "category": "OS",
@@ -7689,6 +7655,23 @@
       "title": "CVE-2026-6406",
       "description": "The Docker CLI --use-api-socket flag bypasses Enhanced Container Isolation (ECI) restrictions in Docker Desktop. When ECI is enabled, Docker socket mounts from containers are denied unless explicitly allowed via the admin-settings configuration. However, the --use-api-socket flag adds the Docker socket mount via the HostConfig.Mounts field rather than the HostConfig.Binds field. The ECI enforcement in the Docker Desktop API proxy only inspected Binds, allowing the mount to pass unchecked. This g...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-6406"
+    },
+    {
+      "alert_id": "nvd:cve-2026-33843:active directory",
+      "source": "NVD",
+      "category": "WEB",
+      "product_key": "active_directory",
+      "confidence": "description_formal",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-33843",
+      "matched": "Active Directory",
+      "severity": "CRITICAL",
+      "score": 9.1,
+      "published": "2026-05-22T23:16:44.163",
+      "last_modified": "2026-05-27T16:50:43.063",
+      "title": "CVE-2026-33843",
+      "description": "Authentication bypass using an alternate path or channel in Microsoft Azure Active Directory B2C allows an unauthorized attacker to elevate privileges over a network.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33843"
     },
     {
       "alert_id": "jvn:cve-2026-44477:postgresql",
