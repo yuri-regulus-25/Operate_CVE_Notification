@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-07T09:07:45.502279+00:00",
-  "count": 493,
+  "generated_at": "2026-06-07T14:02:51.344385+00:00",
+  "count": 494,
   "sources": {
-    "NVD": 451,
+    "NVD": 452,
     "JVN": 42
   },
   "alerts": [
@@ -4935,6 +4935,23 @@
       "title": "CVE-2026-46493",
       "description": "HAX CMS helps manage microsite universe with PHP or NodeJs backends. Versions prior to 26.0.1 use `uniqid` for generating salts, which is unsuitable. Version 26.0.1 fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46493"
+    },
+    {
+      "alert_id": "nvd:cve-2026-49494:windows kernel",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "windows_kernel",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-49494",
+      "matched": "Windows Kernel",
+      "severity": "HIGH",
+      "score": 7.5,
+      "published": "2026-06-07T13:16:20.927",
+      "last_modified": "2026-06-07T13:16:20.927",
+      "title": "CVE-2026-49494",
+      "description": "Comodo Internet Security's firewall driver Inspect.sys contains an integer underflow in its IPv6 packet parser. The parser decrements an unsigned 64-bit payload-length value (taken from the IPv6 fixed header's payload length field) by the size of each IPv6 extension header without validating it, so a packet whose declared payload length is smaller than the sum of its extension-header lengths underflows the value to a near-maximal 64-bit integer. Because IPv6 parsing occurs before firewall rule e...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49494"
     },
     {
       "alert_id": "nvd:cve-1999-0511:microsoft windows",
