@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-07T19:33:16.711961+00:00",
-  "count": 494,
+  "generated_at": "2026-06-08T04:06:48.908257+00:00",
+  "count": 496,
   "sources": {
     "NVD": 452,
-    "JVN": 42
+    "JVN": 44
   },
   "alerts": [
     {
@@ -5662,7 +5662,7 @@
       "severity": "MEDIUM",
       "score": 5.0,
       "published": "2025-07-04T06:15:24.930",
-      "last_modified": "2026-05-26T07:16:17.127",
+      "last_modified": "2026-06-08T03:16:19.730",
       "title": "CVE-2025-5372",
       "description": "A flaw was found in libssh versions built with OpenSSL versions older than 3.0, specifically in the ssh_kdf() function responsible for key derivation. Due to inconsistent interpretation of return values where OpenSSL uses 0 to indicate failure and libssh uses 0 for success—the function may mistakenly return a success status even when key derivation fails. This results in uninitialized cryptographic key buffers being used in subsequent communication, potentially compromising SSH sessions' confide...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-5372"
@@ -6019,7 +6019,7 @@
       "severity": "MEDIUM",
       "score": 5.9,
       "published": "2026-03-30T07:15:58.350",
-      "last_modified": "2026-06-03T11:16:19.937",
+      "last_modified": "2026-06-08T03:16:21.190",
       "title": "CVE-2026-5119",
       "description": "A flaw was found in libsoup. When establishing HTTPS tunnels through a configured HTTP proxy, sensitive session cookies are transmitted in cleartext within the initial HTTP CONNECT request. A network-positioned attacker or a malicious HTTP proxy can intercept these cookies, leading to potential session hijacking or user impersonation.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-5119"
@@ -6240,7 +6240,7 @@
       "severity": "MEDIUM",
       "score": 6.7,
       "published": "2026-04-09T16:16:31.987",
-      "last_modified": "2026-06-04T00:17:00.020",
+      "last_modified": "2026-06-08T03:16:20.853",
       "title": "CVE-2026-4878",
       "description": "A flaw was found in libcap. A local unprivileged user can exploit a Time-of-check-to-time-of-use (TOCTOU) race condition in the `cap_set_file()` function. This allows an attacker with write access to a parent directory to redirect file capability updates to an attacker-controlled file. By doing so, capabilities can be injected into or stripped from unintended executables, leading to privilege escalation.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-4878"
@@ -8048,6 +8048,23 @@
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016847.html"
     },
     {
+      "alert_id": "jvn:cve-2026-10796:node.js",
+      "source": "JVN",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-10796",
+      "matched": "Node.js",
+      "severity": "HIGH",
+      "score": "7.5",
+      "published": "2026-06-08T11:49:17+09:00",
+      "last_modified": "2026-06-08T11:49:17+09:00",
+      "title": "Open JS FoundationのNode Version Manager (NVM)におけるOS コマンドインジェクションの脆弱性",
+      "description": "nvm（Node Version Manager）バージョン0.40.4までには、設定されたNode.js/io.jsミラーから提供されるバージョン文字列に含まれる任意のコマンドを実行される脆弱性があります。例えば、`nvm install`コマンドはミラーのindex.tabから利用可能なバージョンを読み取り、選択されたバージョンをサニタイズせずにダウンロードURLやシェル/awkコマンドの構築に使用します。同じ信頼されていない入力が2つの箇所に影響します。nvm_download()関数はcurl/wgetコマンド文字列を生成し、`eval`で実行するため、コマンド置換（例：$(id)）を含むバージョンフィールドがローカルシェルによって実行されます。またnvm_get_checksum()関数はバージョン由来のダウンロードスラッグをawkプログラムに挿入するため、細工されたバージョンがawkのsystem()経由で任意のコマンドを実行させます。攻撃者が設定されたミラーを制御し、ユーザーやCIにミラーコンテンツを非デフォルトミラー経由で供給するか、TLSを使用しないミラーで中間者攻撃...",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-018366.html"
+    },
+    {
       "alert_id": "jvn:cve-2026-7816:pgadmin",
       "source": "JVN",
       "category": "DB",
@@ -8403,6 +8420,23 @@
       "title": "symfonyのtwigにおける保護メカニズムの不具合に関する脆弱性",
       "description": "Twigのバージョン2.16.xおよび3.9.0から3.25.xには、SourcePolicyInterfaceを使用する際にサンドボックスをバイパスする脆弱性があります。この脆弱性により、テンプレートレンダリング機能を持つ攻撃者が任意のPHPコーラブルをsort、filter、map、およびreduceフィルターに渡すことが可能になります。攻撃者は現在のテンプレートソースを使用しないランタイムチェックを悪用し、サンドボックスがグローバルではなくソースポリシーを通じて有効になっている場合にサンドボックス制限を回避して任意のコードを実行できます。 ",
       "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017624.html"
+    },
+    {
+      "alert_id": "jvn:cve-2026-26832:node.js",
+      "source": "JVN",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-26832",
+      "matched": "Node.js",
+      "severity": "CRITICAL",
+      "score": "9.8",
+      "published": "2026-06-08T12:28:19+09:00",
+      "last_modified": "2026-06-08T12:28:19+09:00",
+      "title": "ZapolnochのTesseract OCRにおけるOS コマンドインジェクションの脆弱性",
+      "description": "node-tesseract-ocrは、Tesseract OCRのためのNode.jsラッパーを提供するnpmパッケージです。バージョン2.2.1までのすべてのバージョンにおいて、src/index.jsのrecognize()関数にはOSコマンドインジェクションの脆弱性が存在します。ファイルパスのパラメータが適切にサニタイズされることなくシェルコマンド文字列に連結され、child_process.exec()に渡されます。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-018472.html"
     }
   ]
 }
