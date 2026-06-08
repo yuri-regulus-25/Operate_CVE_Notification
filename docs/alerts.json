@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-08T04:06:48.908257+00:00",
-  "count": 496,
+  "generated_at": "2026-06-08T11:05:09.413994+00:00",
+  "count": 498,
   "sources": {
-    "NVD": 452,
+    "NVD": 454,
     "JVN": 44
   },
   "alerts": [
@@ -4954,6 +4954,40 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49494"
     },
     {
+      "alert_id": "nvd:cve-2026-11493:smb",
+      "source": "NVD",
+      "category": "WEB",
+      "product_key": "smb",
+      "confidence": "description_formal",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-11493",
+      "matched": "SMB",
+      "severity": "MEDIUM",
+      "score": 5.0,
+      "published": "2026-06-08T07:16:27.030",
+      "last_modified": "2026-06-08T07:16:27.030",
+      "title": "CVE-2026-11493",
+      "description": "A weakness has been identified in Tenda AC15 15.03.05.19. The impacted element is an unknown function of the file /etc_ro/smb.conf of the component Samba. Executing a manipulation can lead to weak password requirements. The attack is only possible within the local network. A high complexity level is associated with this attack. The exploitability is regarded as difficult. The exploit has been made available to the public and could be used for attacks.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11493"
+    },
+    {
+      "alert_id": "nvd:cve-2026-3238:active directory",
+      "source": "NVD",
+      "category": "WEB",
+      "product_key": "active_directory",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-3238",
+      "matched": "Active Directory",
+      "severity": "HIGH",
+      "score": 7.5,
+      "published": "2026-06-08T09:16:30.160",
+      "last_modified": "2026-06-08T09:16:30.160",
+      "title": "CVE-2026-3238",
+      "description": "A flaw was found in Samba’s WINS server component when running as an Active Directory Domain Controller. The WINS protocol handlers for certain request types did not properly validate incoming packets, allowing an unauthenticated remote attacker to trigger a NULL pointer dereference and crash the WINS service using specially crafted UDP packets.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-3238"
+    },
+    {
       "alert_id": "nvd:cve-1999-0511:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -6920,7 +6954,7 @@
       "severity": "MEDIUM",
       "score": 6.1,
       "published": "2026-05-05T16:16:11.647",
-      "last_modified": "2026-06-05T02:17:11.887",
+      "last_modified": "2026-06-08T05:16:30.803",
       "title": "CVE-2026-34000",
       "description": "A flaw was found in the X.Org X server. This out-of-bounds read vulnerability in the XKB geometry processing, specifically within the `CheckSetGeom()` and `XkbAddGeomKeyAlias` functions, allows an attacker to read uninitialized or out-of-bounds memory. An attacker with a connection to the X11 server, either locally or remotely, can exploit this without user interaction. This could lead to the disclosure of memory contents or cause a denial of service by crashing the server.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34000"
@@ -6937,7 +6971,7 @@
       "severity": "MEDIUM",
       "score": 6.1,
       "published": "2026-05-05T16:16:11.787",
-      "last_modified": "2026-06-05T02:17:12.570",
+      "last_modified": "2026-06-08T05:16:31.527",
       "title": "CVE-2026-34002",
       "description": "A flaw was found in the X.Org X server. This vulnerability, an out-of-bounds read, affects the XKB (X Keyboard Extension) modifier map handling. An attacker with access to the X11 server can exploit this by sending a malformed request, which causes the server to read beyond its intended memory boundaries. This can lead to the exposure of sensitive information or cause the server to crash, resulting in a denial of service.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34002"
