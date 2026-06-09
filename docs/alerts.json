@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T20:26:58.292131+00:00",
+  "generated_at": "2026-06-09T03:10:33.285067+00:00",
   "count": 634,
   "sources": {
     "NVD": 590,
@@ -6954,7 +6954,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-06-05T20:17:34.247",
-      "last_modified": "2026-06-05T20:48:21.200",
+      "last_modified": "2026-06-08T20:17:01.220",
       "title": "CVE-2026-46401",
       "description": "HAX CMS helps manage microsite universe with PHP or NodeJs backends. Versions prior to 26.0.0 suffer from an improper session termination vulnerability where authentication tokens remain valid after user logout. This allows attackers who obtain valid tokens to maintain persistent access to authenticated CMS functionality, bypassing the intended session termination mechanism and enabling unauthorized access to CMS metadata and administrative functions. Version 26.0.0 fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-46401"
@@ -7039,7 +7039,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-06-08T16:16:37.967",
-      "last_modified": "2026-06-08T16:16:37.967",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-29167",
       "description": "Use After Free vulnerability in Apache HTTP Server with mod_ldap in per-directory configuration\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29167"
@@ -7056,7 +7056,7 @@
       "severity": "MEDIUM",
       "score": 6.1,
       "published": "2026-06-08T16:16:38.093",
-      "last_modified": "2026-06-08T19:16:42.753",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-29170",
       "description": "A cross-site scripting vulnerability exists in mod_proxy_ftp's HTML directory list generation in Apache HTTP Server 2.4.67 and earlier when listing FTP directory contents either via forward or reverse proxy configuration.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes this issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-29170"
@@ -7073,7 +7073,7 @@
       "severity": "HIGH",
       "score": 7.5,
       "published": "2026-06-08T16:16:38.387",
-      "last_modified": "2026-06-08T19:16:42.943",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-34355",
       "description": "A buffer overflow in mod_proxy_html in Apache HTTP Server 2.4.67 and earlier allows an attack by an untrusted backend.\nUsers are recommended to upgrade to version 2.4.68, which fixes this issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34355"
@@ -7090,7 +7090,7 @@
       "severity": "HIGH",
       "score": 7.5,
       "published": "2026-06-08T16:16:38.537",
-      "last_modified": "2026-06-08T19:16:43.130",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-34356",
       "description": "Heap-based Buffer Overflow vulnerability in Apache HTTP Server with malicious backend servers and ProxyPassReverseCookie*\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-34356"
@@ -7107,7 +7107,7 @@
       "severity": "HIGH",
       "score": 7.5,
       "published": "2026-06-08T16:16:39.263",
-      "last_modified": "2026-06-08T19:16:44.283",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-42536",
       "description": "Heap-based Buffer Overflow vulnerability in Apache HTTP Server with mod_xml2enc, xml2StartParse, and untrusted content\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-42536"
@@ -7124,7 +7124,7 @@
       "severity": "MEDIUM",
       "score": 6.5,
       "published": "2026-06-08T16:16:40.087",
-      "last_modified": "2026-06-08T19:16:44.630",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-43951",
       "description": "Out-of-bounds Read vulnerability in Apache HTTP Server with mod_headers and mod_mime and multiple response languages.\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.67.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-43951"
@@ -7141,7 +7141,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-06-08T16:16:40.203",
-      "last_modified": "2026-06-08T16:16:40.203",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-44119",
       "description": "Improper Privilege Management vulnerability in Apache HTTP Server 2.4.67 and earlier allows local .htaccess authors to read files with the privileges of the httpd user.\n\nThis issue affects Apache HTTP Server: from through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44119"
@@ -7158,7 +7158,7 @@
       "severity": "HIGH",
       "score": 7.3,
       "published": "2026-06-08T16:16:40.327",
-      "last_modified": "2026-06-08T19:16:45.023",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-44185",
       "description": "Buffer Over-read vulnerability in Apache HTTP Server via outbound OCSP requests to an attacker controlled OCSP server\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44185"
@@ -7175,7 +7175,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-06-08T16:16:40.453",
-      "last_modified": "2026-06-08T16:16:40.453",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-44186",
       "description": "Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in the mod_proxy_ftp module in Apache HTTP Server with an attacker controlled backend FTP server.\n\nThis issue affects undefined: from 2.4.0 through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44186"
@@ -7186,13 +7186,13 @@
       "category": "WEB",
       "product_key": "apache_http_server",
       "confidence": "description_formal",
-      "priority": "INFO",
+      "priority": "URGENT",
       "cve_id": "CVE-2026-44631",
       "matched": "Apache HTTP Server",
-      "severity": "UNKNOWN",
-      "score": null,
+      "severity": "CRITICAL",
+      "score": 9.8,
       "published": "2026-06-08T16:16:40.583",
-      "last_modified": "2026-06-08T16:16:40.583",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-44631",
       "description": "Buffer Underwrite vulnerability in Apache HTTP Server on crafted regular expressions in the configuration.\n\nThis issue affects Apache HTTP Server: from 2.4.0 through 2.4.67.\n\nUsers are recommended to upgrade to version 2.4.68, which fixes the issue.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44631"
@@ -7209,7 +7209,7 @@
       "severity": "HIGH",
       "score": 7.3,
       "published": "2026-06-08T16:16:43.390",
-      "last_modified": "2026-06-08T19:16:46.350",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-48913",
       "description": "Use After Free vulnerability in Apache HTTP Server module mod_http2 when file handles are already exhausted.\n\nThis issue affects Apache HTTP Server: from 2.4.55 through 2.4.67.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48913"
@@ -7226,7 +7226,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-06-08T16:16:44.223",
-      "last_modified": "2026-06-08T18:16:33.950",
+      "last_modified": "2026-06-09T01:41:00.563",
       "title": "CVE-2026-49975",
       "description": "Memory Allocation with Excessive Size Value vulnerability in Apache HTTP Server's mod_http leads to denial of service via malicious HTTP requests.\n\nThis issue affects Apache HTTP Server: from 2.4.17 through 2.4.67.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49975"
