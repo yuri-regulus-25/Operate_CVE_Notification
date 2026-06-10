@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-09T20:21:55.329850+00:00",
-  "count": 738,
+  "generated_at": "2026-06-10T03:48:05.463411+00:00",
+  "count": 741,
   "sources": {
-    "NVD": 704,
+    "NVD": 707,
     "JVN": 34
   },
   "alerts": [
@@ -8048,6 +8048,57 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11636"
     },
     {
+      "alert_id": "nvd:cve-2026-11638:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-11638",
+      "matched": "Microsoft Windows",
+      "severity": "CRITICAL",
+      "score": 9.6,
+      "published": "2026-06-09T00:16:46.483",
+      "last_modified": "2026-06-09T20:31:24.087",
+      "title": "CVE-2026-11638",
+      "description": "Use after free in Printing in Google Chrome prior to 149.0.7827.103 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11638"
+    },
+    {
+      "alert_id": "nvd:cve-2026-11640:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-11640",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": 8.3,
+      "published": "2026-06-09T00:16:46.717",
+      "last_modified": "2026-06-09T20:30:59.773",
+      "title": "CVE-2026-11640",
+      "description": "Integer overflow in libyuv in Google Chrome prior to 149.0.7827.103 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: Critical)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11640"
+    },
+    {
+      "alert_id": "nvd:cve-2026-11641:microsoft windows",
+      "source": "NVD",
+      "category": "OS",
+      "product_key": "microsoft_windows",
+      "confidence": "cpe",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-11641",
+      "matched": "Microsoft Windows",
+      "severity": "HIGH",
+      "score": 7.5,
+      "published": "2026-06-09T00:16:46.837",
+      "last_modified": "2026-06-09T20:30:45.200",
+      "title": "CVE-2026-11641",
+      "description": "Use after free in Bluetooth in Google Chrome on Windows prior to 149.0.7827.103 allowed a remote attacker who convinced a user to engage in specific UI gestures to execute arbitrary code via a crafted HTML page. (Chromium security severity: Critical)",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11641"
+    },
+    {
       "alert_id": "nvd:cve-2026-11642:microsoft windows",
       "source": "NVD",
       "category": "OS",
@@ -11459,9 +11510,9 @@
       "severity": "HIGH",
       "score": 7.8,
       "published": "2026-05-12T18:17:06.163",
-      "last_modified": "2026-06-01T19:16:25.380",
+      "last_modified": "2026-06-09T21:17:06.197",
       "title": "CVE-2026-33840",
-      "description": "Concurrent execution using shared resource with improper synchronization ('race condition') in Windows Win32K - GRFX allows an authorized attacker to elevate privileges locally.",
+      "description": "Use after free in Windows Win32K - ICOMP allows an authorized attacker to elevate privileges locally.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-33840"
     },
     {
