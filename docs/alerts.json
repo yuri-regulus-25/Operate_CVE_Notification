@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T20:37:46.192057+00:00",
+  "generated_at": "2026-06-12T03:44:45.324089+00:00",
   "count": 854,
   "sources": {
     "NVD": 779,
@@ -10898,7 +10898,7 @@
       "severity": "MEDIUM",
       "score": 6.4,
       "published": "2026-06-11T17:16:31.837",
-      "last_modified": "2026-06-11T17:16:31.837",
+      "last_modified": "2026-06-11T20:56:29.653",
       "title": "CVE-2026-11945",
       "description": "PostgreSQL Anonymizer contains a vulnerability that allows a user to gain superuser privileges by creating a JSON document and placing malicious code inside a particular key-value pair. If a superuser calls the import_database_rules() or import_roles_rules() functions, the malicious code is executed with superuser privileges. The problem is resolved in PostgreSQL Anonymizer 3.1.1 and further versions",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-11945"
@@ -10915,7 +10915,7 @@
       "severity": "HIGH",
       "score": 7.5,
       "published": "2026-06-11T17:16:32.450",
-      "last_modified": "2026-06-11T17:16:32.450",
+      "last_modified": "2026-06-11T20:56:29.653",
       "title": "CVE-2026-44486",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 0.32.0 and 1.16.0, Axios’ Node.js HTTP adapter can leak proxy credentials to a redirect target in affected versions. When a request is sent through an authenticated proxy, Axios may add a Proxy-Authorization header. If Axios then follows a redirect and the redirected request is no longer sent through that proxy, the stale Proxy-Authorization header can remain on the redirected request and be sent to the redirect target. T...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44486"
@@ -10932,7 +10932,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-06-11T17:16:32.607",
-      "last_modified": "2026-06-11T19:16:41.427",
+      "last_modified": "2026-06-11T20:56:29.653",
       "title": "CVE-2026-44487",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 0.32.0 and 1.16.0, Axios’s Node.js HTTP adapter may forward a Proxy-Authorization header to a redirected origin during specific proxy-to-direct redirect flows. This affects Node.js usage, where an initial HTTP request is sent through an authenticated HTTP proxy, redirects are followed, and the redirected URL is no longer proxied. Under affected redirect shapes, the final origin can receive the proxy credential that was in...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44487"
@@ -10949,7 +10949,7 @@
       "severity": "HIGH",
       "score": 7.5,
       "published": "2026-06-11T17:16:32.750",
-      "last_modified": "2026-06-11T19:16:41.543",
+      "last_modified": "2026-06-11T20:56:29.653",
       "title": "CVE-2026-44488",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. Axios versions 1.7.0 through 1.15.x did not enforce configured request and response size limits when requests were sent with the fetch adapter. Applications that selected adapter: 'fetch', or ran in environments where axios resolved to the fetch adapter, could receive or send bodies larger than maxContentLength or maxBodyLength despite those limits being explicitly configured. This can cause resource exhaustion in server-side usag...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44488"
@@ -10966,7 +10966,7 @@
       "severity": "LOW",
       "score": 3.7,
       "published": "2026-06-11T17:16:32.883",
-      "last_modified": "2026-06-11T19:16:41.647",
+      "last_modified": "2026-06-11T20:56:29.653",
       "title": "CVE-2026-44489",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. From 1.15.2 to before 1.16.0, nested objects created by utils.merge() (e.g., config.proxy) are still constructed as plain {} with Object.prototype in their chain. The setProxy() function at lib/adapters/http.js:209-223 reads proxy.username, proxy.password, and proxy.auth without hasOwnProperty checks. When Object.prototype.username is polluted, setProxy() constructs a Proxy-Authorization header with attacker-controlled credentials...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44489"
@@ -10983,7 +10983,7 @@
       "severity": "MEDIUM",
       "score": 4.8,
       "published": "2026-06-11T17:16:33.027",
-      "last_modified": "2026-06-11T18:16:25.577",
+      "last_modified": "2026-06-11T20:56:29.653",
       "title": "CVE-2026-44490",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 0.32.0 and 1.16.0, axios exposes two read-side prototype-pollution gadgets. When Object.prototype is polluted by an upstream dependency in the same process (e.g. lodash _.merge / CVE-2018-16487), axios silently picks up the polluted values. (1) lib/utils.js line 406 builds merge()'s accumulator as result = {}, so result[targetKey] (line 414) walks Object.prototype and the polluted bucket's own keys are copied into the mer...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44490"
@@ -11000,7 +11000,7 @@
       "severity": "HIGH",
       "score": 8.6,
       "published": "2026-06-11T17:16:33.167",
-      "last_modified": "2026-06-11T17:16:33.167",
+      "last_modified": "2026-06-11T20:56:29.653",
       "title": "CVE-2026-44492",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 0.32.0 and 1.16.0, Axios does not normalise IPv4-mapped IPv6 addresses. When NO_PROXY lists an IPv4 address such as 127.0.0.1 or 169.254.169.254, a request URL using the IPv4-mapped IPv6 form (::ffff:7f00:1, ::ffff:a9fe:a9fe) still routes through the configured proxy. Node.js resolves these addresses to the underlying IPv4 host, so the request reaches the internal service via the proxy rather than being blocked. This vuln...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44492"
@@ -11017,7 +11017,7 @@
       "severity": "HIGH",
       "score": 8.7,
       "published": "2026-06-11T17:16:33.313",
-      "last_modified": "2026-06-11T18:16:25.700",
+      "last_modified": "2026-06-11T20:56:29.653",
       "title": "CVE-2026-44494",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. From 1.0.0 to before 1.16.0, the Axios library is vulnerable to a Prototype Pollution \"Gadget\" attack that allows any Object.prototype pollution in the application's dependency tree to be escalated into a full Man-in-the-Middle (MITM) attack — intercepting, reading, and modifying all HTTP traffic including authentication credentials. The HTTP adapter at lib/adapters/http.js:670 reads config.proxy via standard property access, whic...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44494"
@@ -11034,7 +11034,7 @@
       "severity": "HIGH",
       "score": 7.0,
       "published": "2026-06-11T17:16:33.450",
-      "last_modified": "2026-06-11T17:16:33.450",
+      "last_modified": "2026-06-11T20:56:29.653",
       "title": "CVE-2026-44495",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. From 0.19.0 to before 0.31.1 and 1.15.2, Axios contains prototype-pollution gadgets in request config processing. If another vulnerability in the same JavaScript process has already polluted Object.prototype.transformResponse, affected Axios versions may treat that inherited value as request configuration or as an option validator. Axios does not itself create the prototype pollution. Exploitability requires a separate prototype-p...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44495"
@@ -11051,7 +11051,7 @@
       "severity": "HIGH",
       "score": 7.5,
       "published": "2026-06-11T17:16:33.590",
-      "last_modified": "2026-06-11T18:16:25.837",
+      "last_modified": "2026-06-11T20:56:29.653",
       "title": "CVE-2026-44496",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. Axios versions before 0.32.0 on the 0.x line and before 1.16.0 on the 1.x line build a regular expression from the configured XSRF cookie name without escaping regex metacharacters. In standard browser environments, an attacker who can influence the cookie name passed to axios can cause expensive regex backtracking while axios reads document.cookie. The practical impact is client-side availability degradation, such as freezing the...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44496"
@@ -11068,7 +11068,7 @@
       "severity": "UNKNOWN",
       "score": null,
       "published": "2026-06-11T17:16:33.853",
-      "last_modified": "2026-06-11T17:16:33.853",
+      "last_modified": "2026-06-11T20:59:17.743",
       "title": "CVE-2026-44705",
       "description": "tmp is a temporary file and directory creator for node.js. Prior to 0.2.6, the tmp npm package contains a path traversal vulnerability that allows escaping the intended temporary directory when untrusted data flows into the prefix, postfix, or dir options. By embedding traversal sequences (e.g., ../) or path separators in these parameters, attackers can cause files to be created outside the configured temporary base directory at attacker-controlled locations with the privileges of the running pr...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44705"
@@ -11085,7 +11085,7 @@
       "severity": "HIGH",
       "score": 8.2,
       "published": "2026-06-11T17:16:35.227",
-      "last_modified": "2026-06-11T19:16:47.187",
+      "last_modified": "2026-06-11T20:59:17.743",
       "title": "CVE-2026-49982",
       "description": "tmp is a temporary file and directory creator for node.js. In version 0.2.6, the _assertPath guard added to tmp rejects only string values that contain the substring ... It is bypassed when prefix, postfix, or template is supplied as a non-string value (Array, Buffer, or any object) whose includes('..') returns falsy but whose stringification still contains ../. The value flows through Array.prototype.join/String coercion inside _generateTmpName and path.join(tmpDir, opts.dir, name), producing a...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-49982"
@@ -11102,7 +11102,7 @@
       "severity": "HIGH",
       "score": 7.3,
       "published": "2026-06-11T18:16:26.390",
-      "last_modified": "2026-06-11T18:16:26.390",
+      "last_modified": "2026-06-11T20:59:55.650",
       "title": "CVE-2026-48546",
       "description": "KanaDojo before 0.1.18 contains a sandbox escape vulnerability that allows an attacker to execute arbitrary code by exploiting the explicit passing of the global require function into a Node.js vm.runInNewContext() sandbox context in the issue-auto-respond.yml workflow. Attackers can submit a pull request modifying messages.cjs to import arbitrary Node.js modules, bypassing sandbox restrictions and achieving remote code execution with full GitHub Actions runner privileges including access to AUT...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-48546"
