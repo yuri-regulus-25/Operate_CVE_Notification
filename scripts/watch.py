@@ -15,13 +15,13 @@ ALERTS_PATH = PUBLIC_DIR / "alerts.json"
 NVD_API_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 NVD_API_KEY = os.getenv("NVD_API_KEY")
 NVD_RESULTS_PER_PAGE = 2000
-NVD_LOOKBACK_DAYS = 15
+NVD_LOOKBACK_DAYS = 7
 NVD_REQUEST_DELAY = 0.7 if NVD_API_KEY else 6.1
 NVD_MAX_RETRIES = 3
 
 JVN_API_URL = "https://jvndb.jvn.jp/myjvn"
 JVN_RESULTS_PER_PAGE = 50
-JVN_LOOKBACK_DAYS = 15
+JVN_LOOKBACK_DAYS = 7
 JVN_TIMEZONE = timezone(timedelta(hours=9))
 JVN_REQUEST_DELAY = float(os.getenv("JVN_REQUEST_DELAY", "2.0"))
 JVN_RETRY_BASE_DELAY = float(os.getenv("JVN_RETRY_BASE_DELAY", "10.0"))
