@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-10T04:45:24.848393+00:00",
-  "count": 205,
+  "generated_at": "2026-07-10T11:37:55.575106+00:00",
+  "count": 206,
   "sources": {
-    "NVD": 192,
+    "NVD": 193,
     "JVN": 13
   },
   "alerts": [
@@ -1410,7 +1410,7 @@
       "severity": "HIGH",
       "score": 8.3,
       "published": "2026-07-08T23:16:53.143",
-      "last_modified": "2026-07-09T17:51:25.493",
+      "last_modified": "2026-07-10T05:16:29.517",
       "title": "CVE-2026-15120",
       "description": "Use after free in Core in Google Chrome on Windows prior to 150.0.7871.115 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15120",
@@ -1434,7 +1434,7 @@
       "severity": "HIGH",
       "score": 8.3,
       "published": "2026-07-08T23:16:53.347",
-      "last_modified": "2026-07-09T17:51:05.430",
+      "last_modified": "2026-07-10T05:16:29.820",
       "title": "CVE-2026-15122",
       "description": "Insufficient validation of untrusted input in Codecs in Google Chrome on Windows prior to 150.0.7871.115 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page. (Chromium security severity: High)",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-15122",
@@ -1565,6 +1565,30 @@
       "classification_reason": "known_product_pattern",
       "tracked_keyword": "PostgreSQL",
       "noise_risk": "low"
+    },
+    {
+      "alert_id": "nvd:cve-2026-58225:postgresql",
+      "source": "NVD",
+      "category": "DB",
+      "product_key": "postgresql",
+      "confidence": "description_formal",
+      "priority": "INFO",
+      "cve_id": "CVE-2026-58225",
+      "matched": "PostgreSQL",
+      "severity": "UNKNOWN",
+      "score": null,
+      "published": "2026-07-10T11:16:36.300",
+      "last_modified": "2026-07-10T11:16:36.300",
+      "title": "CVE-2026-58225",
+      "description": "SQL Injection vulnerability in elixir-ecto postgrex allows an attacker who can influence a LISTEN channel name to inject SQL into the reconnect replay query, causing a denial of service of the notification connection.\n\nPostgrex.Notifications sanitizes channel names with quote_channel/1, which doubles double quotes so the name is safe inside a double-quoted identifier. This protects the single-statement LISTEN and UNLISTEN paths. On every (re)connect, however, handle_connect/1 replays all registe...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58225",
+      "actual_product": "PostgreSQL",
+      "package_name": "",
+      "ecosystem": "Database",
+      "relation_type": "keyword_only",
+      "classification_reason": "fallback_matched",
+      "tracked_keyword": "",
+      "noise_risk": "high"
     },
     {
       "alert_id": "nvd:cve-2018-10902:red hat enterprise linux",
