@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-11T14:13:50.280614+00:00",
-  "count": 209,
+  "generated_at": "2026-07-11T17:41:06.729059+00:00",
+  "count": 210,
   "sources": {
-    "NVD": 199,
+    "NVD": 200,
     "JVN": 10
   },
   "alerts": [
@@ -1709,6 +1709,30 @@
       "classification_reason": "description_subject",
       "tracked_keyword": "Laravel",
       "noise_risk": "medium"
+    },
+    {
+      "alert_id": "nvd:cve-2026-56303:postgresql",
+      "source": "NVD",
+      "category": "DB",
+      "product_key": "postgresql",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-56303",
+      "matched": "PostgreSQL",
+      "severity": "HIGH",
+      "score": 7.5,
+      "published": "2026-07-11T14:16:21.820",
+      "last_modified": "2026-07-11T14:16:21.820",
+      "title": "CVE-2026-56303",
+      "description": "Capgo before 12.128.2 contains an information disclosure vulnerability in the find_apikey_by_value PostgreSQL function marked SECURITY DEFINER and executable by the anon role. Unauthenticated attackers can call this function via the /rest/v1/rpc/find_apikey_by_value endpoint to retrieve sensitive API key metadata including user_id, mode, org scoping, and expiration details when supplied a valid key value.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-56303",
+      "actual_product": "PostgreSQL",
+      "package_name": "postgresql",
+      "ecosystem": "PostgreSQL",
+      "relation_type": "direct_product",
+      "classification_reason": "known_product_pattern",
+      "tracked_keyword": "PostgreSQL",
+      "noise_risk": "low"
     },
     {
       "alert_id": "nvd:cve-2018-10902:red hat enterprise linux",
@@ -4506,7 +4530,7 @@
       "severity": "MEDIUM",
       "score": 6.2,
       "published": "2026-06-29T19:16:40.907",
-      "last_modified": "2026-07-10T01:16:28.783",
+      "last_modified": "2026-07-11T17:16:25.000",
       "title": "CVE-2026-13757",
       "description": "A flaw was found in p11-kit. The RPC message attribute parsing functions p11_rpc_message_get_attribute() and p11_rpc_message_get_attribute_array_value() form a mutually-recursive call chain with no recursion depth limit when processing nested CKA_WRAP_TEMPLATE, CKA_UNWRAP_TEMPLATE, and CKA_DERIVE_TEMPLATE attributes. An unauthenticated attacker with local access to the p11-kit RPC Unix domain socket can send a specially crafted request with deeply nested template attributes, causing stack exhaus...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-13757",
