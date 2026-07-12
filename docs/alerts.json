@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-12T14:14:06.770355+00:00",
-  "count": 207,
+  "generated_at": "2026-07-12T17:44:47.146813+00:00",
+  "count": 206,
   "sources": {
-    "NVD": 197,
+    "NVD": 196,
     "JVN": 10
   },
   "alerts": [
@@ -1973,30 +1973,6 @@
       "classification_reason": "fallback_matched",
       "tracked_keyword": "",
       "noise_risk": "low"
-    },
-    {
-      "alert_id": "nvd:cve-2025-57201:smb",
-      "source": "NVD",
-      "category": "WEB",
-      "product_key": "smb",
-      "confidence": "description_formal",
-      "priority": "WATCH",
-      "cve_id": "CVE-2025-57201",
-      "matched": "SMB",
-      "severity": "HIGH",
-      "score": 8.8,
-      "published": "2025-12-03T16:15:57.137",
-      "last_modified": "2026-07-05T17:17:18.447",
-      "title": "CVE-2025-57201",
-      "description": "AVTECH SECURITY Corporation DGM1104 FullImg-1015-1004-1006-1003 was discovered to contain an authenticated command injection vulnerability in the SMB server function. This vulnerability allows attackers to execute arbitrary commands via a crafted input.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-57201",
-      "actual_product": "SMB",
-      "package_name": "",
-      "ecosystem": "Web / Network",
-      "relation_type": "keyword_only",
-      "classification_reason": "fallback_matched",
-      "tracked_keyword": "SMB",
-      "noise_risk": "high"
     },
     {
       "alert_id": "nvd:cve-2026-25639:node.js",
