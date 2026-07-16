@@ -14,10 +14,12 @@ ALERTS_PATH = PUBLIC_DIR / "alerts.json"
 
 NVD_API_URL = "https://services.nvd.nist.gov/rest/json/cves/2.0"
 NVD_API_KEY = os.getenv("NVD_API_KEY")
-NVD_RESULTS_PER_PAGE = 2000
-NVD_LOOKBACK_DAYS = 7
-NVD_REQUEST_DELAY = 0.7 if NVD_API_KEY else 6.1
-NVD_MAX_RETRIES = 3
+NVD_RESULTS_PER_PAGE = int(os.getenv("NVD_RESULTS_PER_PAGE", "100"))
+NVD_LOOKBACK_DAYS = int(os.getenv("NVD_LOOKBACK_DAYS", "7"))
+NVD_REQUEST_DELAY = float(os.getenv("NVD_REQUEST_DELAY", "3.0" if NVD_API_KEY else "6.1"))
+NVD_RETRY_BASE_DELAY = float(os.getenv("NVD_RETRY_BASE_DELAY", "30.0"))
+NVD_MAX_RETRIES = int(os.getenv("NVD_MAX_RETRIES", "3"))
+NVD_TIMEOUT = int(os.getenv("NVD_TIMEOUT", "90"))
 
 JVN_API_URL = "https://jvndb.jvn.jp/myjvn"
 JVN_RESULTS_PER_PAGE = 50
@@ -37,75 +39,17 @@ JVN_TIMEOUT = int(os.getenv("JVN_TIMEOUT", "60"))
 # - IIS / RDP / SMB など Windows 周辺コンポーネントも検索対象に含める
 
 KEYWORD_GROUPS = {
-    "Linux": [
-        "AlmaLinux",
-        "Red Hat Enterprise Linux",
-        "RHEL",
-    ],
-
-    "Windows": [
-        "Microsoft Windows",
-        "Windows Server",
-        "Windows 10",
-        "Windows 11",
-        "Windows Server 2012",
-        "Windows Server 2016",
-        "Windows Server 2019",
-        "Windows Server 2022",
-        "Windows Server 2025",
-
-        "Windows Kernel",
-        "Win32k",
-        "Windows Installer",
-        "Windows TCP/IP",
-        "Windows Common Log File System",
-        "CLFS",
-        "BitLocker",
-        "Hyper-V",
-    ],
-    "WEB": [
-        "Apache",
-        "Apache HTTP Server",
-        "Apache Tomcat",
-        "IIS",
-        "Remote Desktop Services",
-        "RDP",
-        "SMB",
-        "NTLM",
-        "Kerberos",
-        "Active Directory",
-        "LDAP",
-        "DNS Server",
-        "DHCP Server",
-        "Windows Print Spooler",
-        "Windows Routing and Remote Access Service",
-        "RRAS",
-        "Microsoft Defender",
-        "Windows Defender",
-    ],
-
-    "DB": [
-        "PostgreSQL",
-        "pgAdmin",
-        "pgAdmin 4",
-        "pgadmin4",
-    ],
-
     "PHP": [
-        "composer",
         "Composer",
         "Laravel",
         "Symfony",
-        "symfony",
         "AuraSQL",
-        "Aura SQL",
     ],
 
     "JS": [
         "npm",
         "Node.js",
         "Vue.js",
-        "Vue",
         "Vuetify",
     ],
 }
@@ -113,11 +57,17 @@ KEYWORD_GROUPS = {
 
 def flatten_keywords(keyword_groups):
     keywords = []
+    seen = set()
 
     for group_keywords in keyword_groups.values():
         for keyword in group_keywords:
-            if keyword not in keywords:
-                keywords.append(keyword)
+            normalized = keyword.casefold()
+
+            if normalized in seen:
+                continue
+
+            seen.add(normalized)
+            keywords.append(keyword)
 
     return keywords
 
@@ -139,37 +89,10 @@ NVD_CATEGORY_MAP = build_category_map(KEYWORD_GROUPS)
 JVN_CATEGORY_MAP = NVD_CATEGORY_MAP.copy()
 
 STRONG_REJECT_PATTERNS = [
-    "Windows版",
-    "for Windows",
-    "Windows version",
-    "on Windows",
-    "Windows環境",
-    "Linux, UNIX and Windows",
-    "Windows/macOS/Linux",
     "Vue, React, Angular",
     "Vue/React/Angular",
     "supports Vue",
     "RDP/VNC/SSH",
-    "SMB service on device",
-]
-
-MICROSOFT_CONTEXT = [
-    "Microsoft",
-    "Windows",
-    "Active Directory",
-    "Microsoft Entra",
-    "Azure AD",
-]
-
-WINDOWS_CONTEXT = [
-    "Microsoft",
-    "Windows",
-    "Win32k",
-    "CLFS",
-    "BitLocker",
-    "Hyper-V",
-    "Defender",
-    "Active Directory",
 ]
 
 PHP_COMPOSER_CONTEXT = [
@@ -188,219 +111,6 @@ NPM_CONTEXT = [
 ]
 
 PRODUCT_RULES = [
-    {
-        "key": "almalinux",
-        "display": "AlmaLinux",
-        "category": "OS",
-        "formal": ["AlmaLinux"],
-        "cpe": ["almalinux"],
-    },
-    {
-        "key": "rhel",
-        "display": "Red Hat Enterprise Linux",
-        "category": "OS",
-        "formal": ["Red Hat Enterprise Linux"],
-        "aliases": ["RHEL"],
-        "cpe": ["redhat:enterprise_linux", "red_hat:enterprise_linux", "rhel"],
-    },
-    {
-        "key": "microsoft_windows",
-        "display": "Microsoft Windows",
-        "category": "OS",
-        "formal": [
-            "Microsoft Windows",
-            "Windows Server",
-            "Windows 10",
-            "Windows 11",
-            "Windows Server 2012",
-            "Windows Server 2016",
-            "Windows Server 2019",
-            "Windows Server 2022",
-            "Windows Server 2025",
-        ],
-        "cpe": ["microsoft:windows", "microsoft:windows_server"],
-    },
-    {
-        "key": "windows_kernel",
-        "display": "Windows Kernel",
-        "category": "OS",
-        "formal": ["Windows Kernel"],
-        "cpe": [],
-    },
-    {
-        "key": "win32k",
-        "display": "Win32k",
-        "category": "OS",
-        "aliases": ["Win32k"],
-        "contexts": WINDOWS_CONTEXT,
-        "cpe": [],
-    },
-    {
-        "key": "windows_installer",
-        "display": "Windows Installer",
-        "category": "OS",
-        "formal": ["Windows Installer"],
-        "cpe": ["microsoft:windows_installer"],
-    },
-    {
-        "key": "windows_tcp_ip",
-        "display": "Windows TCP/IP",
-        "category": "OS",
-        "formal": ["Windows TCP/IP"],
-        "cpe": [],
-    },
-    {
-        "key": "windows_clfs",
-        "display": "Windows Common Log File System",
-        "category": "OS",
-        "formal": ["Windows Common Log File System"],
-        "aliases": ["CLFS"],
-        "contexts": ["Windows Common Log File System"],
-        "cpe": [],
-    },
-    {
-        "key": "bitlocker",
-        "display": "BitLocker",
-        "category": "OS",
-        "formal": ["BitLocker"],
-        "cpe": ["microsoft:bitlocker"],
-    },
-    {
-        "key": "hyper_v",
-        "display": "Hyper-V",
-        "category": "OS",
-        "formal": ["Hyper-V"],
-        "exclude": ["Linux kernel on Hyper-V"],
-        "cpe": ["microsoft:hyper-v"],
-    },
-    {
-        "key": "apache_http_server",
-        "display": "Apache HTTP Server",
-        "category": "WEB",
-        "formal": ["Apache HTTP Server", "Apache httpd"],
-        "cpe": ["apache:http_server"],
-    },
-    {
-        "key": "apache_tomcat",
-        "display": "Apache Tomcat",
-        "category": "WEB",
-        "formal": ["Apache Tomcat", "Tomcat"],
-        "cpe": ["apache:tomcat"],
-    },
-    {
-        "key": "iis",
-        "display": "IIS",
-        "category": "WEB",
-        "formal": ["Internet Information Services", "Microsoft IIS"],
-        "aliases": ["IIS"],
-        "contexts": ["Microsoft", "Windows", "Internet Information Services"],
-        "cpe": ["microsoft:internet_information_services", "microsoft:iis"],
-    },
-    {
-        "key": "remote_desktop_services",
-        "display": "Remote Desktop Services",
-        "category": "WEB",
-        "formal": ["Remote Desktop Services"],
-        "aliases": ["RDP"],
-        "contexts": ["Remote Desktop Services"],
-        "cpe": ["microsoft:remote_desktop_services"],
-    },
-    {
-        "key": "smb",
-        "display": "SMB",
-        "category": "WEB",
-        "formal": ["Windows SMB", "SMB Server", "Samba"],
-        "aliases": ["SMB"],
-        "contexts": ["Windows SMB", "SMB Server", "Samba", "Microsoft"],
-        "cpe": ["microsoft:smb", "samba:samba"],
-    },
-    {
-        "key": "ntlm",
-        "display": "NTLM",
-        "category": "WEB",
-        "aliases": ["NTLM"],
-        "contexts": ["Microsoft", "Windows", "Active Directory", "authentication"],
-        "cpe": [],
-    },
-    {
-        "key": "kerberos",
-        "display": "Kerberos",
-        "category": "WEB",
-        "formal": ["Kerberos"],
-        "contexts": MICROSOFT_CONTEXT + ["MIT Kerberos", "Heimdal"],
-        "cpe": ["mit:kerberos", "heimdal:heimdal"],
-    },
-    {
-        "key": "active_directory",
-        "display": "Active Directory",
-        "category": "WEB",
-        "formal": ["Active Directory"],
-        "cpe": ["microsoft:active_directory"],
-    },
-    {
-        "key": "ldap",
-        "display": "LDAP",
-        "category": "WEB",
-        "aliases": ["LDAP"],
-        "contexts": ["Active Directory", "OpenLDAP", "Microsoft", "Windows"],
-        "cpe": ["openldap:openldap", "microsoft:active_directory"],
-    },
-    {
-        "key": "windows_dns_server",
-        "display": "Windows DNS Server",
-        "category": "WEB",
-        "formal": ["Windows DNS Server", "Microsoft DNS"],
-        "aliases": ["DNS Server"],
-        "contexts": ["Windows DNS Server", "Microsoft DNS"],
-        "cpe": ["microsoft:dns_server"],
-    },
-    {
-        "key": "windows_dhcp_server",
-        "display": "Windows DHCP Server",
-        "category": "WEB",
-        "formal": ["Windows DHCP Server", "Microsoft DHCP"],
-        "aliases": ["DHCP Server"],
-        "contexts": ["Windows DHCP Server", "Microsoft DHCP"],
-        "cpe": ["microsoft:dhcp_server"],
-    },
-    {
-        "key": "windows_print_spooler",
-        "display": "Windows Print Spooler",
-        "category": "WEB",
-        "formal": ["Windows Print Spooler", "Print Spooler"],
-        "contexts": ["Windows", "Microsoft"],
-        "cpe": [],
-    },
-    {
-        "key": "rras",
-        "display": "Windows Routing and Remote Access Service",
-        "category": "WEB",
-        "formal": ["Windows Routing and Remote Access Service", "Routing and Remote Access Service"],
-        "aliases": ["RRAS"],
-        "contexts": ["Routing and Remote Access Service"],
-        "cpe": [],
-    },
-    {
-        "key": "microsoft_defender",
-        "display": "Microsoft Defender",
-        "category": "WEB",
-        "formal": ["Microsoft Defender", "Windows Defender"],
-        "cpe": ["microsoft:defender", "microsoft:windows_defender"],
-    },
-    {
-        "key": "postgresql",
-        "display": "PostgreSQL",
-        "category": "DB",
-        "formal": ["PostgreSQL"],
-        "cpe": ["postgresql:postgresql"],
-    },
-    {
-        "key": "pgadmin",
-        "display": "pgAdmin",
-        "category": "DB",
-        "formal": ["pgAdmin", "pgAdmin 4", "pgadmin4"],
-        "cpe": ["pgadmin:pgadmin", "pgadmin:pgadmin4"],
-    },
     {
         "key": "composer",
         "display": "Composer",
@@ -514,7 +224,7 @@ def fetch_nvd_page(params):
 
     for attempt in range(1, NVD_MAX_RETRIES + 1):
         try:
-            with urllib.request.urlopen(request, timeout=30) as response:
+            with urllib.request.urlopen(request, timeout=NVD_TIMEOUT) as response:
                 return json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as e:
             message = e.headers.get("message", "")
@@ -529,18 +239,22 @@ def fetch_nvd_page(params):
             if attempt >= NVD_MAX_RETRIES:
                 raise
 
-            time.sleep(NVD_REQUEST_DELAY * attempt)
-        except urllib.error.URLError as e:
+            time.sleep(NVD_RETRY_BASE_DELAY * attempt)
+        except (
+            urllib.error.URLError,
+            TimeoutError,
+            OSError,
+        ) as e:
             print(
                 f"NVD request failed: "
                 f"attempt={attempt}/{NVD_MAX_RETRIES}, "
-                f"reason={e.reason}"
+                f"reason={getattr(e, 'reason', e)}"
             )
 
             if attempt >= NVD_MAX_RETRIES:
                 raise
 
-            time.sleep(NVD_REQUEST_DELAY * attempt)
+            time.sleep(NVD_RETRY_BASE_DELAY * attempt)
 
 
 def fetch_nvd_by_date(date_type):
@@ -1214,6 +928,16 @@ def count_by_source(alerts):
 
 def main():
     PUBLIC_DIR.mkdir(exist_ok=True)
+
+    print(
+        "Watcher settings: "
+        f"NVD keywords={len(NVD_KEYWORDS)}, "
+        f"JVN keywords={len(JVN_KEYWORDS)}, "
+        f"NVD lookback={NVD_LOOKBACK_DAYS} days, "
+        f"NVD page size={NVD_RESULTS_PER_PAGE}, "
+        f"NVD timeout={NVD_TIMEOUT}s, "
+        f"NVD delay={NVD_REQUEST_DELAY}s"
+    )
 
     alerts = []
 
