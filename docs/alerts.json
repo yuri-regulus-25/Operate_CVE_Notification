@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T03:57:53.945423+00:00",
+  "generated_at": "2026-07-16T06:54:21.168979+00:00",
   "count": 160,
   "sources": {
     "NVD": 154,
@@ -954,7 +954,7 @@
       "severity": "CRITICAL",
       "score": 9.8,
       "published": "2026-07-14T20:17:42.173",
-      "last_modified": "2026-07-15T20:18:23.677",
+      "last_modified": "2026-07-16T05:16:24.673",
       "title": "CVE-2026-53633",
       "description": "Vitest is a testing framework powered by Vite. From 3.0.0 until 3.2.5, 4.1.8, and 5.0.0-beta.4, Vitest Browser Mode exposed a cdp() API that forwarded raw Chrome DevTools Protocol methods without being gated by allowWrite or allowExec, allowing a remote client with exposed browser API metadata to use CDP Page.setDownloadBehavior and Runtime.evaluate to overwrite vite.config.ts and execute attacker-controlled Node.js code. This issue is fixed in versions 3.2.5, 4.1.8, and 5.0.0-beta.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53633",
