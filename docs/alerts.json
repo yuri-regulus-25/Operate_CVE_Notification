@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-23T03:56:43.903540+00:00",
-  "count": 137,
+  "generated_at": "2026-07-23T06:55:51.521051+00:00",
+  "count": 136,
   "sources": {
-    "NVD": 84,
+    "NVD": 83,
     "JVN": 53
   },
   "alerts": [
@@ -1949,30 +1949,6 @@
       "classification_reason": "known_product_pattern",
       "tracked_keyword": "Symfony",
       "noise_risk": "low"
-    },
-    {
-      "alert_id": "nvd:cve-2026-53633:node.js",
-      "source": "NVD",
-      "category": "JS",
-      "product_key": "nodejs",
-      "confidence": "description_formal",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-53633",
-      "matched": "Node.js",
-      "severity": "CRITICAL",
-      "score": 9.8,
-      "published": "2026-07-14T20:17:42.173",
-      "last_modified": "2026-07-16T05:16:24.673",
-      "title": "CVE-2026-53633",
-      "description": "Vitest is a testing framework powered by Vite. From 3.0.0 until 3.2.5, 4.1.8, and 5.0.0-beta.4, Vitest Browser Mode exposed a cdp() API that forwarded raw Chrome DevTools Protocol methods without being gated by allowWrite or allowExec, allowing a remote client with exposed browser API metadata to use CDP Page.setDownloadBehavior and Runtime.evaluate to overwrite vite.config.ts and execute attacker-controlled Node.js code. This issue is fixed in versions 3.2.5, 4.1.8, and 5.0.0-beta.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53633",
-      "actual_product": "Vitest",
-      "package_name": "",
-      "ecosystem": "npm / Node.js",
-      "relation_type": "direct_product",
-      "classification_reason": "description_subject",
-      "tracked_keyword": "Node.js",
-      "noise_risk": "medium"
     },
     {
       "alert_id": "nvd:cve-2026-55410:node.js",
