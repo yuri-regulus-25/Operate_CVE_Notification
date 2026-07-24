@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-24T04:00:43.167373+00:00",
+  "generated_at": "2026-07-24T06:55:42.500571+00:00",
   "count": 145,
   "sources": {
     "NVD": 93,
@@ -690,7 +690,7 @@
       "severity": "HIGH",
       "score": 8.4,
       "published": "2026-07-23T12:18:36.103",
-      "last_modified": "2026-07-23T14:35:20.120",
+      "last_modified": "2026-07-24T05:16:46.830",
       "title": "CVE-2026-64806",
       "description": "In JetBrains WebStorm before 2026.2 arbitrary code execution was possible before granting project trust via the configured Node.js interpreter",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-64806",
@@ -738,7 +738,7 @@
       "severity": "CRITICAL",
       "score": 10.0,
       "published": "2026-07-23T18:16:53.350",
-      "last_modified": "2026-07-23T19:16:54.213",
+      "last_modified": "2026-07-24T05:16:44.947",
       "title": "CVE-2026-47668",
       "description": "DbGate is cross-platform database manager. In versions 7.1.8 and prior, DbGate's JSON script runner (`POST /runners/start`) allows remote code execution via code injection in the `functionName` parameter of JSON script `assign` commands. The `functionName` value is interpolated directly into dynamically generated JavaScript source code via string concatenation. The generated code is then executed in a forked Node.js child process. Version 7.1.9 contains a patch.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-47668",
