@@ -1,35 +1,11 @@
 {
-  "generated_at": "2026-07-23T21:39:00.130500+00:00",
+  "generated_at": "2026-07-24T04:00:43.167373+00:00",
   "count": 145,
   "sources": {
     "NVD": 93,
     "JVN": 52
   },
   "alerts": [
-    {
-      "alert_id": "nvd:cve-2026-62241:npm",
-      "source": "NVD",
-      "category": "JS",
-      "product_key": "npm",
-      "confidence": "description_formal",
-      "priority": "URGENT",
-      "cve_id": "CVE-2026-62241",
-      "matched": "npm",
-      "severity": "CRITICAL",
-      "score": 9.1,
-      "published": "2026-07-17T02:18:11.740",
-      "last_modified": "2026-07-17T19:17:18.647",
-      "title": "CVE-2026-62241",
-      "description": "clawvet self-hosted API server (apps/api) before 0.7.5 hard-codes a fallback JWT secret ('clawvet-dev-secret-change-me') in auth.ts and ships it as the default in .env.example. Because GET /api/v1/scans returns scan records containing userId values without authentication, a remote unauthenticated attacker can harvest a victim's userId, forge a valid HS256 cg_session cookie offline using the known secret, and call GET /api/v1/auth/me to obtain the victim's email address, subscription plan, and se...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62241",
-      "actual_product": "clawvet self-hosted API server (apps/api)",
-      "package_name": "",
-      "ecosystem": "npm / Node.js",
-      "relation_type": "direct_product",
-      "classification_reason": "description_subject",
-      "tracked_keyword": "",
-      "noise_risk": "medium"
-    },
     {
       "alert_id": "nvd:cve-2026-49208:symfony",
       "source": "NVD",
@@ -2236,6 +2212,30 @@
       "relation_type": "direct_product",
       "classification_reason": "known_product_pattern",
       "tracked_keyword": "Node.js",
+      "noise_risk": "medium"
+    },
+    {
+      "alert_id": "nvd:cve-2026-62241:npm",
+      "source": "NVD",
+      "category": "JS",
+      "product_key": "npm",
+      "confidence": "description_formal",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-62241",
+      "matched": "npm",
+      "severity": "CRITICAL",
+      "score": 9.1,
+      "published": "2026-07-17T02:18:11.740",
+      "last_modified": "2026-07-17T19:17:18.647",
+      "title": "CVE-2026-62241",
+      "description": "clawvet self-hosted API server (apps/api) before 0.7.5 hard-codes a fallback JWT secret ('clawvet-dev-secret-change-me') in auth.ts and ships it as the default in .env.example. Because GET /api/v1/scans returns scan records containing userId values without authentication, a remote unauthenticated attacker can harvest a victim's userId, forge a valid HS256 cg_session cookie offline using the known secret, and call GET /api/v1/auth/me to obtain the victim's email address, subscription plan, and se...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62241",
+      "actual_product": "clawvet self-hosted API server (apps/api)",
+      "package_name": "",
+      "ecosystem": "npm / Node.js",
+      "relation_type": "direct_product",
+      "classification_reason": "description_subject",
+      "tracked_keyword": "",
       "noise_risk": "medium"
     },
     {
