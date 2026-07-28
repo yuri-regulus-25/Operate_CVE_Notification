@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-28T07:08:08.524142+00:00",
-  "count": 131,
+  "generated_at": "2026-07-28T10:58:25.843617+00:00",
+  "count": 132,
   "sources": {
     "NVD": 119,
-    "JVN": 12
+    "JVN": 13
   },
   "alerts": [
     {
@@ -3149,6 +3149,30 @@
       "classification_reason": "known_product_pattern",
       "tracked_keyword": "Symfony",
       "noise_risk": "low"
+    },
+    {
+      "alert_id": "jvn:cve-2026-55968:node.js",
+      "source": "JVN",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-55968",
+      "matched": "Node.js",
+      "severity": "HIGH",
+      "score": "7.5",
+      "published": "2026-07-28T18:11:15+09:00",
+      "last_modified": "2026-07-28T18:11:15+09:00",
+      "title": "Apache Software FoundationのApache Thriftにおける複数の脆弱性",
+      "description": "Apache ThriftのNode.jsバインディングにおける、制限やスロットリングなしでのリソース割り当てによる非効率なアルゴリズムの複雑性の脆弱性があります。この問題はApache Thriftの0.24.0未満のバージョンに影響を及ぼします。ユーザーは、この問題を修正したバージョン0.24.0にアップグレードすることが推奨されます。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025582.html",
+      "actual_product": "Node.js",
+      "package_name": "",
+      "ecosystem": "npm / Node.js",
+      "relation_type": "keyword_only",
+      "classification_reason": "fallback_matched",
+      "tracked_keyword": "Node.js",
+      "noise_risk": "high"
     }
   ]
 }
