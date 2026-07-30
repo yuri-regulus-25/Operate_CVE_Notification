@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-29T21:23:25.434182+00:00",
-  "count": 89,
+  "generated_at": "2026-07-30T03:45:49.672799+00:00",
+  "count": 90,
   "sources": {
     "NVD": 88,
-    "JVN": 1
+    "JVN": 2
   },
   "alerts": [
     {
@@ -2117,6 +2117,30 @@
       "classification_reason": "description_subject",
       "tracked_keyword": "npm",
       "noise_risk": "medium"
+    },
+    {
+      "alert_id": "jvn:cve-2026-64806:node.js",
+      "source": "JVN",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-64806",
+      "matched": "Node.js",
+      "severity": "HIGH",
+      "score": "8.4",
+      "published": "2026-07-30T09:45:53+09:00",
+      "last_modified": "2026-07-30T09:45:53+09:00",
+      "title": "JetBrainsのWebStormにおける信頼できない制御領域からの機能の組み込みに関する脆弱性",
+      "description": "JetBrains WebStorm 2026.2 未満のバージョンでは、設定された Node.js インタープリターを介してプロジェクトの信頼を付与する前に任意のコードを実行される可能性がありました。 ",
+      "url": "https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025705.html",
+      "actual_product": "Node.js",
+      "package_name": "",
+      "ecosystem": "npm / Node.js",
+      "relation_type": "keyword_only",
+      "classification_reason": "fallback_matched",
+      "tracked_keyword": "Node.js",
+      "noise_risk": "high"
     },
     {
       "alert_id": "jvn:cve-2026-55968:node.js",
