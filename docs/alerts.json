@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T09:35:43.439004+00:00",
+  "generated_at": "2026-08-07T13:49:10.349065+00:00",
   "count": 96,
   "sources": {
     "NVD": 91,
@@ -1386,7 +1386,7 @@
       "severity": "CRITICAL",
       "score": 9.9,
       "published": "2026-04-09T15:16:08.650",
-      "last_modified": "2026-08-03T13:17:08.380",
+      "last_modified": "2026-08-07T12:17:13.110",
       "title": "CVE-2025-62718",
       "description": "Axios is a promise based HTTP client for the browser and Node.js. Prior to 1.15.0 and 0.31.0, Axios does not correctly handle hostname normalization when checking NO_PROXY rules. Requests to loopback addresses like localhost. (with a trailing dot) or [::1] (IPv6 literal) skip NO_PROXY matching and go through the configured proxy. This goes against what developers expect and lets attackers force requests through a proxy, even if NO_PROXY is set up to protect loopback or internal services. This is...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-62718",
@@ -2034,7 +2034,7 @@
       "severity": "CRITICAL",
       "score": 9.3,
       "published": "2026-06-12T21:16:22.447",
-      "last_modified": "2026-08-05T13:22:57.537",
+      "last_modified": "2026-08-07T12:17:57.203",
       "title": "CVE-2026-44990",
       "description": "ApostropheCMS is an open-source Node.js content management system, and sanitize-html provides a simple HTML sanitizer with a clear API. Under the default configuration, versions of `sanitize-html` prior to 2.17.4 can turn attacker-controlled content inside a disallowed `xmp` element into live HTML or JavaScript. This is a sanitizer bypass in the default `disallowedTagsMode: 'discard'` path and can lead to stored XSS in applications that render sanitized output back to users. Version 2.17.4 patch...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-44990",
