@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-08T13:22:55.881642+00:00",
-  "count": 89,
+  "generated_at": "2026-08-08T17:02:55.018078+00:00",
+  "count": 88,
   "sources": {
-    "NVD": 84,
+    "NVD": 83,
     "JVN": 5
   },
   "alerts": [
@@ -1037,30 +1037,6 @@
       "classification_reason": "description_subject",
       "tracked_keyword": "Node.js",
       "noise_risk": "low"
-    },
-    {
-      "alert_id": "nvd:cve-2024-21536:node.js",
-      "source": "NVD",
-      "category": "JS",
-      "product_key": "nodejs",
-      "confidence": "description_formal",
-      "priority": "WATCH",
-      "cve_id": "CVE-2024-21536",
-      "matched": "Node.js",
-      "severity": "HIGH",
-      "score": 7.5,
-      "published": "2024-10-19T05:15:13.097",
-      "last_modified": "2026-08-01T16:16:29.963",
-      "title": "CVE-2024-21536",
-      "description": "Versions of the package http-proxy-middleware before 2.0.7, from 3.0.0 and before 3.0.3 are vulnerable to Denial of Service (DoS) due to an UnhandledPromiseRejection error thrown by micromatch. An attacker could kill the Node.js process and crash the server by making requests to certain paths.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-21536",
-      "actual_product": "Versions of the package http-proxy-middleware",
-      "package_name": "",
-      "ecosystem": "npm / Node.js",
-      "relation_type": "direct_product",
-      "classification_reason": "description_subject",
-      "tracked_keyword": "Node.js",
-      "noise_risk": "medium"
     },
     {
       "alert_id": "nvd:cve-2024-55591:node.js",
