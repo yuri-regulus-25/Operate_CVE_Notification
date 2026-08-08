@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-08T02:31:51.396591+00:00",
+  "generated_at": "2026-08-08T05:17:24.247698+00:00",
   "count": 89,
   "sources": {
     "NVD": 84,
@@ -1050,7 +1050,7 @@
       "severity": "MEDIUM",
       "score": 6.1,
       "published": "2026-08-06T22:18:30.423",
-      "last_modified": "2026-08-06T22:18:30.423",
+      "last_modified": "2026-08-08T03:16:47.430",
       "title": "CVE-2026-71435",
       "description": "Statamic is a Laravel and Git powered content management system (CMS). Prior to 5.74.3 and 6.24.2, the default (\"automagic\") form notification email rendered user-submitted values without escaping, allowing an unauthenticated form submitter to inject HTML into the notification emails sent to the configured recipients. This issue is fixed in versions 5.74.3 and 6.24.2.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-71435",
