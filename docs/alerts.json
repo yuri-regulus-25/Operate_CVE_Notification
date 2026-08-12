@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-12T03:13:16.062433+00:00",
-  "count": 86,
+  "generated_at": "2026-08-12T05:57:30.858275+00:00",
+  "count": 85,
   "sources": {
-    "NVD": 81,
+    "NVD": 80,
     "JVN": 5
   },
   "alerts": [
@@ -845,30 +845,6 @@
       "classification_reason": "fallback_matched",
       "tracked_keyword": "",
       "noise_risk": "low"
-    },
-    {
-      "alert_id": "nvd:cve-2024-55591:node.js",
-      "source": "NVD",
-      "category": "JS",
-      "product_key": "nodejs",
-      "confidence": "description_formal",
-      "priority": "URGENT",
-      "cve_id": "CVE-2024-55591",
-      "matched": "Node.js",
-      "severity": "CRITICAL",
-      "score": 9.8,
-      "published": "2025-01-14T14:15:34.450",
-      "last_modified": "2026-08-05T05:16:42.380",
-      "title": "CVE-2024-55591",
-      "description": "An Authentication Bypass Using an Alternate Path or Channel vulnerability [CWE-288] affecting FortiOS version 7.0.0 through 7.0.16 and FortiProxy version 7.0.0 through 7.0.19 and 7.2.0 through 7.2.12 allows a remote attacker to gain super-admin privileges via crafted requests to Node.js websocket module.",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-55591",
-      "actual_product": "Node.js",
-      "package_name": "",
-      "ecosystem": "npm / Node.js",
-      "relation_type": "keyword_only",
-      "classification_reason": "fallback_matched",
-      "tracked_keyword": "Node.js",
-      "noise_risk": "high"
     },
     {
       "alert_id": "nvd:cve-2026-23745:node.js",
