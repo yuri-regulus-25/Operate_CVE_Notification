@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-13T03:10:08.473461+00:00",
-  "count": 72,
+  "generated_at": "2026-08-13T06:00:34.141288+00:00",
+  "count": 71,
   "sources": {
-    "NVD": 71,
+    "NVD": 70,
     "JVN": 1
   },
   "alerts": [
@@ -1511,30 +1511,6 @@
       "description": "Ghost is a Node.js content management system. From 6.26.0 until 6.54.1, a validation issue allowed some functionality, such as Webmentions, to be abused by an unauthenticated user to make limited HTTP requests to hosts in the Ghost server's internal network. A successful attack would not result in any response data being returned. This vulnerability is fixed in 6.54.1.",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70595",
       "actual_product": "Ghost",
-      "package_name": "",
-      "ecosystem": "npm / Node.js",
-      "relation_type": "direct_product",
-      "classification_reason": "description_subject",
-      "tracked_keyword": "Node.js",
-      "noise_risk": "medium"
-    },
-    {
-      "alert_id": "nvd:cve-2026-70609:node.js",
-      "source": "NVD",
-      "category": "JS",
-      "product_key": "nodejs",
-      "confidence": "description_formal",
-      "priority": "NOTICE",
-      "cve_id": "CVE-2026-70609",
-      "matched": "Node.js",
-      "severity": "MEDIUM",
-      "score": 5.7,
-      "published": "2026-08-05T18:17:15.307",
-      "last_modified": "2026-08-06T05:17:09.140",
-      "title": "CVE-2026-70609",
-      "description": "Electron is a framework for writing cross-platform desktop applications using JavaScript, HTML and CSS. Prior to 39.8.7, 40.9.0, 41.2.0, and 42.0.0-beta.1, the mode option of webContents.openDevTools() was not sanitized before use by the DevTools frontend. If an attacker can influence this value, script under their control may run in the DevTools context, which in unsandboxed configurations has access to Node.js, including when untrusted input reaches the mode argument of openDevTools() or untru...",
-      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-70609",
-      "actual_product": "Electron",
       "package_name": "",
       "ecosystem": "npm / Node.js",
       "relation_type": "direct_product",
