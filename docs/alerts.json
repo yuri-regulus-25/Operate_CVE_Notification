@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-14T20:57:14.189088+00:00",
-  "count": 63,
+  "generated_at": "2026-08-15T02:01:32.547780+00:00",
+  "count": 64,
   "sources": {
-    "NVD": 63
+    "NVD": 64
   },
   "alerts": [
     {
@@ -556,6 +556,30 @@
       "classification_reason": "known_product_pattern",
       "tracked_keyword": "Symfony",
       "noise_risk": "low"
+    },
+    {
+      "alert_id": "nvd:cve-2026-73683:laravel",
+      "source": "NVD",
+      "category": "PHP",
+      "product_key": "laravel",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-73683",
+      "matched": "Laravel",
+      "severity": "HIGH",
+      "score": 8.1,
+      "published": "2026-08-14T22:17:11.550",
+      "last_modified": "2026-08-14T22:17:11.550",
+      "title": "CVE-2026-73683",
+      "description": "Laravel Socialite's Facebook provider contains an authentication bypass vulnerability that allows unauthenticated attackers to replay captured OIDC id_tokens by exploiting the missing nonce claim validation in the getUserByOIDCToken() function within FacebookProvider.php. Attackers who obtain a valid, unexpired id_token issued for the same Facebook App ID can submit the captured token to the backend userFromToken() endpoint, bypassing authentication controls because signature, aud, and iss check...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73683",
+      "actual_product": "Laravel",
+      "package_name": "",
+      "ecosystem": "Composer / PHP",
+      "relation_type": "keyword_only",
+      "classification_reason": "fallback_matched",
+      "tracked_keyword": "Laravel",
+      "noise_risk": "high"
     },
     {
       "alert_id": "nvd:cve-2023-44487:node.js",
