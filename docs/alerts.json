@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-15T20:49:40.748014+00:00",
-  "count": 63,
+  "generated_at": "2026-08-16T02:07:38.388017+00:00",
+  "count": 64,
   "sources": {
-    "NVD": 63
+    "NVD": 64
   },
   "alerts": [
     {
@@ -580,6 +580,30 @@
       "classification_reason": "fallback_matched",
       "tracked_keyword": "Laravel",
       "noise_risk": "high"
+    },
+    {
+      "alert_id": "nvd:cve-2026-73041:node.js",
+      "source": "NVD",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "URGENT",
+      "cve_id": "CVE-2026-73041",
+      "matched": "Node.js",
+      "severity": "CRITICAL",
+      "score": 9.0,
+      "published": "2026-08-15T22:16:53.883",
+      "last_modified": "2026-08-15T22:16:53.883",
+      "title": "CVE-2026-73041",
+      "description": "SiYuan versions before v3.7.4 fail to validate or escape annotation fields written to disk by the setFileAnnotation endpoint. Attackers can inject malicious markup into annotation fields that execute as script in the PDF renderer with full Node.js access when a user opens an annotated PDF.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-73041",
+      "actual_product": "SiYuan versions",
+      "package_name": "",
+      "ecosystem": "npm / Node.js",
+      "relation_type": "direct_product",
+      "classification_reason": "description_subject",
+      "tracked_keyword": "Node.js",
+      "noise_risk": "medium"
     },
     {
       "alert_id": "nvd:cve-2023-44487:node.js",
