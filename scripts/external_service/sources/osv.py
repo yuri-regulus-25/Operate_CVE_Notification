@@ -3,7 +3,7 @@ import time
 import urllib.error
 import urllib.request
 
-from external_service.http import fetch_json
+from external_service.http_client import fetch_json
 from external_service.model import FETCH_ERROR, SUCCESS, SUCCESS_NO_RESULTS
 from external_service.normalize import make_event
 

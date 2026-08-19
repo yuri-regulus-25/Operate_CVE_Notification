@@ -2,7 +2,7 @@ import os
 import time
 import urllib.parse
 
-from external_service.http import fetch_json
+from external_service.http_client import fetch_json
 from external_service.model import FETCH_ERROR, SCHEMA_CHANGED, SUCCESS, SUCCESS_NO_RESULTS
 from external_service.normalize import make_event, severity_level
 

@@ -7,7 +7,7 @@ from pathlib import Path
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from external_service.http import fetch_text
+from external_service.http_client import fetch_text
 from external_service.model import ACTIVE_RELEVANCE, FETCH_ERROR, PARSE_ERROR, SCHEMA_CHANGED
 from external_service.normalize import merge_events, now_iso
 from external_service.relevance import decide

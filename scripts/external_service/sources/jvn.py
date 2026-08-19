@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 import urllib.parse
 from datetime import datetime, timedelta, timezone
 
-from external_service.http import fetch_text
+from external_service.http_client import fetch_text
 
 from external_service.model import FETCH_ERROR, PARSE_ERROR, SUCCESS, SUCCESS_NO_RESULTS
 from external_service.normalize import make_event

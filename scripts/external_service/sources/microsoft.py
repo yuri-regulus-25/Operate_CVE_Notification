@@ -3,7 +3,7 @@ import re
 from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
 
-from external_service.http import fetch_text
+from external_service.http_client import fetch_text
 from external_service.model import FETCH_ERROR, SCHEMA_CHANGED, SUCCESS, SUCCESS_NO_RESULTS
 from external_service.normalize import make_event
 
