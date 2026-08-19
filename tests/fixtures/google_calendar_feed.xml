@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry>
+    <title>Calendar API OAuth security guidance</title>
+    <link href="https://developers.google.com/workspace/calendar/release-notes"/>
+    <updated>2026-08-18T00:00:00Z</updated>
+    <summary>OAuth authorization guidance for Events API integrations.</summary>
+  </entry>
+</feed>

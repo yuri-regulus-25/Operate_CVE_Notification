@@ -318,3 +318,14 @@ python scripts/watch.py
 - `JVN_LOOKBACK_DAYS`
 
 GitHub Actions の secret に `NVD_API_KEY` を設定している場合、NVD API の呼び出しに利用されます。未設定の場合は、公開レート制限に合わせて NVD へのリクエスト間隔を長めに取ります。
+
+## External Service Risk Watch
+
+外部サービス/API/SDK 向けの監視は、既存 CVE Watch とは分離して
+[`docs/external_service/README.md`](docs/external_service/README.md) に記載しています。
+
+- workflow: [`.github/workflows/external-service-watch.yml`](.github/workflows/external-service-watch.yml)
+- target config: [`config/external_services.json`](config/external_services.json)
+- output: [`docs/external_service/alerts.json`](docs/external_service/alerts.json),
+  [`docs/external_service/history.json`](docs/external_service/history.json),
+  [`docs/external_service/state.json`](docs/external_service/state.json)

@@ -1,0 +1,39 @@
+name: External Service Risk Watch
+
+on:
+  schedule:
+    - cron: "17 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+  EXTERNAL_SERVICE_WATCH_FAILURE_FLAG: ${{ runner.temp }}/external-service-watch.failed
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Run External Service Risk Watch
+        run: |
+          python scripts/external_service/run.py
+
+      - name: Commit result
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add docs/external_service/alerts.json docs/external_service/history.json docs/external_service/state.json
+          git commit -m "Update external service risk alerts" || echo "No changes"
+          git push
+
+      - name: Fail on source adapter errors
+        if: always()
+        run: |
+          test ! -f "$EXTERNAL_SERVICE_WATCH_FAILURE_FLAG"

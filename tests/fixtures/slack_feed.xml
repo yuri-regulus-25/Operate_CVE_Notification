@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <item>
+      <title>Deprecation of legacy incoming webhook behavior</title>
+      <link>https://docs.slack.dev/changelog/example</link>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
+      <description>Incoming webhook authentication behavior is changing.</description>
+    </item>
+    <item>
+      <title>New Block Kit button style</title>
+      <link>https://docs.slack.dev/changelog/feature</link>
+      <description>Feature announcement only.</description>
+    </item>
+  </channel>
+</rss>

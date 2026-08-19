@@ -1,0 +1,31 @@
+{
+  "DocumentTracking": {
+    "InitialReleaseDate": "2026-08-13T00:00:00Z",
+    "CurrentReleaseDate": "2026-08-13T00:00:00Z"
+  },
+  "ProductTree": {
+    "FullProductName": [
+      {
+        "ProductID": "graph-teams",
+        "Value": "Microsoft Graph Teams online meetings"
+      }
+    ]
+  },
+  "Vulnerability": [
+    {
+      "CVE": "CVE-2026-55555",
+      "Notes": [
+        {
+          "Title": "Description",
+          "Value": "Security update affecting OAuth handling."
+        }
+      ],
+      "ProductStatuses": [
+        {
+          "Type": "Known Affected",
+          "ProductID": ["graph-teams"]
+        }
+      ]
+    }
+  ]
+}
