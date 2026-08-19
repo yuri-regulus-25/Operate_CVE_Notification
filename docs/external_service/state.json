@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T10:33:17.555324+00:00",
+  "generated_at": "2026-08-19T21:41:21.832738+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
@@ -37,7 +37,7 @@
     },
     "nvd:microsoft_graph_calendar": {
       "status": "SUCCESS",
-      "count": 21
+      "count": 23
     },
     "jvn:microsoft_graph_calendar": {
       "status": "SUCCESS",
@@ -45,7 +45,7 @@
     },
     "microsoft_graph:microsoft_graph_calendar:https://developer.microsoft.com/en-us/graph/changelog?filterBy=Calendar": {
       "status": "SUCCESS_NO_RESULTS",
-      "raw_count": 160,
+      "raw_count": 159,
       "count": 0
     },
     "microsoft_graph:microsoft_graph_calendar:https://developer.microsoft.com/en-us/graph/changelog?filterBy=Cloud%20communications": {
@@ -60,7 +60,7 @@
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 798,
+      "raw_count": 800,
       "count": 19
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Jul": {
@@ -70,7 +70,7 @@
     },
     "nvd:microsoft_graph_teams": {
       "status": "SUCCESS",
-      "count": 21
+      "count": 23
     },
     "jvn:microsoft_graph_teams": {
       "status": "SUCCESS_NO_RESULTS",
@@ -88,7 +88,7 @@
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 798,
+      "raw_count": 800,
       "count": 19
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Jul": {
