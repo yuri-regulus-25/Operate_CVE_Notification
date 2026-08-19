@@ -1,5 +1,6 @@
 import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
@@ -7,6 +8,7 @@ from unittest import mock
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
+import external_service.run as runner
 from external_service.normalize import make_event, merge_events
 from external_service.relevance import decide
 from external_service.sources import feed, jvn, microsoft, nvd, osv, zoom
@@ -32,6 +34,8 @@ class ExternalServiceWatchTests(unittest.TestCase):
         events, status = feed.parse_feed(xml_text, "Slack Feed", "slack", "https://example.test/rss")
         self.assertEqual(status["status"], "SUCCESS")
         self.assertEqual(len(events), 1)
+        self.assertEqual(status["raw_count"], 2)
+        self.assertEqual(status["dropped_count"], 1)
         self.assertEqual(events[0]["type"], "DEPRECATION")
 
     def test_atom_xml_parsing(self):
@@ -45,6 +49,8 @@ class ExternalServiceWatchTests(unittest.TestCase):
         events, status = zoom.parse_security_bulletin(html_text, "https://zoom.test/security")
         self.assertEqual(status["status"], "SUCCESS")
         self.assertEqual(len(events), 2)
+        self.assertEqual(events[0]["id"], "vendor:zoom:ZSB-26005")
+        self.assertIn("Zoom Workplace for Windows", events[0]["raw"]["affected"])
 
         empty_events, empty_status = zoom.parse_security_bulletin("<html>No table</html>", "https://zoom.test/security")
         self.assertEqual(empty_events, [])
@@ -86,6 +92,17 @@ class ExternalServiceWatchTests(unittest.TestCase):
         self.assertEqual(len(events), 2)
         self.assertEqual(fetch.call_count, 3)
 
+    def test_nvd_pagination_guard(self):
+        service = {"key": "zoom", "sources": {"nvd_keywords": ["Zoom"]}}
+        page = {
+            "totalResults": 2,
+            "resultsPerPage": 0,
+            "vulnerabilities": [{"cve": {"id": "CVE-2026-1000", "descriptions": [{"lang": "en", "value": "Zoom REST API vulnerability"}]}}],
+        }
+        with mock.patch("external_service.sources.nvd.fetch_json", return_value=page):
+            events, status = nvd.fetch_for_service(service, "2026-08-01T00:00:00.000Z", "2026-08-19T00:00:00.000Z", results_per_page=1)
+        self.assertEqual(status["status"], "SCHEMA_CHANGED")
+
     def test_jvn_fetch_uses_published_and_modified_date_windows(self):
         service = {"key": "zoom", "sources": {"nvd_keywords": ["Zoom"]}}
         empty_jvn = """<?xml version="1.0"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rss="http://purl.org/rss/1.0/" />"""
@@ -107,6 +124,18 @@ class ExternalServiceWatchTests(unittest.TestCase):
         )
         self.assertEqual(status["status"], "SUCCESS")
         self.assertEqual(events[0]["type"], "DEPRECATION")
+
+    def test_msrc_cvrf_detail_parsing(self):
+        updates = (FIXTURES / "msrc_updates.json").read_text(encoding="utf-8")
+        ids, update_status = microsoft.recent_update_ids(updates, lookback_days=999)
+        self.assertEqual(ids, ["2026-Aug"])
+        self.assertEqual(update_status["raw_count"], 1)
+
+        cvrf = (FIXTURES / "msrc_cvrf.json").read_text(encoding="utf-8")
+        events, status = microsoft.parse_cvrf_document(cvrf, "microsoft_graph_teams", "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug")
+        self.assertEqual(status["status"], "SUCCESS")
+        self.assertEqual(events[0]["id"], "CVE-2026-55555")
+        self.assertIn("Microsoft Graph Teams online meetings", events[0]["raw"]["affected"])
 
     def test_osv_normalization(self):
         event = osv.normalize_vuln(
@@ -135,18 +164,68 @@ class ExternalServiceWatchTests(unittest.TestCase):
         self.assertEqual(merged[0]["services"], ["microsoft_graph_calendar", "microsoft_graph_teams"])
 
     def test_relevance_statuses(self):
-        relevant = make_event("NVD", "zoom", "CVE-2026-1", "Zoom REST API meetings vulnerability")
+        relevant = make_event("NVD", "zoom", "CVE-2026-1001", "Zoom REST API meetings vulnerability")
         self.assertEqual(decide(relevant, self.service())["status"], "RELEVANT")
 
-        not_relevant = make_event("Zoom", "zoom", "CVE-2026-2", "Zoom Workplace for Windows vulnerability")
+        not_relevant = make_event("Zoom", "zoom", "CVE-2026-1002", "Zoom Workplace for Windows vulnerability")
         self.assertEqual(decide(not_relevant, self.service())["status"], "NOT_RELEVANT")
 
         review = make_event("NVD", "zoom", "CVE-2026-3000", "Vendor vulnerability with unclear affected product")
         self.assertEqual(decide(review, self.service())["status"], "REVIEW")
 
+        vendor_only = make_event("NVD", "zoom", "CVE-2026-3001", "Zoom vulnerability; affected surface unclear")
+        self.assertEqual(decide(vendor_only, self.service())["status"], "REVIEW")
+
+        vendor_platform = make_event("NVD", "zoom", "CVE-2026-3002", "Zoom Workplace for macOS vulnerability")
+        self.assertNotEqual(decide(vendor_platform, self.service())["status"], "RELEVANT")
+
+        ambiguous = make_event("NVD", "zoom", "CVE-2026-3003", "Zoom Workplace for Windows vulnerability also mentions meetings")
+        self.assertEqual(decide(ambiguous, self.service())["status"], "REVIEW")
+
         informational = make_event("Slack", "slack", "Deprecation for Slack OAuth", "OAuth migration required")
         service = self.service(key="slack", keywords=["slack", "oauth"], endpoints=[], products=[], exclude_keywords=[])
         self.assertEqual(decide(informational, service)["status"], "INFORMATIONAL")
+
+    def test_zoom_affected_product_not_relevant(self):
+        event = make_event(
+            "Zoom Security Bulletin",
+            "zoom",
+            "ZSB-26005",
+            "Zoom Security Bulletin ZSB-26005",
+            raw={"affected": ["Zoom Workplace for Windows"]},
+            event_id="vendor:zoom:ZSB-26005",
+        )
+        self.assertEqual(decide(event, self.service())["status"], "NOT_RELEVANT")
+
+    def test_source_failure_writes_state_before_exit(self):
+        with tempfile.TemporaryDirectory() as temp:
+            temp_path = Path(temp)
+            failure_flag = temp_path / "failed"
+            with mock.patch.object(runner, "ALERTS_PATH", temp_path / "alerts.json"):
+                with mock.patch.object(runner, "HISTORY_PATH", temp_path / "history.json"):
+                    with mock.patch.object(runner, "STATE_PATH", temp_path / "state.json"):
+                        with mock.patch.dict("os.environ", {"EXTERNAL_SERVICE_WATCH_FAILURE_FLAG": str(failure_flag)}):
+                            with self.assertRaises(SystemExit):
+                                runner.update_outputs(
+                                    [],
+                                    {"feed:slack": {"status": "FETCH_ERROR", "message": "timeout"}},
+                                    {"services": [{"key": "slack", "display": "Slack", "keywords": [], "endpoints": [], "products": []}]},
+                                )
+                            state = json.loads((temp_path / "state.json").read_text(encoding="utf-8"))
+                            self.assertTrue(failure_flag.exists())
+        self.assertEqual(state["sources"]["feed:slack"]["status"], "FETCH_ERROR")
+
+    def test_osv_post_retries_transient_errors(self):
+        response = mock.Mock()
+        response.__enter__ = mock.Mock(return_value=response)
+        response.__exit__ = mock.Mock(return_value=None)
+        response.read.return_value = b'{"results":[]}'
+        transient = TimeoutError("temporary")
+        with mock.patch("external_service.sources.osv.urllib.request.urlopen", side_effect=[transient, response]) as urlopen:
+            with mock.patch("external_service.sources.osv.time.sleep"):
+                result = osv._post_json("https://api.osv.dev/v1/querybatch", {"queries": []})
+        self.assertEqual(result, {"results": []})
+        self.assertEqual(urlopen.call_count, 2)
 
 
 if __name__ == "__main__":

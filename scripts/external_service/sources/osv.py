@@ -1,4 +1,6 @@
 import json
+import time
+import urllib.error
 import urllib.request
 
 from external_service.http import fetch_json
@@ -28,14 +30,24 @@ def normalize_vuln(vuln, service):
     return event
 
 
-def _post_json(url, payload, timeout=60):
+def _post_json(url, payload, timeout=60, retries=3, retry_base_delay=10):
     request = urllib.request.Request(
         url,
         data=json.dumps(payload).encode("utf-8"),
         headers={"Content-Type": "application/json", "User-Agent": "external-service-risk-watch/1.0"},
     )
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return json.loads(response.read().decode("utf-8"))
+    for attempt in range(1, retries + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as error:
+            if error.code not in (429, 500, 502, 503, 504) or attempt >= retries:
+                raise
+            time.sleep(retry_base_delay * attempt)
+        except (urllib.error.URLError, TimeoutError, OSError):
+            if attempt >= retries:
+                raise
+            time.sleep(retry_base_delay * attempt)
 
 
 def fetch_for_services(services):

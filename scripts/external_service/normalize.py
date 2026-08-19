@@ -63,7 +63,17 @@ def severity_level(score=None, level=None):
     return "UNKNOWN"
 
 
-def make_event(source, service, title, description="", url="", published_at="", updated_at="", raw=None):
+def make_event(
+    source,
+    service,
+    title,
+    description="",
+    url="",
+    published_at="",
+    updated_at="",
+    raw=None,
+    event_id=None,
+):
     title = clean_text(title)
     description = clean_text(description)
     cve_ids = find_cve_ids(f"{title} {description}")
@@ -72,7 +82,7 @@ def make_event(source, service, title, description="", url="", published_at="", 
     if not alert_type:
         return None
 
-    event_id = (
+    event_id = event_id or (
         cve_ids[0].upper()
         if cve_ids
         else f"vendor:{service}:{published_at[:10] or 'unknown'}:{stable_hash(source, service, title, url)}"

@@ -3,7 +3,7 @@ import time
 import urllib.parse
 
 from external_service.http import fetch_json
-from external_service.model import FETCH_ERROR, SUCCESS, SUCCESS_NO_RESULTS
+from external_service.model import FETCH_ERROR, SCHEMA_CHANGED, SUCCESS, SUCCESS_NO_RESULTS
 from external_service.normalize import make_event, severity_level
 
 
@@ -27,6 +27,23 @@ def _severity(cve):
     return {"level": "UNKNOWN", "cvss": None}
 
 
+def _iter_cpe_matches(node):
+    for cpe_match in node.get("cpeMatch", []):
+        criteria = cpe_match.get("criteria")
+        if criteria:
+            yield criteria
+    for child in node.get("nodes", []):
+        yield from _iter_cpe_matches(child)
+
+
+def _affected(cve):
+    values = []
+    for configuration in cve.get("configurations", []):
+        for node in configuration.get("nodes", []):
+            values.extend(_iter_cpe_matches(node))
+    return values
+
+
 def normalize_item(item, service_key, keyword):
     cve = item.get("cve", {})
     cve_id = cve.get("id", "")
@@ -39,7 +56,7 @@ def normalize_item(item, service_key, keyword):
         f"https://nvd.nist.gov/vuln/detail/{cve_id}",
         cve.get("published", ""),
         cve.get("lastModified", ""),
-        raw={"keyword": keyword},
+        raw={"keyword": keyword, "affected": _affected(cve)},
     )
     if event:
         event["severity"] = _severity(cve)
@@ -77,6 +94,10 @@ def fetch_for_service(service, start_iso, end_iso, results_per_page=100, delay=3
                         events.append(event)
 
                 page_size = data.get("resultsPerPage", len(vulnerabilities))
+                if page_size <= 0:
+                    if not vulnerabilities:
+                        break
+                    return events, {"status": SCHEMA_CHANGED, "message": "NVD returned items with a non-positive page size."}
                 total = data.get("totalResults", 0)
                 start_index += page_size
                 if not vulnerabilities or start_index >= total:

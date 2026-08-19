@@ -13,7 +13,16 @@ def decide(event, service):
     matched = []
 
     negative = _contains_any(text, service.get("exclude_keywords", []))
-    positive = _contains_any(text, service.get("keywords", []))
+    vendor = _contains_any(
+        text,
+        service.get("vendor_keywords", []) + [service.get("display", ""), service.get("key", "")],
+    )
+    vendor_terms = {value.casefold() for value in vendor}
+    positive = [
+        value
+        for value in _contains_any(text, service.get("keywords", []))
+        if value.casefold() not in vendor_terms
+    ]
     endpoints = _contains_any(text, service.get("endpoints", []))
     products = _contains_any(text, service.get("products", []))
     sdk = service.get("sdk") or {}
@@ -23,7 +32,15 @@ def decide(event, service):
 
     matched.extend(positive + endpoints + products)
 
-    if negative and not (endpoints or matched[:1] == [sdk.get("package")]):
+    if negative and (positive or endpoints or products):
+        return {
+            "status": "REVIEW",
+            "confidence": "MEDIUM",
+            "matched_targets": sorted(set(matched)),
+            "reason": f"Both excluded product terms and monitored API terms matched: {', '.join(negative)}.",
+        }
+
+    if negative:
         return {
             "status": "NOT_RELEVANT",
             "confidence": "HIGH",
@@ -47,12 +64,12 @@ def decide(event, service):
             "reason": "Event text matches monitored service, endpoint, product, or SDK terms.",
         }
 
-    if event.get("id", "").upper().startswith("CVE-"):
+    if event.get("id", "").upper().startswith("CVE-") or vendor:
         return {
             "status": "REVIEW",
             "confidence": "LOW",
-            "matched_targets": [],
-            "reason": "CVE/source hit mentions the vendor but rules cannot confirm affected API surface.",
+            "matched_targets": sorted(set(vendor)),
+            "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
         }
 
     return {

@@ -6,7 +6,8 @@
       "display": "Slack",
       "products": ["web_api", "incoming_webhooks", "oauth"],
       "endpoints": ["chat.postMessage", "incoming webhook"],
-      "keywords": ["slack", "web api", "incoming webhook", "oauth", "authentication", "chat.postmessage"],
+      "vendor_keywords": ["slack"],
+      "keywords": ["web api", "incoming webhook", "oauth", "authentication", "chat.postmessage"],
       "exclude_keywords": ["desktop app", "mobile app", "cli", "bolt", "sdk"],
       "sources": {
         "nvd_keywords": ["Slack"],
@@ -18,7 +19,8 @@
       "display": "Google Calendar",
       "products": ["calendar_api", "oauth2"],
       "endpoints": ["events", "events.insert", "events.update", "events.delete", "events.list"],
-      "keywords": ["google calendar", "calendar api", "events api", "oauth", "authentication", "authorization"],
+      "vendor_keywords": ["google", "google calendar"],
+      "keywords": ["calendar api", "events api", "oauth", "authentication", "authorization"],
       "exclude_keywords": ["google calendar app", "mobile app"],
       "sdk": {
         "ecosystem": "Packagist",
@@ -35,7 +37,8 @@
       "display": "Microsoft Graph Calendar",
       "products": ["microsoft_graph", "calendar", "events", "calendarview", "oauth2"],
       "endpoints": ["events", "calendarView", "onlineMeetings"],
-      "keywords": ["microsoft graph", "calendar", "events", "calendarview", "oauth", "online meeting", "teams"],
+      "vendor_keywords": ["microsoft", "microsoft graph"],
+      "keywords": ["calendar", "events", "calendarview", "oauth", "online meeting", "teams"],
       "exclude_keywords": ["windows client", "outlook desktop"],
       "sdk": {
         "ecosystem": "Packagist",
@@ -56,7 +59,8 @@
       "display": "Microsoft Graph Teams",
       "products": ["microsoft_graph", "teams", "events", "online_meeting", "oauth2"],
       "endpoints": ["events", "onlineMeetings", "isOnlineMeeting", "onlineMeetingProvider"],
-      "keywords": ["microsoft graph", "teams", "online meeting", "oauth", "event"],
+      "vendor_keywords": ["microsoft", "microsoft graph"],
+      "keywords": ["teams", "online meeting", "oauth", "event"],
       "exclude_keywords": ["windows client", "teams desktop"],
       "sdk": {
         "ecosystem": "Packagist",
@@ -74,7 +78,8 @@
       "display": "Zoom",
       "products": ["rest_api", "oauth2", "meetings", "users", "recordings"],
       "endpoints": ["meetings", "users", "recordings", "oauth token", "oauth authorize"],
-      "keywords": ["zoom", "rest api", "oauth", "meetings", "users", "recordings", "developer"],
+      "vendor_keywords": ["zoom"],
+      "keywords": ["rest api", "oauth", "meetings", "users", "recordings", "developer"],
       "exclude_keywords": ["zoom workplace for windows", "zoom clients for windows", "zoom rooms", "vdi plugin", "desktop client"],
       "sources": {
         "nvd_keywords": ["Zoom"],

@@ -1,4 +1,5 @@
 import json
+import os
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -14,7 +15,7 @@ from external_service.sources import feed, jvn, microsoft, nvd, osv, zoom
 
 
 BASE_DIR = Path(__file__).resolve().parents[2]
-CONFIG_PATH = BASE_DIR / "config" / "external_services.yml"
+CONFIG_PATH = BASE_DIR / "config" / "external_services.json"
 OUTPUT_DIR = BASE_DIR / "docs" / "external_service"
 ALERTS_PATH = OUTPUT_DIR / "alerts.json"
 HISTORY_PATH = OUTPUT_DIR / "history.json"
@@ -34,6 +35,24 @@ def load_json(path, default):
 def write_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def write_json_if_changed(path, data):
+    current = load_json(path, None)
+    if current:
+        comparable_current = dict(current)
+        comparable_data = dict(data)
+        comparable_current.pop("generated_at", None)
+        comparable_data.pop("generated_at", None)
+        if comparable_current == comparable_data:
+            return False
+    write_json(path, data)
+    return True
+
+
+def failure_flag_path():
+    value = os.getenv("EXTERNAL_SERVICE_WATCH_FAILURE_FLAG")
+    return Path(value) if value else None
 
 
 def nvd_dates(lookback_days):
@@ -78,30 +97,13 @@ def collect_zoom_security(service):
 
 
 def collect_microsoft_sources(service):
-    events = []
-    health = {}
     sources = service.get("sources", {})
-
-    for url in sources.get("graph_html_urls", []):
-        key = f"microsoft_graph:{service['key']}:{url}"
-        try:
-            html_text = fetch_text(url)
-            parsed, status = microsoft.parse_graph_changelog_html(html_text, service["key"], url)
-            events.extend(parsed)
-            health[key] = status
-        except Exception as error:
-            health[key] = {"status": FETCH_ERROR, "message": str(error)}
-
-    if sources.get("msrc_url"):
-        try:
-            json_text = fetch_text(sources["msrc_url"])
-            parsed, status = microsoft.parse_msrc_updates(json_text, service["key"], sources["msrc_url"])
-            events.extend(parsed)
-            health[f"msrc:{service['key']}"] = status
-        except Exception as error:
-            health[f"msrc:{service['key']}"] = {"status": FETCH_ERROR, "message": str(error)}
-
-    return events, health
+    return microsoft.fetch_for_service(
+        service,
+        sources.get("graph_html_urls", []),
+        sources.get("msrc_url"),
+        lookback_days=45,
+    )
 
 
 def collect_all(config):
@@ -182,8 +184,8 @@ def update_outputs(events, health, config):
     active_alerts = [item for item in history_alerts if item.get("relevance", {}).get("status") in ACTIVE_RELEVANCE]
 
     generated_at = now_iso()
-    write_json(ALERTS_PATH, {"generated_at": generated_at, "count": len(active_alerts), "alerts": active_alerts})
-    write_json(HISTORY_PATH, {"generated_at": generated_at, "count": len(history_alerts), "alerts": history_alerts})
+    write_json_if_changed(ALERTS_PATH, {"generated_at": generated_at, "count": len(active_alerts), "alerts": active_alerts})
+    write_json_if_changed(HISTORY_PATH, {"generated_at": generated_at, "count": len(history_alerts), "alerts": history_alerts})
     write_json(STATE_PATH, {"generated_at": generated_at, "sources": health})
 
     bad = [
@@ -192,10 +194,16 @@ def update_outputs(events, health, config):
         if value.get("status") in {FETCH_ERROR, PARSE_ERROR, SCHEMA_CHANGED}
     ]
     if bad:
+        flag = failure_flag_path()
+        if flag:
+            flag.write_text("\n".join(bad) + "\n", encoding="utf-8")
         raise SystemExit("Source adapter failures: " + ", ".join(bad))
 
 
 def main():
+    flag = failure_flag_path()
+    if flag and flag.exists():
+        flag.unlink()
     config = load_config()
     events, health = collect_all(config)
     update_outputs(events, health, config)

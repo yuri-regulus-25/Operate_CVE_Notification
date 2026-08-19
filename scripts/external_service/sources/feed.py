@@ -38,4 +38,9 @@ def parse_feed(xml_text, source_name, service_key, url):
         if event:
             events.append(event)
 
-    return events, {"status": SUCCESS if events else SUCCESS_NO_RESULTS, "count": len(events)}
+    return events, {
+        "status": SUCCESS if events else SUCCESS_NO_RESULTS,
+        "raw_count": len(items),
+        "count": len(events),
+        "dropped_count": len(items) - len(events),
+    }

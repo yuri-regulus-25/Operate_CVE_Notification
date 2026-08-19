@@ -325,7 +325,7 @@ GitHub Actions の secret に `NVD_API_KEY` を設定している場合、NVD AP
 [`docs/external_service/README.md`](docs/external_service/README.md) に記載しています。
 
 - workflow: [`.github/workflows/external-service-watch.yml`](.github/workflows/external-service-watch.yml)
-- target config: [`config/external_services.yml`](config/external_services.yml)
+- target config: [`config/external_services.json`](config/external_services.json)
 - output: [`docs/external_service/alerts.json`](docs/external_service/alerts.json),
   [`docs/external_service/history.json`](docs/external_service/history.json),
   [`docs/external_service/state.json`](docs/external_service/state.json)

@@ -75,11 +75,17 @@ information changes.
 `SCHEMA_CHANGED`. Fetch or parser failures fail the workflow instead of being
 treated as an empty result.
 
+The workflow commits `state.json` even when a source adapter fails, then fails
+the job in a final step. This preserves the failure reason in the repository
+without making an unhealthy run look successful. `alerts.json` and
+`history.json` keep their previous `generated_at` when their semantic content
+does not change; `state.json` is the per-run execution record.
+
 ## Configuration
 
-Targets are configured in `config/external_services.yml`. The file is written
-as JSON-compatible YAML so the watcher can run with the Python standard library
-only. Add a service entry with `key`, `products`, `endpoints`, `keywords`,
+Targets are configured in `config/external_services.json`. The watcher uses
+JSON so it can run with the Python standard library only. Add a service entry
+with `key`, `vendor_keywords`, `products`, `endpoints`, `keywords`,
 `exclude_keywords`, optional `sdk`, and source URLs.
 
 ## Automation
