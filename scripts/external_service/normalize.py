@@ -81,6 +81,7 @@ def make_event(source, service, title, description="", url="", published_at="", 
     return {
         "id": event_id,
         "service": service,
+        "services": [service],
         "type": alert_type,
         "title": title,
         "description": description,
@@ -105,6 +106,7 @@ def merge_events(events):
         current["published_at"] = min(filter(None, [current.get("published_at"), event.get("published_at")]), default="")
         current["updated_at"] = max(filter(None, [current.get("updated_at"), event.get("updated_at")]), default="")
         current["sources"].extend(event.get("sources", []))
+        current["services"] = sorted(set(current.get("services", [current.get("service")]) + event.get("services", [event.get("service")])))
         if current["severity"].get("cvss") is None and event.get("severity", {}).get("cvss") is not None:
             current["severity"] = event["severity"]
 

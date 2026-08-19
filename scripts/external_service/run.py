@@ -138,6 +138,32 @@ def collect_all(config):
     return events, health
 
 
+def strongest_relevance(event, services):
+    priority = {
+        "RELEVANT": 4,
+        "REVIEW": 3,
+        "INFORMATIONAL": 2,
+        "NOT_RELEVANT": 1,
+    }
+    decisions = []
+
+    for service_key in event.get("services", [event.get("service")]):
+        service = services.get(service_key)
+        if not service:
+            continue
+        service_decision = decide(event, service)
+        service_decision["service"] = service_key
+        decisions.append(service_decision)
+
+    if not decisions:
+        return decide(event, services[event["service"]])
+
+    decisions.sort(key=lambda item: priority.get(item["status"], 0), reverse=True)
+    selected = dict(decisions[0])
+    selected["service_results"] = decisions
+    return selected
+
+
 def update_outputs(events, health, config):
     services = {service["key"]: service for service in config["services"]}
     history = load_json(HISTORY_PATH, {"generated_at": "", "count": 0, "alerts": []})
@@ -145,8 +171,7 @@ def update_outputs(events, health, config):
 
     enriched = []
     for event in merge_events(events):
-        service = services[event["service"]]
-        event["relevance"] = decide(event, service)
+        event["relevance"] = strongest_relevance(event, services)
         old = previous.get(event["id"], {})
         event["first_seen_at"] = old.get("first_seen_at") or now_iso()
         event["last_seen_at"] = now_iso()

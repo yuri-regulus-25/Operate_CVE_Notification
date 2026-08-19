@@ -128,6 +128,12 @@ class ExternalServiceWatchTests(unittest.TestCase):
         self.assertEqual(len(merged), 1)
         self.assertEqual(len(merged[0]["sources"]), 2)
 
+    def test_deduplication_preserves_multiple_services(self):
+        first = make_event("OSV", "microsoft_graph_calendar", "CVE-2026-20000", "microsoft/microsoft-graph security issue")
+        second = make_event("OSV", "microsoft_graph_teams", "CVE-2026-20000", "microsoft/microsoft-graph security issue")
+        merged = merge_events([first, second])
+        self.assertEqual(merged[0]["services"], ["microsoft_graph_calendar", "microsoft_graph_teams"])
+
     def test_relevance_statuses(self):
         relevant = make_event("NVD", "zoom", "CVE-2026-1", "Zoom REST API meetings vulnerability")
         self.assertEqual(decide(relevant, self.service())["status"], "RELEVANT")
