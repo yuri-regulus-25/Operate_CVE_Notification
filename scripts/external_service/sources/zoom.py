@@ -78,6 +78,7 @@ def parse_security_bulletin(html_text, url):
         description = " ".join(window[1:5])
         if "security" not in description.casefold() and "vulnerability" not in description.casefold():
             description = f"Zoom Security Bulletin {value}. {description}"
+        cve_ids = re.findall(r"CVE-\d{4}-\d{4,}", description, flags=re.I)
         event = make_event(
             "Zoom Security Bulletin",
             "zoom",
@@ -85,7 +86,7 @@ def parse_security_bulletin(html_text, url):
             description,
             detail_url,
             raw={"zsb": value, "affected": _affected(window)},
-            event_id=f"vendor:zoom:{value}",
+            event_id=None if cve_ids else f"vendor:zoom:{value}",
         )
         if event:
             for token in window:

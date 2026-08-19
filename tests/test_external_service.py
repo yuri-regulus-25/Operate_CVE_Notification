@@ -49,12 +49,18 @@ class ExternalServiceWatchTests(unittest.TestCase):
         events, status = zoom.parse_security_bulletin(html_text, "https://zoom.test/security")
         self.assertEqual(status["status"], "SUCCESS")
         self.assertEqual(len(events), 2)
-        self.assertEqual(events[0]["id"], "vendor:zoom:ZSB-26005")
+        self.assertEqual(events[0]["id"], "CVE-2026-30903")
         self.assertIn("Zoom Workplace for Windows", events[0]["raw"]["affected"])
 
         empty_events, empty_status = zoom.parse_security_bulletin("<html>No table</html>", "https://zoom.test/security")
         self.assertEqual(empty_events, [])
         self.assertEqual(empty_status["status"], "SCHEMA_CHANGED")
+
+    def test_zoom_zsb_stable_id_without_cve(self):
+        html_text = "<html><body><table><tr><td>ZSB-26006</td><td>Zoom REST API Meetings - Security Bulletin</td><td>High</td></tr></table></body></html>"
+        events, status = zoom.parse_security_bulletin(html_text, "https://zoom.test/security")
+        self.assertEqual(status["status"], "SUCCESS")
+        self.assertEqual(events[0]["id"], "vendor:zoom:ZSB-26006")
 
     def test_nvd_normalization(self):
         item = {
