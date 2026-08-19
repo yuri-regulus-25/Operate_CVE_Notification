@@ -1,6 +1,12 @@
 {
   "value": [
     {
+      "ID": "2007-Jun",
+      "Alias": "2007-Jun",
+      "DocumentTitle": "June 2007 Security Updates",
+      "CurrentReleaseDate": "2026-08-13T00:00:00Z"
+    },
+    {
       "ID": "2026-Aug",
       "Alias": "2026-Aug",
       "DocumentTitle": "August 2026 Security Updates",

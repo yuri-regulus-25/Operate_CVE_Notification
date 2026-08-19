@@ -134,8 +134,9 @@ class ExternalServiceWatchTests(unittest.TestCase):
     def test_msrc_cvrf_detail_parsing(self):
         updates = (FIXTURES / "msrc_updates.json").read_text(encoding="utf-8")
         ids, update_status = microsoft.recent_update_ids(updates, lookback_days=999)
-        self.assertEqual(ids, ["2026-Aug"])
-        self.assertEqual(update_status["raw_count"], 1)
+        self.assertIn("2026-Aug", ids)
+        self.assertNotIn("2007-Jun", ids)
+        self.assertEqual(update_status["raw_count"], 2)
 
         cvrf = (FIXTURES / "msrc_cvrf.json").read_text(encoding="utf-8")
         events, status = microsoft.parse_cvrf_document(cvrf, "microsoft_graph_teams", "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug")
@@ -149,11 +150,11 @@ class ExternalServiceWatchTests(unittest.TestCase):
         graph_html = (FIXTURES / "microsoft_graph.html").read_text(encoding="utf-8")
         urls = []
 
-        def fake_fetch(url):
+        def fake_fetch(url, headers=None):
             urls.append(url)
             if url.endswith("/updates"):
                 return updates
-            if url.endswith("/cvrf/2026-Aug"):
+            if url.endswith("/cvrf/2026-Aug?api-version=2023-11-01"):
                 return cvrf
             return graph_html
 
@@ -166,7 +167,8 @@ class ExternalServiceWatchTests(unittest.TestCase):
                 lookback_days=999,
             )
 
-        self.assertIn("https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug", urls)
+        self.assertIn("https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug?api-version=2023-11-01", urls)
+        self.assertNotIn("https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2007-Jun?api-version=2023-11-01", urls)
         self.assertTrue(any(event["id"] == "CVE-2026-55555" for event in events))
         self.assertIn("msrc_cvrf:microsoft_graph_teams:2026-Aug", health)
 

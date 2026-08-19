@@ -9,6 +9,20 @@ from external_service.normalize import make_event
 
 
 MSRC_CVRF_BASE_URL = "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/"
+MSRC_MONTHS = {
+    "jan": 1,
+    "feb": 2,
+    "mar": 3,
+    "apr": 4,
+    "may": 5,
+    "jun": 6,
+    "jul": 7,
+    "aug": 8,
+    "sep": 9,
+    "oct": 10,
+    "nov": 11,
+    "dec": 12,
+}
 
 
 class TextParser(HTMLParser):
@@ -89,6 +103,16 @@ def _parse_date(value):
         return None
 
 
+def _parse_doc_month(doc_id):
+    match = re.fullmatch(r"(\d{4})-([A-Za-z]{3})", doc_id or "")
+    if not match:
+        return None
+    month = MSRC_MONTHS.get(match.group(2).casefold())
+    if not month:
+        return None
+    return datetime(int(match.group(1)), month, 1, tzinfo=timezone.utc)
+
+
 def recent_update_ids(json_text, lookback_days=45):
     data = json.loads(json_text)
     values = data.get("value", [])
@@ -99,10 +123,13 @@ def recent_update_ids(json_text, lookback_days=45):
     ids = []
     for item in values:
         current = _parse_date(item.get("CurrentReleaseDate") or item.get("InitialReleaseDate"))
+        doc_id = item.get("ID")
+        doc_month = _parse_doc_month(doc_id)
+
         if current and current < threshold:
             continue
-        doc_id = item.get("ID")
-        if doc_id:
+
+        if doc_month and doc_month.date() >= threshold.replace(day=1).date():
             ids.append(doc_id)
 
     return ids, {"status": SUCCESS if ids else SUCCESS_NO_RESULTS, "raw_count": len(values), "count": len(ids)}
@@ -149,7 +176,7 @@ def parse_cvrf_document(json_text, service_key, url):
 
 
 def cvrf_detail_url(doc_id):
-    return f"{MSRC_CVRF_BASE_URL}{doc_id}"
+    return f"{MSRC_CVRF_BASE_URL}{doc_id}?api-version=2023-11-01"
 
 
 def fetch_for_service(service, graph_urls, msrc_url, lookback_days=45):
@@ -174,7 +201,7 @@ def fetch_for_service(service, graph_urls, msrc_url, lookback_days=45):
             for doc_id in ids:
                 detail_url = cvrf_detail_url(doc_id)
                 try:
-                    detail_text = fetch_text(detail_url)
+                    detail_text = fetch_text(detail_url, headers={"Accept": "application/json"})
                     parsed, detail_status = parse_cvrf_document(detail_text, service["key"], detail_url)
                     events.extend(parsed)
                     health[f"msrc_cvrf:{service['key']}:{doc_id}"] = detail_status
