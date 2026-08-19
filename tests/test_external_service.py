@@ -143,6 +143,33 @@ class ExternalServiceWatchTests(unittest.TestCase):
         self.assertEqual(events[0]["id"], "CVE-2026-55555")
         self.assertIn("Microsoft Graph Teams online meetings", events[0]["raw"]["affected"])
 
+    def test_msrc_fetch_uses_official_cvrf_detail_endpoint(self):
+        updates = (FIXTURES / "msrc_updates.json").read_text(encoding="utf-8")
+        cvrf = (FIXTURES / "msrc_cvrf.json").read_text(encoding="utf-8")
+        graph_html = (FIXTURES / "microsoft_graph.html").read_text(encoding="utf-8")
+        urls = []
+
+        def fake_fetch(url):
+            urls.append(url)
+            if url.endswith("/updates"):
+                return updates
+            if url.endswith("/cvrf/2026-Aug"):
+                return cvrf
+            return graph_html
+
+        service = {"key": "microsoft_graph_teams"}
+        with mock.patch("external_service.sources.microsoft.fetch_text", side_effect=fake_fetch):
+            events, health = microsoft.fetch_for_service(
+                service,
+                ["https://developer.microsoft.com/en-us/graph/changelog?filterBy=Cloud%20communications"],
+                "https://api.msrc.microsoft.com/cvrf/v3.0/updates",
+                lookback_days=999,
+            )
+
+        self.assertIn("https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug", urls)
+        self.assertTrue(any(event["id"] == "CVE-2026-55555" for event in events))
+        self.assertIn("msrc_cvrf:microsoft_graph_teams:2026-Aug", health)
+
     def test_osv_normalization(self):
         event = osv.normalize_vuln(
             {

@@ -2,11 +2,13 @@ import json
 import re
 from datetime import datetime, timedelta, timezone
 from html.parser import HTMLParser
-from urllib.parse import urljoin
 
 from external_service.http import fetch_text
 from external_service.model import FETCH_ERROR, SCHEMA_CHANGED, SUCCESS, SUCCESS_NO_RESULTS
 from external_service.normalize import make_event
+
+
+MSRC_CVRF_BASE_URL = "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/"
 
 
 class TextParser(HTMLParser):
@@ -146,6 +148,10 @@ def parse_cvrf_document(json_text, service_key, url):
     return events, {"status": SUCCESS if events else SUCCESS_NO_RESULTS, "raw_count": len(vulnerabilities), "count": len(events)}
 
 
+def cvrf_detail_url(doc_id):
+    return f"{MSRC_CVRF_BASE_URL}{doc_id}"
+
+
 def fetch_for_service(service, graph_urls, msrc_url, lookback_days=45):
     events = []
     health = {}
@@ -166,7 +172,7 @@ def fetch_for_service(service, graph_urls, msrc_url, lookback_days=45):
             ids, status = recent_update_ids(updates_text, lookback_days=lookback_days)
             health[f"msrc_updates:{service['key']}"] = status
             for doc_id in ids:
-                detail_url = urljoin(msrc_url, f"./cvrf/{doc_id}")
+                detail_url = cvrf_detail_url(doc_id)
                 try:
                     detail_text = fetch_text(detail_url)
                     parsed, detail_status = parse_cvrf_document(detail_text, service["key"], detail_url)
