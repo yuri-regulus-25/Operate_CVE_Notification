@@ -1,0 +1,86 @@
+{
+  "lookback_days": 14,
+  "services": [
+    {
+      "key": "slack",
+      "display": "Slack",
+      "products": ["web_api", "incoming_webhooks", "oauth"],
+      "endpoints": ["chat.postMessage", "incoming webhook"],
+      "keywords": ["slack", "web api", "incoming webhook", "oauth", "authentication", "chat.postmessage"],
+      "exclude_keywords": ["desktop app", "mobile app", "cli", "bolt", "sdk"],
+      "sources": {
+        "nvd_keywords": ["Slack"],
+        "feed_urls": ["https://docs.slack.dev/changelog/rss.xml", "https://docs.slack.dev/changelog/atom.xml"]
+      }
+    },
+    {
+      "key": "google_calendar",
+      "display": "Google Calendar",
+      "products": ["calendar_api", "oauth2"],
+      "endpoints": ["events", "events.insert", "events.update", "events.delete", "events.list"],
+      "keywords": ["google calendar", "calendar api", "events api", "oauth", "authentication", "authorization"],
+      "exclude_keywords": ["google calendar app", "mobile app"],
+      "sdk": {
+        "ecosystem": "Packagist",
+        "package": "google/apiclient",
+        "version": "2.12.6"
+      },
+      "sources": {
+        "nvd_keywords": ["Google Calendar", "google/apiclient"],
+        "feed_urls": ["https://developers.google.com/feeds/calendar-release-notes.xml"]
+      }
+    },
+    {
+      "key": "microsoft_graph_calendar",
+      "display": "Microsoft Graph Calendar",
+      "products": ["microsoft_graph", "calendar", "events", "calendarview", "oauth2"],
+      "endpoints": ["events", "calendarView", "onlineMeetings"],
+      "keywords": ["microsoft graph", "calendar", "events", "calendarview", "oauth", "online meeting", "teams"],
+      "exclude_keywords": ["windows client", "outlook desktop"],
+      "sdk": {
+        "ecosystem": "Packagist",
+        "package": "microsoft/microsoft-graph",
+        "version": "1.81.0"
+      },
+      "sources": {
+        "nvd_keywords": ["Microsoft Graph", "Outlook Calendar", "Microsoft Teams"],
+        "graph_html_urls": [
+          "https://developer.microsoft.com/en-us/graph/changelog?filterBy=Calendar",
+          "https://developer.microsoft.com/en-us/graph/changelog?filterBy=Cloud%20communications"
+        ],
+        "msrc_url": "https://api.msrc.microsoft.com/cvrf/v3.0/updates"
+      }
+    },
+    {
+      "key": "microsoft_graph_teams",
+      "display": "Microsoft Graph Teams",
+      "products": ["microsoft_graph", "teams", "events", "online_meeting", "oauth2"],
+      "endpoints": ["events", "onlineMeetings", "isOnlineMeeting", "onlineMeetingProvider"],
+      "keywords": ["microsoft graph", "teams", "online meeting", "oauth", "event"],
+      "exclude_keywords": ["windows client", "teams desktop"],
+      "sdk": {
+        "ecosystem": "Packagist",
+        "package": "microsoft/microsoft-graph",
+        "version": "1.81.0"
+      },
+      "sources": {
+        "nvd_keywords": ["Microsoft Graph", "Microsoft Teams"],
+        "graph_html_urls": ["https://developer.microsoft.com/en-us/graph/changelog?filterBy=Cloud%20communications"],
+        "msrc_url": "https://api.msrc.microsoft.com/cvrf/v3.0/updates"
+      }
+    },
+    {
+      "key": "zoom",
+      "display": "Zoom",
+      "products": ["rest_api", "oauth2", "meetings", "users", "recordings"],
+      "endpoints": ["meetings", "users", "recordings", "oauth token", "oauth authorize"],
+      "keywords": ["zoom", "rest api", "oauth", "meetings", "users", "recordings", "developer"],
+      "exclude_keywords": ["zoom workplace for windows", "zoom clients for windows", "zoom rooms", "vdi plugin", "desktop client"],
+      "sources": {
+        "nvd_keywords": ["Zoom"],
+        "developer_feed_urls": ["https://devforum.zoom.us/c/changelog/100.rss"],
+        "security_bulletin_url": "https://www.zoom.com/en/trust/security-bulletin/"
+      }
+    }
+  ]
+}
