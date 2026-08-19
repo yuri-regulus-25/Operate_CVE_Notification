@@ -2,13 +2,14 @@ import json
 import sys
 import unittest
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from external_service.normalize import make_event, merge_events
 from external_service.relevance import decide
-from external_service.sources import feed, microsoft, nvd, osv, zoom
+from external_service.sources import feed, jvn, microsoft, nvd, osv, zoom
 
 
 FIXTURES = ROOT / "tests" / "fixtures"
@@ -62,6 +63,40 @@ class ExternalServiceWatchTests(unittest.TestCase):
         event = nvd.normalize_item(item, "zoom", "Zoom")
         self.assertEqual(event["id"], "CVE-2026-12345")
         self.assertEqual(event["severity"]["level"], "HIGH")
+
+    def test_nvd_fetch_paginates_published_and_modified(self):
+        pages = [
+            {
+                "totalResults": 2,
+                "resultsPerPage": 1,
+                "vulnerabilities": [{"cve": {"id": "CVE-2026-1000", "descriptions": [{"lang": "en", "value": "Zoom REST API vulnerability"}]}}],
+            },
+            {
+                "totalResults": 2,
+                "resultsPerPage": 1,
+                "vulnerabilities": [{"cve": {"id": "CVE-2026-1001", "descriptions": [{"lang": "en", "value": "Zoom REST API vulnerability"}]}}],
+            },
+            {"totalResults": 0, "resultsPerPage": 1, "vulnerabilities": []},
+        ]
+        service = {"key": "zoom", "sources": {"nvd_keywords": ["Zoom"]}}
+        with mock.patch("external_service.sources.nvd.fetch_json", side_effect=pages) as fetch:
+            with mock.patch("external_service.sources.nvd.time.sleep"):
+                events, status = nvd.fetch_for_service(service, "2026-08-01T00:00:00.000Z", "2026-08-19T00:00:00.000Z", results_per_page=1)
+        self.assertEqual(status["status"], "SUCCESS")
+        self.assertEqual(len(events), 2)
+        self.assertEqual(fetch.call_count, 3)
+
+    def test_jvn_fetch_uses_published_and_modified_date_windows(self):
+        service = {"key": "zoom", "sources": {"nvd_keywords": ["Zoom"]}}
+        empty_jvn = """<?xml version="1.0"?><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rss="http://purl.org/rss/1.0/" />"""
+        with mock.patch("external_service.sources.jvn.fetch_text", return_value=empty_jvn) as fetch:
+            events, status = jvn.fetch_for_service(service, lookback_days=14)
+        urls = [call.args[0] for call in fetch.call_args_list]
+        self.assertEqual(events, [])
+        self.assertEqual(status["status"], "SUCCESS_NO_RESULTS")
+        self.assertEqual(len(urls), 2)
+        self.assertIn("dateFirstPublishedStartY", urls[0])
+        self.assertIn("datePublishedStartY", urls[1])
 
     def test_microsoft_graph_html_parsing(self):
         html_text = (FIXTURES / "microsoft_graph.html").read_text(encoding="utf-8")

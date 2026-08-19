@@ -114,7 +114,7 @@ def collect_all(config):
         events.extend(nvd_events)
         health[f"nvd:{service['key']}"] = nvd_status
 
-        jvn_events, jvn_status = jvn.fetch_for_service(service)
+        jvn_events, jvn_status = jvn.fetch_for_service(service, config.get("lookback_days", 14))
         events.extend(jvn_events)
         health[f"jvn:{service['key']}"] = jvn_status
 

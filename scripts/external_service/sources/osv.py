@@ -1,6 +1,7 @@
 import json
 import urllib.request
 
+from external_service.http import fetch_json
 from external_service.model import FETCH_ERROR, SUCCESS, SUCCESS_NO_RESULTS
 from external_service.normalize import make_event
 
@@ -60,7 +61,7 @@ def fetch_for_services(services):
         events = []
         for service, result in zip(sdk_services, batch.get("results", [])):
             for vuln_ref in result.get("vulns", []):
-                vuln = json.loads(urllib.request.urlopen(OSV_VULN_URL + vuln_ref["id"], timeout=60).read().decode("utf-8"))
+                vuln = fetch_json(OSV_VULN_URL + vuln_ref["id"])
                 event = normalize_vuln(vuln, service)
                 if event:
                     events.append(event)

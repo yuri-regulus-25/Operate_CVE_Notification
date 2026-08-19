@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 import urllib.parse
+from datetime import datetime, timedelta, timezone
 
 from external_service.http import fetch_text
 
@@ -36,26 +37,45 @@ def parse_jvn(xml_text, service_key, requested_keyword):
     return events, {"status": SUCCESS if events else SUCCESS_NO_RESULTS, "count": len(events)}
 
 
-def fetch_for_service(service):
+def _date_params(prefix, start, end):
+    return {
+        f"{prefix}StartY": f"{start.year:04d}",
+        f"{prefix}StartM": f"{start.month:02d}",
+        f"{prefix}StartD": f"{start.day:02d}",
+        f"{prefix}EndY": f"{end.year:04d}",
+        f"{prefix}EndM": f"{end.month:02d}",
+        f"{prefix}EndD": f"{end.day:02d}",
+    }
+
+
+def fetch_for_service(service, lookback_days=14):
     events = []
+    end = datetime.now(timezone(timedelta(hours=9))).date()
+    start = end - timedelta(days=lookback_days)
+
     for keyword in service.get("sources", {}).get("nvd_keywords", []):
-        params = {
-            "method": "getVulnOverviewList",
-            "feed": "hnd",
-            "keyword": keyword,
-            "useSynonym": "1",
-            "rangeDatePublic": "n",
-            "rangeDatePublished": "n",
-            "rangeDateFirstPublished": "n",
-            "maxCountItem": 50,
-        }
-        try:
-            xml_text = fetch_text(JVN_API_URL + "?" + urllib.parse.urlencode(params), timeout=60, retries=3)
-            parsed, status = parse_jvn(xml_text, service["key"], keyword)
-            events.extend(parsed)
-            if status["status"] not in {SUCCESS, SUCCESS_NO_RESULTS}:
-                return events, status
-        except Exception as error:
-            return events, {"status": FETCH_ERROR, "message": str(error)}
+        for date_type, date_values in (
+            ("published", _date_params("dateFirstPublished", start, end)),
+            ("modified", _date_params("datePublished", start, end)),
+        ):
+            params = {
+                "method": "getVulnOverviewList",
+                "feed": "hnd",
+                "keyword": keyword,
+                "useSynonym": "1",
+                "rangeDatePublic": "n",
+                "rangeDatePublished": "n",
+                "rangeDateFirstPublished": "n",
+                "maxCountItem": 50,
+                **date_values,
+            }
+            try:
+                xml_text = fetch_text(JVN_API_URL + "?" + urllib.parse.urlencode(params), timeout=60, retries=3)
+                parsed, status = parse_jvn(xml_text, service["key"], keyword)
+                events.extend(parsed)
+                if status["status"] not in {SUCCESS, SUCCESS_NO_RESULTS}:
+                    return events, status
+            except Exception as error:
+                return events, {"status": FETCH_ERROR, "message": f"{keyword}/{date_type}: {error}"}
 
     return events, {"status": SUCCESS if events else SUCCESS_NO_RESULTS, "count": len(events)}

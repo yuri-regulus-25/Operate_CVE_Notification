@@ -57,20 +57,31 @@ def fetch_for_service(service, start_iso, end_iso, results_per_page=100, delay=3
             {"pubStartDate": start_iso, "pubEndDate": end_iso},
             {"lastModStartDate": start_iso, "lastModEndDate": end_iso},
         ):
-            params = {
-                "keywordSearch": keyword,
-                "resultsPerPage": results_per_page,
-                "startIndex": 0,
-                **date_params,
-            }
-            try:
-                data = fetch_json(NVD_API_URL + "?" + urllib.parse.urlencode(params), headers=headers)
-            except Exception as error:
-                return [], {"status": FETCH_ERROR, "message": str(error)}
-            for item in data.get("vulnerabilities", []):
-                event = normalize_item(item, service["key"], keyword)
-                if event:
-                    events.append(event)
+            start_index = 0
+            while True:
+                params = {
+                    "keywordSearch": keyword,
+                    "resultsPerPage": results_per_page,
+                    "startIndex": start_index,
+                    **date_params,
+                }
+                try:
+                    data = fetch_json(NVD_API_URL + "?" + urllib.parse.urlencode(params), headers=headers)
+                except Exception as error:
+                    return [], {"status": FETCH_ERROR, "message": str(error)}
+
+                vulnerabilities = data.get("vulnerabilities", [])
+                for item in vulnerabilities:
+                    event = normalize_item(item, service["key"], keyword)
+                    if event:
+                        events.append(event)
+
+                page_size = data.get("resultsPerPage", len(vulnerabilities))
+                total = data.get("totalResults", 0)
+                start_index += page_size
+                if not vulnerabilities or start_index >= total:
+                    break
+                time.sleep(delay)
             time.sleep(delay)
 
     return events, {"status": SUCCESS if events else SUCCESS_NO_RESULTS, "count": len(events)}
