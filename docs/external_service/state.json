@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-20T21:43:44.696928+00:00",
+  "generated_at": "2026-08-21T21:38:30.275960+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
-      "count": 4
+      "count": 8
     },
     "jvn:slack": {
       "status": "SUCCESS_NO_RESULTS",
@@ -37,7 +37,7 @@
     },
     "nvd:microsoft_graph_calendar": {
       "status": "SUCCESS",
-      "count": 23
+      "count": 22
     },
     "jvn:microsoft_graph_calendar": {
       "status": "SUCCESS",
@@ -60,17 +60,17 @@
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 491,
-      "count": 18
+      "raw_count": 895,
+      "count": 19
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Jul": {
       "status": "SUCCESS",
-      "raw_count": 1528,
+      "raw_count": 1996,
       "count": 15
     },
     "nvd:microsoft_graph_teams": {
       "status": "SUCCESS",
-      "count": 23
+      "count": 22
     },
     "jvn:microsoft_graph_teams": {
       "status": "SUCCESS_NO_RESULTS",
@@ -88,12 +88,12 @@
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 491,
-      "count": 18
+      "raw_count": 895,
+      "count": 19
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Jul": {
       "status": "SUCCESS",
-      "raw_count": 1528,
+      "raw_count": 1996,
       "count": 15
     },
     "nvd:zoom": {
