@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-20T20:58:54.154545+00:00",
-  "count": 82,
+  "generated_at": "2026-08-21T10:00:47.854824+00:00",
+  "count": 83,
   "sources": {
-    "NVD": 63,
+    "NVD": 64,
     "JVN": 19
   },
   "alerts": [
@@ -431,6 +431,30 @@
       "description": "deepmerge-ts is a typescript library providing functionality to deep merging of javascript objects. Prior to 8.0.0, the deepmerge, deepmergeCustom, deepmergeInto, and deepmergeIntoCustom APIs do not track visited objects or object pairs when recursively merging records. When two input values contain self-references at the same property path, the merge logic repeatedly revisits the same pair until Node.js raises RangeError: Maximum call stack size exceeded. Applications that merge attacker-contro...",
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-40345",
       "actual_product": "deepmerge-ts",
+      "package_name": "",
+      "ecosystem": "npm / Node.js",
+      "relation_type": "direct_product",
+      "classification_reason": "description_subject",
+      "tracked_keyword": "Node.js",
+      "noise_risk": "medium"
+    },
+    {
+      "alert_id": "nvd:cve-2026-74866:node.js",
+      "source": "NVD",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-74866",
+      "matched": "Node.js",
+      "severity": "MEDIUM",
+      "score": 5.8,
+      "published": "2026-08-21T09:16:40.890",
+      "last_modified": "2026-08-21T09:16:40.890",
+      "title": "CVE-2026-74866",
+      "description": "@fastify/busboy is a multipart form-data parser for Node.js. Its multipart part-header parser splits header lines only on the two-byte carriage-return line-feed sequence, so a lone carriage return or line feed embedded in a part header is not treated as a line break and is carried verbatim into the parsed Content-Disposition filename and field name handed to the application. An attacker who uploads a file whose filename or field name contains a bare carriage return or line feed can inject contro...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-74866",
+      "actual_product": "@fastify/busboy",
       "package_name": "",
       "ecosystem": "npm / Node.js",
       "relation_type": "direct_product",
