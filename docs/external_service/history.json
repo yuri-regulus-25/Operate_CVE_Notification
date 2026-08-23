@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T21:36:13.292221+00:00",
+  "generated_at": "2026-08-23T21:36:34.367079+00:00",
   "count": 89,
   "alerts": [
     {
@@ -47,7 +47,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600650+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.292182+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.367036+00:00"
     },
     {
       "id": "CVE-2025-67461",
@@ -94,7 +94,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600632+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.292164+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.367019+00:00"
     },
     {
       "id": "CVE-2026-22844",
@@ -141,7 +141,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600614+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.292102+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366958+00:00"
     },
     {
       "id": "CVE-2026-30900",
@@ -192,7 +192,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600597+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.292087+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366943+00:00"
     },
     {
       "id": "CVE-2026-30901",
@@ -239,7 +239,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600580+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.292072+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366928+00:00"
     },
     {
       "id": "CVE-2026-30902",
@@ -287,7 +287,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600563+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.292056+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366913+00:00"
     },
     {
       "id": "CVE-2026-30903",
@@ -335,7 +335,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600545+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.292039+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366896+00:00"
     },
     {
       "id": "CVE-2026-30904",
@@ -383,7 +383,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600525+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.292019+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366878+00:00"
     },
     {
       "id": "CVE-2026-30905",
@@ -431,7 +431,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600506+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.292001+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366861+00:00"
     },
     {
       "id": "CVE-2026-30906",
@@ -479,7 +479,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600485+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291980+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366842+00:00"
     },
     {
       "id": "CVE-2026-53406",
@@ -526,7 +526,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600467+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291963+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366826+00:00"
     },
     {
       "id": "CVE-2026-53407",
@@ -577,7 +577,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600444+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291941+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366805+00:00"
     },
     {
       "id": "vendor:google_calendar:2018-03-22:c216831f23f0fda9",
@@ -625,7 +625,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600422+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291920+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366785+00:00"
     },
     {
       "id": "vendor:google_calendar:2018-10-31:0443de64b724a59b",
@@ -675,7 +675,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600385+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291885+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366752+00:00"
     },
     {
       "id": "CVE-2020-1135",
@@ -745,7 +745,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T21:41:21.832431+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291863+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366731+00:00"
     },
     {
       "id": "CVE-2020-1153",
@@ -828,7 +828,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T21:41:21.832350+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291784+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366655+00:00"
     },
     {
       "id": "CVE-2021-38657",
@@ -889,7 +889,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600362+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291688+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366560+00:00"
     },
     {
       "id": "CVE-2021-38658",
@@ -953,7 +953,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600340+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291667+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366540+00:00"
     },
     {
       "id": "CVE-2021-38659",
@@ -1014,7 +1014,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600314+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291642+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366517+00:00"
     },
     {
       "id": "CVE-2021-38660",
@@ -1076,7 +1076,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600294+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291623+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366498+00:00"
     },
     {
       "id": "CVE-2022-41107",
@@ -1141,7 +1141,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600271+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291602+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366478+00:00"
     },
     {
       "id": "CVE-2023-29328",
@@ -1205,7 +1205,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600236+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291569+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366447+00:00"
     },
     {
       "id": "CVE-2023-29330",
@@ -1269,7 +1269,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600200+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291547+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366425+00:00"
     },
     {
       "id": "CVE-2023-49282",
@@ -1331,7 +1331,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600172+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291520+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366398+00:00"
     },
     {
       "id": "CVE-2024-21374",
@@ -1392,7 +1392,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599970+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291311+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366204+00:00"
     },
     {
       "id": "vendor:google_calendar:2025-10-27:881255216f0b22cc",
@@ -1442,7 +1442,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599894+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291290+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366182+00:00"
     },
     {
       "id": "CVE-2026-42897",
@@ -1505,7 +1505,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.554543+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291212+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.366119+00:00"
     },
     {
       "id": "CVE-2026-44806",
@@ -1591,7 +1591,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.554402+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.291064+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.365965+00:00"
     },
     {
       "id": "CVE-2026-47304",
@@ -1720,7 +1720,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.554223+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.290877+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.365797+00:00"
     },
     {
       "id": "CVE-2026-49159",
@@ -1783,7 +1783,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.553477+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.290087+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.365082+00:00"
     },
     {
       "id": "CVE-2026-50296",
@@ -1865,7 +1865,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.553408+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.290018+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.365017+00:00"
     },
     {
       "id": "CVE-2026-50302",
@@ -1939,7 +1939,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.553262+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.289865+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.364880+00:00"
     },
     {
       "id": "CVE-2026-50303",
@@ -2017,7 +2017,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.553118+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.289717+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.364745+00:00"
     },
     {
       "id": "CVE-2026-50352",
@@ -2103,7 +2103,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552971+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.289565+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.364609+00:00"
     },
     {
       "id": "CVE-2026-50483",
@@ -2173,7 +2173,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552778+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.289370+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.364434+00:00"
     },
     {
       "id": "CVE-2026-50493",
@@ -2251,7 +2251,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552701+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.289290+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.364359+00:00"
     },
     {
       "id": "CVE-2026-50681",
@@ -2333,7 +2333,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552573+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.289138+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.364229+00:00"
     },
     {
       "id": "CVE-2026-55144",
@@ -2401,7 +2401,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552392+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288949+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.364000+00:00"
     },
     {
       "id": "CVE-2026-55145",
@@ -2461,7 +2461,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552313+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288868+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363925+00:00"
     },
     {
       "id": "CVE-2026-58609",
@@ -2550,7 +2550,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552210+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288762+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363824+00:00"
     },
     {
       "id": "CVE-2026-58638",
@@ -2634,7 +2634,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552042+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288588+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363667+00:00"
     },
     {
       "id": "vendor:slack:2026-07-15:c3c49ddb44ade4b4",
@@ -2678,7 +2678,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599828+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288415+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363511+00:00"
     },
     {
       "id": "CVE-2026-59864",
@@ -2737,7 +2737,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599806+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288395+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363492+00:00"
     },
     {
       "id": "CVE-2026-53409",
@@ -2789,7 +2789,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599743+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288334+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363435+00:00"
     },
     {
       "id": "CVE-2026-53410",
@@ -2845,7 +2845,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599725+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288317+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363418+00:00"
     },
     {
       "id": "CVE-2026-53411",
@@ -2897,7 +2897,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599701+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288294+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363396+00:00"
     },
     {
       "id": "CVE-2026-53412",
@@ -2952,7 +2952,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599680+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288274+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363377+00:00"
     },
     {
       "id": "CVE-2026-28169",
@@ -3003,7 +3003,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599651+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288239+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363351+00:00"
     },
     {
       "id": "CVE-2026-65667",
@@ -3016,7 +3016,7 @@
       "title": "CVE-2026-65667",
       "description": "Missing authorization in Microsoft Teams allows an unauthorized attacker to elevate privileges over a network.",
       "published_at": "2026-08-07T00:16:38.680",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "CRITICAL",
         "cvss": 10.0
@@ -3069,7 +3069,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599585+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288225+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363336+00:00"
     },
     {
       "id": "CVE-2026-17023",
@@ -3120,7 +3120,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599558+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288199+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363311+00:00"
     },
     {
       "id": "vendor:google_calendar:2026-08-10:405c5b3ac1fef4d4",
@@ -3164,7 +3164,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599525+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288168+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363281+00:00"
     },
     {
       "id": "vendor:microsoft_graph_calendar:2026-08-10:50fb86833b4613de",
@@ -3212,7 +3212,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599505+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288148+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363260+00:00"
     },
     {
       "id": "CVE-2026-59130",
@@ -3225,7 +3225,7 @@
       "title": "CVE-2026-59130",
       "description": "CVE-2026-59130 <p>No cwe for this issue in AMD Zen allows an authorized attacker to disclose information locally.</p> <p><strong>What type of information could be disclosed by this vulnerability</strong></p> <p>If the attacker has both the ability to modify the encrypted secret where it is stored and to observe the precise timing for the secret being decrypted by the application, the attacker could infer the original secret across many decryption attempts.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does that mean for this vulnerability</strong></p> <p>To exploit this vulnerability, an attacker would need to target an application by persisting encrypted secrets that are using specific old cryptography and Windows APIs.</p> AMD Zen Microsoft Yes Windows 10 Version 1809 for 32-bit Systems Windows 10 Version 1809 for x64-based Systems Windows Server 2019 Windows Server 2019 (Server Core installation) Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems Windows 10 Version 1607 for 32-bit Systems Windows 10 Version 1607 for x64-based Systems Windows Server 2016 Windows Server 2016 (Server Core installation) Windows Server 2012 R2 Windows Server 2012 R2 (Server Core installation)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3299,7 +3299,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.551546+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.288124+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363235+00:00"
     },
     {
       "id": "CVE-2026-59131",
@@ -3312,7 +3312,7 @@
       "title": "CVE-2026-59131",
       "description": "CVE-2026-59131 <p>No cwe for this issue in AMD Zen allows an authorized attacker to disclose information locally.</p> <p><strong>What type of information could be disclosed by this vulnerability</strong></p> <p>If the attacker has both the ability to modify the encrypted secret where it is stored and to observe the precise timing for the secret being decrypted by the application, the attacker could infer the original secret across many decryption attempts.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does that mean for this vulnerability</strong></p> <p>To exploit this vulnerability, an attacker would need to target an application by persisting encrypted secrets that are using specific old cryptography and Windows APIs.</p> AMD Zen Microsoft Yes Windows 10 Version 1809 for 32-bit Systems Windows 10 Version 1809 for x64-based Systems Windows Server 2019 Windows Server 2019 (Server Core installation) Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems Windows 10 Version 1607 for 32-bit Systems Windows 10 Version 1607 for x64-based Systems Windows Server 2016 Windows Server 2016 (Server Core installation) Windows Server 2012 R2 Windows Server 2012 R2 (Server Core installation)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3386,7 +3386,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.551334+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.287908+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.363032+00:00"
     },
     {
       "id": "CVE-2026-61346",
@@ -3399,7 +3399,7 @@
       "title": "CVE-2026-61346",
       "description": "CVE-2026-61346 <p>Use after free in Windows Graphics Kernel allows an authorized attacker to elevate privileges locally.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does that mean for this vulnerability?</strong></p> <p>Successful exploitation of this vulnerability requires an attacker to win a race condition.</p> <p><strong>What privileges could be gained by an attacker who successfully exploited this vulnerability?</strong></p> <p>An attacker who successfully exploited this vulnerability could gain SYSTEM privileges.</p> Windows Graphics Kernel Microsoft Yes Windows 10 Version 1809 for 32-bit Systems Windows 10 Version 1809 for x64-based Systems Windows Server 2019 Windows Server 2019 (Server Core installation) Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3467,7 +3467,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.551109+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.287669+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.362821+00:00"
     },
     {
       "id": "CVE-2026-62702",
@@ -3480,7 +3480,7 @@
       "title": "CVE-2026-62702",
       "description": "CVE-2026-62702 <p>Null pointer dereference in Windows Graphics Kernel allows an unauthorized attacker to deny service over a network.</p> Windows Graphics Kernel Microsoft Yes Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3544,7 +3544,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550933+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.287486+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.362654+00:00"
     },
     {
       "id": "CVE-2026-62757",
@@ -3557,7 +3557,7 @@
       "title": "CVE-2026-62757",
       "description": "CVE-2026-62757 <p>Improper verification of cryptographic signature in Windows Schannel allows an unauthorized attacker to bypass a security feature over a network.</p> <p><strong>What kind of security feature could be bypassed by successfully exploiting this vulnerability?</strong></p> <p>An attacker who successfully exploited this vulnerability could bypass certificate validation during the account enrollment process.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does this mean for this vulnerability?</strong></p> <p>An attacker would need specific conditions to be in place (i.e. particular protocol settings, or configurations, etc.) before an attack could succeed, which reduces the likelihood of widespread or opportunistic exploitation.</p> Windows Schannel Microsoft Yes Windows 10 Version 1809 for 32-bit Systems Windows 10 Version 1809 for x64-based Systems Windows Server 2019 Windows Server 2019 (Server Core installation) Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems Windows 10 Version 1607 for 32-bit Systems Windows 10 Version 1607 for x64-based Systems Windows Server 2016 Windows Server 2016 (Server Core installation) Windows Server 2012 Windows Server 2012 (Server Core installation) Windows Server 2012 R2 Windows Server 2012 R2 (Server Core installation)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3633,7 +3633,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550797+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.287350+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.362531+00:00"
     },
     {
       "id": "CVE-2026-62774",
@@ -3646,7 +3646,7 @@
       "title": "CVE-2026-62774",
       "description": "CVE-2026-62774 <p>Use after free in Windows Graphics Kernel allows an authorized attacker to elevate privileges locally.</p> <p><strong>What privileges could be gained by an attacker who successfully exploited this vulnerability?</strong></p> <p>An attacker who successfully exploited this vulnerability could gain SYSTEM privileges.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does that mean for this vulnerability?</strong></p> <p>Successful exploitation of this vulnerability requires an attacker to win a race condition.</p> Windows Graphics Kernel Microsoft Yes Windows 10 Version 1809 for 32-bit Systems Windows 10 Version 1809 for x64-based Systems Windows Server 2019 Windows Server 2019 (Server Core installation) Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems Windows 10 Version 1607 for 32-bit Systems Windows 10 Version 1607 for x64-based Systems Windows Server 2016 Windows Server 2016 (Server Core installation)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3718,7 +3718,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550563+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.287095+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.362311+00:00"
     },
     {
       "id": "CVE-2026-62834",
@@ -3731,7 +3731,7 @@
       "title": "CVE-2026-62834",
       "description": "CVE-2026-62834 <p>Improper verification of cryptographic signature in Azure Data Factory allows an unauthorized attacker to elevate privileges over a network.</p> <p><strong>Why are there no links to an update or instructions with steps that must be taken to protect from this vulnerability?</strong></p> <p>This vulnerability has already been fully mitigated by Microsoft. There is no action for users of this service to take. The purpose of this CVE is to provide further transparency.</p> <p>Please see <a href=\"https://aka.ms/MSRC-Cloud-CVEs\">Toward greater transparency: Unveiling Cloud Service CVEs</a> for more information.</p> Azure Data Factory Microsoft No Azure Data Factory",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3778,7 +3778,7 @@
         ]
       },
       "first_seen_at": "2026-08-20T21:43:44.691727+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286876+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.362114+00:00"
     },
     {
       "id": "CVE-2026-62873",
@@ -3791,7 +3791,7 @@
       "title": "CVE-2026-62873",
       "description": "CVE-2026-62873 <p>Improper verification of cryptographic signature in Microsoft 365 Admin Center allows an unauthorized attacker to elevate privileges over a network.</p> <p><strong>Why are there no links to an update or instructions with steps that must be taken to protect from this vulnerability?</strong></p> <p>This vulnerability has already been fully mitigated by Microsoft. There is no action for users of this service to take. The purpose of this CVE is to provide further transparency.</p> <p>Please see <a href=\"https://aka.ms/MSRC-Cloud-CVEs\">Toward greater transparency: Unveiling Cloud Service CVEs</a> for more information.</p> Microsoft 365 Admin Center Microsoft No Microsoft 365 Admin Center",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3838,7 +3838,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550355+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286812+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.362046+00:00"
     },
     {
       "id": "CVE-2026-62882",
@@ -3851,7 +3851,7 @@
       "title": "CVE-2026-62882",
       "description": "CVE-2026-62882 <p>Insufficiently protected credentials in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.</p> <p><strong>According to the CVSS metric, user interaction is required (UI:R). What interaction would the user have to do?</strong></p> <p>An attacker must send a user a malicious Office file and convince them to open it.</p> Microsoft Office Outlook Microsoft Yes Microsoft Office 2019 for 32-bit editions Microsoft Office 2019 for 64-bit editions Microsoft 365 Apps for Enterprise for 32-bit Systems Microsoft 365 Apps for Enterprise for 64-bit Systems Microsoft Office LTSC 2021 for 64-bit editions Microsoft Office LTSC 2021 for 32-bit editions Microsoft Office LTSC 2024 for 32-bit editions Microsoft Office LTSC 2024 for 64-bit editions Microsoft Outlook 2016 (32-bit edition) Microsoft Outlook 2016 (64-bit edition)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3907,7 +3907,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550286+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286743+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361983+00:00"
     },
     {
       "id": "CVE-2026-62896",
@@ -3920,7 +3920,7 @@
       "title": "CVE-2026-62896",
       "description": "CVE-2026-62896 <p>Improper authentication in Microsoft Teams allows an authorized attacker to elevate privileges over a network.</p> <p><strong>Why are there no links to an update or instructions with steps that must be taken to protect from this vulnerability?</strong></p> <p>This vulnerability has already been fully mitigated by Microsoft. There is no action for users of this service to take. The purpose of this CVE is to provide further transparency.</p> <p>Please see <a href=\"https://aka.ms/MSRC-Cloud-CVEs\">Toward greater transparency: Unveiling Cloud Service CVEs</a> for more information.</p> Microsoft Teams Microsoft No Microsoft Teams",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3967,7 +3967,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599636+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286627+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361882+00:00"
     },
     {
       "id": "CVE-2026-62918",
@@ -3980,7 +3980,7 @@
       "title": "CVE-2026-62918",
       "description": "CVE-2026-62918 <p>Improper verification of cryptographic signature in Microsoft Teams allows an unauthorized attacker to perform spoofing over a network.</p> <p><strong>Why are there no links to an update or instructions with steps that must be taken to protect from this vulnerability?</strong></p> <p>This vulnerability has already been fully mitigated by Microsoft. There is no action for users of this service to take. The purpose of this CVE is to provide further transparency.</p> <p>Please see <a href=\"https://aka.ms/MSRC-Cloud-CVEs\">Toward greater transparency: Unveiling Cloud Service CVEs</a> for more information.</p> Microsoft Teams Microsoft No Microsoft Teams",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -4027,7 +4027,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599612+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286568+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361827+00:00"
     },
     {
       "id": "CVE-2026-63518",
@@ -4040,7 +4040,7 @@
       "title": "CVE-2026-63518",
       "description": "CVE-2026-63518 <p>Heap-based buffer overflow in Microsoft Office Word allows an unauthorized attacker to execute code locally.</p> <p><strong>According to the CVSS metric, the attack vector is local (AV:L). Why does the CVE title indicate that this is a remote code execution?</strong></p> <p>The word <strong>Remote</strong> in the title refers to the location of the attacker. This type of exploit is sometimes referred to as Arbitrary Code Execution (ACE). The attack itself is carried out locally. This means an attacker or victim needs to execute code from the local machine to exploit the vulnerability.</p> <p><strong>According to the CVSS metric, user interaction is required (UI:R). What interaction would the user have to do?</strong></p> <p>An attacker must send a user a malicious Office file and convince them to open it.</p> Microsoft Office Word Microsoft Yes Microsoft Office 2019 for 32-bit editions Microsoft Office 2019 for 64-bit editions Microsoft 365 Apps for Enterprise for 32-bit Systems Microsoft 365 Apps for Enterprise for 64-bit Systems Microsoft Office LTSC for Mac 2021 Microsoft Office LTSC 2021 for 64-bit editions Microsoft Office LTSC 2021 for 32-bit editions Microsoft Office LTSC 2024 for 32-bit editions Microsoft Office LTSC 2024 for 64-bit editions Microsoft Office LTSC for Mac 2024 Microsoft Outlook 2016 (32-bit edition) Microsoft Outlook 2016 (64-bit edition) Microsoft Office 365 for Mac",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -4099,7 +4099,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550151+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286500+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361765+00:00"
     },
     {
       "id": "CVE-2026-65767",
@@ -4112,7 +4112,7 @@
       "title": "CVE-2026-65767",
       "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Teams for Android allows an authorized attacker to perform spoofing over a network.",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "HIGH",
         "cvss": 8.8
@@ -4165,7 +4165,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599406+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286331+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361613+00:00"
     },
     {
       "id": "CVE-2026-65768",
@@ -4178,7 +4178,7 @@
       "title": "CVE-2026-65768",
       "description": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Teams for Android allows an unauthorized attacker to execute code over a network.",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "HIGH",
         "cvss": 8.8
@@ -4231,7 +4231,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599374+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286301+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361585+00:00"
     },
     {
       "id": "CVE-2026-65769",
@@ -4244,7 +4244,7 @@
       "title": "CVE-2026-65769",
       "description": "Exposure of sensitive information to an unauthorized actor in Microsoft Teams Mobile allows an unauthorized attacker to disclose information over a network.",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "MEDIUM",
         "cvss": 6.5
@@ -4297,7 +4297,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599341+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286270+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361557+00:00"
     },
     {
       "id": "CVE-2026-65777",
@@ -4310,7 +4310,7 @@
       "title": "CVE-2026-65777",
       "description": "CVE-2026-65777 <p>Inadequate encryption strength in Windows Active Directory allows an authorized attacker to bypass a security feature over a network.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does that mean for this vulnerability?</strong></p> <p>Successful exploitation of this vulnerability requires an attacker to have a deep understanding of the system and the ability to manipulate its components to trigger a specific condition. Successful exploitation is not guaranteed and depends on a combination of factors that may include the environment, system configuration, and the presence of additional security measures.</p> <p><strong>What security feature could an attacker bypass by exploiting this vulnerability?</strong></p> <p>An attacker who successfully exploited this vulnerability could bypass a cryptographic key validation policy, causing a key that should have been rejected as weak to be accepted.</p> Windows Active Directory Microsoft Yes Windows Server 2022 Windows Server 2022 (Server Core installation) Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -4368,7 +4368,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.549801+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286225+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361529+00:00"
     },
     {
       "id": "CVE-2026-69249",
@@ -4381,7 +4381,7 @@
       "title": "CVE-2026-69249",
       "description": "CVE-2026-69249 Mariner GitHub_M Yes azl3 python-cryptography 42.0.5-4 on Azure Linux 3.0",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -4422,7 +4422,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.549569+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286050+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361373+00:00"
     },
     {
       "id": "CVE-2026-70329",
@@ -4435,7 +4435,7 @@
       "title": "CVE-2026-70329",
       "description": "CVE-2026-70329 <p>Integer overflow or wraparound in Microsoft Office Outlook allows an unauthorized attacker to execute code over a network.</p> <p><strong>According to the CVSS metric, user interaction is required (UI:R). What interaction would the user have to do?</strong></p> <p>An attacker must send a user a malicious Office file and convince them to open it.</p> <p><strong>According to the CVSS metric, the attack vector is local (AV:L). Why does the CVE title indicate that this is a remote code execution?</strong></p> <p>The word <strong>Remote</strong> in the title refers to the location of the attacker. This type of exploit is sometimes referred to as Arbitrary Code Execution (ACE). The attack itself is carried out locally. This means an attacker or victim needs to execute code from the local machine to exploit the vulnerability.</p> Microsoft Office Outlook Microsoft Yes Microsoft Office 2019 for 32-bit editions Microsoft Office 2019 for 64-bit editions Microsoft 365 Apps for Enterprise for 32-bit Systems Microsoft 365 Apps for Enterprise for 64-bit Systems Microsoft Office LTSC 2021 for 64-bit editions Microsoft Office LTSC 2021 for 32-bit editions Microsoft Office LTSC 2024 for 32-bit editions Microsoft Office LTSC 2024 for 64-bit editions Microsoft Outlook 2016 (32-bit edition) Microsoft Outlook 2016 (64-bit edition)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-21T07:00:00",
+      "updated_at": "2026-08-23T01:03:57",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -4491,7 +4491,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.549537+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.286024+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361348+00:00"
     },
     {
       "id": "CVE-2026-53413",
@@ -4547,7 +4547,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599480+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285862+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361198+00:00"
     },
     {
       "id": "CVE-2026-53414",
@@ -4603,7 +4603,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599462+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285845+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361182+00:00"
     },
     {
       "id": "CVE-2026-53415",
@@ -4659,7 +4659,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599442+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285828+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361165+00:00"
     },
     {
       "id": "CVE-2026-53416",
@@ -4715,7 +4715,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599424+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285811+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361149+00:00"
     },
     {
       "id": "CVE-2026-74242",
@@ -4769,7 +4769,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599305+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285796+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361131+00:00"
     },
     {
       "id": "CVE-2026-72217",
@@ -4814,7 +4814,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599272+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285763+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361075+00:00"
     },
     {
       "id": "CVE-2026-66641",
@@ -4865,7 +4865,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599193+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285709+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361026+00:00"
     },
     {
       "id": "vendor:google_calendar:2026-08-19:fe5b0be5209d47fb",
@@ -4913,7 +4913,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599176+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285694+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.361013+00:00"
     },
     {
       "id": "vendor:google_calendar:2026-08-19:ac60f81e296602a2",
@@ -4961,7 +4961,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599150+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285672+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.360989+00:00"
     },
     {
       "id": "vendor:google_calendar:2026-08-19:e4d0da889e668b45",
@@ -5009,7 +5009,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599123+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285646+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.360964+00:00"
     },
     {
       "id": "CVE-2026-76386",
@@ -5060,7 +5060,7 @@
         ]
       },
       "first_seen_at": "2026-08-20T01:12:47.316486+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285608+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.360927+00:00"
     },
     {
       "id": "CVE-2026-63004",
@@ -5131,7 +5131,7 @@
         ]
       },
       "first_seen_at": "2026-08-21T21:38:30.268585+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285565+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.360887+00:00"
     },
     {
       "id": "CVE-2026-63466",
@@ -5202,7 +5202,7 @@
         ]
       },
       "first_seen_at": "2026-08-21T21:38:30.268450+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285446+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.360780+00:00"
     },
     {
       "id": "vendor:zoom:Mon, 10 Au:0cab63d0cb4da945",
@@ -5250,7 +5250,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599082+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285332+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.360677+00:00"
     },
     {
       "id": "vendor:zoom:Mon, 17 Au:a94aa0301c69b635",
@@ -5300,7 +5300,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.598964+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.285198+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.360568+00:00"
     },
     {
       "id": "vendor:zoom:Thu, 13 Au:c316339e7d7d7bc5",
@@ -5350,7 +5350,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.598632+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.284861+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.360251+00:00"
     },
     {
       "id": "vendor:zoom:Thu, 13 Au:13bec99eb2ebe232",
@@ -5400,7 +5400,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.598168+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.284411+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.359815+00:00"
     },
     {
       "id": "vendor:slack:Wed, 15 Ju:c3c49ddb44ade4b4",
@@ -5444,7 +5444,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.597531+00:00",
-      "last_seen_at": "2026-08-22T21:36:13.283757+00:00"
+      "last_seen_at": "2026-08-23T21:36:34.359214+00:00"
     },
     {
       "id": "CVE-2026-69248",

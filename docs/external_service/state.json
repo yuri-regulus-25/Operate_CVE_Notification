@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T21:36:13.292221+00:00",
+  "generated_at": "2026-08-23T21:36:34.367079+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
@@ -60,7 +60,7 @@
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 895,
+      "raw_count": 917,
       "count": 19
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Jul": {
@@ -88,7 +88,7 @@
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 895,
+      "raw_count": 917,
       "count": 19
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Jul": {
