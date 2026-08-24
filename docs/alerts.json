@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-23T09:51:48.578753+00:00",
-  "count": 80,
+  "generated_at": "2026-08-24T10:12:21.371079+00:00",
+  "count": 81,
   "sources": {
-    "NVD": 61,
+    "NVD": 62,
     "JVN": 19
   },
   "alerts": [
@@ -460,6 +460,30 @@
       "relation_type": "direct_product",
       "classification_reason": "description_subject",
       "tracked_keyword": "Laravel",
+      "noise_risk": "medium"
+    },
+    {
+      "alert_id": "nvd:cve-2026-78208:node.js",
+      "source": "NVD",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "WATCH",
+      "cve_id": "CVE-2026-78208",
+      "matched": "Node.js",
+      "severity": "HIGH",
+      "score": 7.5,
+      "published": "2026-08-24T01:16:58.280",
+      "last_modified": "2026-08-24T01:16:58.280",
+      "title": "CVE-2026-78208",
+      "description": "exceljs-hardened before 5.0.0 contains a path traversal vulnerability in the Workbook.addImage() function that fails to validate file paths. Attackers can supply arbitrary file paths to read any file accessible to the Node.js process and embed it in the generated workbook.",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78208",
+      "actual_product": "exceljs-hardened before 5.0.0",
+      "package_name": "",
+      "ecosystem": "npm / Node.js",
+      "relation_type": "direct_product",
+      "classification_reason": "description_subject",
+      "tracked_keyword": "Node.js",
       "noise_risk": "medium"
     },
     {
