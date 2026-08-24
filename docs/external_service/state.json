@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-23T21:36:34.367079+00:00",
+  "generated_at": "2026-08-24T21:44:40.256564+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
@@ -23,11 +23,11 @@
     },
     "nvd:google_calendar": {
       "status": "SUCCESS",
-      "count": 2
+      "count": 1
     },
     "jvn:google_calendar": {
       "status": "SUCCESS",
-      "count": 8
+      "count": 6
     },
     "feed:google_calendar:https://developers.google.com/feeds/calendar-release-notes.xml": {
       "status": "SUCCESS",
@@ -37,11 +37,11 @@
     },
     "nvd:microsoft_graph_calendar": {
       "status": "SUCCESS",
-      "count": 22
+      "count": 14
     },
     "jvn:microsoft_graph_calendar": {
       "status": "SUCCESS",
-      "count": 2
+      "count": 4
     },
     "microsoft_graph:microsoft_graph_calendar:https://developer.microsoft.com/en-us/graph/changelog?filterBy=Calendar": {
       "status": "SUCCESS_NO_RESULTS",
@@ -60,21 +60,21 @@
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 917,
+      "raw_count": 1070,
       "count": 19
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Jul": {
       "status": "SUCCESS",
-      "raw_count": 1996,
+      "raw_count": 1997,
       "count": 15
     },
     "nvd:microsoft_graph_teams": {
       "status": "SUCCESS",
-      "count": 22
+      "count": 14
     },
     "jvn:microsoft_graph_teams": {
-      "status": "SUCCESS_NO_RESULTS",
-      "count": 0
+      "status": "SUCCESS",
+      "count": 4
     },
     "microsoft_graph:microsoft_graph_teams:https://developer.microsoft.com/en-us/graph/changelog?filterBy=Cloud%20communications": {
       "status": "SUCCESS_NO_RESULTS",
@@ -88,12 +88,12 @@
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 917,
+      "raw_count": 1070,
       "count": 19
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Jul": {
       "status": "SUCCESS",
-      "raw_count": 1996,
+      "raw_count": 1997,
       "count": 15
     },
     "nvd:zoom": {
@@ -107,8 +107,8 @@
     "feed:zoom:https://devforum.zoom.us/c/changelog/100.rss": {
       "status": "SUCCESS",
       "raw_count": 25,
-      "count": 4,
-      "dropped_count": 21
+      "count": 3,
+      "dropped_count": 22
     },
     "zoom_security_bulletin": {
       "status": "SUCCESS",
