@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-24T21:44:40.256564+00:00",
+  "generated_at": "2026-08-25T21:44:48.137312+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
@@ -22,8 +22,8 @@
       "dropped_count": 19
     },
     "nvd:google_calendar": {
-      "status": "SUCCESS",
-      "count": 1
+      "status": "SUCCESS_NO_RESULTS",
+      "count": 0
     },
     "jvn:google_calendar": {
       "status": "SUCCESS",
@@ -37,7 +37,7 @@
     },
     "nvd:microsoft_graph_calendar": {
       "status": "SUCCESS",
-      "count": 14
+      "count": 10
     },
     "jvn:microsoft_graph_calendar": {
       "status": "SUCCESS",
@@ -60,17 +60,17 @@
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 1070,
+      "raw_count": 1202,
       "count": 19
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Jul": {
       "status": "SUCCESS",
-      "raw_count": 1997,
+      "raw_count": 1999,
       "count": 15
     },
     "nvd:microsoft_graph_teams": {
       "status": "SUCCESS",
-      "count": 14
+      "count": 10
     },
     "jvn:microsoft_graph_teams": {
       "status": "SUCCESS",
@@ -88,17 +88,17 @@
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 1070,
+      "raw_count": 1202,
       "count": 19
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Jul": {
       "status": "SUCCESS",
-      "raw_count": 1997,
+      "raw_count": 1999,
       "count": 15
     },
     "nvd:zoom": {
       "status": "SUCCESS",
-      "count": 17
+      "count": 11
     },
     "jvn:zoom": {
       "status": "SUCCESS_NO_RESULTS",
