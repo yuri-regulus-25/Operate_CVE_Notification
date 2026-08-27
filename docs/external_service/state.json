@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-25T21:44:48.137312+00:00",
+  "generated_at": "2026-08-27T00:48:34.986804+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
@@ -22,8 +22,8 @@
       "dropped_count": 19
     },
     "nvd:google_calendar": {
-      "status": "SUCCESS_NO_RESULTS",
-      "count": 0
+      "status": "SUCCESS",
+      "count": 2
     },
     "jvn:google_calendar": {
       "status": "SUCCESS",
@@ -37,7 +37,7 @@
     },
     "nvd:microsoft_graph_calendar": {
       "status": "SUCCESS",
-      "count": 10
+      "count": 11
     },
     "jvn:microsoft_graph_calendar": {
       "status": "SUCCESS",
@@ -98,7 +98,7 @@
     },
     "nvd:zoom": {
       "status": "SUCCESS",
-      "count": 11
+      "count": 7
     },
     "jvn:zoom": {
       "status": "SUCCESS_NO_RESULTS",
