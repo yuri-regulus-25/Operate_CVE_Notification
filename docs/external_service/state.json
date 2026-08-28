@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-27T00:48:34.986804+00:00",
+  "generated_at": "2026-08-28T05:24:13.766243+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
-      "count": 8
+      "count": 10
     },
     "jvn:slack": {
       "status": "SUCCESS_NO_RESULTS",
@@ -27,7 +27,7 @@
     },
     "jvn:google_calendar": {
       "status": "SUCCESS",
-      "count": 6
+      "count": 2
     },
     "feed:google_calendar:https://developers.google.com/feeds/calendar-release-notes.xml": {
       "status": "SUCCESS",
@@ -98,7 +98,7 @@
     },
     "nvd:zoom": {
       "status": "SUCCESS",
-      "count": 7
+      "count": 6
     },
     "jvn:zoom": {
       "status": "SUCCESS_NO_RESULTS",
