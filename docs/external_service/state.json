@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-29T03:11:21.748855+00:00",
+  "generated_at": "2026-08-29T23:19:46.056599+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
-      "count": 9
+      "count": 8
     },
     "jvn:slack": {
       "status": "SUCCESS_NO_RESULTS",
