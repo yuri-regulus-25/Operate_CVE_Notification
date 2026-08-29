@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-28T05:24:13.766243+00:00",
+  "generated_at": "2026-08-29T03:11:21.748855+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
-      "count": 10
+      "count": 9
     },
     "jvn:slack": {
       "status": "SUCCESS_NO_RESULTS",
@@ -26,8 +26,8 @@
       "count": 2
     },
     "jvn:google_calendar": {
-      "status": "SUCCESS",
-      "count": 2
+      "status": "SUCCESS_NO_RESULTS",
+      "count": 0
     },
     "feed:google_calendar:https://developers.google.com/feeds/calendar-release-notes.xml": {
       "status": "SUCCESS",
@@ -37,7 +37,7 @@
     },
     "nvd:microsoft_graph_calendar": {
       "status": "SUCCESS",
-      "count": 11
+      "count": 10
     },
     "jvn:microsoft_graph_calendar": {
       "status": "SUCCESS",
@@ -60,17 +60,17 @@
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 1202,
+      "raw_count": 1506,
       "count": 19
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Jul": {
       "status": "SUCCESS",
-      "raw_count": 1999,
+      "raw_count": 2003,
       "count": 15
     },
     "nvd:microsoft_graph_teams": {
       "status": "SUCCESS",
-      "count": 10
+      "count": 9
     },
     "jvn:microsoft_graph_teams": {
       "status": "SUCCESS",
@@ -88,17 +88,17 @@
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Aug": {
       "status": "SUCCESS",
-      "raw_count": 1202,
+      "raw_count": 1506,
       "count": 19
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Jul": {
       "status": "SUCCESS",
-      "raw_count": 1999,
+      "raw_count": 2003,
       "count": 15
     },
     "nvd:zoom": {
       "status": "SUCCESS",
-      "count": 6
+      "count": 10
     },
     "jvn:zoom": {
       "status": "SUCCESS_NO_RESULTS",

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-28T05:24:13.766243+00:00",
-  "count": 73,
+  "generated_at": "2026-08-29T03:11:21.748855+00:00",
+  "count": 74,
   "alerts": [
     {
       "id": "CVE-2026-30900",
@@ -51,7 +51,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600597+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.766133+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.748750+00:00"
     },
     {
       "id": "CVE-2026-53407",
@@ -102,160 +102,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600444+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765988+00:00"
-    },
-    {
-      "id": "CVE-2026-53413",
-      "service": "zoom",
-      "services": [
-        "zoom"
-      ],
-      "type": "VULNERABILITY",
-      "title": "ZSB-26015 Zoom Clients - Buffer Over-write",
-      "description": "Zoom Security Bulletin ZSB-26015. Zoom Clients - Buffer Over-write High CVE-2026-53413 08/11/2026",
-      "published_at": "",
-      "updated_at": "",
-      "severity": {
-        "level": "HIGH",
-        "cvss": null
-      },
-      "sources": [
-        {
-          "name": "Zoom Security Bulletin",
-          "url": "https://www.zoom.com/en/trust/security-bulletin/ZSB-26015/",
-          "raw_id": "CVE-2026-53413"
-        }
-      ],
-      "raw": {
-        "zsb": "ZSB-26015",
-        "affected": []
-      },
-      "relevance": {
-        "status": "REVIEW",
-        "confidence": "LOW",
-        "matched_targets": [
-          "Zoom",
-          "zoom"
-        ],
-        "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
-        "service": "zoom",
-        "service_results": [
-          {
-            "status": "REVIEW",
-            "confidence": "LOW",
-            "matched_targets": [
-              "Zoom",
-              "zoom"
-            ],
-            "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
-            "service": "zoom"
-          }
-        ]
-      },
-      "first_seen_at": "2026-08-19T10:26:51.599480+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765933+00:00"
-    },
-    {
-      "id": "CVE-2026-53414",
-      "service": "zoom",
-      "services": [
-        "zoom"
-      ],
-      "type": "VULNERABILITY",
-      "title": "ZSB-26016 Zoom Clients - Buffer Over-read",
-      "description": "Zoom Security Bulletin ZSB-26016. Zoom Clients - Buffer Over-read Medium CVE-2026-53414 08/11/2026",
-      "published_at": "",
-      "updated_at": "",
-      "severity": {
-        "level": "MEDIUM",
-        "cvss": null
-      },
-      "sources": [
-        {
-          "name": "Zoom Security Bulletin",
-          "url": "https://www.zoom.com/en/trust/security-bulletin/ZSB-26016/",
-          "raw_id": "CVE-2026-53414"
-        }
-      ],
-      "raw": {
-        "zsb": "ZSB-26016",
-        "affected": []
-      },
-      "relevance": {
-        "status": "REVIEW",
-        "confidence": "LOW",
-        "matched_targets": [
-          "Zoom",
-          "zoom"
-        ],
-        "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
-        "service": "zoom",
-        "service_results": [
-          {
-            "status": "REVIEW",
-            "confidence": "LOW",
-            "matched_targets": [
-              "Zoom",
-              "zoom"
-            ],
-            "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
-            "service": "zoom"
-          }
-        ]
-      },
-      "first_seen_at": "2026-08-19T10:26:51.599462+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765919+00:00"
-    },
-    {
-      "id": "CVE-2026-53415",
-      "service": "zoom",
-      "services": [
-        "zoom"
-      ],
-      "type": "VULNERABILITY",
-      "title": "ZSB-26017 Zoom Clients - Use After Free",
-      "description": "Zoom Security Bulletin ZSB-26017. Zoom Clients - Use After Free High CVE-2026-53415 08/11/2026",
-      "published_at": "",
-      "updated_at": "",
-      "severity": {
-        "level": "HIGH",
-        "cvss": null
-      },
-      "sources": [
-        {
-          "name": "Zoom Security Bulletin",
-          "url": "https://www.zoom.com/en/trust/security-bulletin/ZSB-26017/",
-          "raw_id": "CVE-2026-53415"
-        }
-      ],
-      "raw": {
-        "zsb": "ZSB-26017",
-        "affected": []
-      },
-      "relevance": {
-        "status": "REVIEW",
-        "confidence": "LOW",
-        "matched_targets": [
-          "Zoom",
-          "zoom"
-        ],
-        "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
-        "service": "zoom",
-        "service_results": [
-          {
-            "status": "REVIEW",
-            "confidence": "LOW",
-            "matched_targets": [
-              "Zoom",
-              "zoom"
-            ],
-            "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
-            "service": "zoom"
-          }
-        ]
-      },
-      "first_seen_at": "2026-08-19T10:26:51.599442+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765905+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.748604+00:00"
     },
     {
       "id": "vendor:google_calendar:2018-03-22:c216831f23f0fda9",
@@ -303,7 +150,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600422+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765873+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.748546+00:00"
     },
     {
       "id": "vendor:google_calendar:2018-10-31:0443de64b724a59b",
@@ -353,7 +200,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600385+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765840+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.748513+00:00"
     },
     {
       "id": "CVE-2020-1135",
@@ -423,7 +270,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T21:41:21.832431+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765819+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.748491+00:00"
     },
     {
       "id": "CVE-2020-1153",
@@ -506,7 +353,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T21:41:21.832350+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765739+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.748412+00:00"
     },
     {
       "id": "CVE-2023-49282",
@@ -568,7 +415,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.600172+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765638+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.748316+00:00"
     },
     {
       "id": "vendor:google_calendar:2025-10-27:881255216f0b22cc",
@@ -618,7 +465,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599894+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765446+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.748124+00:00"
     },
     {
       "id": "CVE-2026-42897",
@@ -681,7 +528,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.554543+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765384+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.748062+00:00"
     },
     {
       "id": "CVE-2026-44806",
@@ -767,7 +614,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.554402+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765237+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.747917+00:00"
     },
     {
       "id": "CVE-2026-47304",
@@ -896,7 +743,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.554223+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.765029+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.747716+00:00"
     },
     {
       "id": "CVE-2026-49159",
@@ -959,7 +806,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.553477+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.764228+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.746929+00:00"
     },
     {
       "id": "CVE-2026-50296",
@@ -1041,7 +888,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.553408+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.764143+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.746840+00:00"
     },
     {
       "id": "CVE-2026-50302",
@@ -1115,7 +962,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.553262+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.763998+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.746684+00:00"
     },
     {
       "id": "CVE-2026-50303",
@@ -1193,7 +1040,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.553118+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.763849+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.746534+00:00"
     },
     {
       "id": "CVE-2026-50352",
@@ -1279,7 +1126,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552971+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.763694+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.746339+00:00"
     },
     {
       "id": "CVE-2026-50483",
@@ -1349,7 +1196,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552778+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.763493+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.746140+00:00"
     },
     {
       "id": "CVE-2026-50493",
@@ -1427,7 +1274,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552701+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.763413+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.746056+00:00"
     },
     {
       "id": "CVE-2026-50681",
@@ -1509,7 +1356,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552573+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.763270+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.745874+00:00"
     },
     {
       "id": "CVE-2026-55144",
@@ -1577,7 +1424,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552392+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.763059+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.745683+00:00"
     },
     {
       "id": "CVE-2026-55145",
@@ -1637,7 +1484,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552313+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.762978+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.745604+00:00"
     },
     {
       "id": "CVE-2026-58609",
@@ -1726,7 +1573,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552210+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.762872+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.745500+00:00"
     },
     {
       "id": "CVE-2026-58638",
@@ -1810,7 +1657,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.552042+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.762693+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.745324+00:00"
     },
     {
       "id": "CVE-2026-59864",
@@ -1869,7 +1716,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599806+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.762499+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.745131+00:00"
     },
     {
       "id": "CVE-2026-16536",
@@ -1929,7 +1776,7 @@
         ]
       },
       "first_seen_at": "2026-08-27T00:48:34.983830+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.762393+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.745027+00:00"
     },
     {
       "id": "CVE-2026-17023",
@@ -1980,7 +1827,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599558+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.762351+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.744986+00:00"
     },
     {
       "id": "CVE-2026-59130",
@@ -1993,7 +1840,7 @@
       "title": "CVE-2026-59130",
       "description": "CVE-2026-59130 <p>No cwe for this issue in AMD Zen allows an authorized attacker to disclose information locally.</p> <p><strong>What type of information could be disclosed by this vulnerability</strong></p> <p>If the attacker has both the ability to modify the encrypted secret where it is stored and to observe the precise timing for the secret being decrypted by the application, the attacker could infer the original secret across many decryption attempts.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does that mean for this vulnerability</strong></p> <p>To exploit this vulnerability, an attacker would need to target an application by persisting encrypted secrets that are using specific old cryptography and Windows APIs.</p> AMD Zen Microsoft Yes Windows 10 Version 1809 for 32-bit Systems Windows 10 Version 1809 for x64-based Systems Windows Server 2019 Windows Server 2019 (Server Core installation) Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems Windows 10 Version 1607 for 32-bit Systems Windows 10 Version 1607 for x64-based Systems Windows Server 2016 Windows Server 2016 (Server Core installation) Windows Server 2012 R2 Windows Server 2012 R2 (Server Core installation)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2067,7 +1914,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.551546+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.762319+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.744953+00:00"
     },
     {
       "id": "CVE-2026-59131",
@@ -2080,7 +1927,7 @@
       "title": "CVE-2026-59131",
       "description": "CVE-2026-59131 <p>No cwe for this issue in AMD Zen allows an authorized attacker to disclose information locally.</p> <p><strong>What type of information could be disclosed by this vulnerability</strong></p> <p>If the attacker has both the ability to modify the encrypted secret where it is stored and to observe the precise timing for the secret being decrypted by the application, the attacker could infer the original secret across many decryption attempts.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does that mean for this vulnerability</strong></p> <p>To exploit this vulnerability, an attacker would need to target an application by persisting encrypted secrets that are using specific old cryptography and Windows APIs.</p> AMD Zen Microsoft Yes Windows 10 Version 1809 for 32-bit Systems Windows 10 Version 1809 for x64-based Systems Windows Server 2019 Windows Server 2019 (Server Core installation) Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems Windows 10 Version 1607 for 32-bit Systems Windows 10 Version 1607 for x64-based Systems Windows Server 2016 Windows Server 2016 (Server Core installation) Windows Server 2012 R2 Windows Server 2012 R2 (Server Core installation)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2154,7 +2001,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.551334+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.762074+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.744717+00:00"
     },
     {
       "id": "CVE-2026-61346",
@@ -2167,7 +2014,7 @@
       "title": "CVE-2026-61346",
       "description": "CVE-2026-61346 <p>Use after free in Windows Graphics Kernel allows an authorized attacker to elevate privileges locally.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does that mean for this vulnerability?</strong></p> <p>Successful exploitation of this vulnerability requires an attacker to win a race condition.</p> <p><strong>What privileges could be gained by an attacker who successfully exploited this vulnerability?</strong></p> <p>An attacker who successfully exploited this vulnerability could gain SYSTEM privileges.</p> Windows Graphics Kernel Microsoft Yes Windows 10 Version 1809 for 32-bit Systems Windows 10 Version 1809 for x64-based Systems Windows Server 2019 Windows Server 2019 (Server Core installation) Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2235,7 +2082,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.551109+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.761832+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.744478+00:00"
     },
     {
       "id": "CVE-2026-62702",
@@ -2248,7 +2095,7 @@
       "title": "CVE-2026-62702",
       "description": "CVE-2026-62702 <p>Null pointer dereference in Windows Graphics Kernel allows an unauthorized attacker to deny service over a network.</p> Windows Graphics Kernel Microsoft Yes Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2312,7 +2159,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550933+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.761641+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.744290+00:00"
     },
     {
       "id": "CVE-2026-62757",
@@ -2325,7 +2172,7 @@
       "title": "CVE-2026-62757",
       "description": "CVE-2026-62757 <p>Improper verification of cryptographic signature in Windows Schannel allows an unauthorized attacker to bypass a security feature over a network.</p> <p><strong>What kind of security feature could be bypassed by successfully exploiting this vulnerability?</strong></p> <p>An attacker who successfully exploited this vulnerability could bypass certificate validation during the account enrollment process.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does this mean for this vulnerability?</strong></p> <p>An attacker would need specific conditions to be in place (i.e. particular protocol settings, or configurations, etc.) before an attack could succeed, which reduces the likelihood of widespread or opportunistic exploitation.</p> Windows Schannel Microsoft Yes Windows 10 Version 1809 for 32-bit Systems Windows 10 Version 1809 for x64-based Systems Windows Server 2019 Windows Server 2019 (Server Core installation) Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems Windows 10 Version 1607 for 32-bit Systems Windows 10 Version 1607 for x64-based Systems Windows Server 2016 Windows Server 2016 (Server Core installation) Windows Server 2012 Windows Server 2012 (Server Core installation) Windows Server 2012 R2 Windows Server 2012 R2 (Server Core installation)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2401,7 +2248,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550797+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.761502+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.744152+00:00"
     },
     {
       "id": "CVE-2026-62774",
@@ -2414,7 +2261,7 @@
       "title": "CVE-2026-62774",
       "description": "CVE-2026-62774 <p>Use after free in Windows Graphics Kernel allows an authorized attacker to elevate privileges locally.</p> <p><strong>What privileges could be gained by an attacker who successfully exploited this vulnerability?</strong></p> <p>An attacker who successfully exploited this vulnerability could gain SYSTEM privileges.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does that mean for this vulnerability?</strong></p> <p>Successful exploitation of this vulnerability requires an attacker to win a race condition.</p> Windows Graphics Kernel Microsoft Yes Windows 10 Version 1809 for 32-bit Systems Windows 10 Version 1809 for x64-based Systems Windows Server 2019 Windows Server 2019 (Server Core installation) Windows Server 2022 Windows Server 2022 (Server Core installation) Windows 10 Version 21H2 for 32-bit Systems Windows 10 Version 21H2 for ARM64-based Systems Windows 10 Version 21H2 for x64-based Systems Windows 10 Version 22H2 for x64-based Systems Windows 10 Version 22H2 for ARM64-based Systems Windows 10 Version 22H2 for 32-bit Systems Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems Windows 10 Version 1607 for 32-bit Systems Windows 10 Version 1607 for x64-based Systems Windows Server 2016 Windows Server 2016 (Server Core installation)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2486,7 +2333,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550563+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.761248+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.743904+00:00"
     },
     {
       "id": "CVE-2026-62834",
@@ -2499,7 +2346,7 @@
       "title": "CVE-2026-62834",
       "description": "CVE-2026-62834 <p>Improper verification of cryptographic signature in Azure Data Factory allows an unauthorized attacker to elevate privileges over a network.</p> <p><strong>Why are there no links to an update or instructions with steps that must be taken to protect from this vulnerability?</strong></p> <p>This vulnerability has already been fully mitigated by Microsoft. There is no action for users of this service to take. The purpose of this CVE is to provide further transparency.</p> <p>Please see <a href=\"https://aka.ms/MSRC-Cloud-CVEs\">Toward greater transparency: Unveiling Cloud Service CVEs</a> for more information.</p> Azure Data Factory Microsoft No Azure Data Factory",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2546,7 +2393,7 @@
         ]
       },
       "first_seen_at": "2026-08-20T21:43:44.691727+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.761012+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.743673+00:00"
     },
     {
       "id": "CVE-2026-62873",
@@ -2559,7 +2406,7 @@
       "title": "CVE-2026-62873",
       "description": "CVE-2026-62873 <p>Improper verification of cryptographic signature in Microsoft 365 Admin Center allows an unauthorized attacker to elevate privileges over a network.</p> <p><strong>Why are there no links to an update or instructions with steps that must be taken to protect from this vulnerability?</strong></p> <p>This vulnerability has already been fully mitigated by Microsoft. There is no action for users of this service to take. The purpose of this CVE is to provide further transparency.</p> <p>Please see <a href=\"https://aka.ms/MSRC-Cloud-CVEs\">Toward greater transparency: Unveiling Cloud Service CVEs</a> for more information.</p> Microsoft 365 Admin Center Microsoft No Microsoft 365 Admin Center",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2606,7 +2453,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550355+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760948+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.743610+00:00"
     },
     {
       "id": "CVE-2026-62882",
@@ -2619,7 +2466,7 @@
       "title": "CVE-2026-62882",
       "description": "CVE-2026-62882 <p>Insufficiently protected credentials in Microsoft Office Outlook allows an unauthorized attacker to perform spoofing over a network.</p> <p><strong>According to the CVSS metric, user interaction is required (UI:R). What interaction would the user have to do?</strong></p> <p>An attacker must send a user a malicious Office file and convince them to open it.</p> Microsoft Office Outlook Microsoft Yes Microsoft Office 2019 for 32-bit editions Microsoft Office 2019 for 64-bit editions Microsoft 365 Apps for Enterprise for 32-bit Systems Microsoft 365 Apps for Enterprise for 64-bit Systems Microsoft Office LTSC 2021 for 64-bit editions Microsoft Office LTSC 2021 for 32-bit editions Microsoft Office LTSC 2024 for 32-bit editions Microsoft Office LTSC 2024 for 64-bit editions Microsoft Outlook 2016 (32-bit edition) Microsoft Outlook 2016 (64-bit edition)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2675,7 +2522,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550286+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760879+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.743541+00:00"
     },
     {
       "id": "CVE-2026-62896",
@@ -2688,7 +2535,7 @@
       "title": "CVE-2026-62896",
       "description": "CVE-2026-62896 <p>Improper authentication in Microsoft Teams allows an authorized attacker to elevate privileges over a network.</p> <p><strong>Why are there no links to an update or instructions with steps that must be taken to protect from this vulnerability?</strong></p> <p>This vulnerability has already been fully mitigated by Microsoft. There is no action for users of this service to take. The purpose of this CVE is to provide further transparency.</p> <p>Please see <a href=\"https://aka.ms/MSRC-Cloud-CVEs\">Toward greater transparency: Unveiling Cloud Service CVEs</a> for more information.</p> Microsoft Teams Microsoft No Microsoft Teams",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2735,7 +2582,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599636+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760765+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.743428+00:00"
     },
     {
       "id": "CVE-2026-62918",
@@ -2748,7 +2595,7 @@
       "title": "CVE-2026-62918",
       "description": "CVE-2026-62918 <p>Improper verification of cryptographic signature in Microsoft Teams allows an unauthorized attacker to perform spoofing over a network.</p> <p><strong>Why are there no links to an update or instructions with steps that must be taken to protect from this vulnerability?</strong></p> <p>This vulnerability has already been fully mitigated by Microsoft. There is no action for users of this service to take. The purpose of this CVE is to provide further transparency.</p> <p>Please see <a href=\"https://aka.ms/MSRC-Cloud-CVEs\">Toward greater transparency: Unveiling Cloud Service CVEs</a> for more information.</p> Microsoft Teams Microsoft No Microsoft Teams",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2795,7 +2642,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599612+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760705+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.743369+00:00"
     },
     {
       "id": "CVE-2026-63518",
@@ -2808,7 +2655,7 @@
       "title": "CVE-2026-63518",
       "description": "CVE-2026-63518 <p>Heap-based buffer overflow in Microsoft Office Word allows an unauthorized attacker to execute code locally.</p> <p><strong>According to the CVSS metric, the attack vector is local (AV:L). Why does the CVE title indicate that this is a remote code execution?</strong></p> <p>The word <strong>Remote</strong> in the title refers to the location of the attacker. This type of exploit is sometimes referred to as Arbitrary Code Execution (ACE). The attack itself is carried out locally. This means an attacker or victim needs to execute code from the local machine to exploit the vulnerability.</p> <p><strong>According to the CVSS metric, user interaction is required (UI:R). What interaction would the user have to do?</strong></p> <p>An attacker must send a user a malicious Office file and convince them to open it.</p> Microsoft Office Word Microsoft Yes Microsoft Office 2019 for 32-bit editions Microsoft Office 2019 for 64-bit editions Microsoft 365 Apps for Enterprise for 32-bit Systems Microsoft 365 Apps for Enterprise for 64-bit Systems Microsoft Office LTSC for Mac 2021 Microsoft Office LTSC 2021 for 64-bit editions Microsoft Office LTSC 2021 for 32-bit editions Microsoft Office LTSC 2024 for 32-bit editions Microsoft Office LTSC 2024 for 64-bit editions Microsoft Office LTSC for Mac 2024 Microsoft Outlook 2016 (32-bit edition) Microsoft Outlook 2016 (64-bit edition) Microsoft Office 365 for Mac",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2867,7 +2714,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.550151+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760640+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.743304+00:00"
     },
     {
       "id": "CVE-2026-65667",
@@ -2880,7 +2727,7 @@
       "title": "CVE-2026-65667",
       "description": "CVE-2026-65667 <p>Missing authorization in Microsoft Teams allows an unauthorized attacker to elevate privileges over a network.</p> <p><strong>Why are there no links to an update or instructions with steps that must be taken to protect from this vulnerability?</strong></p> <p>This vulnerability has already been fully mitigated by Microsoft. There is no action for users of this service to take. The purpose of this CVE is to provide further transparency.</p> <p>Please see <a href=\"https://aka.ms/MSRC-Cloud-CVEs\">Toward greater transparency: Unveiling Cloud Service CVEs</a> for more information.</p> Microsoft Teams Microsoft No Microsoft Teams",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -2927,7 +2774,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599585+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760473+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.743134+00:00"
     },
     {
       "id": "CVE-2026-65767",
@@ -2940,7 +2787,7 @@
       "title": "CVE-2026-65767",
       "description": "Improper neutralization of input during web page generation ('cross-site scripting') in Microsoft Teams for Android allows an authorized attacker to perform spoofing over a network.",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "HIGH",
         "cvss": 8.8
@@ -2993,7 +2840,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599406+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760408+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.743070+00:00"
     },
     {
       "id": "CVE-2026-65768",
@@ -3004,19 +2851,14 @@
       ],
       "type": "VULNERABILITY",
       "title": "CVE-2026-65768",
-      "description": "Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Teams for Android allows an unauthorized attacker to execute code over a network.",
+      "description": "CVE-2026-65768 <p>Improper limitation of a pathname to a restricted directory ('path traversal') in Microsoft Teams for Android allows an unauthorized attacker to execute code over a network.</p> <p><strong>According to the CVSS metric, the attack vector is network (AV:N) and user interaction is required (UI:R). What is the target context of the remote code execution?</strong></p> <p>This attack requires a user to open a specially crafted file from the attacker to initiate remote code execution.</p> Microsoft Teams for Android Microsoft Yes Microsoft Teams for Android",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
-        "level": "HIGH",
-        "cvss": 8.8
+        "level": "UNKNOWN",
+        "cvss": null
       },
       "sources": [
-        {
-          "name": "NVD",
-          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-65768",
-          "raw_id": "CVE-2026-65768"
-        },
         {
           "name": "MSRC",
           "url": "https://api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Aug?api-version=2023-11-01",
@@ -3024,9 +2866,8 @@
         }
       ],
       "raw": {
-        "keyword": "Microsoft Teams",
         "affected": [
-          "cpe:2.3:a:microsoft:teams:*:*:*:*:*:android:*:*"
+          "Microsoft Teams for Android"
         ]
       },
       "relevance": {
@@ -3059,7 +2900,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599374+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760378+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.743040+00:00"
     },
     {
       "id": "CVE-2026-65769",
@@ -3072,7 +2913,7 @@
       "title": "CVE-2026-65769",
       "description": "Exposure of sensitive information to an unauthorized actor in Microsoft Teams Mobile allows an unauthorized attacker to disclose information over a network.",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "MEDIUM",
         "cvss": 6.5
@@ -3125,7 +2966,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599341+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760347+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.742978+00:00"
     },
     {
       "id": "CVE-2026-65777",
@@ -3138,7 +2979,7 @@
       "title": "CVE-2026-65777",
       "description": "CVE-2026-65777 <p>Inadequate encryption strength in Windows Active Directory allows an authorized attacker to bypass a security feature over a network.</p> <p><strong>According to the CVSS metric, the attack complexity is high (AC:H). What does that mean for this vulnerability?</strong></p> <p>Successful exploitation of this vulnerability requires an attacker to have a deep understanding of the system and the ability to manipulate its components to trigger a specific condition. Successful exploitation is not guaranteed and depends on a combination of factors that may include the environment, system configuration, and the presence of additional security measures.</p> <p><strong>What security feature could an attacker bypass by exploiting this vulnerability?</strong></p> <p>An attacker who successfully exploited this vulnerability could bypass a cryptographic key validation policy, causing a key that should have been rejected as weak to be accepted.</p> Windows Active Directory Microsoft Yes Windows Server 2022 Windows Server 2022 (Server Core installation) Windows Server 2025 (Server Core installation) Windows 11 Version 25H2 for ARM64-based Systems Windows 11 Version 25H2 for x64-based Systems Windows 11 Version 23H2 for ARM64-based Systems Windows 11 Version 23H2 for x64-based Systems Windows 11 Version 24H2 for ARM64-based Systems Windows 11 Version 24H2 for x64-based Systems Windows Server 2025 Windows 11 version 26H1 for x64-based Systems Windows 11 Version 26H1 for ARM64-based Systems",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3196,7 +3037,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.549801+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760315+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.742946+00:00"
     },
     {
       "id": "CVE-2026-69249",
@@ -3209,7 +3050,7 @@
       "title": "CVE-2026-69249",
       "description": "CVE-2026-69249 Mariner GitHub_M Yes azl3 python-cryptography 42.0.5-4 on Azure Linux 3.0",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3250,7 +3091,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.549569+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760130+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.742761+00:00"
     },
     {
       "id": "CVE-2026-70329",
@@ -3263,7 +3104,7 @@
       "title": "CVE-2026-70329",
       "description": "CVE-2026-70329 <p>Integer overflow or wraparound in Microsoft Office Outlook allows an unauthorized attacker to execute code over a network.</p> <p><strong>According to the CVSS metric, user interaction is required (UI:R). What interaction would the user have to do?</strong></p> <p>An attacker must send a user a malicious Office file and convince them to open it.</p> <p><strong>According to the CVSS metric, the attack vector is local (AV:L). Why does the CVE title indicate that this is a remote code execution?</strong></p> <p>The word <strong>Remote</strong> in the title refers to the location of the attacker. This type of exploit is sometimes referred to as Arbitrary Code Execution (ACE). The attack itself is carried out locally. This means an attacker or victim needs to execute code from the local machine to exploit the vulnerability.</p> Microsoft Office Outlook Microsoft Yes Microsoft Office 2019 for 32-bit editions Microsoft Office 2019 for 64-bit editions Microsoft 365 Apps for Enterprise for 32-bit Systems Microsoft 365 Apps for Enterprise for 64-bit Systems Microsoft Office LTSC 2021 for 64-bit editions Microsoft Office LTSC 2021 for 32-bit editions Microsoft Office LTSC 2024 for 32-bit editions Microsoft Office LTSC 2024 for 64-bit editions Microsoft Outlook 2016 (32-bit edition) Microsoft Outlook 2016 (64-bit edition)",
       "published_at": "2026-08-11T07:00:00",
-      "updated_at": "2026-08-27T07:00:00",
+      "updated_at": "2026-08-28T07:00:00",
       "severity": {
         "level": "UNKNOWN",
         "cvss": null
@@ -3319,7 +3160,231 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:33:17.549537+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.760104+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.742735+00:00"
+    },
+    {
+      "id": "CVE-2026-53413",
+      "service": "zoom",
+      "services": [
+        "zoom"
+      ],
+      "type": "VULNERABILITY",
+      "title": "CVE-2026-53413",
+      "description": "Missing bounds check in the annotator function of Zoom Clients allows buffer over-write, which may allow a meeting participant to achieve remote code execution of another participant via network access.",
+      "published_at": "2026-08-11T16:17:32.580",
+      "updated_at": "2026-08-28T18:39:48.167",
+      "severity": {
+        "level": "HIGH",
+        "cvss": 8.3
+      },
+      "sources": [
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53413",
+          "raw_id": "CVE-2026-53413"
+        },
+        {
+          "name": "Zoom Security Bulletin",
+          "url": "https://www.zoom.com/en/trust/security-bulletin/ZSB-26015/",
+          "raw_id": "CVE-2026-53413"
+        }
+      ],
+      "raw": {
+        "keyword": "Zoom",
+        "affected": []
+      },
+      "relevance": {
+        "status": "REVIEW",
+        "confidence": "LOW",
+        "matched_targets": [
+          "Zoom",
+          "zoom"
+        ],
+        "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
+        "service": "zoom",
+        "service_results": [
+          {
+            "status": "REVIEW",
+            "confidence": "LOW",
+            "matched_targets": [
+              "Zoom",
+              "zoom"
+            ],
+            "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
+            "service": "zoom"
+          }
+        ]
+      },
+      "first_seen_at": "2026-08-19T10:26:51.599480+00:00",
+      "last_seen_at": "2026-08-29T03:11:21.742577+00:00"
+    },
+    {
+      "id": "CVE-2026-53414",
+      "service": "zoom",
+      "services": [
+        "zoom"
+      ],
+      "type": "VULNERABILITY",
+      "title": "CVE-2026-53414",
+      "description": "Missing bounds check in the annotator function of Zoom Clients allows buffer over-read, which may allow a meeting participant to conduct a denial of service on another participant via network access.",
+      "published_at": "2026-08-11T16:17:32.713",
+      "updated_at": "2026-08-28T18:39:48.167",
+      "severity": {
+        "level": "MEDIUM",
+        "cvss": 6.5
+      },
+      "sources": [
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53414",
+          "raw_id": "CVE-2026-53414"
+        },
+        {
+          "name": "Zoom Security Bulletin",
+          "url": "https://www.zoom.com/en/trust/security-bulletin/ZSB-26016/",
+          "raw_id": "CVE-2026-53414"
+        }
+      ],
+      "raw": {
+        "keyword": "Zoom",
+        "affected": []
+      },
+      "relevance": {
+        "status": "REVIEW",
+        "confidence": "LOW",
+        "matched_targets": [
+          "Zoom",
+          "zoom"
+        ],
+        "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
+        "service": "zoom",
+        "service_results": [
+          {
+            "status": "REVIEW",
+            "confidence": "LOW",
+            "matched_targets": [
+              "Zoom",
+              "zoom"
+            ],
+            "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
+            "service": "zoom"
+          }
+        ]
+      },
+      "first_seen_at": "2026-08-19T10:26:51.599462+00:00",
+      "last_seen_at": "2026-08-29T03:11:21.742560+00:00"
+    },
+    {
+      "id": "CVE-2026-53415",
+      "service": "zoom",
+      "services": [
+        "zoom"
+      ],
+      "type": "VULNERABILITY",
+      "title": "CVE-2026-53415",
+      "description": "Use after Free in the annotator function of Zoom Clients may allow a meeting participant to achieve remote code execution of another participant via network access.",
+      "published_at": "2026-08-11T16:17:32.833",
+      "updated_at": "2026-08-28T18:39:48.167",
+      "severity": {
+        "level": "HIGH",
+        "cvss": 8.3
+      },
+      "sources": [
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53415",
+          "raw_id": "CVE-2026-53415"
+        },
+        {
+          "name": "Zoom Security Bulletin",
+          "url": "https://www.zoom.com/en/trust/security-bulletin/ZSB-26017/",
+          "raw_id": "CVE-2026-53415"
+        }
+      ],
+      "raw": {
+        "keyword": "Zoom",
+        "affected": []
+      },
+      "relevance": {
+        "status": "REVIEW",
+        "confidence": "LOW",
+        "matched_targets": [
+          "Zoom",
+          "zoom"
+        ],
+        "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
+        "service": "zoom",
+        "service_results": [
+          {
+            "status": "REVIEW",
+            "confidence": "LOW",
+            "matched_targets": [
+              "Zoom",
+              "zoom"
+            ],
+            "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
+            "service": "zoom"
+          }
+        ]
+      },
+      "first_seen_at": "2026-08-19T10:26:51.599442+00:00",
+      "last_seen_at": "2026-08-29T03:11:21.742542+00:00"
+    },
+    {
+      "id": "CVE-2026-53416",
+      "service": "zoom",
+      "services": [
+        "zoom"
+      ],
+      "type": "VULNERABILITY",
+      "title": "CVE-2026-53416",
+      "description": "Path traversal in Zoom VDI Client and Plugins may allow an authenticated user to conduct information disclosure via local access.",
+      "published_at": "2026-08-11T16:17:32.960",
+      "updated_at": "2026-08-28T18:39:48.167",
+      "severity": {
+        "level": "HIGH",
+        "cvss": 7.1
+      },
+      "sources": [
+        {
+          "name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53416",
+          "raw_id": "CVE-2026-53416"
+        },
+        {
+          "name": "Zoom Security Bulletin",
+          "url": "https://www.zoom.com/en/trust/security-bulletin/ZSB-26018/",
+          "raw_id": "CVE-2026-53416"
+        }
+      ],
+      "raw": {
+        "keyword": "Zoom",
+        "affected": []
+      },
+      "relevance": {
+        "status": "REVIEW",
+        "confidence": "LOW",
+        "matched_targets": [
+          "Zoom",
+          "zoom"
+        ],
+        "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
+        "service": "zoom",
+        "service_results": [
+          {
+            "status": "REVIEW",
+            "confidence": "LOW",
+            "matched_targets": [
+              "Zoom",
+              "zoom"
+            ],
+            "reason": "Source hit mentions the vendor but rules cannot confirm affected API surface.",
+            "service": "zoom"
+          }
+        ]
+      },
+      "first_seen_at": "2026-08-19T10:26:51.599424+00:00",
+      "last_seen_at": "2026-08-29T03:11:21.742525+00:00"
     },
     {
       "id": "CVE-2026-74242",
@@ -3373,7 +3438,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599305+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.759946+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.742509+00:00"
     },
     {
       "id": "CVE-2026-66641",
@@ -3424,7 +3489,7 @@
         ]
       },
       "first_seen_at": "2026-08-19T10:26:51.599193+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.759865+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.742428+00:00"
     },
     {
       "id": "CVE-2026-76386",
@@ -3475,7 +3540,7 @@
         ]
       },
       "first_seen_at": "2026-08-20T01:12:47.316486+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.759852+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.742413+00:00"
     },
     {
       "id": "CVE-2026-63004",
@@ -3546,7 +3611,7 @@
         ]
       },
       "first_seen_at": "2026-08-21T21:38:30.268585+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.759810+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.742372+00:00"
     },
     {
       "id": "CVE-2026-63466",
@@ -3617,7 +3682,7 @@
         ]
       },
       "first_seen_at": "2026-08-21T21:38:30.268450+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.759696+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.742258+00:00"
     },
     {
       "id": "CVE-2026-33828",
@@ -3678,7 +3743,157 @@
         ]
       },
       "first_seen_at": "2026-08-24T21:44:40.250012+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.759587+00:00"
+      "last_seen_at": "2026-08-29T03:11:21.742147+00:00"
+    },
+    {
+      "id": "vendor:zoom:Mon, 17 Au:a94aa0301c69b635",
+      "service": "zoom",
+      "services": [
+        "zoom"
+      ],
+      "type": "AUTH_CHANGE",
+      "title": "Changelog: Contact Center - Four new endpoints and five new events; new fields in dozens of API endpoints and new fields in five Teams events",
+      "description": "<p>Released: 2026-08-17 Updated: 2026-08-17</p> <p><a href=\"https://developers.zoom.us/changelog/contact-center/august-17-2026\">Visit Changelog</a></p> <p>Summary: Three new Reports endpoints, one new Campaigns endpoint, and five new Queues webhook events; new fields in dozens of API endpoints and new fields in five Teams events.</p> <h2><a name=\"p-332527-added-1\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332527-added-1\" aria-label=\"Heading link\"></a>Added</h2> <ul> <li>New <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/log/historical/agent_work_session</code></li> <li><code>GET /v2/contact_center/analytics/log/historical/agent_opt</code></li> <li><code>GET /v2/contact_center/analytics/log/historical/agent_compliance</code></li> </ul> </li> <li>New <strong>Campaigns</strong> API: <ul> <li><code>PATCH /v2/contact_center/outbound_campaign/campaigns/{campaignId}/contact_lists</code></li> </ul> </li> <li>New <strong>Queues</strong> webhook event: <ul> <li><code>contact_center.queue_disposition_unassigned</code></li> <li><code>contact_center.queue_disposition_assigned</code></li> <li><code>contact_center.queue_disposition_updated</code></li> <li><code>contact_center.queue_disposition_set_assigned</code></li> <li><code>contact_center.queue_disposition_set_unassigned</code></li> </ul> </li> </ul> <h2><a name=\"p-332527-changed-2\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332527-changed-2\" aria-label=\"Heading link\"></a>Changed</h2> <ul> <li>New <code>inbound_inactive_conversation_duration</code>, <code>callback_retry_registered_count</code>, <code>inbound_active_conversation_duration</code>, <code>callback_outcome</code>, <code>inbound_handled_excluding_callbacks_count</code>, <code>callback_connected_count</code>, <code>callback_disconnected_duration</code>, <code>callback_outcome</code>, <code>callback_retry_triggered_count</code>, <code>outbound_active_conversation_duration</code>, <code>out_sla_count</code>, <code>outbound_inactive_conversation_duration</code>, and <code>in_sla_count</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> </ul> </li> <li>New <code>agent_involved</code>, <code>auto_close_disconnect_count</code>, <code>zva_interaction_turn_count</code>, <code>zva_tools_used_count,parked_count</code>, <code>zva_skills_used_count,parked_duration</code>, <code>zva_consumer_messages_sent_count</code>, <code>zva_agent_messages_sent_count</code>, <code>zva_non_interactive_drop_off_count</code>, <code>zva_conversation_duration</code>, <code>zva_interactive_engagement_count</code>, and <code>zva_articles_used_count</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> </ul> </li> <li>New <code>customer_ring_disconnect_count</code> and <code>agent_message_received_count</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>division_name</code>, <code>division_id</code>, and <code>page_size</code> response fields in this <strong>Users</strong> API: <ul> <li><code>GET /v2/contact_center/users</code></li> </ul> </li> <li>New <code>accept_menu</code> response fields in these <strong>Queue Waiting Experiences</strong> APIs: <ul> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/units</code></li> <li><code>GET /v2/contact_center/address_books/custom_fields</code></li> <li><code>GET /v2/contact_center/address_books</code></li> <li><code>GET /v2/contact_center/address_books/contacts/{contactId}/custom_fields</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Operating Hours</strong> APIs: <ul> <li><code>GET /v2/contact_center/closures/{closureSetId}/queues</code></li> <li><code>GET /v2/contact_center/closures/{closureSetId}/flows</code></li> <li><code>POST /v2/contact_center/closures</code></li> </ul> </li> <li>New <code>disposition_time,disposition_count</code> and <code>current_disposition_id</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> </ul> </li> <li>New <code>active_conversation_duration</code> and <code>inactive_conversation_duration</code> response fields in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>next_page_token</code> request field in this <strong>Address Books</strong> API: <ul> <li><code>GET /v2/contact_center/address_books/custom_fields</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in these <strong>Campaigns</strong> APIs: <ul> <li><code>POST /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>DELETE /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists</code></li> </ul> </li> <li>New <code>next_page_token</code> request field in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/outbound_dialer_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_timecard</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>direction</code> and <code>dnis</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Campaigns</strong> APIs: <ul> <li><code>POST /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contacts/{contactId}/custom_fields</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/{addressBookId}</code></li> <li><code>GET /v2/contact_center/address_books/units/{unitId}</code></li> <li><code>POST /v2/contact_center/address_books/{addressBookId}/contacts/batch</code></li> <li><code>POST /v2/contact_center/address_books/{addressBookId}/contacts</code></li> <li><code>GET /v2/contact_center/address_books/custom_fields/{customFieldId}</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in this <strong>Operating Hours</strong> API: <ul> <li><code>POST /v2/contact_center/closures</code></li> </ul> </li> <li>New <code>division_id</code>, <code>page_size</code>, <code>X-Zoom-Division-Id</code>, <code>division_name</code>, and <code>next_page_token</code> response fields in these <strong>nboxes</strong> API: <ul> <li><code>GET /v2/contact_center/inboxes/{inboxId}/queues</code></li> </ul> </li> <li>New <code>page_size</code> request field in the following <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/units</code></li> <li><code>GET /v2/contact_center/address_books</code></li> <li><code>GET /v2/contact_center/address_books/contacts/{contactId}/custom_fields</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Operating Hours</strong> APIs: <ul> <li><code>GET /v2/contact_center/closures/{closureSetId}/queues</code></li> <li><code>GET /v2/contact_center/closures/{closureSetId}/flows</code></li> </ul> </li> <li>New <code>is_accept_menu</code> response fields in this <strong>Queue Waiting Experiences</strong> API: <ul> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Campaigns</strong> APIs: <ul> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contacts/{contactId}/custom_fields</code></li> </ul> </li> <li>New <code>engagement_count</code> response field in the following <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/expert_assist</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/outbound_dialer_performance</code></li> </ul> </li> <li>New <code>division_id</code> and <code>division_name</code> fields in these <strong>Teams</strong> webhook events: <ul> <li><code>contact_center.team_created</code></li> <li><code>contact_center.team_moved</code></li> <li><code>contact_center.team_members_assigned</code></li> <li><code>contact_center.team_members_unassigned</code></li> <li><code>contact_center.team_deleted</code></li> <li><code>contact_center.team_updated</code></li> </ul> </li> </ul> <p><small>1 post - 1 participant</small></p> <p><a href=\"https://devforum.zoom.us/t/changelog-contact-center-four-new-endpoints-and-five-new-events-new-fields-in-dozens-of-api-endpoints-and-new-fields-in-five-teams-events/145656\">Read full topic</a></p>",
+      "published_at": "Mon, 17 Aug 2026 18:33:01 +0000",
+      "updated_at": "Mon, 17 Aug 2026 18:33:01 +0000",
+      "severity": {
+        "level": "UNKNOWN",
+        "cvss": null
+      },
+      "sources": [
+        {
+          "name": "Zoom Feed",
+          "url": "https://devforum.zoom.us/t/changelog-contact-center-four-new-endpoints-and-five-new-events-new-fields-in-dozens-of-api-endpoints-and-new-fields-in-five-teams-events/145656",
+          "raw_id": "vendor:zoom:Mon, 17 Au:a94aa0301c69b635"
+        }
+      ],
+      "raw": {
+        "feed_url": "https://devforum.zoom.us/c/changelog/100.rss"
+      },
+      "relevance": {
+        "status": "RELEVANT",
+        "confidence": "MEDIUM",
+        "matched_targets": [
+          "developer",
+          "users"
+        ],
+        "reason": "Event text matches monitored service, endpoint, product, or SDK terms.",
+        "service": "zoom",
+        "service_results": [
+          {
+            "status": "RELEVANT",
+            "confidence": "MEDIUM",
+            "matched_targets": [
+              "developer",
+              "users"
+            ],
+            "reason": "Event text matches monitored service, endpoint, product, or SDK terms.",
+            "service": "zoom"
+          }
+        ]
+      },
+      "first_seen_at": "2026-08-19T10:26:51.598964+00:00",
+      "last_seen_at": "2026-08-29T03:11:21.741660+00:00"
+    },
+    {
+      "id": "vendor:zoom:Thu, 13 Au:c316339e7d7d7bc5",
+      "service": "zoom",
+      "services": [
+        "zoom"
+      ],
+      "type": "AUTH_CHANGE",
+      "title": "Changelog: Contact Center - Four new APIs and five Queues webhook events",
+      "description": "<p>Released: 2026-08-13 Updated: 2026-08-13</p> <p><a href=\"https://developers.zoom.us/changelog/contact-center/august-13-2026\">Visit Changelog</a></p> <p>Summary: Added three new Reports APIs, one new Campaigns API and five new Queues webhooks. Added over a dozen fields across the Reports V2 (CX Analytics), Queue Waiting Experiences, Address Books, Operating Hours, Campaigns, Users, and Queues API endpoints and six Teams webhook events.</p> <h2><a name=\"p-332378-added-1\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332378-added-1\" aria-label=\"Heading link\"></a>Added</h2> <ul> <li>New <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/log/historical/agent_work_session</code></li> <li><code>GET /v2/contact_center/analytics/log/historical/agent_opt</code></li> <li><code>GET /v2/contact_center/analytics/log/historical/agent_compliance</code></li> </ul> </li> <li>New <strong>Campaigns</strong> API: <ul> <li><code>PATCH /v2/contact_center/outbound_campaign/campaigns/{campaignId}/contact_lists</code></li> </ul> </li> <li>New <strong>Queues</strong> webhook events: <ul> <li><code>contact_center.queue_disposition_unassigned</code></li> <li><code>contact_center.queue_disposition_assigned</code></li> <li><code>contact_center.queue_disposition_updated</code></li> <li><code>contact_center.queue_disposition_set_assigned</code></li> <li><code>contact_center.queue_disposition_set_unassigned</code></li> </ul> </li> </ul> <h2><a name=\"p-332378-changed-2\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332378-changed-2\" aria-label=\"Heading link\"></a>Changed</h2> <ul> <li>New <code>inbound_inactive_conversation_duration</code>, <code>callback_retry_registered_count</code>, <code>inbound_active_conversation_duration</code>, <code>callback_outcome</code>, <code>inbound_handled_excluding_callbacks_count</code>, <code>callback_connected_count</code>, <code>callback_disconnected_duration</code>, <code>callback_outcome</code>, <code>callback_retry_triggered_count</code>, <code>outbound_active_conversation_duration</code>, <code>out_sla_count</code>, <code>outbound_inactive_conversation_duration</code>, and <code>in_sla_count</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> </ul> </li> <li>New <code>agent_involved</code>, <code>auto_close_disconnect_count</code>, <code>zva_interaction_turn_count</code>, <code>zva_tools_used_count</code>, <code>parked_count,zva_skills_used_count</code>, <code>parked_duration</code>, <code>zva_consumer_messages_sent_count</code>, <code>zva_agent_messages_sent_count</code>, <code>zva_non_interactive_drop_off_count</code>, <code>zva_conversation_duration</code>, <code>zva_interactive_engagement_count</code>, and <code>zva_articles_used_count</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> </ul> </li> <li>New <code>customer_ring_disconnect_count</code> and <code>agent_message_received_count</code> response fields in these <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Users</strong> APIs: <ul> <li><code>GET /v2/contact_center/users/{userId}</code></li> <li><code>GET /v2/contact_center/users</code></li> </ul> </li> <li>New <code>accept_menu</code> response fields in these <strong>Queue Waiting Experiences</strong> APIs: <ul> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/units</code></li> <li><code>GET /v2/contact_center/address_books/custom_fields</code></li> <li><code>GET /v2/contact_center/address_books</code></li> <li><code>GET /v2/contact_center/address_books/{addressBookId}/contacts</code></li> <li><code>GET /v2/contact_center/address_books/contacts/{contactId}/custom_fields</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Operating Hours</strong> APIs: <ul> <li><code>GET /v2/contact_center/closures/{closureSetId}</code></li> <li><code>GET /v2/contact_center/closures/{closureSetId}/queues</code></li> <li><code>GET /v2/contact_center/closures/{closureSetId}/flows</code></li> <li><code>POST /v2/contact_center/closures</code></li> </ul> </li> <li>New <code>disposition_time,disposition_count</code> and <code>current_disposition_id</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> </ul> </li> <li>New <code>active_conversation_duration</code> and <code>inactive_conversation_duration</code> response fields in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>next_page_token</code> request field in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/custom_fields</code></li> <li><code>GET /v2/contact_center/address_books/{addressBookId}/contacts</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in these <strong>Campaigns</strong> APIs: <ul> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>DELETE /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts/{contactId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>POST /v2/contact_center/outbound_campaign/dnc_lists/{dncListId}/phones</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts/{contactId}</code></li> <li><code>DELETE /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts/{contactId}</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>DELETE /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts/batch</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts</code></li> <li><code>DELETE /v2/contact_center/outbound_campaign/dnc_lists/{dncListId}/phones</code></li> </ul> </li> <li>New <code>next_page_token</code> request field in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/outbound_dialer_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_timecard</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>direction</code> and <code>dnis</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> </ul> </li> <li>New <code>page_size</code>, <code>division_id</code>, and <code>division_name</code> request fields in these <strong>Queues</strong> APIs: <ul> <li><code>GET /v2/contact_center/queues</code></li> <li><code>GET /v2/contact_center/queue_templates</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Campaigns</strong> APIs: <ul> <li><code>POST /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts/{contactId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contacts/{contactId}/custom_fields</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts</code></li> <li><code>GET /v2/contact_center/outbound_campaign/dnc_lists/{dncListId}/phones</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in this <strong>Users</strong> API: <ul> <li><code>GET /v2/contact_center/users/{userId}</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in these <strong>Address Books</strong> APIs: <ul> <li><code>DELETE /v2/contact_center/address_books/{addressBookId}/contacts/batch</code></li> <li><code>GET /v2/contact_center/address_books/{addressBookId}</code></li> <li><code>PATCH /v2/contact_center/address_books/{addressBookId}/contacts/{contactId}</code></li> <li><code>PATCH /v2/contact_center/address_books/{addressBookId}/contacts/batch</code></li> <li><code>DELETE /v2/contact_center/address_books/{addressBookId}/contacts/{contactId}</code></li> <li><code>DELETE /v2/contact_center/address_books/{addressBookId}</code></li> <li><code>PATCH /v2/contact_center/address_books/custom_fields/{customFieldId}</code></li> <li><code>GET /v2/contact_center/address_books/units/{unitId}</code></li> <li><code>PATCH /v2/contact_center/address_books/units/{unitId}</code></li> <li><code>POST /v2/contact_center/address_books/{addressBookId}/contacts/batch</code></li> <li><code>DELETE /v2/contact_center/address_books/custom_fields/{customFieldId}</code></li> <li><code>PATCH /v2/contact_center/address_books/{addressBookId}</code></li> <li><code>DELETE /v2/contact_center/address_books/units/{unitId}</code></li> <li><code>POST /v2/contact_center/address_books/custom_fields</code></li> <li><code>GET /v2/contact_center/address_books/{addressBookId}/contacts/{contactId}</code></li> <li><code>POST /v2/contact_center/address_books/{addressBookId}/contacts</code></li> <li><code>GET /v2/contact_center/address_books/custom_fields/{customFieldId}</code></li> <li><code>POST /v2/contact_center/address_books/units</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in these <strong>Operating Hours</strong> APIs: <ul> <li><code>GET /v2/contact_center/closures/{closureSetId}</code></li> <li><code>POST /v2/contact_center/closures</code></li> </ul> </li> <li>New <code>division_id</code>, <code>page_size</code>, <code>X-Zoom-Division-Id</code>, <code>division_name</code>, and <code>next_page_token</code> response fields in this <strong>Inboxes</strong> API: <ul> <li><code>GET /v2/contact_center/inboxes/{inboxId}/queues</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in this <strong>Queues</strong> API: <ul> <li><code>GET /v2/contact_center/queues/{queueId}</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Users</strong> API: <ul> <li><code>GET /v2/contact_center/users</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/units</code></li> <li><code>GET /v2/contact_center/address_books</code></li> <li><code>GET /v2/contact_center/address_books/contacts/{contactId}/custom_fields</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Operating Hours</strong> APIs: <ul> <li><code>GET /v2/contact_center/closures/{closureSetId}/queues</code></li> <li><code>GET /v2/contact_center/closures/{closureSetId}/flows</code></li> </ul> </li> <li>New <code>is_accept_menu</code> response fields in this <strong>Queue Waiting Experiences</strong> API: <ul> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Campaigns</strong> APIs: <ul> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contacts/{contactId}/custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/dnc_lists/{dncListId}/phones</code></li> </ul> </li> <li>New <code>engagement_count</code> response field in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/expert_assist</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/outbound_dialer_performance</code></li> </ul> </li> <li>New <code>division_id</code> and <code>division_name</code> fields in these <strong>Teams</strong> webhook events: <ul> <li><code>contact_center.team_created</code></li> <li><code>contact_center.team_moved</code></li> <li><code>contact_center.team_members_assigned</code></li> <li><code>contact_center.team_members_unassigned</code></li> <li><code>contact_center.team_deleted</code></li> <li><code>contact_center.team_updated</code></li> </ul> </li> </ul> <p><small>1 post - 1 participant</small></p> <p><a href=\"https://devforum.zoom.us/t/changelog-contact-center-four-new-apis-and-five-queues-webhook-events/145557\">Read full topic</a></p>",
+      "published_at": "Thu, 13 Aug 2026 22:21:57 +0000",
+      "updated_at": "Thu, 13 Aug 2026 22:21:57 +0000",
+      "severity": {
+        "level": "UNKNOWN",
+        "cvss": null
+      },
+      "sources": [
+        {
+          "name": "Zoom Feed",
+          "url": "https://devforum.zoom.us/t/changelog-contact-center-four-new-apis-and-five-queues-webhook-events/145557",
+          "raw_id": "vendor:zoom:Thu, 13 Au:c316339e7d7d7bc5"
+        }
+      ],
+      "raw": {
+        "feed_url": "https://devforum.zoom.us/c/changelog/100.rss"
+      },
+      "relevance": {
+        "status": "RELEVANT",
+        "confidence": "MEDIUM",
+        "matched_targets": [
+          "developer",
+          "users"
+        ],
+        "reason": "Event text matches monitored service, endpoint, product, or SDK terms.",
+        "service": "zoom",
+        "service_results": [
+          {
+            "status": "RELEVANT",
+            "confidence": "MEDIUM",
+            "matched_targets": [
+              "developer",
+              "users"
+            ],
+            "reason": "Event text matches monitored service, endpoint, product, or SDK terms.",
+            "service": "zoom"
+          }
+        ]
+      },
+      "first_seen_at": "2026-08-19T10:26:51.598632+00:00",
+      "last_seen_at": "2026-08-29T03:11:21.741315+00:00"
+    },
+    {
+      "id": "vendor:zoom:Thu, 13 Au:13bec99eb2ebe232",
+      "service": "zoom",
+      "services": [
+        "zoom"
+      ],
+      "type": "DEPRECATION",
+      "title": "Changelog: Zoom Rooms Controller - Windows - 6.7.0",
+      "description": "<p>Released: 2026-01-05 Updated: 2026-08-11</p> <p><a href=\"https://developers.zoom.us/changelog/zoom-rooms-controller/windows/6.7.0\">Visit Changelog</a></p> <p>Summary: Added personal link and simulive webinar support, enhanced HWIO for companion devices, with API improvements and breaking changes.</p> <h2><a name=\"p-332379-breaking-changes-1\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332379-breaking-changes-1\" aria-label=\"Heading link\"></a>Breaking changes</h2> <ul> <li> <p>Enhanced SDK initialization API in file <code>IZRCSDK.h</code>.</p> <ul> <li> <p>Moved <code>CreateInstance</code> method to the beginning of class <code>IZRCSDK</code> and integrated sink registration into instance creation.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">static IZRCSDK* CreateInstance(IZRCSDKSink* pSdkSink); </code></pre> </li> <li> <p>Removed <code>RegisterSink</code> method from class <code>IZRCSDK</code>. Use <code>CreateInstance</code> with sink parameter instead.</p> </li> </ul> </li> <li> <p>Enhanced classic whiteboard share status notification in file <code>IMeetingShareHelper.h</code>.</p> <ul> <li> <p>New added struct <code>ClassicWhiteboardShareStatus</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct ClassicWhiteboardShareStatus { bool isSharing = false; ///&lt;TRUE indicates classic whiteboard is being shared, otherwise not. int32_t shareSourceID = -1; ///&lt;Share source ID. -1 if not available. The share that the shareSourceID refers to can be pinned on confidence monitor screen. }; </code></pre> </li> <li> <p>Renamed callback from <code>OnUpdateWhiteboardShareStatusNotification</code> to <code>OnUpdateClassicWhiteboardShareStatusNotification</code> in class <code>IMeetingShareHelperSink</code>, and changed parameter from <code>bool isSharing</code> to <code>ClassicWhiteboardShareStatus</code> structure.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual void OnUpdateClassicWhiteboardShareStatusNotification(const ClassicWhiteboardShareStatus&amp; status) = 0; </code></pre> </li> </ul> </li> <li> <p>Enhanced join meeting interfaces in file <code>IMeetingService.h</code>.</p> <ul> <li> <p>Renamed interface from <code>JoinMeeting</code> to <code>JoinMeetingWithMeetingNumber</code> in class <code>IMeetingService</code> for clarity.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError JoinMeetingWithMeetingNumber(const std::string&amp; meetingNumber, bool bringShareToMeeting = false) = 0; </code></pre> </li> <li> <p>Removed <code>bringShareToMeeting</code> parameter from interface <code>JoinMeetingWithURL</code> in class <code>IMeetingService</code> because it is not supported.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError JoinMeetingWithURL(const std::string&amp; url) = 0; </code></pre> </li> <li> <p>Removed <code>bringShareToMeeting</code> parameter from interface <code>JoinMeetingWithContactID</code> in class <code>IMeetingService</code> because it is not supported.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError JoinMeetingWithContactID(const std::string&amp; contactID) = 0; </code></pre> </li> </ul> </li> <li> <p>Enhanced HWIO feature to support Mac&amp;Win Companion Zoom Rooms in file <code>IHWIOHelper.h</code>.</p> <ul> <li> <p>Added <code>companionZRID</code> parameter to all HWIO interfaces in class <code>IHWIOHelper</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">ListHWIODevices(const std::string&amp; companionZRID = \"\") ConfigureHWIODevice(const HWIODeviceConfiguration&amp; configuration, const std::string&amp; companionZRID = \"\") AssignHWIODevice(const HWIOAssignDeviceInfo&amp; assignDevice, const std::string&amp; companionZRID = \"\") IsHWIOServiceAvailable(bool&amp; available, const std::string&amp; companionZRID = \"\") SetHWIOVideoConvertPreference(const HWIOVideoConvertPreference&amp; preference, const std::string&amp; companionZRID = \"\") SetHWIOInputSignalDetection(const HWIOInputSignalDetection&amp; signalDetection, const std::string&amp; companionZRID = \"\") </code></pre> </li> <li> <p>Added <code>companionZRID</code> parameter to all HWIO callbacks in class <code>IHWIOHelperSink</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">OnHWIOListDevicesResult(int32_t result, const HWIOInfo&amp; info, const std::string&amp; companionZRID) OnHWIOConfigureDeviceResult(int32_t result, const HWIODeviceConfiguration&amp; configuration, const std::string&amp; companionZRID) OnHWIOAssignDeviceResult(int32_t result, const HWIOAssignDeviceInfo&amp; assignDeviceInfo, const std::string&amp; companionZRID) OnHWIODeviceUpdated(const HWIODeviceUpdate&amp; deviceUpdate, const std::string&amp; companionZRID) OnHWIOServiceStatusUpdated(bool isServiceAvailable, bool isFeatureAllowed, const std::string&amp; companionZRID) OnHWIOSetVideoConvertPreferenceResult(int32_t result, const HWIOVideoConvertPreference&amp; preference, const std::string&amp; companionZRID) OnHWIOSetInputSignalDetectionResult(int32_t result, const HWIOInputSignalDetection&amp; signalDetection, const std::string&amp; companionZRID) </code></pre> </li> </ul> </li> <li> <p>Changed field type of <code>defaultIndex</code> in struct <code>CameraPresetInfo</code> from <code>uint32_t</code> to <code>int32_t</code> in file <code>ZRCSDKTypes.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct CameraPresetInfo { int32_t defaultIndex = -1; ///&lt;Default preset index. // ... }; </code></pre> </li> </ul> <h2><a name=\"p-332379-added-2\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332379-added-2\" aria-label=\"Heading link\"></a>Added</h2> <ul> <li> <p>New added interfaces to support joining meeting with personal link feature.</p> <ul> <li> <p>New added callback in class <code>IMeetingServiceSink</code> to confirm personal link for joining meeting in file <code>IMeetingService.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual void OnConfirmPersonalLink(const std::string&amp; personalLink) = 0; </code></pre> </li> <li> <p>New added interface in class <code>IMeetingService</code> to join meeting with personal link name in file <code>IMeetingService.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError JoinMeetingWithPersonalLinkName(const std::string&amp; personalLinkName, bool bringShareToMeeting = false) = 0; </code></pre> </li> <li> <p>New added interface in class <code>IMeetingService</code> to join meeting using a complete personal link in file <code>IMeetingService.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError JoinMeetingWithPersonalLink(const std::string&amp; personalLink) = 0; </code></pre> </li> <li> <p>New added interface in class <code>IMeetingService</code> to cancel confirming personal link in file <code>IMeetingService.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError CancelConfirmPersonalLink() = 0; </code></pre> </li> </ul> </li> <li> <p>New added interfaces to support simulive webinar feature.</p> <ul> <li> <p>New added struct <code>SimuliveWebinarInfo</code> in file <code>IMeetingWebinarHelper.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct SimuliveWebinarInfo { bool isInSimuliveStatus = false; ///&lt;TRUE indicates it is currently in simulive status, otherwise not. time_t recordingEndTimeStampInSecond = 0; ///&lt;The recording end time stamp, it is valid when the isInSimuliveStatus is true. }; </code></pre> </li> <li> <p>New added callback in class <code>IMeetingWebinarHelperSink</code> to notify simulive webinar info in file <code>IMeetingWebinarHelper.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual void OnSimuliveWebinarInfoNotification(const SimuliveWebinarInfo&amp; info) = 0; </code></pre> </li> <li> <p>New added interface in class <code>IMeetingWebinarHelper</code> to transition simulive webinar to live session in file <code>IMeetingWebinarHelper.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError SimuliveWebinarGoLive() = 0; </code></pre> </li> <li> <p>New added enum value <code>CONSENT_TYPE_SIMULIVE_WEBINAR</code> in enum <code>ConsentType</code> in file <code>IMeetingReminderHelper.h</code>.</p> </li> <li> <p>New added enum value <code>CONSENT_TYPE_CUSTOM_RECORDING</code> in enum <code>ConsentType</code> in file <code>IMeetingReminderHelper.h</code>.</p> </li> <li> <p>New added fields in struct <code>MeetingInfo</code> in file <code>ZRCSDKTypes.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct MeetingInfo { // ... bool isSimuliveWebinar = false; ///&lt;TRUE indicates the meeting is simulive webinar, otherwise not. bool isSimuliveWebinarSupportGoLive = false; ///&lt;TRUE indicates the simulive webinar supports go live, otherwise not. bool isSimuliveWebinarAllowGoLive = false; ///&lt;TRUE indicates the simulive webinar is allowed go live, otherwise not. }; </code></pre> </li> <li> <p>New added fields in struct <code>MeetingParticipant</code> in file <code>ZRCSDKTypes.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct MeetingParticipant { // ... bool isSimuliveUser = false; ///&lt;TRUE indicates the user is simulive user, otherwise not. bool isActiveSimuliveUser = false; ///&lt;TRUE indicates the user is simulive user that is playing recording, otherwise not. }; </code></pre> </li> <li> <p>New added error code <code>ZRCSDKERR_API_NOT_SUPPORT_IN_SIMULIVE_WEBINAR</code> in file <code>ZRCSDKTypes.h</code>.</p> </li> <li> <p>New added error code <code>ZRCSDKERR_USER_IS_SIMULIVE_USER</code> in file <code>ZRCSDKTypes.h</code>.</p> </li> </ul> </li> <li> <p>New added interfaces to support system audio enhancements feature in file <code>ISettingService.h</code>.</p> <ul> <li> <p>New added enum <code>SystemAudioEnhancementsMode</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">enum SystemAudioEnhancementsMode { SystemAudioEnhancementsModeNone = -1, ///&lt;System audio enhancements mode is None, indicates the system audio enhancements feature is not available. SystemAudioEnhancementsModeAuto = 0, ///&lt;System audio enhancements mode is Auto. SystemAudioEnhancementsModeOn, ///&lt;System audio enhancements mode is On. SystemAudioEnhancementsModeOff ///&lt;System audio enhancements mode is Off. }; </code></pre> </li> <li> <p>New added callback in class <code>ISettingServiceSink</code> to notify system audio enhancements mode update.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual void OnUpdateSystemAudioEnhancementsMode(SystemAudioEnhancementsMode mode) = 0; </code></pre> </li> <li> <p>New added interface in class <code>ISettingService</code> to get current system audio enhancements mode.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError GetCurrentSystemAudioEnhancementsMode(SystemAudioEnhancementsMode&amp; mode) = 0; </code></pre> </li> <li> <p>New added interface in class <code>ISettingService</code> to select system audio enhancements mode.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError SelectSystemAudioEnhancementsMode(SystemAudioEnhancementsMode mode) = 0; </code></pre> </li> </ul> </li> <li> <p>New added fields in struct <code>MeetingParticipant</code> to support RTMP user in file <code>ZRCSDKTypes.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct MeetingParticipant { // ... bool isRTMPUser = false; ///&lt;TRUE indicates user is RTMP (Real Time Messaging Protocol) user, otherwise not. bool isActiveRTMPUser = false; ///&lt;TRUE indicates user is current active RTMP user, otherwise not. }; </code></pre> </li> <li> <p>New added field in struct <code>Device</code> to support stethoscope microphone in file <code>ZRCSDKTypes.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct Device { // ... bool isStethoscopeMic = false; ///&lt;TRUE indicates device is a stethoscope microphone, otherwise not. }; </code></pre> </li> <li> <p>New added error codes in file <code>ZRCSDKTypes.h</code>.</p> <ul> <li><code>ZRCSDKERR_CANNOT_PIN_THE_SHARE_ON_CONFIDENCE_MONITOR_SCREEN</code> - The share can’t be pinned on confidence monitor screen.</li> <li><code>ZRCSDKERR_USER_UNSUPPORTED_ACTION</code> - The user unsupported action.</li> </ul> </li> <li> <p>New added enum value <code>ExitMeetingReasonRejoinNewMeeting</code> in enum <code>ExitMeetingReason</code> to indicate exit meeting reason is rejoin new meeting in file <code>IMeetingService.h</code>.</p> </li> </ul> <h2><a name=\"p-332379-changed-3\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332379-changed-3\" aria-label=\"Heading link\"></a>Changed</h2> <ul> <li>Enhanced interface <code>ReportIssue</code> in class <code>IParticipantHelper</code> to support report in waiting room in file <code>IParticipantHelper.h</code>. In this case, <code>userIDs</code> can be empty.</li> </ul> <h2><a name=\"p-332379-deprecated-4\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332379-deprecated-4\" aria-label=\"Heading link\"></a>Deprecated</h2> <ul> <li>Deprecated interface <code>UpdateVideoLayoutStyle</code> in class <code>IMeetingViewLayoutHelper</code> in file <code>IMeetingViewLayoutHelper.h</code>. Please use <code>SetScreenLayout(MeetingScreen screenIndex, ScreenLayoutSourceType layout)</code> instead.</li> </ul> <p><small>1 post - 1 participant</small></p> <p><a href=\"https://devforum.zoom.us/t/changelog-zoom-rooms-controller-windows-6-7-0/145558\">Read full topic</a></p>",
+      "published_at": "Thu, 13 Aug 2026 22:21:58 +0000",
+      "updated_at": "Thu, 13 Aug 2026 22:21:58 +0000",
+      "severity": {
+        "level": "UNKNOWN",
+        "cvss": null
+      },
+      "sources": [
+        {
+          "name": "Zoom Feed",
+          "url": "https://devforum.zoom.us/t/changelog-zoom-rooms-controller-windows-6-7-0/145558",
+          "raw_id": "vendor:zoom:Thu, 13 Au:13bec99eb2ebe232"
+        }
+      ],
+      "raw": {
+        "feed_url": "https://devforum.zoom.us/c/changelog/100.rss"
+      },
+      "relevance": {
+        "status": "REVIEW",
+        "confidence": "MEDIUM",
+        "matched_targets": [
+          "developer",
+          "meetings"
+        ],
+        "reason": "Both excluded product terms and monitored API terms matched: zoom rooms.",
+        "service": "zoom",
+        "service_results": [
+          {
+            "status": "REVIEW",
+            "confidence": "MEDIUM",
+            "matched_targets": [
+              "developer",
+              "meetings"
+            ],
+            "reason": "Both excluded product terms and monitored API terms matched: zoom rooms.",
+            "service": "zoom"
+          }
+        ]
+      },
+      "first_seen_at": "2026-08-19T10:26:51.598168+00:00",
+      "last_seen_at": "2026-08-29T03:11:21.740850+00:00"
     },
     {
       "id": "vendor:google_calendar:2026-08-27:7c9230a6fe3d0908",
@@ -3729,156 +3944,6 @@
       },
       "first_seen_at": "2026-08-28T05:24:13.759158+00:00",
       "last_seen_at": "2026-08-28T05:24:13.759159+00:00"
-    },
-    {
-      "id": "vendor:zoom:Mon, 17 Au:a94aa0301c69b635",
-      "service": "zoom",
-      "services": [
-        "zoom"
-      ],
-      "type": "AUTH_CHANGE",
-      "title": "Changelog: Contact Center - Four new endpoints and five new events; new fields in dozens of API endpoints and new fields in five Teams events",
-      "description": "<p>Released: 2026-08-17 Updated: 2026-08-17</p> <p><a href=\"https://developers.zoom.us/changelog/contact-center/august-17-2026\">Visit Changelog</a></p> <p>Summary: Three new Reports endpoints, one new Campaigns endpoint, and five new Queues webhook events; new fields in dozens of API endpoints and new fields in five Teams events.</p> <h2><a name=\"p-332527-added-1\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332527-added-1\" aria-label=\"Heading link\"></a>Added</h2> <ul> <li>New <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/log/historical/agent_work_session</code></li> <li><code>GET /v2/contact_center/analytics/log/historical/agent_opt</code></li> <li><code>GET /v2/contact_center/analytics/log/historical/agent_compliance</code></li> </ul> </li> <li>New <strong>Campaigns</strong> API: <ul> <li><code>PATCH /v2/contact_center/outbound_campaign/campaigns/{campaignId}/contact_lists</code></li> </ul> </li> <li>New <strong>Queues</strong> webhook event: <ul> <li><code>contact_center.queue_disposition_unassigned</code></li> <li><code>contact_center.queue_disposition_assigned</code></li> <li><code>contact_center.queue_disposition_updated</code></li> <li><code>contact_center.queue_disposition_set_assigned</code></li> <li><code>contact_center.queue_disposition_set_unassigned</code></li> </ul> </li> </ul> <h2><a name=\"p-332527-changed-2\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332527-changed-2\" aria-label=\"Heading link\"></a>Changed</h2> <ul> <li>New <code>inbound_inactive_conversation_duration</code>, <code>callback_retry_registered_count</code>, <code>inbound_active_conversation_duration</code>, <code>callback_outcome</code>, <code>inbound_handled_excluding_callbacks_count</code>, <code>callback_connected_count</code>, <code>callback_disconnected_duration</code>, <code>callback_outcome</code>, <code>callback_retry_triggered_count</code>, <code>outbound_active_conversation_duration</code>, <code>out_sla_count</code>, <code>outbound_inactive_conversation_duration</code>, and <code>in_sla_count</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> </ul> </li> <li>New <code>agent_involved</code>, <code>auto_close_disconnect_count</code>, <code>zva_interaction_turn_count</code>, <code>zva_tools_used_count,parked_count</code>, <code>zva_skills_used_count,parked_duration</code>, <code>zva_consumer_messages_sent_count</code>, <code>zva_agent_messages_sent_count</code>, <code>zva_non_interactive_drop_off_count</code>, <code>zva_conversation_duration</code>, <code>zva_interactive_engagement_count</code>, and <code>zva_articles_used_count</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> </ul> </li> <li>New <code>customer_ring_disconnect_count</code> and <code>agent_message_received_count</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>division_name</code>, <code>division_id</code>, and <code>page_size</code> response fields in this <strong>Users</strong> API: <ul> <li><code>GET /v2/contact_center/users</code></li> </ul> </li> <li>New <code>accept_menu</code> response fields in these <strong>Queue Waiting Experiences</strong> APIs: <ul> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/units</code></li> <li><code>GET /v2/contact_center/address_books/custom_fields</code></li> <li><code>GET /v2/contact_center/address_books</code></li> <li><code>GET /v2/contact_center/address_books/contacts/{contactId}/custom_fields</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Operating Hours</strong> APIs: <ul> <li><code>GET /v2/contact_center/closures/{closureSetId}/queues</code></li> <li><code>GET /v2/contact_center/closures/{closureSetId}/flows</code></li> <li><code>POST /v2/contact_center/closures</code></li> </ul> </li> <li>New <code>disposition_time,disposition_count</code> and <code>current_disposition_id</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> </ul> </li> <li>New <code>active_conversation_duration</code> and <code>inactive_conversation_duration</code> response fields in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>next_page_token</code> request field in this <strong>Address Books</strong> API: <ul> <li><code>GET /v2/contact_center/address_books/custom_fields</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in these <strong>Campaigns</strong> APIs: <ul> <li><code>POST /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>DELETE /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists</code></li> </ul> </li> <li>New <code>next_page_token</code> request field in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/outbound_dialer_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_timecard</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>direction</code> and <code>dnis</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Campaigns</strong> APIs: <ul> <li><code>POST /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contacts/{contactId}/custom_fields</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/{addressBookId}</code></li> <li><code>GET /v2/contact_center/address_books/units/{unitId}</code></li> <li><code>POST /v2/contact_center/address_books/{addressBookId}/contacts/batch</code></li> <li><code>POST /v2/contact_center/address_books/{addressBookId}/contacts</code></li> <li><code>GET /v2/contact_center/address_books/custom_fields/{customFieldId}</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in this <strong>Operating Hours</strong> API: <ul> <li><code>POST /v2/contact_center/closures</code></li> </ul> </li> <li>New <code>division_id</code>, <code>page_size</code>, <code>X-Zoom-Division-Id</code>, <code>division_name</code>, and <code>next_page_token</code> response fields in these <strong>nboxes</strong> API: <ul> <li><code>GET /v2/contact_center/inboxes/{inboxId}/queues</code></li> </ul> </li> <li>New <code>page_size</code> request field in the following <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/units</code></li> <li><code>GET /v2/contact_center/address_books</code></li> <li><code>GET /v2/contact_center/address_books/contacts/{contactId}/custom_fields</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Operating Hours</strong> APIs: <ul> <li><code>GET /v2/contact_center/closures/{closureSetId}/queues</code></li> <li><code>GET /v2/contact_center/closures/{closureSetId}/flows</code></li> </ul> </li> <li>New <code>is_accept_menu</code> response fields in this <strong>Queue Waiting Experiences</strong> API: <ul> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Campaigns</strong> APIs: <ul> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contacts/{contactId}/custom_fields</code></li> </ul> </li> <li>New <code>engagement_count</code> response field in the following <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/expert_assist</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/outbound_dialer_performance</code></li> </ul> </li> <li>New <code>division_id</code> and <code>division_name</code> fields in these <strong>Teams</strong> webhook events: <ul> <li><code>contact_center.team_created</code></li> <li><code>contact_center.team_moved</code></li> <li><code>contact_center.team_members_assigned</code></li> <li><code>contact_center.team_members_unassigned</code></li> <li><code>contact_center.team_deleted</code></li> <li><code>contact_center.team_updated</code></li> </ul> </li> </ul> <p><small>1 post - 1 participant</small></p> <p><a href=\"https://devforum.zoom.us/t/changelog-contact-center-four-new-endpoints-and-five-new-events-new-fields-in-dozens-of-api-endpoints-and-new-fields-in-five-teams-events/145656\">Read full topic</a></p>",
-      "published_at": "Mon, 17 Aug 2026 18:33:01 +0000",
-      "updated_at": "Mon, 17 Aug 2026 18:33:01 +0000",
-      "severity": {
-        "level": "UNKNOWN",
-        "cvss": null
-      },
-      "sources": [
-        {
-          "name": "Zoom Feed",
-          "url": "https://devforum.zoom.us/t/changelog-contact-center-four-new-endpoints-and-five-new-events-new-fields-in-dozens-of-api-endpoints-and-new-fields-in-five-teams-events/145656",
-          "raw_id": "vendor:zoom:Mon, 17 Au:a94aa0301c69b635"
-        }
-      ],
-      "raw": {
-        "feed_url": "https://devforum.zoom.us/c/changelog/100.rss"
-      },
-      "relevance": {
-        "status": "RELEVANT",
-        "confidence": "MEDIUM",
-        "matched_targets": [
-          "developer",
-          "users"
-        ],
-        "reason": "Event text matches monitored service, endpoint, product, or SDK terms.",
-        "service": "zoom",
-        "service_results": [
-          {
-            "status": "RELEVANT",
-            "confidence": "MEDIUM",
-            "matched_targets": [
-              "developer",
-              "users"
-            ],
-            "reason": "Event text matches monitored service, endpoint, product, or SDK terms.",
-            "service": "zoom"
-          }
-        ]
-      },
-      "first_seen_at": "2026-08-19T10:26:51.598964+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.759089+00:00"
-    },
-    {
-      "id": "vendor:zoom:Thu, 13 Au:c316339e7d7d7bc5",
-      "service": "zoom",
-      "services": [
-        "zoom"
-      ],
-      "type": "AUTH_CHANGE",
-      "title": "Changelog: Contact Center - Four new APIs and five Queues webhook events",
-      "description": "<p>Released: 2026-08-13 Updated: 2026-08-13</p> <p><a href=\"https://developers.zoom.us/changelog/contact-center/august-13-2026\">Visit Changelog</a></p> <p>Summary: Added three new Reports APIs, one new Campaigns API and five new Queues webhooks. Added over a dozen fields across the Reports V2 (CX Analytics), Queue Waiting Experiences, Address Books, Operating Hours, Campaigns, Users, and Queues API endpoints and six Teams webhook events.</p> <h2><a name=\"p-332378-added-1\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332378-added-1\" aria-label=\"Heading link\"></a>Added</h2> <ul> <li>New <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/log/historical/agent_work_session</code></li> <li><code>GET /v2/contact_center/analytics/log/historical/agent_opt</code></li> <li><code>GET /v2/contact_center/analytics/log/historical/agent_compliance</code></li> </ul> </li> <li>New <strong>Campaigns</strong> API: <ul> <li><code>PATCH /v2/contact_center/outbound_campaign/campaigns/{campaignId}/contact_lists</code></li> </ul> </li> <li>New <strong>Queues</strong> webhook events: <ul> <li><code>contact_center.queue_disposition_unassigned</code></li> <li><code>contact_center.queue_disposition_assigned</code></li> <li><code>contact_center.queue_disposition_updated</code></li> <li><code>contact_center.queue_disposition_set_assigned</code></li> <li><code>contact_center.queue_disposition_set_unassigned</code></li> </ul> </li> </ul> <h2><a name=\"p-332378-changed-2\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332378-changed-2\" aria-label=\"Heading link\"></a>Changed</h2> <ul> <li>New <code>inbound_inactive_conversation_duration</code>, <code>callback_retry_registered_count</code>, <code>inbound_active_conversation_duration</code>, <code>callback_outcome</code>, <code>inbound_handled_excluding_callbacks_count</code>, <code>callback_connected_count</code>, <code>callback_disconnected_duration</code>, <code>callback_outcome</code>, <code>callback_retry_triggered_count</code>, <code>outbound_active_conversation_duration</code>, <code>out_sla_count</code>, <code>outbound_inactive_conversation_duration</code>, and <code>in_sla_count</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> </ul> </li> <li>New <code>agent_involved</code>, <code>auto_close_disconnect_count</code>, <code>zva_interaction_turn_count</code>, <code>zva_tools_used_count</code>, <code>parked_count,zva_skills_used_count</code>, <code>parked_duration</code>, <code>zva_consumer_messages_sent_count</code>, <code>zva_agent_messages_sent_count</code>, <code>zva_non_interactive_drop_off_count</code>, <code>zva_conversation_duration</code>, <code>zva_interactive_engagement_count</code>, and <code>zva_articles_used_count</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> </ul> </li> <li>New <code>customer_ring_disconnect_count</code> and <code>agent_message_received_count</code> response fields in these <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Users</strong> APIs: <ul> <li><code>GET /v2/contact_center/users/{userId}</code></li> <li><code>GET /v2/contact_center/users</code></li> </ul> </li> <li>New <code>accept_menu</code> response fields in these <strong>Queue Waiting Experiences</strong> APIs: <ul> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/units</code></li> <li><code>GET /v2/contact_center/address_books/custom_fields</code></li> <li><code>GET /v2/contact_center/address_books</code></li> <li><code>GET /v2/contact_center/address_books/{addressBookId}/contacts</code></li> <li><code>GET /v2/contact_center/address_books/contacts/{contactId}/custom_fields</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Operating Hours</strong> APIs: <ul> <li><code>GET /v2/contact_center/closures/{closureSetId}</code></li> <li><code>GET /v2/contact_center/closures/{closureSetId}/queues</code></li> <li><code>GET /v2/contact_center/closures/{closureSetId}/flows</code></li> <li><code>POST /v2/contact_center/closures</code></li> </ul> </li> <li>New <code>disposition_time,disposition_count</code> and <code>current_disposition_id</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> </ul> </li> <li>New <code>active_conversation_duration</code> and <code>inactive_conversation_duration</code> response fields in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>next_page_token</code> request field in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/custom_fields</code></li> <li><code>GET /v2/contact_center/address_books/{addressBookId}/contacts</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in these <strong>Campaigns</strong> APIs: <ul> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>DELETE /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts/{contactId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>POST /v2/contact_center/outbound_campaign/dnc_lists/{dncListId}/phones</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts/{contactId}</code></li> <li><code>DELETE /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts/{contactId}</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>DELETE /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts/batch</code></li> <li><code>PATCH /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts</code></li> <li><code>DELETE /v2/contact_center/outbound_campaign/dnc_lists/{dncListId}/phones</code></li> </ul> </li> <li>New <code>next_page_token</code> request field in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/outbound_dialer_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_timecard</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>direction</code> and <code>dnis</code> response fields in this <strong>Reports V2 (CX Analytics)</strong> API: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> </ul> </li> <li>New <code>page_size</code>, <code>division_id</code>, and <code>division_name</code> request fields in these <strong>Queues</strong> APIs: <ul> <li><code>GET /v2/contact_center/queues</code></li> <li><code>GET /v2/contact_center/queue_templates</code></li> </ul> </li> <li>New <code>division_name</code> and <code>division_id</code> response fields in these <strong>Campaigns</strong> APIs: <ul> <li><code>POST /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields/{customFieldId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts/{contactId}</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contacts/{contactId}/custom_fields</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts</code></li> <li><code>GET /v2/contact_center/outbound_campaign/dnc_lists/{dncListId}/phones</code></li> <li><code>POST /v2/contact_center/outbound_campaign/contact_lists</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in this <strong>Users</strong> API: <ul> <li><code>GET /v2/contact_center/users/{userId}</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in these <strong>Address Books</strong> APIs: <ul> <li><code>DELETE /v2/contact_center/address_books/{addressBookId}/contacts/batch</code></li> <li><code>GET /v2/contact_center/address_books/{addressBookId}</code></li> <li><code>PATCH /v2/contact_center/address_books/{addressBookId}/contacts/{contactId}</code></li> <li><code>PATCH /v2/contact_center/address_books/{addressBookId}/contacts/batch</code></li> <li><code>DELETE /v2/contact_center/address_books/{addressBookId}/contacts/{contactId}</code></li> <li><code>DELETE /v2/contact_center/address_books/{addressBookId}</code></li> <li><code>PATCH /v2/contact_center/address_books/custom_fields/{customFieldId}</code></li> <li><code>GET /v2/contact_center/address_books/units/{unitId}</code></li> <li><code>PATCH /v2/contact_center/address_books/units/{unitId}</code></li> <li><code>POST /v2/contact_center/address_books/{addressBookId}/contacts/batch</code></li> <li><code>DELETE /v2/contact_center/address_books/custom_fields/{customFieldId}</code></li> <li><code>PATCH /v2/contact_center/address_books/{addressBookId}</code></li> <li><code>DELETE /v2/contact_center/address_books/units/{unitId}</code></li> <li><code>POST /v2/contact_center/address_books/custom_fields</code></li> <li><code>GET /v2/contact_center/address_books/{addressBookId}/contacts/{contactId}</code></li> <li><code>POST /v2/contact_center/address_books/{addressBookId}/contacts</code></li> <li><code>GET /v2/contact_center/address_books/custom_fields/{customFieldId}</code></li> <li><code>POST /v2/contact_center/address_books/units</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in these <strong>Operating Hours</strong> APIs: <ul> <li><code>GET /v2/contact_center/closures/{closureSetId}</code></li> <li><code>POST /v2/contact_center/closures</code></li> </ul> </li> <li>New <code>division_id</code>, <code>page_size</code>, <code>X-Zoom-Division-Id</code>, <code>division_name</code>, and <code>next_page_token</code> response fields in this <strong>Inboxes</strong> API: <ul> <li><code>GET /v2/contact_center/inboxes/{inboxId}/queues</code></li> </ul> </li> <li>New <code>X-Zoom-Division-Id</code> request field in this <strong>Queues</strong> API: <ul> <li><code>GET /v2/contact_center/queues/{queueId}</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Users</strong> API: <ul> <li><code>GET /v2/contact_center/users</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/queue_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/disposition</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/flow_performance</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/agent_performance</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Address Books</strong> APIs: <ul> <li><code>GET /v2/contact_center/address_books/units</code></li> <li><code>GET /v2/contact_center/address_books</code></li> <li><code>GET /v2/contact_center/address_books/contacts/{contactId}/custom_fields</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Operating Hours</strong> APIs: <ul> <li><code>GET /v2/contact_center/closures/{closureSetId}/queues</code></li> <li><code>GET /v2/contact_center/closures/{closureSetId}/flows</code></li> </ul> </li> <li>New <code>is_accept_menu</code> response fields in this <strong>Queue Waiting Experiences</strong> API: <ul> <li><code>PUT /v2/contact_center/queue_waiting_experiences/{queueId}/interrupt_menu</code></li> </ul> </li> <li>New <code>page_size</code> request field in these <strong>Campaigns</strong> APIs: <ul> <li><code>GET /v2/contact_center/outbound_campaign/contact_list_custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists/{contactListId}/contacts</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contact_lists</code></li> <li><code>GET /v2/contact_center/outbound_campaign/contacts/{contactId}/custom_fields</code></li> <li><code>GET /v2/contact_center/outbound_campaign/dnc_lists/{dncListId}/phones</code></li> </ul> </li> <li>New <code>engagement_count</code> response field in these <strong>Reports V2 (CX Analytics)</strong> APIs: <ul> <li><code>GET /v2/contact_center/analytics/dataset/historical/engagement</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/expert_assist</code></li> <li><code>GET /v2/contact_center/analytics/dataset/historical/outbound_dialer_performance</code></li> </ul> </li> <li>New <code>division_id</code> and <code>division_name</code> fields in these <strong>Teams</strong> webhook events: <ul> <li><code>contact_center.team_created</code></li> <li><code>contact_center.team_moved</code></li> <li><code>contact_center.team_members_assigned</code></li> <li><code>contact_center.team_members_unassigned</code></li> <li><code>contact_center.team_deleted</code></li> <li><code>contact_center.team_updated</code></li> </ul> </li> </ul> <p><small>1 post - 1 participant</small></p> <p><a href=\"https://devforum.zoom.us/t/changelog-contact-center-four-new-apis-and-five-queues-webhook-events/145557\">Read full topic</a></p>",
-      "published_at": "Thu, 13 Aug 2026 22:21:57 +0000",
-      "updated_at": "Thu, 13 Aug 2026 22:21:57 +0000",
-      "severity": {
-        "level": "UNKNOWN",
-        "cvss": null
-      },
-      "sources": [
-        {
-          "name": "Zoom Feed",
-          "url": "https://devforum.zoom.us/t/changelog-contact-center-four-new-apis-and-five-queues-webhook-events/145557",
-          "raw_id": "vendor:zoom:Thu, 13 Au:c316339e7d7d7bc5"
-        }
-      ],
-      "raw": {
-        "feed_url": "https://devforum.zoom.us/c/changelog/100.rss"
-      },
-      "relevance": {
-        "status": "RELEVANT",
-        "confidence": "MEDIUM",
-        "matched_targets": [
-          "developer",
-          "users"
-        ],
-        "reason": "Event text matches monitored service, endpoint, product, or SDK terms.",
-        "service": "zoom",
-        "service_results": [
-          {
-            "status": "RELEVANT",
-            "confidence": "MEDIUM",
-            "matched_targets": [
-              "developer",
-              "users"
-            ],
-            "reason": "Event text matches monitored service, endpoint, product, or SDK terms.",
-            "service": "zoom"
-          }
-        ]
-      },
-      "first_seen_at": "2026-08-19T10:26:51.598632+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.758741+00:00"
-    },
-    {
-      "id": "vendor:zoom:Thu, 13 Au:13bec99eb2ebe232",
-      "service": "zoom",
-      "services": [
-        "zoom"
-      ],
-      "type": "DEPRECATION",
-      "title": "Changelog: Zoom Rooms Controller - Windows - 6.7.0",
-      "description": "<p>Released: 2026-01-05 Updated: 2026-08-11</p> <p><a href=\"https://developers.zoom.us/changelog/zoom-rooms-controller/windows/6.7.0\">Visit Changelog</a></p> <p>Summary: Added personal link and simulive webinar support, enhanced HWIO for companion devices, with API improvements and breaking changes.</p> <h2><a name=\"p-332379-breaking-changes-1\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332379-breaking-changes-1\" aria-label=\"Heading link\"></a>Breaking changes</h2> <ul> <li> <p>Enhanced SDK initialization API in file <code>IZRCSDK.h</code>.</p> <ul> <li> <p>Moved <code>CreateInstance</code> method to the beginning of class <code>IZRCSDK</code> and integrated sink registration into instance creation.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">static IZRCSDK* CreateInstance(IZRCSDKSink* pSdkSink); </code></pre> </li> <li> <p>Removed <code>RegisterSink</code> method from class <code>IZRCSDK</code>. Use <code>CreateInstance</code> with sink parameter instead.</p> </li> </ul> </li> <li> <p>Enhanced classic whiteboard share status notification in file <code>IMeetingShareHelper.h</code>.</p> <ul> <li> <p>New added struct <code>ClassicWhiteboardShareStatus</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct ClassicWhiteboardShareStatus { bool isSharing = false; ///&lt;TRUE indicates classic whiteboard is being shared, otherwise not. int32_t shareSourceID = -1; ///&lt;Share source ID. -1 if not available. The share that the shareSourceID refers to can be pinned on confidence monitor screen. }; </code></pre> </li> <li> <p>Renamed callback from <code>OnUpdateWhiteboardShareStatusNotification</code> to <code>OnUpdateClassicWhiteboardShareStatusNotification</code> in class <code>IMeetingShareHelperSink</code>, and changed parameter from <code>bool isSharing</code> to <code>ClassicWhiteboardShareStatus</code> structure.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual void OnUpdateClassicWhiteboardShareStatusNotification(const ClassicWhiteboardShareStatus&amp; status) = 0; </code></pre> </li> </ul> </li> <li> <p>Enhanced join meeting interfaces in file <code>IMeetingService.h</code>.</p> <ul> <li> <p>Renamed interface from <code>JoinMeeting</code> to <code>JoinMeetingWithMeetingNumber</code> in class <code>IMeetingService</code> for clarity.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError JoinMeetingWithMeetingNumber(const std::string&amp; meetingNumber, bool bringShareToMeeting = false) = 0; </code></pre> </li> <li> <p>Removed <code>bringShareToMeeting</code> parameter from interface <code>JoinMeetingWithURL</code> in class <code>IMeetingService</code> because it is not supported.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError JoinMeetingWithURL(const std::string&amp; url) = 0; </code></pre> </li> <li> <p>Removed <code>bringShareToMeeting</code> parameter from interface <code>JoinMeetingWithContactID</code> in class <code>IMeetingService</code> because it is not supported.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError JoinMeetingWithContactID(const std::string&amp; contactID) = 0; </code></pre> </li> </ul> </li> <li> <p>Enhanced HWIO feature to support Mac&amp;Win Companion Zoom Rooms in file <code>IHWIOHelper.h</code>.</p> <ul> <li> <p>Added <code>companionZRID</code> parameter to all HWIO interfaces in class <code>IHWIOHelper</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">ListHWIODevices(const std::string&amp; companionZRID = \"\") ConfigureHWIODevice(const HWIODeviceConfiguration&amp; configuration, const std::string&amp; companionZRID = \"\") AssignHWIODevice(const HWIOAssignDeviceInfo&amp; assignDevice, const std::string&amp; companionZRID = \"\") IsHWIOServiceAvailable(bool&amp; available, const std::string&amp; companionZRID = \"\") SetHWIOVideoConvertPreference(const HWIOVideoConvertPreference&amp; preference, const std::string&amp; companionZRID = \"\") SetHWIOInputSignalDetection(const HWIOInputSignalDetection&amp; signalDetection, const std::string&amp; companionZRID = \"\") </code></pre> </li> <li> <p>Added <code>companionZRID</code> parameter to all HWIO callbacks in class <code>IHWIOHelperSink</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">OnHWIOListDevicesResult(int32_t result, const HWIOInfo&amp; info, const std::string&amp; companionZRID) OnHWIOConfigureDeviceResult(int32_t result, const HWIODeviceConfiguration&amp; configuration, const std::string&amp; companionZRID) OnHWIOAssignDeviceResult(int32_t result, const HWIOAssignDeviceInfo&amp; assignDeviceInfo, const std::string&amp; companionZRID) OnHWIODeviceUpdated(const HWIODeviceUpdate&amp; deviceUpdate, const std::string&amp; companionZRID) OnHWIOServiceStatusUpdated(bool isServiceAvailable, bool isFeatureAllowed, const std::string&amp; companionZRID) OnHWIOSetVideoConvertPreferenceResult(int32_t result, const HWIOVideoConvertPreference&amp; preference, const std::string&amp; companionZRID) OnHWIOSetInputSignalDetectionResult(int32_t result, const HWIOInputSignalDetection&amp; signalDetection, const std::string&amp; companionZRID) </code></pre> </li> </ul> </li> <li> <p>Changed field type of <code>defaultIndex</code> in struct <code>CameraPresetInfo</code> from <code>uint32_t</code> to <code>int32_t</code> in file <code>ZRCSDKTypes.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct CameraPresetInfo { int32_t defaultIndex = -1; ///&lt;Default preset index. // ... }; </code></pre> </li> </ul> <h2><a name=\"p-332379-added-2\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332379-added-2\" aria-label=\"Heading link\"></a>Added</h2> <ul> <li> <p>New added interfaces to support joining meeting with personal link feature.</p> <ul> <li> <p>New added callback in class <code>IMeetingServiceSink</code> to confirm personal link for joining meeting in file <code>IMeetingService.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual void OnConfirmPersonalLink(const std::string&amp; personalLink) = 0; </code></pre> </li> <li> <p>New added interface in class <code>IMeetingService</code> to join meeting with personal link name in file <code>IMeetingService.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError JoinMeetingWithPersonalLinkName(const std::string&amp; personalLinkName, bool bringShareToMeeting = false) = 0; </code></pre> </li> <li> <p>New added interface in class <code>IMeetingService</code> to join meeting using a complete personal link in file <code>IMeetingService.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError JoinMeetingWithPersonalLink(const std::string&amp; personalLink) = 0; </code></pre> </li> <li> <p>New added interface in class <code>IMeetingService</code> to cancel confirming personal link in file <code>IMeetingService.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError CancelConfirmPersonalLink() = 0; </code></pre> </li> </ul> </li> <li> <p>New added interfaces to support simulive webinar feature.</p> <ul> <li> <p>New added struct <code>SimuliveWebinarInfo</code> in file <code>IMeetingWebinarHelper.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct SimuliveWebinarInfo { bool isInSimuliveStatus = false; ///&lt;TRUE indicates it is currently in simulive status, otherwise not. time_t recordingEndTimeStampInSecond = 0; ///&lt;The recording end time stamp, it is valid when the isInSimuliveStatus is true. }; </code></pre> </li> <li> <p>New added callback in class <code>IMeetingWebinarHelperSink</code> to notify simulive webinar info in file <code>IMeetingWebinarHelper.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual void OnSimuliveWebinarInfoNotification(const SimuliveWebinarInfo&amp; info) = 0; </code></pre> </li> <li> <p>New added interface in class <code>IMeetingWebinarHelper</code> to transition simulive webinar to live session in file <code>IMeetingWebinarHelper.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError SimuliveWebinarGoLive() = 0; </code></pre> </li> <li> <p>New added enum value <code>CONSENT_TYPE_SIMULIVE_WEBINAR</code> in enum <code>ConsentType</code> in file <code>IMeetingReminderHelper.h</code>.</p> </li> <li> <p>New added enum value <code>CONSENT_TYPE_CUSTOM_RECORDING</code> in enum <code>ConsentType</code> in file <code>IMeetingReminderHelper.h</code>.</p> </li> <li> <p>New added fields in struct <code>MeetingInfo</code> in file <code>ZRCSDKTypes.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct MeetingInfo { // ... bool isSimuliveWebinar = false; ///&lt;TRUE indicates the meeting is simulive webinar, otherwise not. bool isSimuliveWebinarSupportGoLive = false; ///&lt;TRUE indicates the simulive webinar supports go live, otherwise not. bool isSimuliveWebinarAllowGoLive = false; ///&lt;TRUE indicates the simulive webinar is allowed go live, otherwise not. }; </code></pre> </li> <li> <p>New added fields in struct <code>MeetingParticipant</code> in file <code>ZRCSDKTypes.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct MeetingParticipant { // ... bool isSimuliveUser = false; ///&lt;TRUE indicates the user is simulive user, otherwise not. bool isActiveSimuliveUser = false; ///&lt;TRUE indicates the user is simulive user that is playing recording, otherwise not. }; </code></pre> </li> <li> <p>New added error code <code>ZRCSDKERR_API_NOT_SUPPORT_IN_SIMULIVE_WEBINAR</code> in file <code>ZRCSDKTypes.h</code>.</p> </li> <li> <p>New added error code <code>ZRCSDKERR_USER_IS_SIMULIVE_USER</code> in file <code>ZRCSDKTypes.h</code>.</p> </li> </ul> </li> <li> <p>New added interfaces to support system audio enhancements feature in file <code>ISettingService.h</code>.</p> <ul> <li> <p>New added enum <code>SystemAudioEnhancementsMode</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">enum SystemAudioEnhancementsMode { SystemAudioEnhancementsModeNone = -1, ///&lt;System audio enhancements mode is None, indicates the system audio enhancements feature is not available. SystemAudioEnhancementsModeAuto = 0, ///&lt;System audio enhancements mode is Auto. SystemAudioEnhancementsModeOn, ///&lt;System audio enhancements mode is On. SystemAudioEnhancementsModeOff ///&lt;System audio enhancements mode is Off. }; </code></pre> </li> <li> <p>New added callback in class <code>ISettingServiceSink</code> to notify system audio enhancements mode update.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual void OnUpdateSystemAudioEnhancementsMode(SystemAudioEnhancementsMode mode) = 0; </code></pre> </li> <li> <p>New added interface in class <code>ISettingService</code> to get current system audio enhancements mode.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError GetCurrentSystemAudioEnhancementsMode(SystemAudioEnhancementsMode&amp; mode) = 0; </code></pre> </li> <li> <p>New added interface in class <code>ISettingService</code> to select system audio enhancements mode.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">virtual ZRCSDKError SelectSystemAudioEnhancementsMode(SystemAudioEnhancementsMode mode) = 0; </code></pre> </li> </ul> </li> <li> <p>New added fields in struct <code>MeetingParticipant</code> to support RTMP user in file <code>ZRCSDKTypes.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct MeetingParticipant { // ... bool isRTMPUser = false; ///&lt;TRUE indicates user is RTMP (Real Time Messaging Protocol) user, otherwise not. bool isActiveRTMPUser = false; ///&lt;TRUE indicates user is current active RTMP user, otherwise not. }; </code></pre> </li> <li> <p>New added field in struct <code>Device</code> to support stethoscope microphone in file <code>ZRCSDKTypes.h</code>.</p> <pre data-code-wrap=\"cpp\"><code class=\"lang-cpp\">struct Device { // ... bool isStethoscopeMic = false; ///&lt;TRUE indicates device is a stethoscope microphone, otherwise not. }; </code></pre> </li> <li> <p>New added error codes in file <code>ZRCSDKTypes.h</code>.</p> <ul> <li><code>ZRCSDKERR_CANNOT_PIN_THE_SHARE_ON_CONFIDENCE_MONITOR_SCREEN</code> - The share can’t be pinned on confidence monitor screen.</li> <li><code>ZRCSDKERR_USER_UNSUPPORTED_ACTION</code> - The user unsupported action.</li> </ul> </li> <li> <p>New added enum value <code>ExitMeetingReasonRejoinNewMeeting</code> in enum <code>ExitMeetingReason</code> to indicate exit meeting reason is rejoin new meeting in file <code>IMeetingService.h</code>.</p> </li> </ul> <h2><a name=\"p-332379-changed-3\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332379-changed-3\" aria-label=\"Heading link\"></a>Changed</h2> <ul> <li>Enhanced interface <code>ReportIssue</code> in class <code>IParticipantHelper</code> to support report in waiting room in file <code>IParticipantHelper.h</code>. In this case, <code>userIDs</code> can be empty.</li> </ul> <h2><a name=\"p-332379-deprecated-4\" class=\"anchor\" href=\"https://devforum.zoom.us#p-332379-deprecated-4\" aria-label=\"Heading link\"></a>Deprecated</h2> <ul> <li>Deprecated interface <code>UpdateVideoLayoutStyle</code> in class <code>IMeetingViewLayoutHelper</code> in file <code>IMeetingViewLayoutHelper.h</code>. Please use <code>SetScreenLayout(MeetingScreen screenIndex, ScreenLayoutSourceType layout)</code> instead.</li> </ul> <p><small>1 post - 1 participant</small></p> <p><a href=\"https://devforum.zoom.us/t/changelog-zoom-rooms-controller-windows-6-7-0/145558\">Read full topic</a></p>",
-      "published_at": "Thu, 13 Aug 2026 22:21:58 +0000",
-      "updated_at": "Thu, 13 Aug 2026 22:21:58 +0000",
-      "severity": {
-        "level": "UNKNOWN",
-        "cvss": null
-      },
-      "sources": [
-        {
-          "name": "Zoom Feed",
-          "url": "https://devforum.zoom.us/t/changelog-zoom-rooms-controller-windows-6-7-0/145558",
-          "raw_id": "vendor:zoom:Thu, 13 Au:13bec99eb2ebe232"
-        }
-      ],
-      "raw": {
-        "feed_url": "https://devforum.zoom.us/c/changelog/100.rss"
-      },
-      "relevance": {
-        "status": "REVIEW",
-        "confidence": "MEDIUM",
-        "matched_targets": [
-          "developer",
-          "meetings"
-        ],
-        "reason": "Both excluded product terms and monitored API terms matched: zoom rooms.",
-        "service": "zoom",
-        "service_results": [
-          {
-            "status": "REVIEW",
-            "confidence": "MEDIUM",
-            "matched_targets": [
-              "developer",
-              "meetings"
-            ],
-            "reason": "Both excluded product terms and monitored API terms matched: zoom rooms.",
-            "service": "zoom"
-          }
-        ]
-      },
-      "first_seen_at": "2026-08-19T10:26:51.598168+00:00",
-      "last_seen_at": "2026-08-28T05:24:13.758285+00:00"
     },
     {
       "id": "vendor:google_calendar:2026-08-19:fe5b0be5209d47fb",
