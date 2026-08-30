@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-08-29T14:35:56.840354+00:00",
-  "count": 78,
+  "generated_at": "2026-08-30T14:31:35.033147+00:00",
+  "count": 79,
   "sources": {
-    "NVD": 73,
+    "NVD": 74,
     "JVN": 5
   },
   "alerts": [
@@ -749,6 +749,30 @@
       "classification_reason": "description_subject",
       "tracked_keyword": "Node.js",
       "noise_risk": "low"
+    },
+    {
+      "alert_id": "nvd:cve-2026-82417:node.js",
+      "source": "NVD",
+      "category": "JS",
+      "product_key": "nodejs",
+      "confidence": "description_formal",
+      "priority": "NOTICE",
+      "cve_id": "CVE-2026-82417",
+      "matched": "Node.js",
+      "severity": "MEDIUM",
+      "score": 5.3,
+      "published": "2026-08-30T00:16:34.657",
+      "last_modified": "2026-08-30T00:16:34.657",
+      "title": "CVE-2026-82417",
+      "description": "### Summary\n\n\n\n`qs.stringify` throws a `TypeError` when it serializes an object whose own `constructor` property has a truthy, non-callable `isBuffer` member. `utils.isBuffer` duck-types buffers by calling `obj.constructor.isBuffer(obj)` after checking only that the property is truthy, so a value such as `{ constructor: { isBuffer: \"x\" } }` makes the call throw `TypeError: obj.constructor.isBuffer is not a function`.\n\n\n\n### Details\n\n\n\n`lib/stringify.js:127` calls `utils.isBuffer` on every non-pr...",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-82417",
+      "actual_product": "Node.js",
+      "package_name": "",
+      "ecosystem": "npm / Node.js",
+      "relation_type": "keyword_only",
+      "classification_reason": "fallback_matched",
+      "tracked_keyword": "",
+      "noise_risk": "high"
     },
     {
       "alert_id": "nvd:cve-2026-23745:node.js",
