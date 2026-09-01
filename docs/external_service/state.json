@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T00:38:42.740676+00:00",
+  "generated_at": "2026-09-01T23:19:06.921443+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
@@ -98,7 +98,7 @@
     },
     "nvd:zoom": {
       "status": "SUCCESS",
-      "count": 8
+      "count": 7
     },
     "jvn:zoom": {
       "status": "SUCCESS_NO_RESULTS",
