@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-08-30T23:30:26.914752+00:00",
+  "generated_at": "2026-09-01T00:38:42.740676+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
-      "count": 8
+      "count": 7
     },
     "jvn:slack": {
       "status": "SUCCESS_NO_RESULTS",
@@ -37,7 +37,7 @@
     },
     "nvd:microsoft_graph_calendar": {
       "status": "SUCCESS",
-      "count": 8
+      "count": 7
     },
     "jvn:microsoft_graph_calendar": {
       "status": "SUCCESS",
@@ -70,7 +70,7 @@
     },
     "nvd:microsoft_graph_teams": {
       "status": "SUCCESS",
-      "count": 7
+      "count": 6
     },
     "jvn:microsoft_graph_teams": {
       "status": "SUCCESS",
@@ -98,7 +98,7 @@
     },
     "nvd:zoom": {
       "status": "SUCCESS",
-      "count": 10
+      "count": 8
     },
     "jvn:zoom": {
       "status": "SUCCESS_NO_RESULTS",
