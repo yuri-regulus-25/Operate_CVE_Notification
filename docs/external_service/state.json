@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-03T23:17:37.090904+00:00",
+  "generated_at": "2026-09-04T23:04:03.242107+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
-      "count": 6
+      "count": 20
     },
     "jvn:slack": {
       "status": "SUCCESS_NO_RESULTS",
@@ -37,7 +37,7 @@
     },
     "nvd:microsoft_graph_calendar": {
       "status": "SUCCESS",
-      "count": 5
+      "count": 1
     },
     "jvn:microsoft_graph_calendar": {
       "status": "SUCCESS",
@@ -55,8 +55,13 @@
     },
     "msrc_updates:microsoft_graph_calendar": {
       "status": "SUCCESS",
-      "raw_count": 190,
-      "count": 1
+      "raw_count": 191,
+      "count": 2
+    },
+    "msrc_cvrf:microsoft_graph_calendar:2026-Aug": {
+      "status": "SUCCESS",
+      "raw_count": 1640,
+      "count": 19
     },
     "msrc_cvrf:microsoft_graph_calendar:2026-Jul": {
       "status": "SUCCESS",
@@ -64,8 +69,8 @@
       "count": 15
     },
     "nvd:microsoft_graph_teams": {
-      "status": "SUCCESS",
-      "count": 4
+      "status": "SUCCESS_NO_RESULTS",
+      "count": 0
     },
     "jvn:microsoft_graph_teams": {
       "status": "SUCCESS",
@@ -78,8 +83,13 @@
     },
     "msrc_updates:microsoft_graph_teams": {
       "status": "SUCCESS",
-      "raw_count": 190,
-      "count": 1
+      "raw_count": 191,
+      "count": 2
+    },
+    "msrc_cvrf:microsoft_graph_teams:2026-Aug": {
+      "status": "SUCCESS",
+      "raw_count": 1640,
+      "count": 19
     },
     "msrc_cvrf:microsoft_graph_teams:2026-Jul": {
       "status": "SUCCESS",
