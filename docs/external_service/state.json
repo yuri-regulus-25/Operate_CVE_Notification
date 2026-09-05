@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T23:04:03.242107+00:00",
+  "generated_at": "2026-09-05T22:55:27.785549+00:00",
   "sources": {
     "nvd:slack": {
       "status": "SUCCESS",
@@ -50,7 +50,7 @@
     },
     "microsoft_graph:microsoft_graph_calendar:https://developer.microsoft.com/en-us/graph/changelog?filterBy=Cloud%20communications": {
       "status": "SUCCESS_NO_RESULTS",
-      "raw_count": 159,
+      "raw_count": 160,
       "count": 0
     },
     "msrc_updates:microsoft_graph_calendar": {
